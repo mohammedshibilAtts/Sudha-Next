@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .responsive-image {
+    max-height: 250px; /* Set your desired max height */
+    width: auto; /* Allow width to adjust automatically */
+  }
+  
+  
