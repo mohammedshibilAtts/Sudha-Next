@@ -28,11 +28,7 @@ function FAQItem({ question, answer, isOpen, toggle }) {
           </motion.div>
         )}
       </AnimatePresence>
-      {isOpen && (
-        <p className="mt-2 text-gray-600">
-          {answer}
-        </p>
-      )}
+      
     </div>
   );
 }

@@ -530,7 +530,13 @@ function Home() {
       {/* Faq */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
-          {Ambattur.faqs.slice(0, visibleCount).map((faq, index) => (
+          <div className="content mx-auto flex-1 text-center lg:text-left">
+            <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl flex justify-center">
+             FAQ
+            </h1>
+          </div>
+        <div className="mt-5">
+        {Ambattur.faqs.slice(0, visibleCount).map((faq, index) => (
             <FAQItem
               key={index}
               question={faq.question}
@@ -540,8 +546,10 @@ function Home() {
             />
           ))}
         </div>
+        </div>
       </div>
 
+      {/* contact us  */}
       <div
         className="py-16 bg-cover bg-center"
         style={{
@@ -751,30 +759,33 @@ function Home() {
         </div>
       </div>
 
+
+
+      {/* MarqueeComponent */}
       <section>
-          {/* <div className="container mx-auto">
-            <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full"> */}
-              <MarqueeComponent
-                items={Ambattur.gallery}
-                direction="left"
-                speed="fast"
-                className="custom-class"
-              />
-              <div className="flex justify-center gap-4 items-center mt-4 mb-4">
-                <h2 className="text-2xl font-bold text-center ">
-                  Happy Patients, Happy Stories
-                </h2>
-                <Button text="View youtube " icon={<FaYoutube />} />
-              </div>
-              <MarqueeComponent
-                items={Ambattur.gallery}
-                direction="right"
-                speed="fast"
-                className="custom-class"
-              />
-            {/* </div>
-          </div> */}
-        </section>
+        <div className="container mx-auto">
+            <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
+        <MarqueeComponent
+          items={Ambattur.gallery}
+          direction="left"
+          speed="fast"
+          className="custom-class"
+        />
+        <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
+          <h2 className="text-2xl font-bold text-center ">
+            Happy Patients, Happy Stories
+          </h2>
+          <Button title="View youtube" icon={<FaYoutube />} />
+        </div>
+        <MarqueeComponent
+          items={Ambattur.gallery}
+          direction="right"
+          speed="fast"
+          className="custom-class"
+        />
+        </div>
+          </div>
+      </section>
     </>
   );
 }

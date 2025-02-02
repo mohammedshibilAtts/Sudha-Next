@@ -71,7 +71,7 @@ export const MarqueeComponent = ({
     >
       {items.map((item, idx) => (
         <li
-          className="w-[250px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[350px]" // Reduced width
+          className=" max-w-full relative rounded-2xl flex-shrink-0 md:w-[350px]" // Reduced width
           key={`${item.name}-${idx}`} // Ensure unique key
         >
           <blockquote>
