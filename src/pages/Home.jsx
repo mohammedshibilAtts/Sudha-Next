@@ -357,11 +357,11 @@ function Home() {
                 </div>
               </div>
 
-              <div className="tiles-1">
-                <div className="main-tail flex items-center justify-center">
-                  <div className="content text-cente">
+              <div className="tiles-1 flex items-center justify-center">
+                <div className="main-tailflex items-center justify-center ">
+                  <div className="content  flex justify-center items-center ">
                     <div className="title">
-                      <div className="button flex justify-center lg:hidden">
+                      <div className="button flex items-center justify-center lg:hidden">
                         <Button title={"View More"} />
                       </div>
                     </div>

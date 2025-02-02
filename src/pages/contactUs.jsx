@@ -28,9 +28,9 @@ function ContactUs() {
           className="absolute inset-0 bg-cover bg-center -top-28  md:-top-36"
           style={{
             backgroundImage: `url(${Banner.src})`,
-            backgroundSize: "fill", // Ensures the image covers the area
-            backgroundPosition: "right", // Centers the image
-            backgroundRepeat: "no-repeat", // Prevents the image from repeating
+            backgroundSize: "fill", 
+            backgroundPosition: "right", 
+            backgroundRepeat: "no-repeat", 
           }}
         >
           <div className="absolute inset-0 bg-[#173366A1] opacity-45"></div>
@@ -303,7 +303,7 @@ function ContactUs() {
 
       <div className="container mx-auto relative h-full">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
-        <div className="title text-center">
+        <div className="title text-center ">
           <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
             For immediate assistance
             <span className="lg:block"> Sudha Fertility Centre</span>
@@ -314,9 +314,9 @@ function ContactUs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 mt-8 shadow-xl relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 shadow-xl relative">
           {/* First Row */}
-          <div className="py-16 relative border-r border-b lg:border-b last:border-r-0">
+          <div className="py-16 relative border-r border-b lg:border-b last:border-r-0 ">
             <div className="image flex justify-center items-center mb-4">
               <Image
                 src={WriteToUs}
@@ -327,8 +327,8 @@ function ContactUs() {
             <div className="title">
               <h1 className="text-xl text-center">Write to us</h1>
             </div>
-            <div className="des mt-3">
-              <p className="text-center">care@sudhahospitals.com</p>
+            <div className="des mt-3 =">
+              <p className="text-center ">care@sudhahospitals.com</p>
             </div>
           </div>
 
@@ -426,23 +426,20 @@ function ContactUs() {
       className="relative min-h-[250px] rounded-lg shadow-2xl overflow-hidden"
       style={{
         backgroundImage: `url(${SubBanner.src})`,
-        backgroundSize: 'cover', // Using cover for better responsiveness
+        backgroundSize: 'cover', 
         backgroundPosition: 'center',
       }}
     >
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* Content Container */}
-      <div className="relative h-full flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12 mt-9">
-        {/* Left side - Text */}
+      
+      <div className="relative h-full flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12 mt-9"> 
         <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start text-center lg:text-left mb-6 lg:mb-0">
           <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl text-white">
             Welcome Your Baby into Your Home
           </h1>
         </div>
-
-        {/* Right side - Button */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-end items-center">
           <Button title="Book Your Free Appointment" />
         </div>
