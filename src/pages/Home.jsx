@@ -400,9 +400,9 @@ function Home() {
 
       {/* Make Pregnancy Planning Simple and Confident with Our Calculator Tools */}
       <div className="container mx-auto mt-8">
-        <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 py-12 sm:px-6 lg:px-8">
           <div className="main-box">
-            <div className="flex flex-col lg:flex-row p-7 border rounded-3xl">
+            <div className="flex flex-col lg:flex-row pb-4 lg:pb-0 lg:p-7 border rounded-3xl">
               {/* Left Section */}
               <div className="left px-3 flex-1">
                 <div className="content h-auto lg:h-72 flex flex-col justify-center items-center text-center lg:text-left">
@@ -426,7 +426,7 @@ function Home() {
               <div className="h-[] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"></div>
 
               <div className="right flex-1 flex justify-center items-center px-3">
-                <div className="tiles grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 xl mt-9">
+                <div className="tiles grid  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 xl mt-9">
                   {/* First row: 3 tiles */}
                   <div className="tiles-1 flex flex-col items-center justify-center text-center">
                     <div className="title mb-3">
