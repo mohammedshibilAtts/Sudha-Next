@@ -22,6 +22,7 @@ import Ambattur from "@/middleware/imagesroute";
 function ContactUs() {
   return (
     <>
+    {/* Banner  */}
       <div className="relative">
         {/* Background Image with Gradient Overlay */}
         <div

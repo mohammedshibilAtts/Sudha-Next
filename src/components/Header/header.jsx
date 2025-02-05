@@ -83,15 +83,19 @@ function Navbar() {
 
   return (
     <header
-      className={`w-full text-white font-outfit z-30 sticky top-0 ${navbarColor ? "bg-[#173366]" : "bg-transparent"}`}
+      className={`w-full  text-white font-outfit z-30 sticky top-0 ${navbarColor ? "bg-[#173366]" : "bg-transparent"}`}
     >
+      <div className="container mx-auto">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+
+      
       {/* Top Navigation Bar */}
-      <div className="py-5">
+      <div className=" py-3">
         <div className="mx-auto px-7">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="w-40 2xl:relative">
-              <Image src={Logo} alt="Sudha Logo" className="w-full h-auto 2xl:absolute top-2" />
+            <div className="w-40 ">
+              <Image src={Logo} alt="Sudha Logo" className="w-full h-auto  top-2" />
             </div>
 
             {/* Mobile Hamburger */}
@@ -139,6 +143,8 @@ function Navbar() {
             </div>
           </div>
         </div>
+      </div>
+      </div>
       </div>
 
       {/* Mobile Menu */}
@@ -204,7 +210,8 @@ function Navbar() {
     </div>
 
       {/* Main Navigation Bar for Larger Screens */}
-      <div className="pb-4 hidden lg:block">
+      <div className="container mx-auto">
+        <div className="pb-4 hidden lg:block">
         <div className="ms-9 2xl:mt-5">
           <ul className="container flex gap-8 2xl:gap-12 justify-center">
             {mainNavItems.map((item, index) => (
@@ -275,6 +282,7 @@ function Navbar() {
             ))}
           </ul>
         </div>
+      </div>
       </div>
     </header>
   );

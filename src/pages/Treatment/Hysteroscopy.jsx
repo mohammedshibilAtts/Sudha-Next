@@ -20,166 +20,149 @@ import x from "@/assets/Home/x.svg";
 import fb from "@/assets/Home/fb.svg";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
-import { FaQ } from "react-icons/fa6";
- 
+
 const IVFData = [
   {
-    question: "Initial Consultation",
+    question: "Ovulation stimulation",
     answer:
-      "The IVF experts in Sudha Fertility Centre will review your medical history, examine you with necessary tests, and discuss treatment options. This step is vital to tailor a personalised treatment plan for a successful pregnancy.",
+      "If you’re ovulating regularly, medications are not required to induce ovulation. If you’re not ovulating periodically, IUI specialists in Sudha will prescribe you medications that stimulate egg development. We plan your IVF procedure depending on your hormone and ultrasound test results.",
   },
   {
-    question: "Super Ovulation or Super Stimulation",
+    question: "Sperm extraction",
     answer:
-      "After setting the treatment plan, the first step in the IVF process is ovarian stimulation. In this process, the patient is prescribed certain medications to increase the production of eggs. During this period, the IVF doctors in Sudha will monitor you via ultrasounds and blood tests for positive results.",
+      "Our IUI doctors extract a sperm sample from your partner or donor and “wash it” to remove the non-motile sperms or non-healthy sperms.",
   },
   {
-    question: "Egg Retrieval and Sperm Collection",
+    question: "Insemination Procedure",
     answer:
-      "The next process involves a minor surgical procedure by the fertility specialists in Sudha to retrieve the eggs under sedation. Simultaneously, sperm samples will be collected from the male.",
-  },
-  {
-    question: "Fertilization and Embryo Culture",
-    answer:
-      "After retrieving the eggs and sperm, they will be fertilized in the laboratory by the IVF experts in Sudha. After fertilization, the eggs grow as embryos and the fertility doctors will monitor to identify the risk of passing genetic disorders to the baby.",
-  },
-  {
-    question: "Embryo Transfer",
-    answer:
-      "After proper monitoring, the healthy embryos will be placed into the woman’s womb",
+      "In this procedure, the IUI experts used a thin catheter to inject the washed sperm sample into the uterus. By this method, the sperm skips the part of bypassing the vagina and cervix.",
   },
 ];
- 
+
 const FAQ = [
   {
-    question: "Which hospital provides the best IVF treatment in India? ",
+    question: "Which hospital provides the best IUI treatment in Bangalore?",
     answer:
-      "Sudha Fertility Centre is widely recognized as one of the best IVF Centres in India. With a team of expert fertility specialists, cutting-edge technology, and a patient-centered approach, we offer personalized IVF treatments to help couples achieve their dream of parenthood.",
+      "When looking for IUI (Intrauterine Insemination) treatment in Bangalore, Sudha Fertility Centre, the best IUI centre in Bangalore, is one of the top choices, known for its expertise and high success rates in fertility treatments. We offer you the best treatments with the best IUI doctors in India",
   },
   {
-    question: "What is the IVF success rate in India?",
+    question: "What is the success rate of IUI treatment?",
     answer:
-      "The IVF success rate in India can vary depending on factors such as age, the cause of infertility, the clinic's expertise, and the treatment plan. Leading IVF Centres in India like Sudha Fertility Centre are known for their high success rates, which reflect their advanced technology, experienced fertility specialists, and personalized care.",
+      "The success rate of IUI treatment can vary based on factors such as the woman’s age, the cause of infertility, sperm quality, and overall reproductive health. At Sudha Fertility Centre, we offer personalised care to help optimize your chances of success with IUI treatment.",
   },
   {
-    question: "What is the cost of IVF treatment in India?",
+    question: "Is there any risk associated with IUI treatment? ",
     answer:
-      "The cost of IVF treatment in India can vary based on factors like the clinic, treatment type, medications, and additional procedures. As a leading IVF Centre in India, Sudha Fertility Centre offers personalized care with transparent and affordable pricing.",
+      "IUI treatment is a safe procedure. There might be some risk factors including a slight chance of infection and the possibility of multiple pregnancies. At Sudha Fertility Centre, we take all precautions to minimize these risks and ensure the safety and well-being of our patients throughout the treatment process.",
   },
   {
-    question: "How many times can we try IVF?",
+    question: "Is IUI treatment painful?",
     answer:
-      "The number of IVF attempts a couple can make depends on various factors, including the individual’s age, overall health, and the cause of infertility. At Sudha Fertility Centre, one of the best IVF centres, our fertility specialists assess your specific situation and guide you on the most suitable approach, ensuring the best chance of success in the first attempt itself.",
+      "IUI treatment is generally not painful. Most women experience only mild discomfort or cramping during the procedure, similar to menstrual cramps. At Sudha Fertility Centre, recognised as the best IUI treatment hospital in India, our experienced specialists ensure that the procedure is as comfortable as possible and provide support throughout your treatment.",
   },
   {
-    question: "How long does it take for an IVF treatment?",
+    question: "Can I do my regular work after IUI treatment?",
     answer:
-      "IVF typically takes 4-6 weeks per cycle, and some couples may need more than one cycle to achieve successful results. At Sudha Fertility Centre, one of the top IVF centres in India, we prioritise providing comprehensive care and support, ensuring a well-guided and effective treatment experience throughout your journey.",
+      "Yes, it is safe to do your regular work and daily activities after IUI treatment. Light activities and normal tasks are typically fine, but it's recommended to avoid exhausting exercise or heavy lifting. At Sudha Fertility Centre, the best IUI hospital, our specialists will guide you on how to care for yourself post-treatment to support your health and maximise the chances of a positive outcome.",
   },
   {
-    question: "Is normal delivery possible in IVF treatment?",
+    question: "Can I go to a job after IUI treatment?",
     answer:
-      "Yes, normal delivery is possible after IVF. Factors such as the mother’s health, the baby’s position, and any pregnancy-related complications are considered when determining the delivery method. Sudha Fertility Centre, the best fertility centre in India, supports you through your pregnancy journey to ensure a healthy, safe delivery.",
+      "Yes, you can go to work after IUI treatment. The procedure is minimally invasive, and most women feel well enough to resume their regular work activities the same day. However, it's best to avoid physically demanding tasks or heavy lifting. At Sudha Fertility Centre, the best IUI centre, we ensure you receive proper guidance on post-treatment care to help you feel comfortable and supported.",
   },
   {
-    question: "Is IVF an expensive treatment? ",
+    question: "Is normal delivery possible in IUI treatment?",
     answer:
-      "The cost of IVF treatment can vary based on factors like the clinic chosen, medications, number of IVF cycles, and any additional procedures. At Sudha Fertility Centre, we provide transparent pricing and personalized care to ensure you receive the best treatment suited to your needs.",
+      "Yes, normal delivery is possible after successful IUI treatment. Sudha Fertility Centre, the best fertility centre in India, offers continuous care throughout the pregnancy journey to ensure a healthy delivery.",
   },
   {
-    question: "Are IVF pregnancies risky? ",
+    question: "Should I take complete bed rest after IUI treatment",
     answer:
-      "IVF pregnancies are generally safe, but like any pregnancy, there can be risks involved, especially in cases of multiple pregnancies or underlying health conditions. However, with advancements in IVF technology and expert care, the risks are significantly minimised. At Sudha Fertility Centre, we monitor your pregnancy closely to ensure the best outcomes for both mother and baby, providing comprehensive support throughout the process.",
+      "No, complete bed rest is not required. You can continue with normal activities but should avoid exhausting tasks or heavy lifting for a few days. At Sudha Fertility Centre, the best fertility centre in India, we provide guidance on how to manage post-IUI care effectively.",
   },
   {
-    question: "What is the best age to undergo IVF?",
+    question: "What is the cost of IUI treatment?",
     answer:
-      "The ideal age to undergo IVF is typically between 35 and 40 years, as fertility starts to decline after 35. However, women in their early 30s generally have higher chances of success. IVF can still be effective for women over 40. At Sudha Fertility Centre, we offer personalised care and expert guidance throughout your fertility journey with the best IVF doctors in India.",
+      "IUI treatment costs vary depending on number of cycles required to attain a positive result. As the best IUI centre in India, Sudha Fertility Centre offers affordable and transparent pricing for all fertility treatments.",
   },
   {
-    question: "When should I consider IVF after multiple miscarriages? ",
+    question: "Who should consider IUI treatment?",
     answer:
-      "If you’ve experienced multiple miscarriages, IVF is a good option to consider. Sudha Fertility Centre has helped thousands of couples who had faced multiple miscarriages deliver healthy babies. Our dedication and empathetic care retain us as the best IVF hospital in India.",
+      "Couples with unexplained infertility, ovulation issues, or minor male fertility issues may consider IUI. At Sudha Fertility Centre, regarded as a leading IVF centre, we provide expert evaluations and help you determine the most suitable approach for your fertility journey.",
   },
   {
-    question: "Should I take complete bed rest after IVF treatment? ",
+    question: "When should I consider IUI treatment?",
     answer:
-      "Complete bed rest is not required after IVF. However, it is important to avoid lifting heavy weights, doing heavy household chores, and exhausting activities. At Sudha Fertility Centre, a leading IVF centre, we offer expert guidance to help you recover comfortably and maximize your chances of success.",
+      "You should consider IUI treatment if you have been trying to conceive for more than a year of regular unprotected sex. IUI is especially beneficial for couples facing mild infertility issues. At Sudha Fertility Centre, our expert IUI doctors provide personalised assessments to help determine the best treatment option for your fertility health.",
   },
   {
-    question: "Who should take IVF treatment? ",
+    question: "What is IUI treatment?",
     answer:
-      "IVF is ideal for couples with unexplained infertility, blocked fallopian tubes, male infertility, or other reproductive issues. Sudha Fertility Centre, the best IVF centre in India, offers expert diagnosis to identify the cause of infertility and provide the best treatments.",
+      "IUI (Intrauterine Insemination) is a fertility treatment where sperm is directly injected into the uterus using a catheter to increase the chances of fertilization. This process is beneficial for couples facing minor male infertility issues. At Sudha Fertility Centre, our expert IUI doctors provide personalized care to ensure the best chances of success in your fertility journey.",
   },
 ];
- 
+
 const When_Why_choose = [
-  "Elderly women above 40, as they produce less quality eggs or don’t produce eggs.",
-  "Individuals who had their ovaries removed.",
-  "Women with blocked or damaged fallopian tubes.",
-  "Men with less sperm count, motility, or abnormal sperm shape.",
-  "Couples who want to be parents after menopause",
-  "For couples who have a history of failed fertility treatments.",
-  "Couples with genetic disorders, to prevent the transmission of genetic diseases.",
+  "Couples attempting to conceive through unprotected intercourse and have a healthy sexual life.",
+  "Women with endometriosis condition (lining of the uterus growing outside the uterus).",
+  "Men with reduced fertility due to sperm factors (slightly lower sperm count or motility).",
+  "Couples or individuals who opt for donor sperm to get pregnant",
 ];
- 
+
 const prepare_for_IVF = [
-  "Focus on a balanced and nutritious diet, moderate exercise, and avoid alcohol and tobacco to support your body for IVF.",
-  "Ensure conditions like PCOS, diabetes, or thyroid issues are under control, as these can impact IVF success.",
-  "Include folic acid and prenatal vitamins to boost reproductive health and reduce birth risks.",
-  "IVF can be an emotional journey. Communicate with your partner and your closed ones to help manage stress.",
-  "Follow the prescribed medications properly and make sure you don’t skip regular checkups.",
-  "Engage yourself in activities like yoga, meditation, or other relaxation techniques to maintain mental and physical well-being.",
+  "Schedule a consultation with a fertility specialist and review the medical history of both partners to identify any pre-existing conditions.",
+  "Both partners should adopt a healthy diet.",
+  "Engage in regular exercise, and maintain a healthy diet.",
+  "Limit exposure to environmental toxins. ",
+  "Maintain a healthy weight, being underweight or overweight can affect hormone levels and ovulation.",
 ];
 const facilities = [
   {
-    title: "High-tech technologies",
+    title: "Best IUI doctors in India",
     position: "left-32 top-10",
     rounded: "rounded-br-none",
   },
   {
-    title: "Modern IVF laboratories",
+    title: "24/7 pharmacy access",
     position: "left-24 top-44",
     rounded: "rounded-br-none",
   },
   {
-    title: "Round-the-clock pharmacy access",
+    title: "Round-the-clock care and support,",
     position: "left-1 top-2/4",
     rounded: "rounded-br-none",
   },
   {
-    title: "Intellectual fertility experts",
+    title: "World-class equipments, ",
     position: "right-32 top-[70px] ",
     rounded: "rounded-bl-none",
   },
   {
-    title: "Experienced embryologists",
+    title: "Experienced lab technicians",
     position: "right-28 top-[140px]  ",
     rounded: "rounded-bl-none",
   },
   {
-    title: "Advanced treatment with exceptional care",
+    title: "Advanced treatments with personalised care.",
     position: "-right-6  top-[280px] ",
     rounded: "rounded-bl-none",
   },
 ];
 const Do = [
-  "Drink plenty of water to keep your body hydrated.",
-  "Focus on nutrient-dense foods rich in vitamins, minerals, and protein to support reproductive health.",
-  "Seek emotional support as IVF can be an emotional journey.",
-  "Prioritise sleep and rest. Aim for at least 7 hours of quality sleep",
-  "Engage in gentle activities like walking or stretching.",
+  "Eat healthy food to help fertilization.",
+  "Take the medicines prescribed by the IUI experts.",
+  "Get enough sleep and rest.",
+  "Focus on your physical and mental health.",
+  "Exercise moderately to keep yourself active.",
 ];
- 
+
 const Dont = [
-  "Avoid heavy exercises.",
-  "Restrict alcohol and caffeine intake.",
-  "Avoid long travel to reduce body stress.",
-  "Never skip the prescribed medications or intake unprescribed ones.",
-  "Avoid exposure to toxins.",
+  "Avoid alcohol and smoking.",
+  "Reduce caffeine intake.",
+  "Refrain from ejaculation for 2-3 days before collecting a semen sample.",
 ];
- 
-function IVF() {
+
+function Hysteroscopy() {
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(0);
   const [faqIndex, setFaqIndex] = useState(0);
@@ -187,7 +170,7 @@ function IVF() {
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
- 
+
   const toggleFAQ = (index) => {
     setFaqIndex(faqIndex === index ? null : index);
   };
@@ -197,10 +180,10 @@ function IVF() {
       setShowAll(false); // Properly toggle state
     } else {
       setVisibleCount(Ambattur.faqs.length); // Show all FAQs
-      setShowAll(true); // Properly toggle state
+      setShowAll(true); 
     }
   };
- 
+
   return (
     <>
       {/* Banner */}
@@ -216,7 +199,7 @@ function IVF() {
         >
           <div className="absolute inset-0 bg-[#173366A1] opacity-45"></div>
         </div>
- 
+
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
@@ -233,41 +216,40 @@ function IVF() {
           </div>
         </div>
       </div>
- 
-      {/* About IVF */}
+
+      {/* About IUI */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
-          <h2 className="text-2xl font-semibold flex justify-center  text-center lg:hidden">
-            About IVF
+          <h2 className="text-2xl font-semibold flex justify-center text-center lg:hidden">
+            About IUI
           </h2>
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={About} alt="About IVF" />
+                  <Image src={About} alt="About IUI" />
                 </div>
               </div>
             </div>
- 
+
             <div className="flex-1 flex items-center px-4">
               <div>
                 <div className="Title">
                   <h2 className="text-2xl font-semibold hidden lg:block">
-                    About IVF
+                    About IUI
                   </h2>
                 </div>
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    In vitro fertilization (IVF) is one of the well-known and
-                    most successful fertility treatments preferred for couples
-                    with complicated fertility problems. IVF treatment is one of
-                    the assisted reproductive technology types chosen by
-                    millions of couples worldwide with fertility problems. With
-                    a 90% success rate around India, IVF is known as a
-                    successful fertility treatment. For a few couples, the first
-                    IVF cycle might be successful, for some couples, it may take
-                    more than one cycle. This treatment involves several medical
-                    processes from initial consultation to embryo transfer.
+                    Intrauterine Insemination (IUI) is a fertility treatment
+                    process in which the sperm is directly injected into the
+                    uterus to help conception. This procedure is also known as
+                    artificial insemination. IUI treatment is affordable and
+                    highly successful for couples with less severe fertility
+                    problems. This process causes less pain and less discomfort.
+                    IUI treatment improves the chances of fertilization as the
+                    sperm is directly placed in the uterus and the number of
+                    sperm reaching the fallopian tubes can be increased.
                   </p>
                 </div>
                 <div className="mt-5">
@@ -278,48 +260,83 @@ function IVF() {
           </div>
         </div>
       </div>
- 
-      {/* IVF in Sudha Fertility Centre */}
+
+      {/* Hysteroscopy in Sudha Fertility Centre */}
       <div className="container mx-auto relative h-full mt-6 lg:mt-20">
         <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
-          <h2 className="text-2xl font-semibold  flex justify-center mt-14 text-center lg:hidden">
-            IVF in Sudha Fertility Centre
+          <h2 className="text-2xl font-semibold flex justify-center text-center mt-14 lg:hidden">
+            Hysteroscopy in Sudha Fertility Centre
           </h2>
           <div className="main flex flex-col md:flex-row">
-            <div className="flex-1  px-4">
+            <div className="flex-1 px-4">
               <div>
                 <div className="Title">
                   <h2 className="text-2xl font-semibold hidden lg:block">
-                    IVF in Sudha Fertility Centre
+                    Hysteroscopy in Sudha Fertility Centre
                   </h2>
                 </div>
-                <div className="Accordian mt-4 ">
-                  {IVFData.map((item, index) => (
-                    <FAQItem
-                      key={index}
-                      question={item.question}
-                      answer={item.answer}
-                      isOpen={openIndex === index}
-                      toggle={() => toggleAccordion(index)}
-                    />
-                  ))}
+                <div className="Accordian mt-4">
+                  <p className="text-[#838383]">
+                    Sudha Fertility Centre is equipped with the best fertility
+                    doctors in India, who are determined to help you in your
+                    journey towards parenthood. Our fertility experts suggest
+                    performing hysteroscopy under the following circumstances.
+                  </p>
+
+                  <ul className="text-[#838383] space-y-2 list-inside list-disc mt-3">
+                    <li>Abnormal bleeding</li>
+                    <li>Too much menstrual bleeding</li>
+                    <li>Post-menopausal bleeding</li>
+                    <li>Recurrent miscarriages</li>
+                    <li>Uterine fibroids and polyps</li>
+                    <li>Causes of infertility</li>
+                    <li>Misplaced IUD</li>
+                    <li>Any uterine abnormalities</li>
+                    <li>Extreme pelvic pain</li>
+                  </ul>
                 </div>
               </div>
             </div>
- 
-            <div className="flex-1 lg:px-12   flex items-center justify-center">
+
+            <div className="flex-1 lg:px-12 flex items-center justify-center mt-6 md:mt-0">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="relative w-full h-64 md:h-52 lg:h-96">
-                  <Image src={Microscope} alt="IVF in Sudha Fertility Centre" />
+                  <Image
+                    src={Microscope}
+                    alt="IVF in Sudha Fertility Centre"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="description shadow-lg rounded-lg p-2 mt-10 px-4 sm:px-6 md:px-8">
+            <p className="text-[#838383]">
+              Hysteroscopy is done for both diagnostic and surgical procedures.
+              The diagnostic process is done to identify the structural
+              irregularities in the uterus that may cause abnormal bleeding. It
+              may also be used to confirm other test results such as ultrasound
+              or hysterosalpingography (HSG). HSG is done to check whether the
+              fallopian tubes are blocked.
+            </p>
+
+            <p className="text-[#838383] mt-3">
+              Operative hysteroscopy is done by the best surgeons of Sudha
+              Fertility Centre to treat abnormality diagnosed during diagnostic
+              hysteroscopy. Operative hysteroscopy is not advised to be
+              performed on pregnant women, and when there is an inflammation of
+              the cervix or pelvis. Patients who are allergic to nickel or
+              radioactive contrast dye are also not encouraged to undergo this
+              procedure. It is also not to be performed on those suffering from
+              uterine cancer.
+            </p>
+          </div>
         </div>
       </div>
- 
+
       {/* Why choose us for IVF? */}
-      <div className="container mx-auto mt-6 lg:mt-20 relative h-full bg-[#F0F5FF]">
+      <div className="container mx-auto mt-6 lg:mt-20 relative h-full ">
         <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
           <div className="Title lg:hidden text-center">
             <h2 className="text-2xl font-semibold">Why choose us for IVF?</h2>
@@ -331,11 +348,11 @@ function IVF() {
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={WhyChoose} alt="About IVF" />
+                  <Image src={WhyChoose} alt="About IUI" />
                 </div>
               </div>
             </div>
- 
+
             <div className="flex-1 flex items-center px-4">
               <div>
                 <div className="Title hidden lg:block">
@@ -348,19 +365,15 @@ function IVF() {
                 </div>
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    As a leading IVF center in India, Sudha Fertility Centre has
-                    a success rate of 85% in IVF treatments. With over 4 decades
-                    of expertise in fertility care, we have delivered thousands
-                    of healthy IVF babies. With the best IVF doctors in India,
-                    we provide you the exceptional IVF treatments in India,
-                    guiding you through every step of your parenthood journey
-                    and helping you achieve your dream. We offer personalised
-                    counselling and compassionate care from consultation to
-                    delivery. The dedication of the IVF doctors in Sudha
-                    Fertility Centre prioritising every step to maximize the
-                    chances of a successful healthy pregnancy and also focusing
-                    on the health of both mother and baby retains us as the best
-                    IVF hospital in India.
+                    As the best IUI centre in India, Sudha Fertility Centre has
+                    delivered more than thousands of healthy IUI babies holding
+                    a success rate of 85% in IUI treatments. With the best IUI
+                    doctors in India, Sudha Fertility Centre provides you with
+                    the best IUI treatments in India helping you to achieve your
+                    dream of parenthood into reality. Our fertility experts are
+                    dedicated to providing you with personalised care at every
+                    step of your parenthood journey which retains us as the best
+                    IUI hospital in India.
                   </p>
                 </div>
               </div>
@@ -368,52 +381,14 @@ function IVF() {
           </div>
         </div>
       </div>
- 
-      {/* When and Why Choose IVF? */}
-      <div className="container mx-auto relative h-full  mt-6 lg:mt-14 ">
-        <div className="max-w-7xl mx-auto px-4 pt-8 sm:px-6  lg:px-8 h-full">
-          <h2 className="text-2xl font-semibold text-center lg:hidden">
-            When and Why Choose IVF?
-          </h2>
-          <div className="main flex flex-col md:flex-row">
-            <div className="flex-1 flex items-center ">
-              <div className="p-6">
-                <div className="Title ">
-                  <h2 className="text-2xl font-semibold lg:block hidden">
-                    When and Why Choose IVF?
-                  </h2>
-                </div>
-                <div className=" pt-6">
-                  <div className="space-y-4">
-                    {When_Why_choose .map((item, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-6 h-6">
-                          <Image src={Tick} alt="Tick" />
-                        </div>
-                        <p className="text-gray-600 flex-1 pt-0.5">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
- 
-            <div className="flex-1 lg:px-12 py-3  flex items-center justify-center lg:items-start ">
-              <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full">
-                  <Image src={ChooseIVF} alt="About IVF" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- 
+
+     
+
       {/* Facilities */}
       <div className="container mx-auto relative  bg-[#F0F5FF] mb-9">
         <div className="max-w-7xl mx-auto px-4 pt-10 mt-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-3xl font-bold text-center mb-12">Facilities</h2>
- 
+
           {/* Desktop Layout - Hidden on mobile */}
           <div className="relative hidden md:flex justify-center items-center">
             {/* Center Image */}
@@ -424,7 +399,7 @@ function IVF() {
                 className="w-full h-auto"
               />
             </div>
- 
+
             {/* Facility Cards for Desktop */}
             <div className="absolute inset-0">
               {facilities.map((facility, index) => (
@@ -432,7 +407,7 @@ function IVF() {
                   key={index}
                   className={`absolute ${
                     facility.position
-                  } transform -translate-y-1/2 z-10
+                  } transform -translate-y-1/2 z-10 
                   ${
                     facility.position.includes("left")
                       ? "mr-4 md:mr-8 pr-4"
@@ -451,7 +426,7 @@ function IVF() {
               ))}
             </div>
           </div>
- 
+
           {/* Mobile Layout - Grid with 2 columns */}
           <div className="md:hidden grid grid-cols-2 gap-4">
             {/* Center Image */}
@@ -464,7 +439,7 @@ function IVF() {
                 />
               </div>
             </div>
- 
+
             {/* Facility Cards for Mobile */}
             {facilities.map((facility, index) => (
               <div key={index} className="flex justify-center">
@@ -478,105 +453,11 @@ function IVF() {
           </div>
         </div>
       </div>
- 
-      {/* How to prepare for IVF? */}
-      <div className="container mx-auto relative h-full  mt-6 lg:mt-14 ">
-        <div className="max-w-7xl mx-auto px-4 pt-8 sm:px-6  lg:px-8 h-full">
-          <h2 className="text-2xl font-semibold text-center lg:hidden">
-            How to prepare for IVF?
-          </h2>
-          <div className="main flex flex-col-reverse md:flex-row">
-            <div className="lg:px-12 py-3  flex items-center pb-8 justify-center lg:items-start ">
-              <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full">
-                  <Image src={PrepareIVF} alt="About IVF" />
-                </div>
-              </div>
-            </div>
- 
-            <div className=" flex items-center ">
-              <div className="p-6">
-                <div className="Title ">
-                  <h2 className="text-2xl font-semibold lg:block hidden">
-                    How to prepare for IVF?
-                  </h2>
-                </div>
-                <div className=" pt-6">
-                  <div className="space-y-4">
-                    {prepare_for_IVF.map((item, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-6 h-6">
-                          <Image src={Tick} alt="Tick" />
-                        </div>
-                        <p className="text-gray-600 flex-1 pt-0.5">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- 
-      {/* Do’s & Don’ts During IVF */}
-      <div className="container mx-auto relative h-full mt-8 pb-7">
-        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full shadow-2xl">
-          <div className="title">
-            <h2 className="text-2xl font-semibold text-center mb-3">
-              Do’s & Don’ts During IVF
-            </h2>
-          </div>
-          <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
-            {/* Do's Section */}
-            <div className="do flex-1">
-              <div className="heading p-5">
-                <h2 className="text-2xl font-semibold text-center text-[#173366]">
-                  Do’s
-                </h2>
-              </div>
-              <div className="pt-6">
-                <div className="space-y-4">
-                  {Do.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-6 h-6">
-                        <Image src={Tick} alt="Tick" />
-                      </div>
-                      <p className="text-gray-600 flex-1 pt-0.5">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            {/* Vertical Divider */}
-            <div className="border-l-2 border-gray-300"></div>{" "}
-            {/* Add this divider */}
-            {/* Don'ts Section */}
-            <div className="dont flex-1">
-              <div className="heading p-5">
-                <h2 className="text-2xl font-semibold text-center text-[#173366]">
-                  Don’ts
-                </h2>
-              </div>
-              <div className="pt-6">
-                <div className="space-y-4">
-                  {Dont.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-6 h-6">
-                        <Image src={Tick} alt="Tick" />
-                      </div>
-                      <p className="text-gray-600 flex-1 pt-0.5">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- 
+
+    
+
       {/* Welcome Your Baby into Your Home */}
-      <div className="container mx-auto mt-6 mb-9">
+      <div className="container mx-auto mt-16 mb-9">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className="relative min-h-[250px] rounded-lg shadow-2xl overflow-hidden"
@@ -588,7 +469,7 @@ function IVF() {
           >
             {/* Overlay to ensure text readability */}
             <div className="absolute inset-0 bg-black/30"></div>
- 
+
             <div className="relative h-full flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12 mt-9">
               <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start text-center lg:text-left mb-6 lg:mb-0">
                 <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl text-white">
@@ -602,7 +483,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* Faq */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
@@ -634,7 +515,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* contact  */}
       <div
         className="py-16 bg-cover bg-center"
@@ -655,7 +536,7 @@ function IVF() {
                   Take the first step towards your parenthood journey.
                 </p>
               </div>
- 
+
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-5">
@@ -679,7 +560,7 @@ function IVF() {
                     <p className="text-black">9874651230</p>
                   </div>
                 </div>
- 
+
                 <div className="flex items-center gap-3">
                   <div className="w-5">
                     <svg
@@ -703,7 +584,7 @@ function IVF() {
                   </div>
                 </div>
               </div>
- 
+
               <div className="space-y-3">
                 <p className="text-sm text-black">Connect with us:</p>
                 <div className="flex gap-3">
@@ -730,13 +611,13 @@ function IVF() {
                 </div>
               </div>
             </div>
- 
+
             {/* Right Column - Form */}
             <div className="rounded-3xl shadow-xl p-8 bg-white z-30 relative">
               <h3 className="text-xl font-semibold text-black mb-8">
                 Ready to Start Your Journey to Meet Your Little One?
               </h3>
- 
+
               <form className="space-y-6">
                 <div>
                   <label
@@ -752,7 +633,7 @@ function IVF() {
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
                   />
                 </div>
- 
+
                 <div>
                   <label
                     htmlFor="mobile"
@@ -767,7 +648,7 @@ function IVF() {
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
                   />
                 </div>
- 
+
                 <div>
                   <label
                     htmlFor="branch"
@@ -804,7 +685,7 @@ function IVF() {
                     </div>
                   </div>
                 </div>
- 
+
                 <button
                   type="submit"
                   className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
@@ -829,7 +710,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* MarqueeComponent */}
       <section>
         <div className="container mx-auto">
@@ -858,5 +739,5 @@ function IVF() {
     </>
   );
 }
- 
-export default IVF;
+
+export default Hysteroscopy;
