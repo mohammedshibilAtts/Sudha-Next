@@ -8,8 +8,8 @@ import SudhaAbout from "@/assets/branch/ambatur/doc.png";
 import { motion } from "framer-motion";
 import Pradeepa from "@/assets/branch/ambatur/pradeepa.png";
 import Hospital from "@/assets/branch/karur/Karur.webp";
-import Lavanya from "@/assets/branch/Kishnagiri/lavanya.webp";
-import Kanimozhi from "@/assets/branch/Kishnagiri/kanimozhi.webp";
+import Lavanya from "@/assets/branch/kishnagiri/lavanya.webp";
+import Kanimozhi from "@/assets/branch/kishnagiri/kanimozhi.webp";
 import ImageGrid from "@/components/imagegrid";
 
 import {

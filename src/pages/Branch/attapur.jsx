@@ -8,7 +8,7 @@ import SudhaAbout from "@/assets/branch/ambatur/doc.png";
 import { motion } from "framer-motion";
 import Pradeepa from "@/assets/branch/ambatur/pradeepa.png";
 import Geethanjali from "@/assets/branch/attapur/Geethanjali.webp";
-import Hospital from "@/assets/branch/Attapur/frontarea.webp";
+import Hospital from "@/assets/branch/attapur/frontarea.webp";
 
 import ImageGrid from "@/components/imagegrid";
 
