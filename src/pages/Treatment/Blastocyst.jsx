@@ -118,17 +118,17 @@ const prepare_for_IVF = [
 ];
 const facilities = [
   {
-    title: "Best IUI doctors in India",
+    title: "High-tech IVF laboratory",
     position: "left-32 top-10",
     rounded: "rounded-br-none",
   },
   {
-    title: "24/7 pharmacy access",
+    title: "World-class embryology equipment",
     position: "left-24 top-44",
     rounded: "rounded-br-none",
   },
   {
-    title: "Round-the-clock care and support,",
+    title: "Sophisticated incubators",
     position: "left-1 top-2/4",
     rounded: "rounded-br-none",
   },
@@ -138,12 +138,12 @@ const facilities = [
     rounded: "rounded-bl-none",
   },
   {
-    title: "Experienced lab technicians",
+    title: "Comprehensive diagnostic tools",
     position: "right-28 top-[140px]  ",
     rounded: "rounded-bl-none",
   },
   {
-    title: "Advanced treatments with personalised care.",
+    title: "Experienced fertility specialists and embryologists in India",
     position: "-right-6  top-[280px] ",
     rounded: "rounded-bl-none",
   },
@@ -266,94 +266,124 @@ function Blastocyst() {
             Blastocyst Culture And Transfer in Sudha Fertility Centre
           </h2>
           <div className="max-w-6xl text-center">
-                <div className="Title">
-                  <h2 className="text-2xl font-semibold hidden lg:block">
-                    Blastocyst Culture And Transfer in Sudha Fertility Centre
-                  </h2>
-                </div>
-                <div className="Accordian mt-4">
-                  <p className="text-[#838383] max-w-5xl mx-auto">
-                    Both IVF and Blastocyst culture treatments may seem similar
-                    but there is a huge difference in the duration that the
-                    embryos are cultured before implantation in the uterus. At
-                    Sudha Fertility Centre, fertility experts follow precise
-                    procedures to enhance the chances of a successful pregnancy.
-                  </p>
-
-                
-                </div>
-              </div>
+            <div className="Title">
+              <h2 className="text-2xl font-semibold hidden lg:block">
+                Blastocyst Culture And Transfer in Sudha Fertility Centre
+              </h2>
+            </div>
+            <div className="Accordian mt-4">
+              <p className="text-[#838383] max-w-5xl mx-auto">
+                Both IVF and Blastocyst culture treatments may seem similar but
+                there is a huge difference in the duration that the embryos are
+                cultured before implantation in the uterus. At Sudha Fertility
+                Centre, fertility experts follow precise procedures to enhance
+                the chances of a successful pregnancy.
+              </p>
+            </div>
+          </div>
           <div className="main flex flex-col md:flex-row mt-8">
             <div className="flex-1 px-4">
               <div>
-              <div className="description ">
-            <p className="text-[#838383] shadow-lg rounded-lg p-2 mt-10 px-4 sm:px-6 md:px-8">
-              Hysteroscopy is done for both diagnostic and surgical procedures.
-              The diagnostic process is done to identify the structural
-              irregularities in the uterus that may cause abnormal bleeding. It
-              may also be used to confirm other test results such as ultrasound
-              or hysterosalpingography (HSG). HSG is done to check whether the
-              fallopian tubes are blocked.
-            </p>
+                <div className="description ">
+                  <div className="mt-6 flex items-center gap-4 p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <span className="text-lg font-semibold bg-black text-white w-10 h-10 p-3 flex items-center justify-center rounded-full">
+                      01
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        Egg retrieval and Fertilization
+                      </h3>
+                      <p className="text-[#838383]">
+                        After ovarian stimulation mature eggs are retrieved and
+                        fertilized with sperm in the lab, creating embryos the
+                        same as the IVF procedure.
+                      </p>
+                    </div>
+                  </div>
 
-            <p className="text-[#838383] mt-3 ">
-              Operative hysteroscopy is done by the best surgeons of Sudha
-              Fertility Centre to treat abnormality diagnosed during diagnostic
-              hysteroscopy. Operative hysteroscopy is not advised to be
-              performed on pregnant women, and when there is an inflammation of
-              the cervix or pelvis. Patients who are allergic to nickel or
-              radioactive contrast dye are also not encouraged to undergo this
-              procedure. It is also not to be performed on those suffering from
-              uterine cancer.
-            </p>
-          </div>
-              </div>
-            </div>
+                  <div className="mt-6 flex items-center gap-4 p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <span className="text-lg font-semibold bg-black text-white w-10 h-10 flex p-3 items-center justify-center rounded-full">
+                      02
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        Extended Culture
+                      </h3>
+                      <p className="text-[#838383]">
+                        The embryos are carefully cultured for 5-6 days,
+                        allowing them to develop into blastocysts with advanced
+                        cell differentiation, which increases their implantation
+                        potential.
+                      </p>
+                    </div>
+                  </div>
 
-            <div className="flex-1 lg:px-12 flex items-center justify-center mt-6 md:mt-0">
-              <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-52 lg:h-96">
-                  <Image
-                    src={Microscope}
-                    alt="IVF in Sudha Fertility Centre"
-                    className="w-full h-full object-cover rounded-lg"
-                  />
+                  <div className="mt-6 flex items-center gap-4 p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <span className="text-lg font-semibold bg-black text-white p-3 w-10 h-10 flex items-center justify-center rounded-full">
+                      03
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        Blastocyst Selection
+                      </h3>
+                      <p className="text-[#838383]">
+                        Embryologists in Sudha Fertility Centre, closely monitor
+                        and select the healthiest blastocyst, which exemplifies
+                        strong growth and viability
+                      </p>
+                    </div>
+                  </div>
+                  <div className="description  p-2 mt-3 px-4 sm:px-6 md:px-8">
+                    <p className="text-[#838383]">
+                      The good-quality embryos that are not transferred are
+                      frozen and stored. Those will be used if the first cycle
+                      is not successful
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="description shadow-lg rounded-lg p-2 mt-10 px-4 sm:px-6 md:px-8">
-            <p className="text-[#838383]">
-              Hysteroscopy is done for both diagnostic and surgical procedures.
-              The diagnostic process is done to identify the structural
-              irregularities in the uterus that may cause abnormal bleeding. It
-              may also be used to confirm other test results such as ultrasound
-              or hysterosalpingography (HSG). HSG is done to check whether the
-              fallopian tubes are blocked.
-            </p>
-
-            <p className="text-[#838383] mt-3">
-              Operative hysteroscopy is done by the best surgeons of Sudha
-              Fertility Centre to treat abnormality diagnosed during diagnostic
-              hysteroscopy. Operative hysteroscopy is not advised to be
-              performed on pregnant women, and when there is an inflammation of
-              the cervix or pelvis. Patients who are allergic to nickel or
-              radioactive contrast dye are also not encouraged to undergo this
-              procedure. It is also not to be performed on those suffering from
-              uterine cancer.
-            </p>
+            <div className="flex-1">
+              <div className=" lg:px-12 flex items-center justify-center mt-6 md:mt-0">
+                <div className="w-full h-full flex justify-center items-center">
+                  <div className="relative w-full h-64 md:h-52 lg:h-96">
+                    <Image
+                      src={Microscope}
+                      alt="IVF in Sudha Fertility Centre"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 flex items-center gap-4 p-4 bg-gray-100 rounded-lg shadow-lg">
+                <span className="text-lg font-semibold bg-black text-white w-10 h-10 p-3 flex items-center justify-center rounded-full">
+                  04
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold">Blastocyst Transfer</h3>
+                  <p className="text-[#838383]">
+                    Using a thin catheter, the selected blastocyst is
+                    transferred into the uterus with ultrasound guidance,
+                    ensuring precise placement by the best fertility specialists
+                    in India.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Why choose us for IVF? */}
+      {/* Why choose us for Blastocyst Culture And Transfer */}
       <div className="container mx-auto mt-6 lg:mt-20 relative h-full ">
         <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
-          <div className="Title lg:hidden text-center">
-            <h2 className="text-2xl font-semibold">Why choose us for IVF?</h2>
+          <div className="Title  text-center">
+            <h2 className="text-2xl font-semibold">
+              Why choose us for Blastocyst Culture And Transfer
+            </h2>
             <h2 className="text-xl mt-2 ">
-              With IVF, Your Little Miracle is Just Around the Corner
+              With blastocyst transfer, each moment brings your baby closer.
             </h2>
           </div>
           <div className="main flex flex-col-reverse md:flex-row">
@@ -367,26 +397,28 @@ function Blastocyst() {
 
             <div className="flex-1 flex items-center px-4">
               <div>
-                <div className="Title hidden lg:block">
-                  <h2 className="text-2xl font-semibold">
-                    Why choose us for IVF?
-                  </h2>
-                  <h2 className="text-xl mt-2 ">
-                    With IVF, Your Little Miracle is Just Around the Corner
-                  </h2>
-                </div>
+               
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    As the best IUI centre in India, Sudha Fertility Centre has
-                    delivered more than thousands of healthy IUI babies holding
-                    a success rate of 85% in IUI treatments. With the best IUI
-                    doctors in India, Sudha Fertility Centre provides you with
-                    the best IUI treatments in India helping you to achieve your
-                    dream of parenthood into reality. Our fertility experts are
-                    dedicated to providing you with personalised care at every
-                    step of your parenthood journey which retains us as the best
-                    IUI hospital in India.
+                    Equipped with the best fertility doctors in India, Sudha
+                    Fertility Centre has delivered 1 lakh+ healthy babies. After
+                    conducting tests, our fertility specialists suggest you a
+                    personalised treatment plan considering your needs and
+                    medical history Blastocyst Culture and Transfer is often
+                    recommended in cases of
                   </p>
+
+                  <ul className="text-[#838383] space-y-2 list-inside list-disc mt-3">
+                    <li>Abnormal bleeding</li>
+                    <li>Too much menstrual bleeding</li>
+                    <li>Post-menopausal bleeding</li>
+                    <li>Recurrent miscarriages</li>
+                    <li>Uterine fibroids and polyps</li>
+                    <li>Causes of infertility</li>
+                    <li>Misplaced IUD</li>
+                    <li>Any uterine abnormalities</li>
+                    <li>Extreme pelvic pain</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -676,21 +708,7 @@ function Blastocyst() {
                       <option value="branch1">Location 1</option>
                       <option value="branch2">Location 2</option>
                     </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <svg
-                        className="w-5 h-5 text-black"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></div>
                   </div>
                 </div>
 
@@ -721,28 +739,24 @@ function Blastocyst() {
 
       {/* MarqueeComponent */}
       <section>
-        <div className="container mx-auto">
-          <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
-            <MarqueeComponent
-              items={Ambattur.gallery}
-              direction="left"
-              speed="fast"
-              className="custom-class"
-            />
-            <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
-              <h2 className="text-2xl font-bold text-center ">
-                Happy Patients, Happy Stories
-              </h2>
-              <Button title="View youtube" icon={<FaYoutube />} />
-            </div>
-            <MarqueeComponent
-              items={Ambattur.gallery}
-              direction="right"
-              speed="fast"
-              className="custom-class"
-            />
-          </div>
+        <MarqueeComponent
+          items={Ambattur.gallery}
+          direction="left"
+          speed="fast"
+          className="custom-class"
+        />
+        <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
+          <h2 className="text-2xl font-bold text-center ">
+            Happy Patients, Happy Stories
+          </h2>
+          <Button title="View youtube" icon={<FaYoutube />} />
         </div>
+        <MarqueeComponent
+          items={Ambattur.gallery}
+          direction="right"
+          speed="fast"
+          className="custom-class"
+        />
       </section>
     </>
   );

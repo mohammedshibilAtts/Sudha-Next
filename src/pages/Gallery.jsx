@@ -1,56 +1,80 @@
-"use client"
-import React, { useState } from "react";
-import Banner from "@/assets/About/Banner.webp";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import ImageLayout from "@/components/ImageLayout/ImageLayout";
+import gallery1 from "../assets/gallery/1.webp";
+import gallery2 from "../assets/gallery/2.webp";
+import gallery3 from "../assets/gallery/3.webp";
+import gallery4 from "../assets/gallery/4.webp";
+import gallery5 from "../assets/gallery/5.webp";
+import gallery6 from "../assets/gallery/6.webp";
+import gallery7 from "../assets/gallery/7.webp";
+import gallery8 from "../assets/gallery/8.webp";
+import gallery9 from "../assets/gallery/9.webp";
+import gallery10 from "../assets/gallery/10.webp";
+import gallery11 from "../assets/gallery/11.webp";
+import gallery12 from "../assets/gallery/12.webp";
+import gallery13 from "../assets/gallery/1.webp";
+import gallery14 from "../assets/gallery/2.webp";
+import gallery15 from "../assets/gallery/3.webp";
+import gallery16 from "../assets/gallery/4.webp";
+import gallery17 from "../assets/gallery/5.webp";
+import gallery18 from "../assets/gallery/6.webp";
+import gallery19 from "../assets/gallery/7.webp";
+import gallery20 from "../assets/gallery/8.webp";
+import gallery21 from "../assets/gallery/9.webp";
+import gallery22 from "../assets/gallery/10.webp";
+import gallery23 from "../assets/gallery/11.webp";
+import gallery24 from "../assets/gallery/12.webp";
+import gallery25 from "../assets/gallery/1.webp";
+import gallery26 from "../assets/gallery/2.webp";
+import gallery27 from "../assets/gallery/3.webp";
+import gallery28 from "../assets/gallery/4.webp";
+import Banner from "@/assets/About/Banner.webp"
 
-// Variants for animations
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
-// Gallery Image Data
-const imageData = [
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg",
-   
+const images = [
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+  gallery7,
+  gallery8,
+  gallery9,
+  gallery10,
+  gallery11,
+  gallery12,
+  gallery13,
+  gallery14,
+  gallery15,
+  gallery16,
+  gallery17,
+  gallery18,
+  gallery19,
+  gallery20,
+  gallery21,
+  gallery22,
+  gallery23,
+  gallery24,
+  gallery25,
+  gallery26,
+  gallery27,
+  gallery28,
 ];
 
-function Gallery() {
-  const [visibleImages, setVisibleImages] = useState(8);
+export default function Gallery() {
+  const [visibleImages, setVisibleImages] = useState(18);
 
   const loadMore = () => {
     setVisibleImages((prev) => prev + 6);
   };
-    console.log(motion)
+
   return (
+
     <>
-      {/* Banner Section */}
-      <div className="relative">
+
+          {/* Banner Section */}
+          <div className="relative">
         <div
           className="absolute inset-0 bg-cover bg-center -top-28 md:-top-36"
           style={{
@@ -98,18 +122,38 @@ function Gallery() {
         </div>
       </div>
 
-     {/* Gallery  */}
-     <div className="container mx-auto mt-7 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto py-5">
-          <h1 className="text-center font-semibold text-2xl md:text-3xl">
-              Gallery            
-          </h1>
-          </div>
-          <ImageLayout/>
-          </div>
+    <div className="flex flex-col items-center">
+      <h2 className="text-2xl font-semibold my-6">Gallery</h2>
 
+      {/* Masonry Layout */}
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
+        {images.slice(0, visibleImages).map((src, index) => (
+          <div key={index} className="mb-4 break-inside-avoid">
+            <Image
+              src={src}
+              alt={`Gallery Image ${index + 1}`}
+              className="w-full h-auto rounded-lg shadow-lg"
+              loading="lazy"
+              width={500}
+              height={300}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Load More Button */}
+      <div className="relative w-full flex justify-center mt-6">
+        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+        {visibleImages < images.length && (
+          <button
+            onClick={loadMore}
+            className="relative z-10 px-6 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700"
+          >
+            Load More
+          </button>
+        )}
+      </div>
+    </div>
     </>
   );
 }
-
-export default Gallery;

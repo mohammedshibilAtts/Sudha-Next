@@ -13,10 +13,11 @@ import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 const topNavItems = ["Helpline No: +91 767-007-6006", "Book Appointment"];
 
 const mainNavItems = [
-  "Home",
-  "About Us",
+  { item: "Home", link: "/" },
+  { item: "About Us", link: "/about" },
   {
     title: "Treatments",
+    link: "treatment",
     dropdownItems: [
       { item: "In Vitro Fertilization", link: "/in-vitro-fertilization" },
       { item: "Intrauterine Insemination", link: "/intrauterine-insemination" },
@@ -29,8 +30,8 @@ const mainNavItems = [
         item: "Blastocyst Culture And Transfer",
         link: "/blastocyst-culture-and-transfer",
       },
-      { item: "Laser Assisted Hatching", link: "/laser-assisted-hatching" },
-      { item: "laparoscopy", link: "/laparoscopy" },
+      // { item: "Laser Assisted Hatching", link: "/laser-assisted-hatching" },
+      // { item: "laparoscopy", link: "/laparoscopy" },
       {
         item: "Assisted Reproduction Treatments",
         link: "/assisted-reproduction-treatments",
@@ -39,7 +40,7 @@ const mainNavItems = [
       { item: "Male Infertility", link: "/male-infertility" },
     ],
   },
-  "Blogs",
+  // "Blogs",
   {
     title: "Branches",
     states: [
@@ -60,13 +61,21 @@ const mainNavItems = [
           { item: "Tirunelveli", link: "/fertility-centre-in-tirunelveli" },
           { item: "Vellore", link: "/fertility-centre-in-vellore" },
           { item: "Tiruppur", link: "/fertility-centre-in-tiruppur" },
-          { item: "Tiruvannamalai", link: "/fertility-centre-in-tiruvannamalai" },
-          { item: "Ramanathapuram", link: "/fertility-centre-in-ramanathapuram" },
+          {
+            item: "Tiruvannamalai",
+            link: "/fertility-centre-in-tiruvannamalai",
+          },
+          {
+            item: "Ramanathapuram",
+            link: "/fertility-centre-in-ramanathapuram",
+          },
         ],
       },
       {
         name: "karnataka",
-        branches: [{ item: "Bengaluru ", link: "/fertility-centre-in-bengaluru" }],
+        branches: [
+          { item: "Bengaluru ", link: "/fertility-centre-in-bengaluru" },
+        ],
       },
       {
         name: "Telangana",
@@ -77,13 +86,15 @@ const mainNavItems = [
       },
       {
         name: "Andhra Pradesh",
-        branches: [{ item: "Vijayawada ",link:"/fertility-centre-in-Vijayawada" }],
+        branches: [
+          { item: "Vijayawada ", link: "/fertility-centre-in-Vijayawada" },
+        ],
       },
     ],
   },
-  "Gallery",
-  "International Patients",
-  "Contact Us",
+  { item: "Gallery", link: "/gallery" },
+  { item: "International Patients", link: "/international" },
+  { item: "Contact Us", link: "/contact" },
 ];
 
 function Navbar() {
@@ -244,13 +255,13 @@ function Navbar() {
                   {mainNavItems.map((item, index) => (
                     <div key={index} className="border-b border-gray-200">
                       {/* Render simple string items (e.g., "Home", "About Us", "Blogs", etc.) */}
-                      {typeof item === "string" ? (
+                      {typeof item.item === "string" ? (
                         <Link
-                          href="/"
+                          href={item.link}
                           className="block py-4 text-gray-800 hover:text-blue-600 text-lg"
                           onClick={toggleMobileMenu}
                         >
-                          {item}
+                          {item.item}
                         </Link>
                       ) : (
                         // Render items with a title and dropdown (Treatments and Branches)
@@ -362,19 +373,28 @@ function Navbar() {
                 >
                   <div
                     className={`hover:text-[#FFC65C] xl:ps-8 transition-colors duration-300 cursor-pointer text-md flex items-center gap-1
-                    ${activeDropdown === index ? "text-[#FFC65C]" : ""}`}
+    ${activeDropdown === index ? "text-[#FFC65C]" : ""}`}
                   >
-                    {typeof item === "string" ? item : item.title}
-                    {typeof item === "object" && (
-                      <IoIosArrowDown
-                        className={`transition-transform duration-300 
-                      ${
-                        activeDropdown === index
-                          ? "rotate-180 text-[#FFC65C]"
-                          : ""
-                      }`}
-                      />
+                    {typeof item.item === "string" ? (
+                      <Link href={item.link}>{item.item}</Link>
+                    ) : (
+                      item.title
                     )}
+
+
+                    {/* Check for dropdownItems and states being present and correct */}
+                    {(typeof item.dropdownItems === "object" &&
+                      item.dropdownItems !== null) ||
+                    (typeof item.states === "object" &&
+                      item.states !== null) ? (
+                      <IoIosArrowDown
+                        className={`transition-transform duration-300 ${
+                          activeDropdown === index
+                            ? "rotate-180 text-[#FFC65C]"
+                            : ""
+                        }`}
+                      />
+                    ) : null}
                   </div>
 
                   {/* Dropdown for Treatments */}

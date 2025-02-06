@@ -1,6 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import Banner from "@/assets/Treatments/IVF/Banner.webp";
+import React from "react";
+import Banner from "@/assets/Treatments/laparoscopy/Banner.webp";
+import { MarqueeComponent } from "@/components/marqueeSlider";
+import Button from "@/components/button/button";
 import About from "@/assets/Treatments/IVF/About.webp";
 import Microscope from "@/assets/Treatments/IVF/microscope.webp";
 import WhyChoose from "@/assets/Treatments/IVF/WhyChoose.webp";
@@ -8,7 +9,6 @@ import ChooseIVF from "@/assets/Treatments/IVF/ChooseIVF.webp";
 import Tick from "@/assets/Treatments/IVF/Tick.svg";
 import Facilities from "@/assets/Treatments/IVF/Facilities.webp";
 import PrepareIVF from "@/assets/Treatments/IVF/PrepareIVF.webp";
-import Button from "@/components/button/button";
 import Image from "next/image";
 import FAQItem from "@/components/accordion";
 import SubBanner from "@/assets/contact-us/SubBanner.webp";
@@ -18,65 +18,40 @@ import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
 import x from "@/assets/Home/x.svg";
 import fb from "@/assets/Home/fb.svg";
-import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
-
-
-const facilities = [
-  {
-    title: "Advanced hysteroscopy technology suite.",
-    position: "left-32 top-10",
-    rounded: "rounded-br-none",
-  },
-  {
-    title: "High-resolution imaging equipment",
-    position: "left-24 top-44",
-    rounded: "rounded-br-none",
-  },
-  {
-    title: "Dedicated rooms for pre- and post-procedure resting.",
-    position: "left-1 top-2/4",
-    rounded: "rounded-br-none",
-  },
-  {
-    title: "Fully-equipped operating rooms.",
-    position: "right-32 top-[70px] ",
-    rounded: "rounded-bl-none",
-  },
-  {
-    title: "Hygienic environment.",
-    position: "right-36 top-[140px]  ",
-    rounded: "rounded-bl-none",
-  },
-  {
-    title: "Advanced treatments with personalised care.",
-    position: "-right-6  top-[280px] ",
-    rounded: "rounded-bl-none",
-  },
-];
-
-
-function Hysteroscopy() {
-  const [visibleCount, setVisibleCount] = useState(5);
-  const [openIndex, setOpenIndex] = useState(0);
-  const [faqIndex, setFaqIndex] = useState(0);
-  const [showAll, setShowAll] = useState(false);
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const toggleFAQ = (index) => {
-    setFaqIndex(faqIndex === index ? null : index);
-  };
-  const toggleViewMore = () => {
-    if (showAll) {
-      setVisibleCount(5); // Reset to initial count when showing less
-      setShowAll(false); // Properly toggle state
-    } else {
-      setVisibleCount(Ambattur.faqs.length); // Show all FAQs
-      setShowAll(true);
-    }
-  };
+function Laparoscopy() {
+  const facilities = [
+    {
+      title: "World-class laparoscopic surgical equipment",
+      position: "left-32 top-10",
+      rounded: "rounded-br-none",
+    },
+    {
+      title: "Fully-equipped operating rooms",
+      position: "left-24 top-44",
+      rounded: "rounded-br-none",
+    },
+    {
+      title: "Dedicated rooms for pre- and post-procedure resting",
+      position: "left-1 top-2/4",
+      rounded: "rounded-br-none",
+    },
+    {
+      title: "Round-the-clock emergency medical support",
+      position: "right-32 top-[70px] ",
+      rounded: "rounded-bl-none",
+    },
+    {
+      title: "Hygienic environment",
+      position: "right-36 top-[140px]  ",
+      rounded: "rounded-bl-none",
+    },
+    {
+      title: "State-of-the-Art Ultrasound Technology",
+      position: "-right-6  top-[280px] ",
+      rounded: "rounded-bl-none",
+    },
+  ];
 
   return (
     <>
@@ -98,10 +73,10 @@ function Hysteroscopy() {
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
               <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                Find hope and healing through precision.
+                Embrace the power of precision for a healthier tomorrow.
               </h3>
               <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
-                Hysteroscopy
+                Laparoscopy
               </h1>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
@@ -111,11 +86,11 @@ function Hysteroscopy() {
         </div>
       </div>
 
-      {/* About About Hysteroscopy */}
+      {/* AboutAbout Laparoscopy */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-2xl font-semibold flex justify-center text-center lg:hidden">
-            About Hysteroscopy
+            About Laparoscopy
           </h2>
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
@@ -130,24 +105,21 @@ function Hysteroscopy() {
               <div>
                 <div className="Title">
                   <h2 className="text-2xl font-semibold hidden lg:block">
-                    About Hysteroscopy
+                    About Laparoscopy
                   </h2>
                 </div>
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    Hysteroscopy is a diagnostic procedure that is performed to
-                    examine and identify the issues and complications inside the
-                    uterus and cervix. Hysteroscopy is performed using a tool
-                    called a hysteroscope, a thin, lighted tube. This will be
-                    inserted through a woman’s vagina by the surgical experts to
-                    diagnose the problems. This process is usually undergone for
-                    both surgical and diagnostic purposes.
-                  </p>
-                  <p className="mt-2">
-                    The fertility specialists suggest performing hysteroscopy
-                    for patients who have a history of multiple unsuccessful IVF
-                    attempts to identify the problem and assess if the patient’s
-                    uterus is fit for childbearing.
+                    Laparoscopy is a minimally invasive procedure performed to
+                    examine the stomach or pelvis. In this process, a thin
+                    lighted tube with a video camera is inserted with a tiny
+                    incision into your belly. In fertility treatments,
+                    laparoscopy allows to diagnose the fertility problems that
+                    are not identified in other tests. Issues like endometriosis
+                    and pelvic adhesions can be detected only with the help of
+                    surgical observance, done through laparoscopy. It also takes
+                    very little time to recover, unlike traditional open
+                    surgical procedures.
                   </p>
                 </div>
                 <div className="mt-5">
@@ -159,39 +131,60 @@ function Hysteroscopy() {
         </div>
       </div>
 
-      {/* Hysteroscopy in Sudha Fertility Centre */}
+      {/*  Laparoscopy in Sudha Fertility Centre */}
       <div className="container mx-auto relative h-full mt-6 lg:mt-20">
         <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-2xl font-semibold flex justify-center text-center mt-14 lg:hidden">
-            Hysteroscopy in Sudha Fertility Centre
+            Laparoscopy in Sudha Fertility Centre
           </h2>
           <div className="main flex flex-col md:flex-row">
             <div className="flex-1 px-4">
               <div>
                 <div className="Title">
                   <h2 className="text-2xl font-semibold hidden lg:block">
-                    Hysteroscopy in Sudha Fertility Centre
+                    Laparoscopy in Sudha Fertility Centre
                   </h2>
                 </div>
                 <div className="Accordian mt-4">
                   <p className="text-[#838383]">
-                    Sudha Fertility Centre is equipped with the best fertility
-                    doctors in India, who are determined to help you in your
-                    journey towards parenthood. Our fertility experts suggest
-                    performing hysteroscopy under the following circumstances.
+                    A laparoscopy is performed under general anesthetic, so the
+                    patient will be asleep during the procedure and will not
+                    feel any pain. Sudha Fertility Centre is well equipped with
+                    experienced laparoscopic surgeons to perform this procedure
                   </p>
 
                   <ul className="text-[#838383] space-y-2 list-inside list-disc mt-3">
-                    <li>Abnormal bleeding</li>
-                    <li>Too much menstrual bleeding</li>
-                    <li>Post-menopausal bleeding</li>
-                    <li>Recurrent miscarriages</li>
-                    <li>Uterine fibroids and polyps</li>
-                    <li>Causes of infertility</li>
-                    <li>Misplaced IUD</li>
-                    <li>Any uterine abnormalities</li>
-                    <li>Extreme pelvic pain</li>
+                    <li>
+                      The surgeon will make a small cut near the belly button of
+                      the patient
+                    </li>
+                    <li>
+                      Air will be pumped into the tummy through the cut making
+                      it easier for the surgeons to examine the inside of the
+                      tummy
+                    </li>
+                    <li>
+                      A laparoscopy which is thin and flexible with a camera
+                      inside will be inserted into the cut to make the inside of
+                      the tummy visible on screen.{" "}
+                    </li>
+                    <li>
+                      If the patient requires surgery, the surgeon may need to
+                      make more small cuts to insert surgical tools
+                    </li>
+                    <li>
+                      After the surgery, the tools and most of the gas will be
+                      removed and the incisions will be closed with stitches or
+                      surgical tape
+                    </li>
                   </ul>
+
+                  <p className="text-[#838383] mt-5">
+                    Mostly after laparoscopy surgery, the patient can go home
+                    the same day. The surgeons will advise for discharge after
+                    monitoring the breathing, heart rates, and prolonged
+                    bleeding.
+                  </p>
                 </div>
               </div>
             </div>
@@ -208,41 +201,19 @@ function Hysteroscopy() {
               </div>
             </div>
           </div>
-
-          <div className="description shadow-lg rounded-lg p-2 mt-10 px-4 sm:px-6 md:px-8">
-            <p className="text-[#838383]">
-              Hysteroscopy is done for both diagnostic and surgical procedures.
-              The diagnostic process is done to identify the structural
-              irregularities in the uterus that may cause abnormal bleeding. It
-              may also be used to confirm other test results such as ultrasound
-              or hysterosalpingography (HSG). HSG is done to check whether the
-              fallopian tubes are blocked.
-            </p>
-
-            <p className="text-[#838383] mt-3">
-              Operative hysteroscopy is done by the best surgeons of Sudha
-              Fertility Centre to treat abnormality diagnosed during diagnostic
-              hysteroscopy. Operative hysteroscopy is not advised to be
-              performed on pregnant women, and when there is an inflammation of
-              the cervix or pelvis. Patients who are allergic to nickel or
-              radioactive contrast dye are also not encouraged to undergo this
-              procedure. It is also not to be performed on those suffering from
-              uterine cancer.
-            </p>
-          </div>
         </div>
       </div>
 
-      {/*  Why choose us for Hysteroscopy?  */}
+      {/*  Why choose us for Laparoscopy?  */}
       <div className="container mx-auto mt-6  relative h-full ">
         <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
           <div className="Title lg:hidden text-center">
             <h2 className="text-2xl font-semibold">
               {" "}
-              Why choose us for Hysteroscopy?{" "}
+              Why choose us for Laparoscopy?{" "}
             </h2>
             <h2 className="text-xl mt-2 ">
-              Uncover the hope for a healthier generation with Hysteroscopy.
+              Where hope meets expertise—experience the promise of laparoscopy
             </h2>
           </div>
           <div className="main flex flex-col-reverse md:flex-row">
@@ -258,26 +229,40 @@ function Hysteroscopy() {
               <div>
                 <div className="Title hidden lg:block">
                   <h2 className="text-2xl font-semibold">
-                    Why choose us for Hysteroscopy?
+                    Why choose us for Laparoscopy?
                   </h2>
                   <h2 className="text-xl mt-2 ">
-                    Uncover the hope for a healthier generation with
-                    Hysteroscopy.
+                    Where hope meets expertise—experience the promise of
+                    laparoscopy
                   </h2>
                 </div>
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    As the best fertility centre in India, Sudha Fertility
-                    Centre has performed more than thousands of successful
-                    hysteroscopies with the best fertility doctors in India.
-                    Hysteroscopy has helped thousands of couples to identify the
-                    root cause of infertility and help them achieve their dream
-                    of parenthood in reality. Unlike other, more invasive
-                    gynecological procedures, hysteroscopy offers a quick
-                    recovery time, minimal discomfort, and a detailed view of
-                    the uterine cavity, allowing our specialists to diagnose and
-                    address issues with precision and care. Every step we take
-                    is dedicated to helping you on your journey to parenthood.
+                    Being the best fertility hospital in India, Sudha Fertility
+                    Centre has performed 1 lakh+ successful laparoscopies with
+                    the best surgeons in India. With laparoscopy, our fertility
+                    doctors have identified the fertility challenges and helped
+                    many couples achieve their dream of parenthood into reality.
+                    With the best surgeons, we perform painless laparoscopies,
+                    offering
+                  </p>
+                </div>
+
+                <ul className="text-[#838383] space-y-2 list-inside list-disc mt-3">
+                  <li>Minimal scarring</li>
+                  <li>Shorter recovery time</li>
+                  <li>Precise Diagnosis</li>
+                  <li>
+                    Faster fertility treatments to increase the chances of
+                    conception
+                  </li>
+                </ul>
+
+                <div className="description mt-4 text-[#838383]">
+                  <p>
+                    At Sudha Fertility Centre, we combine advanced technology
+                    with compassionate care to help you on your path to
+                    parenthood.
                   </p>
                 </div>
               </div>
@@ -383,8 +368,6 @@ function Hysteroscopy() {
           </div>
         </div>
       </div>
-
-     
 
       {/* contact  */}
       <div
@@ -583,8 +566,7 @@ function Hysteroscopy() {
 
       {/* MarqueeComponent */}
       <section>
-        <div className="container mx-auto">
-          <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
+        
             <MarqueeComponent
               items={Ambattur.gallery}
               direction="left"
@@ -603,11 +585,10 @@ function Hysteroscopy() {
               speed="fast"
               className="custom-class"
             />
-          </div>
-        </div>
+         
       </section>
     </>
   );
 }
 
-export default Hysteroscopy;
+export default Laparoscopy;

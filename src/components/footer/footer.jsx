@@ -13,36 +13,35 @@ import whatsapp from "@/assets/footer/whatsapp.svg";
 import phone from "@/assets/footer/phone.svg";
 import Link from "next/link";
 
-
-const branches =[
-  {title:"Ambattur  ",link:""},
-  {title:"Attapur",link:""},
-  {title:"Bengaluru",link:""},
-  {title:"Chennai",link:""},
-  {title:"Coimbatore",link:""},
-  {title:"Erode",link:""},
-  {title:"Dindigul",link:""},
-  {title:"Hyderabad",link:""},
-  {title:"Karur",link:""},
-  {title:"Krishnagiri",link:""},
-  {title:"Madurai",link:""},
-  {title:"Nagercoil",link:""},
-  {title:"Puducherry",link:""},
-  {title:"Ramanathapuram",link:""},
-  {title:"Salem",link:""},
-  {title:"Tiruvannamalai",link:""},
-  {title:"Trichy",link:""},
-  {title:"Thanjavur",link:""},
-  {title:"Tiruppur",link:""},
-  {title:"Theni",link:""},
-  {title:"Tirunelveli",link:""},
-  {title:"Vellore",link:""},
-  {title:"Vijayawada",link:""},
-]
+const branches = [
+  { title: "Ambattur  ", link: "" },
+  { title: "Attapur", link: "" },
+  { title: "Bengaluru", link: "" },
+  { title: "Chennai", link: "" },
+  { title: "Coimbatore", link: "" },
+  { title: "Erode", link: "" },
+  { title: "Dindigul", link: "" },
+  { title: "Hyderabad", link: "" },
+  { title: "Karur", link: "" },
+  { title: "Krishnagiri", link: "" },
+  { title: "Madurai", link: "" },
+  { title: "Nagercoil", link: "" },
+  { title: "Puducherry", link: "" },
+  { title: "Ramanathapuram", link: "" },
+  { title: "Salem", link: "" },
+  { title: "Tiruvannamalai", link: "" },
+  { title: "Trichy", link: "" },
+  { title: "Thanjavur", link: "" },
+  { title: "Tiruppur", link: "" },
+  { title: "Theni", link: "" },
+  { title: "Tirunelveli", link: "" },
+  { title: "Vellore", link: "" },
+  { title: "Vijayawada", link: "" },
+];
 
 export default function Footer() {
   return (
-    <footer className="container mx-auto relative h-full ">
+    <footer className="container mx-auto relative h-full">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
         {/* Branches Section */}
         <div>
@@ -50,11 +49,11 @@ export default function Footer() {
             Our Branches
           </h3>
           <div className="flex flex-wrap gap-4 mt-2 text-sm md:text-base text-gray-600">
-            {branches.map((item,index) => (
+            {branches.map((item, index) => (
               <Link href={item.link} key={index}>
-              <p className="hover:text-[#FFC65C] transition-colors duration-300 cursor-pointer">
-                {item.title} <span className="ms-3">|</span>
-              </p>
+                <p className="hover:text-[#FFC65C] transition-colors duration-300 cursor-pointer">
+                  {item.title} <span className="ms-3">|</span>
+                </p>
               </Link>
             ))}
           </div>
@@ -63,14 +62,14 @@ export default function Footer() {
         <div className="border-b border-gray-300 my-6"></div>
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Social Links */}
           <div className="space-y-4">
             <Image src={Logo} alt="Sudha Fertility Centre" width={200} />
             <p className="text-gray-600 text-sm md:text-base">
               As a leading Fertility hospital in India, we provide world-class
               treatments with the best fertility specialists in a supportive
-              environment. Let’s make your dream come true and welcome your
+              environment. Let's make your dream come true and welcome your
               little one.
             </p>
             <button className="mt-4 px-6 py-3 bg-blue-600 text-white text-sm rounded-md flex items-center justify-center gap-2 hover:bg-blue-700 transition">
@@ -123,15 +122,15 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-800 text-lg md:text-xl">
               Contact Us
             </h3>
-            <button className="mt-2 px-6 py-3  text-gray-800 text-sm rounded-full border border-[#000000] transition">
+            <button className="mt-2 px-6 py-3 text-gray-800 text-sm rounded-full border border-[#000000] transition">
               Contact Us →
             </button>
             <div className="flex items-center gap-2 mt-4 text-gray-700">
-              <Image src={whatsapp} alt="whatsapp"/>
+              <Image src={whatsapp} alt="whatsapp" />
               <span className="text-sm md:text-base">Chat on Whatsapp</span>
             </div>
             <div className="flex items-center gap-2 mt-2 text-gray-700">
-              <Image src={phone}  alt="phone"/>
+              <Image src={phone} alt="phone" />
               <span className="text-sm md:text-base">+91 767-007-6006</span>
             </div>
           </div>

@@ -19,27 +19,51 @@ import Mission from "@/assets/About/mission.svg";
 import ManagementCards from "@/components/MangemntCard/ManagementCard";
 import TimelineTabs from "@/components/TimelineTab/TimeLineTab";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import {Ambattur } from "@/middleware/imagesroute";
 import { FaYoutube } from "react-icons/fa";
+import { Ambattur } from "@/middleware/imagesroute";
+import Thumbnail from "@/assets/About/dhanabagyam-thumbnail.png";
 const cardData = [
   {
-    headLine: "Driven By the Happiness Of Thousands of Families",
+    headLine: "Four Decades of Compassionate Care in Parenthood",
     Image: Founder,
-    subHead: "Experiencing Parenthood Is No More A Dream!",
+    subHead: "",
     description: {
-      title: "Four Decades of Compassionate Care in Parenthood.",
+      title: "",
       content:
-        "With 40+ years of excellence in fertility and child care, Sudha Fertility Centre is known as the best fertility centre in India. With an empathetic mission, Sudha was inaugurated in Erode in 1995 to help childless couples experience the joy of parenting. Today, we take the honour of having 22+ branches across South India and Sri Lanka. We offer comprehensive care with no compromise in quality from metropolitan cities to rural areas. Let us help you overcome your emotional challenges and guide you through your parenthood journey.",
+        "With 40+ years of excellence in fertility and childcare, Sudha Fertility Centre is known as the best fertility centre in India. With an empathetic mission, Sudha was inaugurated in Erode in 1995 to help childless couples experience the joy of parenting. Today, we take the honor of having 22+ branches across South India, Bangladesh, and Sri Lanka. We offer comprehensive care with no compromise in quality from metropolitan cities to rural areas. Let us help you overcome your emotional challenges and guide you through your parenthood journey. ",
     },
   },
   {
-    headLine: "Test Data",
+    headLine: "Being the Best by Providing the Best ",
     Image: Tab1,
-    subHead: "Experiencing Test Data",
+    subHead: "",
     description: {
-      title: "Four Decades of Compassionate Care in Parenthood.",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sequi earum quia quos quod dolore molestiae, temporibus incidunt reprehenderit consectetur doloribus, dolorem quam sed exercitationem hic! Dicta tenetur a laudantium?",
+      title: "",
+      content: `
+      As the best fertility hospital in India, Sudha Fertility Centre is equipped with the best, from equipment to experts, with the intention to provide the best treatments to help you overcome your fertility challenges and make your dream of parenthood into reality.
+    `,
+      list: [
+        "World-class facilities",
+        "Best fertility doctors",
+        "IVF specialists",
+        "IUI doctors",
+        "State-of-the-art technologies",
+        "Finest embryologists",
+        "Experienced gynecologists",
+        "Meticulous surgeons",
+      ],
+    },
+  },
+  {
+    headLine: " Inspired by Empathy, Driven by Purpose: ",
+    Image: Tab1,
+    subHead: "",
+    description: {
+      title: "",
+      content: `
+      We are inspired by the mission to help couples bring their parenthood dreams into reality. Our dedication, consistent care, and professionalism helped us remain the best fertility hospital in India. We have delivered 1 lakh+ healthy babies and brought happiness to the lives of thousands of families. Driven by the vision to vanish the stress and tears of couples longing for a baby. 
+    `,
+   
     },
   },
 ];
@@ -202,14 +226,14 @@ function About() {
             <div className="image w-full lg:w-1/2 flex justify-center items-center">
               <motion.div
                 className="w-full  flex justify-center items-center"
-                key={`image-${currentIndex}`}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
+                // key={`image-${currentIndex}`}
+                // initial={{ opacity: 0, x: -20 }}
+                // animate={{ opacity: 1, x: 0 }}
+                // exit={{ opacity: 0, x: -100 }}
+                // transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={cardData[currentIndex].Image}
+                  src={Founder}
                   alt="Founder"
                   className="rounded-xl object-cover w-full h-64 sm:h-80 md:h-96 lg:h-[300px] xl:h-[400px]"
                 />
@@ -253,19 +277,36 @@ function About() {
                 >
                   {cardData[currentIndex].description.title}
                 </motion.h1>
-                <motion.p
-                  className="text-[#838383] mt-2"
-                  key={`description-content-${currentIndex}`} // Make key unique by appending index
+                <motion.div
+                  className="content rounded-xl font-outfit mt-3"
+                  key={`description-content-${currentIndex}`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  {cardData[currentIndex].description.content}
-                </motion.p>
+                  <p className="text-[#838383] mt-2">
+                    {cardData[currentIndex].description.content}
+                  </p>
+                  {cardData[currentIndex].description.list && (
+                    <ul className="list-disc pl-5 mt-2 text-[#838383]">
+                      {cardData[currentIndex].description.list.map(
+                        (item, index) => (
+                          <li key={index}>{item}</li>
+                        )
+                      )}
+                    </ul>
+                  )}
+                </motion.div>
 
                 {/* Navigation */}
-                <div className="navigator flex mt-4 gap-6 justify-center lg:justify-end">
+               
+              </div>
+               
+            </div>
+          </div>
+
+          <div className="navigator flex mt-4 gap-6 justify-center lg:justify-end">
                   <div
                     className="left shadow-xl rounded-full p-3 flex justify-center cursor-pointer"
                     onClick={handlePrev}
@@ -295,9 +336,6 @@ function About() {
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -318,12 +356,7 @@ function About() {
                     Our Mission
                   </h1>
                   <p className="mt-4 max-w-lg">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s .Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s ...
+                  Sudha Fertility Centre is a trusted fertility hospital, committed to providing compassionate and advanced care to individuals and couples on their path to parenthood. As a leading IVF centre, we combine innovation and expertise to make the dream of building a family a reality. With a patient-focused approach, we ensure the highest standard of care in a supportive and nurturing environment. 
                   </p>
                   <div className="button mt-5">
                     <Button title={"Book Your Free Appointment"} />
@@ -343,14 +376,12 @@ function About() {
                           <div className="content">
                             <div className="title">
                               <h1 className="text-xl font-bold text-[#173366]">
-                                Vision
+                                Vision 
                               </h1>
                             </div>
                             <div className="des mt-2">
                               <p className="text-[#838383]">
-                                To support couples with compassionate care and
-                                advanced fertility solutions to achieve their
-                                dream of parenthood
+                              To support couples with compassionate care and advanced fertility solutions to achieve their dream of parenthood. 
                               </p>
                             </div>
                           </div>
@@ -368,14 +399,12 @@ function About() {
                             <div className="content">
                               <div className="title">
                                 <h1 className="text-xl font-bold text-[#173366]">
-                                  Values
+                                Values 
                                 </h1>
                               </div>
                               <div className="des mt-2">
                                 <p className="text-[#838383]">
-                                  Compassion, integrity, innovation, and
-                                  unwavering support in every step of the
-                                  parenthood journey
+                                Compassion, integrity, innovation, and unwavering support in every step of the parenthood journey 
                                 </p>
                               </div>
                             </div>
@@ -395,14 +424,12 @@ function About() {
                             <div className="content">
                               <div className="title">
                                 <h1 className="text-xl font-bold text-[#173366]">
-                                  Mission
+                                Mission 
                                 </h1>
                               </div>
                               <div className="des mt-2">
                                 <p className="text-[#838383]">
-                                  To provide empathetic, personalised care that
-                                  supports couples on their journey to
-                                  parenthood
+                                To provide empathetic, personalized care that supports couples on their journey to parenthood 
                                 </p>
                               </div>
                             </div>
@@ -427,12 +454,54 @@ function About() {
             </h1>
 
             <p className="max-w-5xl flex mx-auto mt-3 text-center justify-center">
-              The Visionaries Powering Your Parenthood Dream
+            The Visionaries Powering Your Parenthood Dream 
             </p>
           </div>
           <ManagementCards />
         </div>
       </div>
+
+
+
+      <div className="container mx-auto p-4  rounded-lg">
+  <h2 className="text-center text-2xl font-bold mb-4">Our Journey</h2>
+  <div className="flex flex-col md:flex-row items-center">
+    <div className="relative w-full md:w-1/2 mb-4 md:mb-0">
+      <Image
+        src={Thumbnail}
+        alt="Story Behind Sudha Fertility Centre"
+        className="w-full h-auto rounded-lg"
+      />
+
+      <div className="absolute inset-0 flex items-center justify-center">
+        <button
+          onClick={() => window.open('https://youtu.be/E6aWzjaivps?si=j_XV57-KpA7QVN7L', '_blank')}
+          className="bg-white p-2 rounded-full shadow-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10 text-red-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 10v4a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div className="w-full md:w-1/2 md:pl-4">
+      <h3 className="text-xl font-semibold mb-2">
+      40 Years of Excellence & Inauguration of New Branches 
+      </h3>
+      <p className="text-gray-600">
+      The journey of Sudha Fertility Centre started with an empathetic mission to help couples achieve their dream of parenthood. The vision of Dr. S. Dhanabagyam, the founder, was shaped by a heart-wrenching and life-changing experience. While performing a postmortem on a woman who had tragically taken her own life due to the immense societal pressure of not having children, Dr. Dhanabagyam was profoundly moved. This sorrowful event sparked her determination to make a difference in the lives of couples facing infertility. It led her to establish the Sudha Fertility Centre. 
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
       {/* Tab  */}
       <div className="container mx-auto relative h-full">
@@ -643,30 +712,30 @@ function About() {
         </div>
       </div>
 
-       {/* MarqueeComponent */}
-       <section>
+      {/* MarqueeComponent */}
+      <section>
         <div className="container mx-auto">
-            <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
-        <MarqueeComponent
-          items={Ambattur.gallery}
-          direction="left"
-          speed="fast"
-          className="custom-class"
-        />
-        <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
-          <h2 className="text-2xl font-bold text-center ">
-            Happy Patients, Happy Stories
-          </h2>
-          <Button title="View youtube" icon={<FaYoutube />} />
-        </div>
-        <MarqueeComponent
-          items={Ambattur.gallery}
-          direction="right"
-          speed="fast"
-          className="custom-class"
-        />
-        </div>
+          <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
+            <MarqueeComponent
+              items={Ambattur.gallery}
+              direction="left"
+              speed="fast"
+              className="custom-class"
+            />
+            <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
+              <h2 className="text-2xl font-bold text-center ">
+                Happy Patients, Happy Stories
+              </h2>
+              <Button title="View youtube" icon={<FaYoutube />} />
+            </div>
+            <MarqueeComponent
+              items={Ambattur.gallery}
+              direction="right"
+              speed="fast"
+              className="custom-class"
+            />
           </div>
+        </div>
       </section>
     </>
   );

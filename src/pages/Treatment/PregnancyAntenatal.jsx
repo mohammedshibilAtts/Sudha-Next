@@ -12,7 +12,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import FAQItem from "@/components/accordion";
 import SubBanner from "@/assets/contact-us/SubBanner.webp";
-import {Ambattur } from "@/middleware/imagesroute";
+import { Ambattur } from "@/middleware/imagesroute";
 import Insta from "@/assets/Home/insta.svg";
 import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
@@ -40,13 +40,68 @@ const IVFData = [
 ];
 
 const FAQ = [
-    {
-    question:"",
+  {
+    question: "When should I start my antenatal visits?",
     answer:
-    ""
-   },
+      "It is recommended to start antenatal visits as soon as you confirm your pregnancy, ideally around 6-8 weeks. Early visits help monitor the health of both mother and baby and address any potential concerns right away. At Sudha Fertility Centre, the best fertility centre in India, we guide you through every step of your pregnancy journey, ensuring you receive the best care and support.",
+  },
+  {
+    question: "What supplements should I take during pregnancy?",
+    answer:
+      "Pregnant women commonly need folic acid, iron, and calcium supplements. It's important to consult your healthcare provider for personalised recommendations. At Sudha Fertility Centre, the best fertility centre in India, we guide expectant mothers on the right supplements and care for a healthy pregnancy.",
+  },
+  {
+    question:
+      "Does Sudha Fertility Centre provide pregnancy services and antenatal care?",
+    answer:
+      "Yes, at Sudha Fertility Centre, we provide all pregnancy services and antenatal care from the beginning to delivery. As the best fertility centre in India, we offer comprehensive pregnancy services, including antenatal care, to ensure a healthy pregnancy and safe delivery.",
+  },
+  {
+    question: "Why should I consider a hospital for pregnancy care?",
+    answer:
+      "A hospital offers specialised care and access to expert doctors, advanced medical equipment, and a safe environment for both mother and baby. With regular monitoring, prenatal screenings, and emergency support, hospitals ensure any complications are addressed promptly. At Sudha Fertility Centre, the best fertility centre in India, we provide comprehensive pregnancy care, from conception to delivery, with personalised attention and expert guidance every step of the way.",
+  },
+  {
+    question: "What is postpartum care and why is it important?",
+    answer:
+      "Postpartum care supports a mother’s recovery after childbirth, addressing physical and emotional needs. Sudha Fertility Centre, the best fertility centre in India, provides essential postpartum services to nurture the health of mother and baby.",
+  },
+  {
+    question: "How do I know when I'm in labor?",
+    answer:
+      "Signs of labor include regular, intense contractions, changes in vaginal discharge, and the breaking of water. If you experience these, contact your healthcare provider. At Sudha Fertility Centre, the best fertility centre in India, we provide support and guidance throughout your pregnancy journey.",
+  },
+  {
+    question: "What are the benefits of normal delivery?",
+    answer:
+      "Normal delivery offers quicker recovery, less risk of infections, and supports the baby’s development. It also contributes to better long-term health for the mother. At Sudha Fertility Centre, the best fertility centre in India, we guide you toward the best possible delivery experience.",
+  },
+  {
+    question: "Is C-section safe?",
+    answer:
+      "C-section is generally safe when performed by experienced doctors. At Sudha Fertility Centre, the best fertility centre in India, we prioritise your safety and well-being, offering expert care and guidance throughout the delivery proces.",
+  },
+  {
+    question: "Can I have a normal delivery in the future after a C-section?",
+    answer:
+      "Yes, many women can have a normal delivery after a C-section, depending on factors like the reason for the previous C-section, the type of incision, and the condition of the uterus. This is known as a Vaginal Birth After Cesarean (VBAC). At Sudha Fertility Centre, the best fertility centre in India, we assess your circumstances and guide you toward the safest and best delivery option for your health and future pregnancies.",
+  },
+  {
+    question: "How can I confirm that I'm pregnant?",
+    answer:
+      "You can confirm pregnancy at home with a pregnancy test kit. Upon receiving a positive result visit your gynecologist. An ultrasound can provide further confirmation. At Sudha Fertility Centre, the best fertility centre in India, we offer comprehensive support and guidance for your pregnancy journey.",
+  },
+  {
+    question: "What are the first signs of pregnancy?",
+    answer:
+      "The first signs of pregnancy may include missed periods, nausea, fatigue, frequent urination, and breast tenderness. Some women also experience light spotting or cramping. At Sudha Fertility Centre, the best fertility centre in India, we provide expert care and support throughout your pregnancy journey.",
+  },
+  {
+    question: "How can I prepare for labor and delivery?",
+    answer:
+      "To prepare for labor and delivery, consider attending childbirth classes, creating a birth plan, practicing relaxation techniques, and ensuring you have all necessary items packed for the hospital. It’s also important to stay healthy and active during pregnancy. At Sudha Fertility Centre, the best fertility centre in India, we guide and support you throughout your pregnancy for safe and smooth delivery.",
+  },
 ];
-
 
 function PregnancyAntenatal() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -66,7 +121,7 @@ function PregnancyAntenatal() {
       setShowAll(false); // Properly toggle state
     } else {
       setVisibleCount(Ambattur.faqs.length); // Show all FAQs
-      setShowAll(true); 
+      setShowAll(true);
     }
   };
 
@@ -102,33 +157,25 @@ function PregnancyAntenatal() {
           </div>
         </div>
       </div>
-      
 
       {/* About pregnancy-and-antenatal-care */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
-        <div className="mt-5 text-center">
-                <div className="Title">
-                  <h2 className="text-2xl font-semibold  ">
-                    About IUI
-                  </h2>
-                </div>
-                <div className="description mt-4 text-[#838383]">
-                  <p>
-                    Intrauterine Insemination (IUI) is a fertility treatment
-                    process in which the sperm is directly injected into the
-                    uterus to help conception. This procedure is also known as
-                    artificial insemination. IUI treatment is affordable and
-                    highly successful for couples with less severe fertility
-                    problems. This process causes less pain and less discomfort.
-                    IUI treatment improves the chances of fertilization as the
-                    sperm is directly placed in the uterus and the number of
-                    sperm reaching the fallopian tubes can be increased.
-                  </p>
-                </div>
-              </div>
+          <div className="mt-5 text-center">
+            <div className="Title">
+              <h2 className="text-2xl font-semibold  ">About IUI</h2>
+            </div>
+            <div className="description mt-4 text-[#838383]">
+              <p>
+                Antenatal care is vital for a healthy parenthood journey,
+                especially for couples who have undergone fertility treatments.
+                Being the best maternity hospital in Tamil Nadu, Sudha Fertility
+                Centre understands the joy and anticipation of parenthood. Our
+                expert team is here to guide you in every step of your journey.
+              </p>
+            </div>
+          </div>
 
-              
           <h2 className="text-2xl font-semibold flex justify-center text-center lg:hidden mt-4">
             About IUI
           </h2>
@@ -150,15 +197,12 @@ function PregnancyAntenatal() {
                 </div>
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    Intrauterine Insemination (IUI) is a fertility treatment
-                    process in which the sperm is directly injected into the
-                    uterus to help conception. This procedure is also known as
-                    artificial insemination. IUI treatment is affordable and
-                    highly successful for couples with less severe fertility
-                    problems. This process causes less pain and less discomfort.
-                    IUI treatment improves the chances of fertilization as the
-                    sperm is directly placed in the uterus and the number of
-                    sperm reaching the fallopian tubes can be increased.
+                    Antenatal care is vital for a healthy parenthood journey,
+                    especially for couples who have undergone fertility
+                    treatments. Being the best maternity hospital in Tamil Nadu,
+                    Sudha Fertility Centre understands the joy and anticipation
+                    of parenthood. Our expert team is here to guide you in every
+                    step of your journey.
                   </p>
                 </div>
               </div>
@@ -171,117 +215,97 @@ function PregnancyAntenatal() {
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full">
           <div className="title ">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-              Website Visitors
+              Personalized Antenatal Care
             </h1>
           </div>
 
           <div className="description">
             <p className="flex mx-auto mt-5 text-[#838383]">
-              Like most website operators, Sudha Fertility Centre collects
-              non-personally-identifying information of the sort that web
-              browsers and servers typically make available, such as the browser
-              type, language preference, referring site, and the date and time
-              of each visitor request. Sudha Fertility Centre’ purpose in
-              collecting non-personally identifying information is to better
-              understand how Sudha Fertility Centre’ visitors use its website.
-              From time to time, Sudha Fertility Centre may release
-              non-personally-identifying information in the aggregate, e.g., by
-              publishing a report on trends in the usage of its website.
+              Pregnancy is a special and unique experience for every woman. We
+              understand your emotions and provide you with the personalised
+              antenatal care of each mother-to-be. We make sure you enjoy your
+              motherhood and have a healthy pregnancy with the best pregnancy
+              care by the top gynecologists in India. It’s important to have
+              regular health check-ups, ultrasound scans, and detailed
+              monitoring of your baby’s growth and development.
             </p>
             <p className="mt-5 text-[#838383]">
-              Sudha Fertility Centre also collects potentially
-              personally-identifying information like Internet Protocol (IP)
-              addresses for logged in users and for users leaving comments on
-              https://www.sudhafertilitycentre.com/ blog posts. Sudha Fertility
-              Centre only discloses logged in user and commenter IP addresses
-              under the same circumstances that it uses and discloses
-              personally-identifying information as described below.
+              You need antenatal care right from the moment your pregnancy is
+              confirmed. We as the best pregnancy hospital in Tamil Nadu provide
+              you with the right care and education on what to expect in the
+              coming months. Our gynecologists will guide you in managing
+              morning sickness and provide nutritional guidance to stay healthy
+              and active safely. We also assist in planning for labour and
+              delivery, so you feel confident and well-prepared.
             </p>
           </div>
         </div>
       </div>
-
-
 
       {/* Nutrition and Lifestyle Guidance */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full">
           <div className="title ">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-              Website Visitors
+              Nutrition and Lifestyle Guidance
             </h1>
           </div>
 
           <div className="description">
             <p className="flex mx-auto mt-5 text-[#838383]">
-              Like most website operators, Sudha Fertility Centre collects
-              non-personally-identifying information of the sort that web
-              browsers and servers typically make available, such as the browser
-              type, language preference, referring site, and the date and time
-              of each visitor request. Sudha Fertility Centre’ purpose in
-              collecting non-personally identifying information is to better
-              understand how Sudha Fertility Centre’ visitors use its website.
-              From time to time, Sudha Fertility Centre may release
-              non-personally-identifying information in the aggregate, e.g., by
-              publishing a report on trends in the usage of its website.
+              Proper nutrition and physical activities are important for a
+              healthy pregnancy and normal delivery. Our nutritionists will
+              provide you with personalised dietary plans to ensure you and your
+              baby receive all the essential nutrients for growth. We also
+              address common concerns, such as managing cravings and avoiding
+              foods that may pose risks. Additionally, we provide lifestyle
+              guidance, including safe exercises to maintain your physical
+              health and techniques to manage stress effectively.
             </p>
-            
           </div>
         </div>
       </div>
-
 
       {/* High-Risk Pregnancy Care */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full">
           <div className="title ">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-              Website Visitors
+              High Risk Pregnancy Care
             </h1>
           </div>
 
           <div className="description">
             <p className="flex mx-auto mt-5 text-[#838383]">
-              Like most website operators, Sudha Fertility Centre collects
-              non-personally-identifying information of the sort that web
-              browsers and servers typically make available, such as the browser
-              type, language preference, referring site, and the date and time
-              of each visitor request. Sudha Fertility Centre’ purpose in
-              collecting non-personally identifying information is to better
-              understand how Sudha Fertility Centre’ visitors use its website.
-              From time to time, Sudha Fertility Centre may release
-              non-personally-identifying information in the aggregate, e.g., by
-              publishing a report on trends in the usage of its website.
+              For a few women pregnancy may include high risk due to underlying
+              health conditions or complications. Our specialists at Sudha
+              Fertility Centre provide expert care and closely monitor
+              pregnancies with advanced diagnostic tools. We provide continuous
+              support to manage risks and ensure the best outcomes for both
+              mother and baby. .
             </p>
-            
           </div>
         </div>
       </div>
-
 
       {/* Emotional and Psychological Support */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full">
           <div className="title ">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-              Website Visitors
+              Emotional and Psychological Support
             </h1>
           </div>
 
           <div className="description">
             <p className="flex mx-auto mt-5 text-[#838383]">
-              Like most website operators, Sudha Fertility Centre collects
-              non-personally-identifying information of the sort that web
-              browsers and servers typically make available, such as the browser
-              type, language preference, referring site, and the date and time
-              of each visitor request. Sudha Fertility Centre’ purpose in
-              collecting non-personally identifying information is to better
-              understand how Sudha Fertility Centre’ visitors use its website.
-              From time to time, Sudha Fertility Centre may release
-              non-personally-identifying information in the aggregate, e.g., by
-              publishing a report on trends in the usage of its website.
+              Pregnancy is a journey filled with both joy and challenges. We’re
+              here to support not just your physical health, but also your
+              emotional and psychological well-being. Our dedicated counselors
+              and support groups are ready to guide you through the emotional
+              complexities of pregnancy, ensuring you feel cared for and
+              understood. .
             </p>
-            
           </div>
         </div>
       </div>
@@ -291,29 +315,56 @@ function PregnancyAntenatal() {
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full">
           <div className="title ">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-              Website Visitors
+              Preparing for a Healthy Delivery
             </h1>
           </div>
 
           <div className="description">
             <p className="flex mx-auto mt-5 text-[#838383]">
-              Like most website operators, Sudha Fertility Centre collects
-              non-personally-identifying information of the sort that web
-              browsers and servers typically make available, such as the browser
-              type, language preference, referring site, and the date and time
-              of each visitor request. Sudha Fertility Centre’ purpose in
-              collecting non-personally identifying information is to better
-              understand how Sudha Fertility Centre’ visitors use its website.
-              From time to time, Sudha Fertility Centre may release
-              non-personally-identifying information in the aggregate, e.g., by
-              publishing a report on trends in the usage of its website.
+              Throughout your pregnancy journey, we are committed to preparing
+              you for a safe and healthy delivery. Our obstetricians explore
+              various birthing options with you and create a birth plan focused
+              on the health and safety of you and your baby.
             </p>
-            
+            <p className="flex mx-auto mt-5 text-[#838383]">
+              At Sudha Fertility Centre, recognised as the best maternity
+              hospital in Tamil Nadu, we offer compassionate and comprehensive
+              antenatal care. Our commitment is to make your pregnancy journey
+              as smooth and joyful as possible, ensuring a memorable and
+              positive experience as you get ready to welcome your baby.
+            </p>
           </div>
         </div>
       </div>
 
-
+      <div className="container mx-auto">
+        <section>
+          <div className=" max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
+            <h2 className="text-2xl font-bold text-center mb-6">
+              Frequently Asked Questions
+            </h2>
+            {FAQ.slice(0, visibleCount).map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={openIndex === index}
+                toggle={() => toggleFAQ(index)}
+              />
+            ))}
+            {FAQ.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
+              <div className="text-center mt-4">
+                <button
+                  className="bg-[#173366] text-white py-2 px-4 rounded-lg hover:bg-[#173366] transition-all"
+                  onClick={toggleViewMore} // Updated onClick handler
+                >
+                  {showAll ? "View Less ←" : "View More →"}
+                </button>
+              </div>
+            )}
+          </div>
+        </section>
+      </div>
     </>
   );
 }
