@@ -21,7 +21,6 @@ import fb from "@/assets/Home/fb.svg";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
 
-
 const FAQ = [
   {
     question: "Which hospital provides the best IUI treatment in Bangalore?",
@@ -85,42 +84,39 @@ const FAQ = [
   },
 ];
 
-
 const facilities = [
   {
-    title: "High-tech IVF laboratory",
+    title: "High-precision laser system.",
     position: "left-32 top-10",
     rounded: "rounded-br-none",
   },
   {
-    title: "World-class embryology equipment",
+    title: "Advanced embryo culture incubator",
     position: "left-24 top-44",
     rounded: "rounded-br-none",
   },
   {
-    title: "Sophisticated incubators",
+    title: "World-class microscopes and micro-manipulation tools",
     position: "left-1 top-2/4",
     rounded: "rounded-br-none",
   },
   {
-    title: "World-class equipments, ",
+    title: "Sophisticated laser control unit. ",
     position: "right-32 top-[70px] ",
     rounded: "rounded-bl-none",
   },
   {
-    title: "Comprehensive diagnostic tools",
+    title: "Comprehensive lab monitoring systems. ",
     position: "right-28 top-[140px]  ",
     rounded: "rounded-bl-none",
   },
   {
-    title: "Experienced fertility specialists and embryologists in India",
-    position: "-right-6  top-[280px] ",
+    title: "High-tech laboratories.  ",
+    position: "right-56  top-[280px] ",
     rounded: "rounded-bl-none",
   },
 ];
-
-
-function Blastocyst() {
+function LaserAssistedHatching() {
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(0);
   const [faqIndex, setFaqIndex] = useState(0);
@@ -141,7 +137,6 @@ function Blastocyst() {
       setShowAll(true);
     }
   };
-
   return (
     <>
       {/* Banner */}
@@ -162,10 +157,11 @@ function Blastocyst() {
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
               <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
-                Blastocyst Culture And Transfer
+                Laser-Assisted Hatching
               </h1>
               <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                Every blastocyst transfer is a step toward your cherished dream
+                Paving the way for your little miracle with innovative
+                solutions.
               </h3>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
@@ -179,7 +175,7 @@ function Blastocyst() {
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-2xl font-semibold flex justify-center text-center lg:hidden">
-            About Blastocyst Culture And Transfer
+            About Laser-Assisted Hatching
           </h2>
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
@@ -194,18 +190,17 @@ function Blastocyst() {
               <div>
                 <div className="Title">
                   <h2 className="text-2xl font-semibold hidden lg:block">
-                    About Blastocyst Culture And Transfer
+                    About Laser-Assisted Hatching
                   </h2>
                 </div>
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    Blastocyst Culture and Transfer is an important process in
-                    IVF that involves the creation of an embryo in a laboratory
-                    for 5-6 days until it reaches the blastocyst stage, an
-                    advanced development phase. This extended culture allows the
-                    selection of the healthiest embryos, increasing the chances
-                    of implantation and successful pregnancy when transferred to
-                    the uterus.
+                    Laser-Assisted Hatching is an advanced technique used in IVF
+                    to help embryos implant more effectively in the uterus. This
+                    procedure involves using a focused laser beam to create a
+                    small hole in the outer protective layer (zona pellucida)
+                    surrounding the embryo. This helps the embryos “hatch” and
+                    facilitates the process of implanting into the uterine wall.
                   </p>
                 </div>
                 <div className="mt-5">
@@ -217,131 +212,110 @@ function Blastocyst() {
         </div>
       </div>
 
-      {/* Hysteroscopy in Sudha Fertility Centre */}
-     <div className="container mx-auto relative h-full mt-6 lg:mt-20">
-           <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
-             <h2 className="text-2xl font-semibold flex justify-center text-center mt-14 lg:hidden">
-               Blastocyst Culture And Transfer in Sudha Fertility Centre
-             </h2>
-             <div className="max-w-6xl text-center">
-               <div className="Title">
-                 <h2 className="text-2xl font-semibold hidden lg:block">
-                   Blastocyst Culture And Transfer in Sudha Fertility Centre
-                 </h2>
-               </div>
-               <div className="Accordian mt-4">
-                 <p className="text-[#838383] max-w-5xl mx-auto">
-                   Both IVF and Blastocyst culture treatments may seem similar but
-                   there is a huge difference in the duration that the embryos are
-                   cultured before implantation in the uterus. At Sudha Fertility
-                   Centre, fertility experts follow precise procedures to enhance
-                   the chances of a successful pregnancy.
-                 </p>
-               </div>
-             </div>
-             <div className="main flex flex-col md:flex-row mt-8">
-               <div className="flex-1 px-4">
-                 <div>
-                   <div className="description ">
-                     <div className="mt-6 flex items-center gap-4   rounded-lg  hover:bg-[#F0F5FF] cursor-pointer p-5">
-                       <span className="text-lg font-semibold bg-[#E7E7E7]  w-10 h-10 p-3 flex items-center justify-center rounded-full">
-                         01
-                       </span>
-                       <div>
-                         <h3 className="text-lg font-semibold">
-                           Egg retrieval and Fertilization
-                         </h3>
-                         <p className="text-[#838383]">
-                           After ovarian stimulation mature eggs are retrieved and
-                           fertilized with sperm in the lab, creating embryos the
-                           same as the IVF procedure.
-                         </p>
-                       </div>
-                     </div>
-   
-                     <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
-                       <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 flex p-3 items-center justify-center rounded-full">
-                         02
-                       </span>
-                       <div>
-                         <h3 className="text-lg font-semibold">
-                           Extended Culture
-                         </h3>
-                         <p className="text-[#838383]">
-                           The embryos are carefully cultured for 5-6 days,
-                           allowing them to develop into blastocysts with advanced
-                           cell differentiation, which increases their implantation
-                           potential.
-                         </p>
-                       </div>
-                     </div>
-   
-                     <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
-                       <span className="text-lg font-semibold bg-[#E7E7E7] p-3 w-10 h-10 flex items-center justify-center rounded-full">
-                         03
-                       </span>
-                       <div>
-                         <h3 className="text-lg font-semibold">
-                           Blastocyst Selection
-                         </h3>
-                         <p className="text-[#838383]">
-                           Embryologists in Sudha Fertility Centre, closely monitor
-                           and select the healthiest blastocyst, which exemplifies
-                           strong growth and viability
-                         </p>
-                       </div>
-                     </div>
-                     <div className="description  p-2 mt-3 px-4 sm:px-6 md:px-8">
-                       <p className="text-[#838383]">
-                         The good-quality embryos that are not transferred are
-                         frozen and stored. Those will be used if the first cycle
-                         is not successful
-                       </p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-   
-               <div className="flex-1">
-                 <div className=" lg:px-12 flex items-center justify-center mt-6 md:mt-0">
-                   <div className="w-full h-full flex justify-center items-center">
-                     <div className="relative w-full h-64 md:h-52 lg:h-96">
-                       <Image
-                         src={Microscope}
-                         alt="IVF in Sudha Fertility Centre"
-                         className="w-full h-full object-cover rounded-lg"
-                       />
-                     </div>
-                   </div>
-                 </div>
-                 <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
-                   <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 p-3 flex items-center justify-center rounded-full">
-                     04
-                   </span>
-                   <div>
-                     <h3 className="text-lg font-semibold">Blastocyst Transfer</h3>
-                     <p className="text-[#838383]">
-                       Using a thin catheter, the selected blastocyst is
-                       transferred into the uterus with ultrasound guidance,
-                       ensuring precise placement by the best fertility specialists
-                       in India.
-                     </p>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
+      {/*  Laser-Assisted Hatching in Sudha Fertility Centre */}
+      <div className="container mx-auto relative h-full mt-6 lg:mt-20">
+        <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
+          <h2 className="text-2xl font-semibold flex justify-center text-center mt-14 lg:hidden">
+            Laser-Assisted Hatching in Sudha Fertility Centre
+          </h2>
+          <div className="max-w-6xl text-center">
+            <div className="Title">
+              <h2 className="text-2xl font-semibold hidden lg:block">
+                Laser-Assisted Hatching in Sudha Fertility Centre
+              </h2>
+            </div>
+            <div className="Accordian mt-4">
+              <p className="text-[#838383] max-w-5xl mx-auto">
+                As the best fertility centre in India, Sudha Fertility Centre is
+                equipped with the best embryologists and fertility specialists
+                in India. With world-class technology, our embryologists undergo
+                the process of laser-assisted hatching with precision and care.
+              </p>
+            </div>
+          </div>
+          <div className="main flex flex-col md:flex-row mt-8">
+            <div className="flex-1 px-4">
+              <div>
+                <div className="description ">
+                  <div className="mt-6 flex items-center gap-4   rounded-lg  hover:bg-[#F0F5FF] cursor-pointer p-5">
+                    <span className="text-lg font-semibold bg-[#E7E7E7]  w-10 h-10 p-3 flex items-center justify-center rounded-full">
+                      01
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">Embryo Culture</h3>
+                      <p className="text-[#838383]">
+                        The embryos are cultured in the lab for a few days after
+                        fertilization.
+                      </p>
+                    </div>
+                  </div>
 
-      {/* Why choose us for Blastocyst Culture And Transfer */}
+                  <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
+                    <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 flex p-3 items-center justify-center rounded-full">
+                      02
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                          Laser Application
+                      </h3>
+                      <p className="text-[#838383]">
+                        Once the embryos reach the blastocyst stage, a laser is
+                        used to create a small hole in the zona pellucida. The
+                        laser is precisely aimed at a single spot to avoid
+                        damaging the embryo.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
+                    <span className="text-lg font-semibold bg-[#E7E7E7] p-3 w-10 h-10 flex items-center justify-center rounded-full">
+                      03
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">Embryo Transfer</h3>
+                      <p className="text-[#838383]">
+                        After the process of laser-assisted hatching, the embryo
+                        is transferred into the woman’s uterus.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="description  p-2 mt-3 px-4 sm:px-6 md:px-8">
+                    <p className="text-[#838383]">
+                      As one of the leading fertility centres in India, we offer
+                      laser-assisted hatching, backed by a team of highly
+                      trained embryologists and fertility experts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-1">
+              <div className=" lg:px-12 flex items-center justify-center mt-6 md:mt-0">
+                <div className="w-full h-full flex justify-center items-center">
+                  <div className="relative w-full h-64 md:h-52 lg:h-96">
+                    <Image
+                      src={Microscope}
+                      alt="IVF in Sudha Fertility Centre"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why choose us for Laser-Assisted Hatching */}
       <div className="container mx-auto mt-6 lg:mt-20 relative h-full ">
         <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
           <div className="Title  text-center">
             <h2 className="text-2xl font-semibold">
-              Why choose us for Blastocyst Culture And Transfer
+              Why choose us for Laser-Assisted Hatching
             </h2>
             <h2 className="text-xl mt-2 ">
-              With blastocyst transfer, each moment brings your baby closer.
+              Hope is reborn with each successful laser-assisted hatching
             </h2>
           </div>
           <div className="main flex flex-col-reverse md:flex-row">
@@ -355,28 +329,32 @@ function Blastocyst() {
 
             <div className="flex-1 flex items-center px-4">
               <div>
-               
                 <div className="description mt-4 text-[#838383]">
                   <p>
-                    Equipped with the best fertility doctors in India, Sudha
-                    Fertility Centre has delivered 1 lakh+ healthy babies. After
-                    conducting tests, our fertility specialists suggest you a
-                    personalised treatment plan considering your needs and
-                    medical history Blastocyst Culture and Transfer is often
-                    recommended in cases of
+                    At Sudha Fertility Centre, we are driven by the mission to
+                    help you overcome your fertility challenges and achieve your
+                    dream of parenthood into reality. Our experienced fertility
+                    specialists and embryologists suggest laser-assisted
+                    hatching under the following circumstances:
                   </p>
 
                   <ul className="text-[#838383] space-y-2 list-inside list-disc mt-3">
-                    <li>Abnormal bleeding</li>
-                    <li>Too much menstrual bleeding</li>
-                    <li>Post-menopausal bleeding</li>
-                    <li>Recurrent miscarriages</li>
-                    <li>Uterine fibroids and polyps</li>
-                    <li>Causes of infertility</li>
-                    <li>Misplaced IUD</li>
-                    <li>Any uterine abnormalities</li>
-                    <li>Extreme pelvic pain</li>
+                    <li>Advanced maternal age (above 37 years). </li>
+                    <li>Thick or abnormal eggshell </li>
+                    <li>Poor quality or slow-developing embryos </li>
+                    <li>Patient with 2 or more previous failed IVF cycles. </li>
+                    <li>Increased follicle-stimulating hormone (FSH)</li>
                   </ul>
+
+                  <p className="description mt-4 text-[#838383]">
+                    This process reduces the risk of damaging the embryo and may
+                    result in higher pregnancy success rates. If you’re over 37
+                    and planning for pregnancy this might be a perfect option
+                    for a successful pregnancy on the first attempt. With a
+                    patient-centric approach and cutting-edge technology, Sudha
+                    Fertility Centre continues to help countless families
+                    achieve their dream of parenthood.
+                  </p>
                 </div>
               </div>
             </div>
@@ -720,4 +698,4 @@ function Blastocyst() {
   );
 }
 
-export default Blastocyst;
+export default LaserAssistedHatching;

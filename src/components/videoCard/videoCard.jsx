@@ -92,7 +92,6 @@ export default function VideoCarousel() {
 
   return (
     <div className="relative w-full max-w-5xl mx-auto p-4">
-      <h2 className="text-center text-2xl font-bold mb-4">Video Testimonials</h2>
       <div className="flex gap-4 overflow-hidden">
         {videos.slice(currentIndex, currentIndex + videosPerPage).map((video, index) => (
           <div key={index} className="relative bg-white shadow-lg rounded-lg overflow-hidden w-1/3">
