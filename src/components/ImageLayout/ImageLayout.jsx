@@ -6,6 +6,13 @@ import Button from "../button/button";
 import { IoMdRocket } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
 
+import one from "@/assets/Gallery/1.webp"
+import two from "@/assets/Gallery/2.webp"
+import three from "@/assets/Gallery/3.webp"
+import four from "@/assets/Gallery/4.webp"
+import five from "@/assets/Gallery/5.webp"
+import six from "@/assets/Gallery/6.webp"
+
 function ImageLayout() {
   const [showMore, setShowMore] = useState(false);
   // Motion animation settings
@@ -23,7 +30,7 @@ function ImageLayout() {
 
   return (
     <div className="py-6">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid  grid-cols-2 md:grid-cols-4 gap-4">
         <div className="grid gap-4">
           <motion.div
             variants={imageVariants}

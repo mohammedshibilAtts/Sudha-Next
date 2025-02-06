@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
@@ -67,9 +68,11 @@ function ImageGrid({ images }) {
             height={200}
             objectFit="cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+         <Link href={"/gallery"}>
+         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
             <span className="text-white font-bold">View More</span>
           </div>
+         </Link>
         </div>
       </div>
     </div>

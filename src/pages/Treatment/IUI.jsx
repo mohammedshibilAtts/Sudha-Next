@@ -12,7 +12,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import FAQItem from "@/components/accordion";
 import SubBanner from "@/assets/contact-us/SubBanner.webp";
-import Ambattur from "@/middleware/imagesroute";
+
 import Insta from "@/assets/Home/insta.svg";
 import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
@@ -20,6 +20,7 @@ import x from "@/assets/Home/x.svg";
 import fb from "@/assets/Home/fb.svg";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
+import { Ambattur } from "@/middleware/imagesroute";
 
 const IVFData = [
   {
@@ -203,12 +204,12 @@ function IUI() {
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
-              <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
-                In Vitro Fertilization (IVF)
-              </h1>
               <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                “Join the 1,50,00+ Families who have Overcome Infertility”
+                Little you is on the way, hold on to hope
               </h3>
+              <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
+                Intrauterine insemination (IUI)
+              </h1>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
               </div>
@@ -265,15 +266,23 @@ function IUI() {
       <div className="container mx-auto relative h-full mt-6 lg:mt-20">
         <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-2xl font-semibold  flex justify-center text-center lg:hidden">
-            IVF in Sudha Fertility Centre
+            IUI in Sudha Fertility Centre
           </h2>
           <div className="main flex flex-col md:flex-row">
             <div className="flex-1  px-4">
               <div>
                 <div className="Title">
                   <h2 className="text-2xl font-semibold hidden lg:block">
-                    IVF in Sudha Fertility Centre
+                    IUI in Sudha Fertility Centre
                   </h2>
+                </div>
+                <div className="description mt-4 text-[#838383]">
+                  <p>
+                    The IUI doctors in Sudha Fertility Centre examine you and
+                    recommend you the right lifestyle changes, nutrients, and
+                    proper time to start the IUI treatment for a positive
+                    result. The IUI procedures involve the following steps.
+                  </p>
                 </div>
                 <div className="Accordian mt-4 ">
                   {IVFData.map((item, index) => (
@@ -304,10 +313,7 @@ function IUI() {
       <div className="container mx-auto mt-6 lg:mt-20 relative h-full bg-[#F0F5FF]">
         <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
           <div className="Title lg:hidden text-center">
-            <h2 className="text-2xl font-semibold">Why choose us for IVF?</h2>
-            <h2 className="text-xl mt-2 ">
-              With IVF, Your Little Miracle is Just Around the Corner
-            </h2>
+            <h2 className="text-2xl font-semibold">Why choose us for IUI?</h2>
           </div>
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
@@ -322,10 +328,7 @@ function IUI() {
               <div>
                 <div className="Title hidden lg:block">
                   <h2 className="text-2xl font-semibold">
-                    Why choose us for IVF?
-                  </h2>
-                  <h2 className="text-xl mt-2 ">
-                    With IVF, Your Little Miracle is Just Around the Corner
+                    Why choose us for IUI?
                   </h2>
                 </div>
                 <div className="description mt-4 text-[#838383]">
@@ -457,11 +460,11 @@ function IUI() {
         </div>
       </div>
 
-      {/* How to prepare for IVF? */}
+      {/* How to prepare for IUI? */}
       <div className="container mx-auto relative h-full  mt-6 lg:mt-14 ">
         <div className="max-w-7xl mx-auto px-4 pt-8 sm:px-6  lg:px-8 h-full">
           <h2 className="text-2xl font-semibold text-center lg:hidden">
-            How to prepare for IVF?
+            How to prepare for IUI?
           </h2>
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="lg:px-12 py-3  flex items-center pb-8 justify-center lg:items-start ">
@@ -476,7 +479,7 @@ function IUI() {
               <div className="p-6">
                 <div className="Title ">
                   <h2 className="text-2xl font-semibold lg:block hidden">
-                    How to prepare for IVF?
+                    How to prepare for IUI?
                   </h2>
                 </div>
                 <div className=" pt-6">
@@ -599,7 +602,7 @@ function IUI() {
                 toggle={() => toggleFAQ(index)}
               />
             ))}
-            {Ambattur.faqs.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
+            {FAQ.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
               <div className="text-center mt-4">
                 <button
                   className="bg-[#173366] text-white py-2 px-4 rounded-lg hover:bg-[#173366] transition-all"

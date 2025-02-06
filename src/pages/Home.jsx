@@ -26,29 +26,22 @@ import Period_Calculator from "@/assets/Home/Period-Calculator.svg";
 import Pregnancy_Conception from "@/assets/Home/Pregnancy-Conception.svg";
 import Pregnancy_DueDate from "@/assets/Home/Pregnancy-DueDate.svg";
 import FAQItem from "@/components/accordion";
-import Ambattur from "@/middleware/imagesroute";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
+import Tab1 from "@/assets/Home/tab1.webp";
+import Tab2 from "@/assets/Home/tab2.webp";
+import Tab3 from "@/assets/Home/tab3.webp";
+import Tab4 from "@/assets/Home/tab4.webp";
+import Tab5 from "@/assets/Home/tab5.webp";
+import Icon1 from "@/assets/Home/tab1.svg";
+import Icon2 from "@/assets/Home/tab2.svg";
+import Icon3 from "@/assets/Home/tab3.svg";
+import Icon4 from "@/assets/Home/tab4.svg";
+import Icon5 from "@/assets/Home/tab5.svg";
+import { Ambattur } from "@/middleware/imagesroute";
+import VideoCard from "@/components/videoCard/videoCard";
 
 function Home() {
-  const reviews = [
-    {
-      author: "Chitra Rosharan",
-      text: "Good caring is taken by Doctor Ganeshanmoorthy and nurses. Thank you",
-    },
-    {
-      author: "Prathi Indian",
-      text: "All major Medical Specialist Doctors available. Well maintained hospitals. Little crowdy. All tests done with speed and precision. Nice behavior by Doctor cardio Dr Rajasekar.",
-    },
-    {
-      author: "Periyasamy M",
-      text: "Best carrying for all stuffs and doctors, maintenance and cleaning well.... we are happy to take treatment for this hospital",
-    },
-    {
-      author: "Jeremy ds",
-      text: "Maruthuvargal seeviiyargal midham sugathara paniyalargal anaivaram siraptha muraiyil seyial padugirargal dhudara valthukal",
-    },
-  ];
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -56,6 +49,63 @@ function Home() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const tabs = [
+    {
+      title: "80% Success Rates",
+      label: "80% Success Rates ",
+      content: {
+        heading: "80% Success Rates",
+        description:
+          "As the leading fertility hospital in South India, Sudha Fertility Centre serves as a beacon of hope and brings happiness. With the best fertility doctors and world-class fertility treatments, Sudha Fertility Centre has a record of 80% success rate in helping parents achieve the dream of parenthood. With delivering lakhs of healthy babies, we are identified as a renowned IVF hospital in South India offering personalized solutions and treatments for couples trying for pregnancy. From young couples to older couples, we stand with them in every step of their parenthood journey.",
+        image: Tab1,
+      },
+      icon: Icon1,
+    },
+    {
+      title: "Affordable Treatment Cost",
+      label: "Affordable Treatment Cost",
+      content: {
+        heading: "Affordable Treatment Cost",
+        description:
+          "At Sudha Fertility Centre, we believe that fertility care should be both affordable and of the highest quality. We conduct free medical camps every month to make sure quality treatment reaches everyone. Free consultation and tests are provided at every camp. With affordable treatment costs, we make sure that your dream of parenthood is within reach. Every camp has helped countless people achieve their dreams easily with trusted experts. We cherish and support every parenthood journey. ",
+        image: Tab2,
+      },
+      icon: Icon2,
+    },
+    {
+      title: "People's Most Trusted",
+      label: "People's Most Trusted",
+      content: {
+        heading: "People's Most Trusted",
+        description:
+          "Sudha Fertility Centre has earned the trust of lakhs of families as South India's best fertility centre. We are happy and blessed to witness the parenthood stories of lakhs of parents. Each review and video we receive always remember our motto of helping couples in their parenthood journey. We are driven by the mission to help couples experience the happiness of parenthood, and dedicated to making it happen. We ensure every couple who visits us receives the best care and starts their journey of parenthood.",
+        image: Tab3,
+      },
+      icon: Icon3,
+    },
+    {
+      title: "40+ Years Of Excellence",
+      label: "40+ Years Of Excellence",
+      content: {
+        heading: "40+ Years Of Excellence",
+        description:
+          "Sudha Fertility Centre is known as an icon in fertility care with more than 4 decades of excellence in making lakhs of parents' dreams into reality. With experienced Fertility specialists, we offer you the best treatments personalized according to your needs and medical history. With 20+ branches across Tamil Nadu, we ensure that expert fertility care is accessible to all, giving you the support and guidance you need on your parenthood journey",
+        image: Tab4,
+      },
+      icon: Icon4,
+    },
+    {
+      title: "150+ Fertility Specialists",
+      label: "150+ Fertility Specialists",
+      content: {
+        heading: "150+ Fertility Specialists",
+        description:
+          "With a team of hundreds of experienced fertility experts, Sudha Fertility Centre offers comprehensive and specialized treatments tailored to your needs. Under the guidance of the fertility experts, Dr. S. Dhanabagyam and Dr. S. Pradeepa, our skilled IVF specialists and IUI doctors are dedicated to helping you through every step of your parenthood journey. Supported by the expertise and care of our fertility specialists, lakhs of happy parents have successfully welcomed healthy, beautiful babies into their families. ",
+        image: Tab5,
+      },
+      icon: Icon5,
+    },
+  ];
   return (
     <>
       {/* Banner */}
@@ -227,17 +277,18 @@ function Home() {
         </div>
       </div>
 
+   
       {/* What Makes Sudha Fertility Centre  the Best Choice */}
       <div className="container mx-auto ">
         <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
           <div className="title text-center">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
               What Makes Sudha Fertility Centre{" "}
-              <span className="lg:block">the Best Choice</span>
+              <span className="lg:bock">the Best Choice</span>
             </h1>
           </div>
           <div className="tab mt-12">
-            <MetricsTabs />
+            <MetricsTabs tabs={tabs} />
           </div>
         </div>
       </div>
@@ -261,7 +312,6 @@ function Home() {
 
           <div>
             <div className="tiles grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5   gap-6  mt-9">
-
               <div className="tiles-1 border border-[#E7E7E7] p-4 rounded-2xl font-outfit hover:bg-[#EBF2FE] cursor-pointer">
                 <div className="main-tail flex items-center justify-center">
                   <div className="content">
@@ -279,7 +329,6 @@ function Home() {
 
               <div className="tiles-1 border border-[#E7E7E7] p-4 rounded-2xl hover:bg-[#EBF2FE] cursor-pointer">
                 <div className="main-tail flex items-center justify-center">
-                  
                   <div className="content">
                     <div className="title">
                       <div className="image flex justify-center">
@@ -507,6 +556,33 @@ function Home() {
         </div>
       </div>
 
+      {/* VIdeo section  */}
+
+      <div className="bg-[#EBF2FE]">
+        <div className="container mx-auto ">
+          <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div className="title text-center">
+              <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl ">
+                Turning Dreams into Reality: Witness the Joy of Parenthood with
+                Sudha Fertility Centre.
+                <span className="lg:bock">the Best Choice</span>
+              </h1>
+
+              <p className="text-[#838383] text-center ">
+                Behind every testimonial is a journey filled with hope, trust,
+                and perseverance. Hearing this happiness is what drives us. All
+                the tears, years, fears and prayers have been answered. Listen
+                to the happy stories of the couples welcoming their love of life
+              </p>
+            </div>
+            <div className="tab mt-12">
+              <VideoCard tabs={tabs} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       {/* Turning Dreams into Reality: Witness the Joy of Parenthood  with Sudha Fertility Centre. */}
       <div className="bg-[#DDE9FD] hidden">
         <div className="container mx-auto relative h-full">
@@ -533,11 +609,11 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
           <div className="content mx-auto flex-1 text-center lg:text-left">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl flex justify-center">
-             FAQ
+              FAQ
             </h1>
           </div>
-        <div className="mt-5">
-        {Ambattur.faqs.slice(0, visibleCount).map((faq, index) => (
+          <div className="mt-5">
+            {/* {AmbatturPage.faqs.slice(0, visibleCount).map((faq, index) => (
             <FAQItem
               key={index}
               question={faq.question}
@@ -545,8 +621,8 @@ function Home() {
               isOpen={openIndex === index}
               toggle={() => toggleFAQ(index)}
             />
-          ))}
-        </div>
+          ))} */}
+          </div>
         </div>
       </div>
 
@@ -760,32 +836,30 @@ function Home() {
         </div>
       </div>
 
-
-
       {/* MarqueeComponent */}
       <section>
         <div className="container mx-auto">
-            <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
-        <MarqueeComponent
-          items={Ambattur.gallery}
-          direction="left"
-          speed="fast"
-          className="custom-class"
-        />
-        <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
-          <h2 className="text-2xl font-bold text-center ">
-            Happy Patients, Happy Stories
-          </h2>
-          <Button title="View youtube" icon={<FaYoutube />} />
-        </div>
-        <MarqueeComponent
-          items={Ambattur.gallery}
-          direction="right"
-          speed="fast"
-          className="custom-class"
-        />
-        </div>
+          <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
+            <MarqueeComponent
+              items={Ambattur.gallery}
+              direction="left"
+              speed="fast"
+              className="custom-class"
+            />
+            <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
+              <h2 className="text-2xl font-bold text-center ">
+                Happy Patients, Happy Stories
+              </h2>
+              <Button title="View youtube" icon={<FaYoutube />} />
+            </div>
+            <MarqueeComponent
+              items={Ambattur.gallery}
+              direction="right"
+              speed="fast"
+              className="custom-class"
+            />
           </div>
+        </div>
       </section>
     </>
   );

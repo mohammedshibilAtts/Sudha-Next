@@ -17,7 +17,7 @@ import SubBanner from "@/assets/contact-us/SubBanner.webp";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
 import Button from "@/components/button/button";
-import Ambattur from "@/middleware/imagesroute";
+import {Ambattur } from "@/middleware/imagesroute";
 
 function ContactUs() {
   return (

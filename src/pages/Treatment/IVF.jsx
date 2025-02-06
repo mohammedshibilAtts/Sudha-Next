@@ -12,7 +12,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import FAQItem from "@/components/accordion";
 import SubBanner from "@/assets/contact-us/SubBanner.webp";
-import Ambattur from "@/middleware/imagesroute";
+import {Ambattur } from "@/middleware/imagesroute";
 import Insta from "@/assets/Home/insta.svg";
 import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
@@ -621,7 +621,7 @@ function IVF() {
                 toggle={() => toggleFAQ(index)}
               />
             ))}
-            {Ambattur.faqs.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
+            {FAQ.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
               <div className="text-center mt-4">
                 <button
                   className="bg-[#173366] text-white py-2 px-4 rounded-lg hover:bg-[#173366] transition-all"

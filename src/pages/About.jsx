@@ -19,7 +19,7 @@ import Mission from "@/assets/About/mission.svg";
 import ManagementCards from "@/components/MangemntCard/ManagementCard";
 import TimelineTabs from "@/components/TimelineTab/TimeLineTab";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import Ambattur from "@/middleware/imagesroute";
+import {Ambattur } from "@/middleware/imagesroute";
 import { FaYoutube } from "react-icons/fa";
 const cardData = [
   {

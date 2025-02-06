@@ -34,7 +34,7 @@ function Navbar({ sections }) {
   }, [sections]);
 
   return (
-    <nav className="sticky top-[140px] w-full bg-white z-10 max-h-screen overflow-y-auto">
+    <nav className="sticky top-[70px] md:top-[72px] lg:top-[112px] xl:top-[132px] w-full bg-white z-10 max-h-screen overflow-y-auto">
       <ul className="flex md:flex-row flex-nowrap gap-4 justify-between items-center overflow-x-auto md:space-x-6 text-lg font-semibold border-b-2 border-gray-500">
         {sections.map((section) => (
           <li key={section.id} className="my-2 md:my-0">

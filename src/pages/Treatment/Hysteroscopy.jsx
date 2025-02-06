@@ -12,7 +12,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import FAQItem from "@/components/accordion";
 import SubBanner from "@/assets/contact-us/SubBanner.webp";
-import Ambattur from "@/middleware/imagesroute";
+import {Ambattur } from "@/middleware/imagesroute";
 import Insta from "@/assets/Home/insta.svg";
 import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";

@@ -17,7 +17,7 @@ import Vitro from "@/assets/Treatments/Vitro.svg";
 
 import { FaArrowRight } from "react-icons/fa6";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import Ambattur from "@/middleware/imagesroute";
+import {Ambattur } from "@/middleware/imagesroute";
 import { FaYoutube } from "react-icons/fa";
 function Treatment() {
   return (
