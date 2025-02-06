@@ -54,7 +54,7 @@ const mainNavItems = [
           { item: "Erode", link: "/fertility-centre-in-erode" },
           { item: "Karur", link: "/fertility-centre-in-karur" },
           { item: "Krishnagiri", link: "/fertility-centre-in-krishnagiri" },
-          { item: "Madurai", link: "/fertility-centre-in-madurai" },
+          { item: "Madurai", link: "/fertility-centre-in-madurai" },     
           { item: "Salem", link: "/fertility-centre-in-salem" },
           { item: "Thanjavur", link: "/fertility-centre-in-thanjavur" },
           { item: "Theni", link: "/fertility-centre-in-theni" },
@@ -460,5 +460,7 @@ function Navbar() {
     </header>
   );
 }
+
+// lest
 
 export default Navbar;
