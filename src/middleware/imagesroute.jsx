@@ -84,11 +84,11 @@ import NagercoilImagefive from "../assets/branch/nagercoil/gallery/5.webp";
 
 
 // Puducherry
-import PuducherryImageone from "../assets/branch/puducherry/gallery/1.webp";
-import PuducherryImagetwo from "../assets/branch/puducherry/gallery/2.webp";
-import PuducherryImagethree from "../assets/branch/puducherry/gallery/3.webp";
-import PuducherryImagefour from "../assets/branch/puducherry/gallery/4.webp";
-import PuducherryImagefive from "../assets/branch/puducherry/gallery/5.webp";
+import PuducherryImageone from "../assets/branch/Puducherry/gallery/1.webp";
+import PuducherryImagetwo from "../assets/branch/Puducherry/gallery/2.webp";
+import PuducherryImagethree from "../assets/branch/Puducherry/gallery/3.webp";
+import PuducherryImagefour from "../assets/branch/Puducherry/gallery/4.webp";
+import PuducherryImagefive from "../assets/branch/Puducherry/gallery/5.webp";
 
 
 // Ramanathapuram
