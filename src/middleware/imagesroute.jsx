@@ -62,11 +62,11 @@ import karurImagefour from "../assets/branch/karur/gallery/4.webp";
 import karurImagefive from "../assets/branch/karur/gallery/5.webp";
 
 // Kishnagiri
-import KishnagiriImageone from "../assets/branch/Kishnagiri/gallery/1.webp";
-import KishnagiriImagetwo from "../assets/branch/Kishnagiri/gallery/2.webp";
-import KishnagiriImagethree from "../assets/branch/Kishnagiri/gallery/3.webp";
-import KishnagiriImagefour from "../assets/branch/Kishnagiri/gallery/4.webp";
-import KishnagiriImagefive from "../assets/branch/Kishnagiri/gallery/5.webp";
+import KishnagiriImageone from "../assets/branch/kishnagiri/gallery/1.webp";
+import KishnagiriImagetwo from "../assets/branch/kishnagiri/gallery/2.webp";
+import KishnagiriImagethree from "../assets/branch/kishnagiri/gallery/3.webp";
+import KishnagiriImagefour from "../assets/branch/kishnagiri/gallery/4.webp";
+import KishnagiriImagefive from "../assets/branch/kishnagiri/gallery/5.webp";
 
 // Madurai
 import MaduraiImageone from "../assets/branch/Madurai/gallery/1.webp";
