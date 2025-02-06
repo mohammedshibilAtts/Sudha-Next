@@ -7,7 +7,7 @@ import Button from "@/components/button";
 import SudhaAbout from "@/assets/branch/ambatur/doc.png";
 import { motion } from "framer-motion";
 import Pradeepa from "@/assets/branch/ambatur/pradeepa.png";
-import Hospital from "@/assets/branch/Salem/S.webp";
+import Hospital from "@/assets/branch/Salem/salem.webp";
 import charulatha from "@/assets/branch/Salem/charulatha.webp";
 import ImageGrid from "@/components/imagegrid";
 
