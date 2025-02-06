@@ -323,6 +323,7 @@ function Navbar() {
                                           <Link
                                             href={branch.link}
                                             key={branchIndex}
+                                            onClick={toggleMobileMenu}
                                           >
                                             <li className="py-1 text-gray-600 hover:text-blue-600">
                                               {branch.item}
@@ -461,6 +462,6 @@ function Navbar() {
   );
 }
 
-// lest
+// lestn
 
 export default Navbar;

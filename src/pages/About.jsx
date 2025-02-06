@@ -463,7 +463,8 @@ function About() {
 
 
 
-      <div className="container mx-auto p-4  rounded-lg">
+      <div className="container mx-auto relative h-full">
+      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
   <h2 className="text-center text-2xl font-bold mb-4">Our Journey</h2>
   <div className="flex flex-col md:flex-row items-center">
     <div className="relative w-full md:w-1/2 mb-4 md:mb-0">
@@ -499,6 +500,7 @@ function About() {
       </p>
     </div>
   </div>
+</div>
 </div>
 
 

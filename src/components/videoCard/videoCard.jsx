@@ -5,51 +5,65 @@ import { FaPlay } from 'react-icons/fa';
 import { Dialog } from '@headlessui/react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
+const getYoutubeThumbnail = (videoUrl) => {
+  // Check if the videoUrl contains the embed URL format
+  if (videoUrl.includes('embed/')) {
+    const videoId = videoUrl.split('embed/')[1].split('?')[0];
+    return `https://img.youtube.com/vi/${videoId}/0.jpg`; // Fetch the thumbnail based on the video ID
+  } else {
+    // If not, log an error or handle it gracefully
+    console.error('Invalid YouTube embed URL');
+    return 'https://via.placeholder.com/300x200.png?text=Invalid+Video'; // Return a placeholder if URL is incorrect
+  }
+};
 
 const videos = [
     {
       id: 1,
-      thumbnail: "https://via.placeholder.com/300x200.png?text=Video+1",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/Ma6II9Cw4MY?si=I9HBz2tQ05JJKwrH"),
+      videoUrl: "https://www.youtube.com/embed/Ma6II9Cw4MY?si=I9HBz2tQ05JJKwrH",
       title: "Video 1",
       description: "This is the first video description."
     },
     {
       id: 2,
-      thumbnail: "https://via.placeholder.com/300x200.png?text=Video+2",
-      videoUrl: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/oMipXnLGmj4?si=sxMnz3fQjz30hWM_"),
+      videoUrl: "https://www.youtube.com/embed/oMipXnLGmj4?si=sxMnz3fQjz30hWM_",
       title: "Video 2",
       description: "This is the second video description."
     },
     {
       id: 3,
-      thumbnail: "https://via.placeholder.com/300x200.png?text=Video+3",
-      videoUrl: "https://www.youtube.com/embed/tgbNymZ7vqY",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/h71m87dx-3E?si=9VD1XpmSMfqahpDb"),
+      videoUrl: "https://www.youtube.com/embed/h71m87dx-3E?si=9VD1XpmSMfqahpDb",
       title: "Video 3",
       description: "This is the third video description."
     },
     {
       id: 4,
-      thumbnail: "https://via.placeholder.com/300x200.png?text=Video+4",
-      videoUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/6jcLO3srNto?si=3X1IYpX_3dL9b2SN"),
+      videoUrl: "https://www.youtube.com/embed/6jcLO3srNto?si=3X1IYpX_3dL9b2SN",
       title: "Video 4",
       description: "This is the fourth video description."
     },
     {
       id: 5,
-      thumbnail: "https://via.placeholder.com/300x200.png?text=Video+5",
-      videoUrl: "https://www.youtube.com/embed/L_jWHffIx5E",
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/fAoaLHKsQKk?si=hosbH1NDWMbPEWBn"),
+      videoUrl: "https://www.youtube.com/embed/fAoaLHKsQKk?si=hosbH1NDWMbPEWBn",
       title: "Video 5",
       description: "This is the fifth video description."
     },
     {
       id: 6,
-      thumbnail: "https://via.placeholder.com/300x200.png?text=Video+5",
-      videoUrl: "https://www.youtube.com/embed/L_jWHffIx5E",
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/1XyLY1tiz48?si=il-KUAqpgYVCtFYI"),
+      videoUrl: "https://www.youtube.com/embed/1XyLY1tiz48?si=il-KUAqpgYVCtFYI",
       title: "Video 5",
       description: "This is the fifth video description."
     }
   ];
+
+
+
   
  
   
@@ -75,6 +89,7 @@ export default function VideoCarousel() {
     }
   };
 
+
   return (
     <div className="relative w-full max-w-5xl mx-auto p-4">
       <h2 className="text-center text-2xl font-bold mb-4">Video Testimonials</h2>
@@ -85,7 +100,7 @@ export default function VideoCarousel() {
             <button
               className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl rounded-full w-14 h-14 m-auto"
               onClick={() => {
-                setSelectedVideo(video.url);
+                setSelectedVideo(video.videoUrl);
                 setIsOpen(true);
               }}
             >
@@ -112,18 +127,19 @@ export default function VideoCarousel() {
       
       
       {/* Modal for Video */}
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-        <div className="p-4 rounded-lg relative bg-white">
-          <button onClick={() => setIsOpen(false)} className="absolute -top-5 right-0 text-black text-lg">✕</button>
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 ">
+        <div className="p-4 rounded-lg relative ">
+          <button onClick={() => setIsOpen(false)} className="absolute -top-5 right-0 text-white text-lg">✕</button>
           {selectedVideo && (
-            <iframe
-              width="560"
-              height="315"
-              src={selectedVideo}
-              title="YouTube video"
-              allow="autoplay; encrypted-media"
-              className="rounded-lg"
-            ></iframe>
+         <iframe
+         width="100%" // Makes the iframe width responsive, based on the container's width
+         height="auto" // We'll control the height with responsive classes below
+         src={selectedVideo}
+         title="YouTube video"
+         allow="autoplay; encrypted-media"
+         className="rounded-lg w-96 xl:w-[800px] h-96  md:h-[300px] md:w-[500px] lg:h-[400px] lg:w-[700px] xl:h-[500px]" // Adjust height at different breakpoints
+       ></iframe>
+       
           )}
         </div>
       </Dialog>
