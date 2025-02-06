@@ -69,26 +69,26 @@ import KishnagiriImagefour from "../assets/branch/kishnagiri/gallery/4.webp";
 import KishnagiriImagefive from "../assets/branch/kishnagiri/gallery/5.webp";
 
 // Madurai
-import MaduraiImageone from "../assets/branch/Madurai/gallery/1.webp";
-import MaduraiImagetwo from "../assets/branch/Madurai/gallery/2.webp";
-import MaduraiImagethree from "../assets/branch/Madurai/gallery/3.webp";
-import MaduraiImagefour from "../assets/branch/Madurai/gallery/4.webp";
-import MaduraiImagefive from "../assets/branch/Madurai/gallery/5.webp";
+import MaduraiImageone from "../assets/branch/madurai/gallery/1.webp";
+import MaduraiImagetwo from "../assets/branch/madurai/gallery/2.webp";
+import MaduraiImagethree from "../assets/branch/madurai/gallery/3.webp";
+import MaduraiImagefour from "../assets/branch/madurai/gallery/4.webp";
+import MaduraiImagefive from "../assets/branch/madurai/gallery/5.webp";
 
 // Nagercoil
-import NagercoilImageone from "../assets/branch/Nagercoil/gallery/1.webp";
-import NagercoilImagetwo from "../assets/branch/Nagercoil/gallery/2.webp";
-import NagercoilImagethree from "../assets/branch/Nagercoil/gallery/3.webp";
-import NagercoilImagefour from "../assets/branch/Nagercoil/gallery/4.webp";
-import NagercoilImagefive from "../assets/branch/Nagercoil/gallery/5.webp";
+import NagercoilImageone from "../assets/branch/nagercoil/gallery/1.webp";
+import NagercoilImagetwo from "../assets/branch/nagercoil/gallery/2.webp";
+import NagercoilImagethree from "../assets/branch/nagercoil/gallery/3.webp";
+import NagercoilImagefour from "../assets/branch/nagercoil/gallery/4.webp";
+import NagercoilImagefive from "../assets/branch/nagercoil/gallery/5.webp";
 
 
 // Puducherry
-import PuducherryImageone from "../assets/branch/Puducherry/gallery/1.webp";
-import PuducherryImagetwo from "../assets/branch/Puducherry/gallery/2.webp";
-import PuducherryImagethree from "../assets/branch/Puducherry/gallery/3.webp";
-import PuducherryImagefour from "../assets/branch/Puducherry/gallery/4.webp";
-import PuducherryImagefive from "../assets/branch/Puducherry/gallery/5.webp";
+import PuducherryImageone from "../assets/branch/puducherry/gallery/1.webp";
+import PuducherryImagetwo from "../assets/branch/puducherry/gallery/2.webp";
+import PuducherryImagethree from "../assets/branch/puducherry/gallery/3.webp";
+import PuducherryImagefour from "../assets/branch/puducherry/gallery/4.webp";
+import PuducherryImagefive from "../assets/branch/puducherry/gallery/5.webp";
 
 
 // Ramanathapuram
@@ -106,11 +106,11 @@ import SalemImagefour from "../assets/branch/Salem/gallery/4.webp";
 import SalemImagefive from "../assets/branch/Salem/gallery/5.webp";
 
 // Tiruvannamalai
-import TiruvannamalaiImageone from "../assets/branch/Tiruvannamalai/gallery/1.webp";
-import TiruvannamalaiImagetwo from "../assets/branch/Tiruvannamalai/gallery/2.webp";
-import TiruvannamalaiImagethree from "../assets/branch/Tiruvannamalai/gallery/3.webp";
-import TiruvannamalaiImagefour from "../assets/branch/Tiruvannamalai/gallery/4.webp";
-import TiruvannamalaiImagefive from "../assets/branch/Tiruvannamalai/gallery/4.webp";
+import TiruvannamalaiImageone from "../assets/branch/tiruvannamalai/gallery/1.webp";
+import TiruvannamalaiImagetwo from "../assets/branch/tiruvannamalai/gallery/2.webp";
+import TiruvannamalaiImagethree from "../assets/branch/tiruvannamalai/gallery/3.webp";
+import TiruvannamalaiImagefour from "../assets/branch/tiruvannamalai/gallery/4.webp";
+import TiruvannamalaiImagefive from "../assets/branch/tiruvannamalai/gallery/4.webp";
 
 // Trichy
 import TrichyImageone from "../assets/branch/Trichy/gallery/1.webp";
@@ -135,11 +135,11 @@ import TiruppurImagefour from "../assets/branch/Tiruppur/gallery/4.webp";
 import TiruppurImagefive from "../assets/branch/Tiruppur/gallery/5.webp";
 
 // Theni
-import TheniImageone from "../assets/branch/Theni/gallery/1.webp";
-import TheniImagetwo from "../assets/branch/Theni/gallery/2.webp";
-import TheniImagethree from "../assets/branch/Theni/gallery/3.webp";
-import TheniImagefour from "../assets/branch/Theni/gallery/4.webp";
-import TheniImagefive from "../assets/branch/Theni/gallery/5.webp";
+import TheniImageone from "../assets/branch/theni/gallery/1.webp";
+import TheniImagetwo from "../assets/branch/theni/gallery/2.webp";
+import TheniImagethree from "../assets/branch/theni/gallery/3.webp";
+import TheniImagefour from "../assets/branch/theni/gallery/4.webp";
+import TheniImagefive from "../assets/branch/theni/gallery/5.webp";
 
 // Tirunelveli
 import TirunelveliImageone from "../assets/branch/tirunelveli/gallery/1.webp";
