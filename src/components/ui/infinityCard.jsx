@@ -16,7 +16,7 @@ export const InfiniteMovingReviews = ({
   const [duplicatedItems, setDuplicatedItems] = useState([]);
 
   useEffect(() => {
-    const minItems =100;
+    const minItems = 100;
     const duplicatesNeeded = Math.ceil(minItems / items.length);
     
     const duplicatedArray = Array(duplicatesNeeded)
@@ -59,11 +59,25 @@ export const InfiniteMovingReviews = ({
   };
 
   return (
-    <div ref={containerRef} className={cn("scroller relative z-10 w-full overflow-hidden", className)}>
-      <ul ref={scrollerRef} className={cn("flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap", start && "animate-scroll")}>
+    <div 
+      ref={containerRef} 
+      className={cn(
+        "scroller relative z-10 w-full overflow-hidden group",
+        "hover:[--pause-animation:paused]",
+        className
+      )}
+    >
+      <ul 
+        ref={scrollerRef} 
+        className={cn(
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          start && "animate-scroll motion-reduce:animate-none",
+          "[animation-play-state:var(--pause-animation,running)]"
+        )}
+      >
         {duplicatedItems.map((item, idx) => (
           <li key={item.key} className="flex-shrink-0">
-            <div className="bg-white rounded-lg p-4 w-80 h-64 shadow-lg relative flex flex-col justify-between">
+            <div className="bg-white rounded-lg p-4 w-80 h-64 shadow-lg relative flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
               {/* Rating and Google logo section */}
               <div className="flex justify-between items-center mb-2">
                 <div className="flex gap-1">

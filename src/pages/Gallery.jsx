@@ -96,8 +96,8 @@ export default function Gallery() {
       </div>
 
       {/* Achievements Section */}
-      <div className="container mx-auto mt-7 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto py-12">
+      <div className="container mx-auto  px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-5">
           <h1 className="text-center font-semibold text-2xl md:text-3xl">
             Driven By the Happiness Of Lakhs of Families
             <span className="block">Our Achievements</span>
@@ -121,7 +121,9 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-
+    
+      <div className="container mx-auto relative h-full">
+      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
     <div className="flex flex-col items-center">
       <h2 className="text-2xl font-semibold my-6">Gallery</h2>
 
@@ -153,6 +155,8 @@ export default function Gallery() {
           </button>
         )}
       </div>
+    </div>
+    </div>
     </div>
     </>
   );

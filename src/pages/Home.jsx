@@ -476,7 +476,7 @@ function Home() {
               <div className="h-[] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"></div>
 
               <div className="right flex-1 flex justify-center items-center px-3">
-                <div className="tiles grid  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 md:gap-8 xl mt-9">
+                <div className="tiles grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:gap-8 xl mt-9">
                   {/* First row: 3 tiles */}
                   <div className="tiles-1 flex flex-col items-center justify-center text-center hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                     <div className="title mb-3">
@@ -517,9 +517,8 @@ function Home() {
                     </div>
                   </div>
 
-                  {/* Second row: 2 tiles centered */}
-                  <div className="mx-auto flex justify-center items-center gap-4 col-span-3 ">
-                    <div className="tiles-1 flex flex-col items-center justify-center text-center px-3 hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
+                  
+                  <div className="tiles-1 flex flex-col items-center justify-center text-center px-3 hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                       <div className="title mb-3">
                         <Image
                           src={Pregnancy_Conception}
@@ -533,22 +532,6 @@ function Home() {
                         </p>
                       </div>
                     </div>
-
-                    <div className="tiles-1 flex flex-col items-center justify-center text-center px-3 hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
-                      <div className="title mb-3">
-                        <Image
-                          src={Pregnancy_DueDate}
-                          alt="Pregnancy Due Date Calculator"
-                          className="mx-auto"
-                        />
-                      </div>
-                      <div className="des">
-                        <p className="text-[#838383]">
-                          Pregnancy Due Date <br /> Calculator
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

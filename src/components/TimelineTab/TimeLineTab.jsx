@@ -1,84 +1,83 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Tab2024 from "@/assets/About/2024.webp";
-import Tab2023 from "@/assets/About/2024.webp";
-import Tab2022 from "@/assets/About/2024.webp";
-import Tab2021 from "@/assets/About/2024.webp";
-import Tab2020 from "@/assets/About/2024.webp";
-import Tab2019 from "@/assets/About/2024.webp";
-import Tab2018 from "@/assets/About/2024.webp";
-import Tab2015 from "@/assets/About/2024.webp";
-import Tab2011 from "@/assets/About/2024.webp";
-import Tab1995 from "@/assets/About/2024.webp";
-import Tab1985 from "@/assets/About/2024.webp";
-
+import Tab2024 from "../../assets/About/2024.webp";
+import Tab2023 from "../../assets/About/2024.webp";
+import Tab2022 from "../../assets/About/2024.webp";
+import Tab2021 from "../../assets/About/2024.webp";
+import Tab2020 from "../../assets/About/2024.webp";
+import Tab2019 from "../../assets/About/2024.webp";
+import Tab2018 from "../../assets/About/2024.webp";
+import Tab2015 from "../../assets/About/2024.webp";
+import Tab2011 from "../../assets/About/2024.webp";
+import Tab1985 from "../../assets/About/2024.webp";
 const timelineData = [
   {
-    year: "2024",
-    title: "Sudha Women Care And Fertility Centre",
-    description: "Was Inaugurated At Thiruvanmamulai Nagercoil And Ramanathapuram.",
-    img: Tab2024
-  },
-  {
-    year: "2023",
-    title: "Recent Achievement",
-    description: "Example description for 2023",
-    img: Tab2023
-  },
-  {
-    year: "2022",
-    title: "Major Milestone",
-    description: "Example description for 2022",
-    img: Tab2022
-  },
-  {
-    year: "2021",
-    title: "Expansion Phase",
-    description: "Example description for 2021",
-    img: Tab2021
-  },
-  {
-    year: "2020",
-    title: "New Development",
-    description: "Example description for 2020",
-    img: Tab2020
-  },
-  {
-    year: "2019",
-    title: "Growth Period",
-    description: "Example description for 2019",
-    img: Tab2019
-  },
-  {
-    year: "2018",
-    title: "Achievement",
-    description: "Example description for 2018",
-    img: Tab2018
-  },
-  {
-    year: "2015",
-    title: "Milestone",
-    description: "Example description for 2015",
-    img: Tab2015
+    year: "1985",
+    title: "",
+    description: (
+      <>
+        1985 - The journey of Sudha Hospitals began at Erode as a humble 20-bed medical unit for the people.
+        <br />
+        1995 - The Sudha Women and Child Care Centre was launched in Erode.
+      </>
+    ),
+    img: Tab1985,
   },
   {
     year: "2011",
-    title: "Early Days",
-    description: "Example description for 2011",
-    img: Tab2011
+    title: "",
+    description: "2011 - Sudha Women Care and Fertility Centre was inaugurated at Coimbatore ",
+    img: Tab2011,
   },
   {
-    year: "1995",
-    title: "Foundation",
-    description: "Example description for 1995",
-    img: Tab1995
+    year: "2015 ",
+    title: "",
+    description: "2015 - Sudha Medical Centre was launched in Colombo, Sri Lanka. ",
+    img: Tab2015,
   },
   {
-    year: "1985",
-    title: "Beginning",
-    description: "Example description for 1985",
-    img: Tab1985
-  }
+    year: "2018",
+    title: "",
+    description: "2018 - Sudha Women Care and Fertility Centre was inaugurated in Salem. ",
+    img: Tab2018,
+  },
+  {
+    year: "2019",
+    title: "",
+    description: "2019 - Sudha Women Care and Fertility Centre was inaugurated in Chennai. ",
+    img: Tab2019,
+  },
+  {
+    year: "2020",
+    title: "",
+    description: "2020 - Sudha Women Care and Fertility Centre was inaugurated in Madurai and Trichy.",
+    img: Tab2020,
+  },
+  {
+    year: "2021",
+    title: "",
+    description: "2021 - Launch of many new fully equipped branches at Bangalore, Hyderabad and Theni.",
+    img: Tab2021,
+  },
+  {
+    year: "2022",
+    title: "",
+    description: "2022 - Launch of further branches at Vellore, Pondicherry, Thanjavur, Tirupur, Krishnagiri. ",
+    img: Tab2022,
+  },
+  {
+    year: "2023",
+    title: "",
+    description: "2023 - Sudha Women Care and Fertility Centre was inaugurated at Karur, Attapur, Ambattur, Tirunelveli, Dindigul, and Vijayawada.",
+    img: Tab2023,
+  },
+  {
+    year: "2024",
+    title: "",
+    description: "2024 - Sudha Woman Care and Fertility Centre was inaugurated at Thiruvannamalai, Nagercoil and Ramanathapuram. ",
+    img: Tab2024,
+  },
+ 
 ];
 
 const TimelineTabs = () => {

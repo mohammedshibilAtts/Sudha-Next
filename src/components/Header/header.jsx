@@ -116,7 +116,7 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         setNavbarColor(true);
       } else {
         setNavbarColor(false);
@@ -215,6 +215,7 @@ function Navbar() {
                   </div>
                 </div>
               </div>
+                {/* <hr className="h-px mt-2 mx-6 text-white bg-gray-200 border-0 dark:bg-gray-700"/> */}
             </div>
           </div>
         </div>

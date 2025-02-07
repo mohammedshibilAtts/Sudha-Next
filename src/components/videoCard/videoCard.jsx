@@ -6,14 +6,13 @@ import { Dialog } from '@headlessui/react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const getYoutubeThumbnail = (videoUrl) => {
-  // Check if the videoUrl contains the embed URL format
   if (videoUrl.includes('embed/')) {
     const videoId = videoUrl.split('embed/')[1].split('?')[0];
-    return `https://img.youtube.com/vi/${videoId}/0.jpg`; // Fetch the thumbnail based on the video ID
+    return `https://img.youtube.com/vi/${videoId}/0.jpg`; 
   } else {
-    // If not, log an error or handle it gracefully
+
     console.error('Invalid YouTube embed URL');
-    return 'https://via.placeholder.com/300x200.png?text=Invalid+Video'; // Return a placeholder if URL is incorrect
+    return 'https://via.placeholder.com/300x200.png?text=Invalid+Video'; 
   }
 };
 
@@ -62,11 +61,6 @@ const videos = [
     }
   ];
 
-
-
-  
- 
-  
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);

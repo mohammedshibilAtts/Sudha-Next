@@ -5,13 +5,15 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
-  FaWhatsapp,
-  FaPhone,
 } from "react-icons/fa";
 import Logo from "@/assets/logo-dark.svg";
 import whatsapp from "@/assets/footer/whatsapp.svg";
-import phone from "@/assets/footer/phone.svg";
 import Link from "next/link";
+import { MdLocationOn } from "react-icons/md";
+import phone from "@/assets/footer/phone.svg";
+import fb from "@/assets/footer/fb.svg";
+import insta from "@/assets/footer/insta.svg";
+import yt from "@/assets/footer/yt.svg";
 
 const branches = [
   { title: "Ambattur  ", link: "" },
@@ -72,22 +74,16 @@ export default function Footer() {
               environment. Let's make your dream come true and welcome your
               little one.
             </p>
-            <button className="mt-4 px-6 py-3 bg-blue-600 text-white text-sm rounded-md flex items-center justify-center gap-2 hover:bg-blue-700 transition">
-              Get Directions
+            <button className="mt-4 px-6 py-3 bg-[#173366] rounded-full text-white text-sm  flex items-center justify-center gap-2 transition">
+              Get Directions{" "}
+              <span>
+                <MdLocationOn size={22} />
+              </span>
             </button>
-            <div className="flex gap-4 mt-4 text-gray-700">
-              <FaYoutube
-                size={24}
-                className="cursor-pointer hover:text-blue-600 transition"
-              />
-              <FaInstagram
-                size={24}
-                className="cursor-pointer hover:text-blue-600 transition"
-              />
-              <FaFacebookF
-                size={24}
-                className="cursor-pointer hover:text-blue-600 transition"
-              />
+            <div className="flex gap-4 mt-4 text-gray-700 ">
+            <Image src={yt} alt="whatsapp" />
+            <Image src={insta} alt="whatsapp" />
+            <Image src={fb} alt="whatsapp" />
             </div>
           </div>
 
@@ -97,11 +93,20 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="text-gray-600 text-sm md:text-base mt-2 space-y-2">
-              <li>About Us</li>
-              <li>Treatments</li>
-              <li>News & Events</li>
-              <li>Blog</li>
-              <li>Gallery</li>
+              <li>
+               <Link href={'/about'}> About Us</Link>
+                </li>
+              <li>
+                <Link href={"/treatments"}/>
+                Treatments
+                </li>
+              <li
+              >News & Events
+              </li>
+              {/* <li>Blog</li> */}
+              <li>
+                Gallery
+                </li>
               <li>Interviews</li>
             </ul>
           </div>
