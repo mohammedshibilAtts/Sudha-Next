@@ -604,7 +604,7 @@ function Home() {
               <div className="h-[] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"></div>
 
               <div className="right flex-1 flex justify-center items-center px-3">
-                <div className="tiles grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:gap-8 xl mt-9">
+                <div className="tiles grid  grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:gap-8 xl mt-9">
                   {/* First row: 3 tiles */}
                   <div className="tiles-1 flex flex-col items-center justify-center text-center hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                     <div className="title mb-3">
