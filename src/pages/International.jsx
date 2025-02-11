@@ -15,18 +15,18 @@ import Icon4 from "@/assets/Home/tab4.svg";
 import Icon5 from "@/assets/Home/tab5.svg";
 import FAQItem from "@/components/accordion";
 import Image from "next/image";
-
 import fb from "@/assets/Home/fb.svg";
 import x from "@/assets/Home/x.svg";
 import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
 import Insta from "@/assets/Home/insta.svg";
-
 import VideoThumbnail from "@/assets/international/VideoThumbnail.png";
 import MetricsTabs from "@/components/ui/internationaltab";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { IoArrowBackSharp, IoArrowForwardOutline } from "react-icons/io5";
+import { MarqueeComponent } from "@/components/marqueeSlider";
+import { Ambattur } from "@/middleware/imagesroute";
+import { FaYoutube } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -49,7 +49,9 @@ const testimonials = [
 ];
 
 function International() {
+  const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(null);
+    const [showAll, setShowAll] = useState(false);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -65,6 +67,16 @@ function International() {
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
+
+    const toggleViewMore = () => {
+      if (showAll) {
+        setVisibleCount(5); // Reset to initial count when showing less
+        setShowAll(false); // Properly toggle state
+      } else {
+        setVisibleCount(FAQData.length); // Show all FAQs
+        setShowAll(true); // Properly toggle state
+      }
+    };
 
   const tabs = [
     {
@@ -135,6 +147,9 @@ function International() {
         heading: "Payment",
         description: (
           <div>
+            <p className="text-gray-600 mb-4  mt-2">
+            You can make payments to Sudha Fertility Centre through the following options: 
+            </p>
             <ul className="list-disc pl-5 pr-5 text-gray-600">
               <li>Cash</li>
               <li>Wire Transfer</li>
@@ -155,7 +170,7 @@ function International() {
         description: (
           <div>
             <div>
-              <h2>Language Services</h2>
+              
               <p>
                 Language will never be a barrier to achieving your dreams of
                 having a child. At Sudha Fertility Centres, we offer the
@@ -172,69 +187,70 @@ function International() {
       icon: Icon5,
     },
   ];
+  
 
-  const FAQData = [
+  const FAQData=[
     {
-      question: "Which hospital provides the best IUI treatment in Bangalore?",
+      question: "What is the cost of fertility treatments in India? ",
       answer:
-        "When looking for IUI (Intrauterine Insemination) treatment in Bangalore, Sudha Fertility Centre, the best IUI centre in Bangalore, is one of the top choices, known for its expertise and high success rates in fertility treatments. We offer you the best treatments with the best IUI doctors in India",
+        "The average cost of fertility treatments in India may vary depending on the treatment you choose. The cost of the treatments is also influenced by factors like age, the clinic you choose,  the location, etc. Sudha Fertility Centre, the best IVF center in India, provides personalized treatments tailored to your needs with comprehensive care from the best fertility experts in India at an affordable cost.",
     },
     {
-      question: "What is the success rate of IUI treatment?",
+      question: "How to choose the best IVF center in India? ",
       answer:
-        "The success rate of IUI treatment can vary based on factors such as the woman’s age, the cause of infertility, sperm quality, and overall reproductive health. At Sudha Fertility Centre, we offer personalised care to help optimize your chances of success with IUI treatment.",
+        "Before choosing an IVF center you have to consider the success rates, the expertise and experience of the IVF doctors, facilities, infrastructures, and the treatments they provide. As the leading and best IVF center in India, Sudha Fertility Centre provides world-class IVF treatments with the leading fertility experts in India with cutting-edge equipment. We hold a success rate of 80%, with 1 lakh+ healthy babies delivered.  ",
     },
     {
-      question: "Is there any risk associated with IUI treatment? ",
+      question: "Which hospital provides the best fertility treatments in India?",
       answer:
-        "IUI treatment is a safe procedure. There might be some risk factors including a slight chance of infection and the possibility of multiple pregnancies. At Sudha Fertility Centre, we take all precautions to minimize these risks and ensure the safety and well-being of our patients throughout the treatment process.",
+        "Sudha Fertility Centre provides the best fertility treatments in India specializing in IVF treatments. With the best fertility experts in India combining world-class facilities with compassionate care, our team is dedicated to helping you in every step of your journey toward parenthood.",
     },
     {
-      question: "Is IUI treatment painful?",
+      question: "How to proceed with Fertility treatments for foreigners in India?",
       answer:
-        "IUI treatment is generally not painful. Most women experience only mild discomfort or cramping during the procedure, similar to menstrual cramps. At Sudha Fertility Centre, recognised as the best IUI treatment hospital in India, our experienced specialists ensure that the procedure is as comfortable as possible and provide support throughout your treatment.",
+        "International patients seeking fertility treatment in India can apply for a medical visa and choose their preferred hospital for treatment. At Sudha Fertility Centre, the best IVF centre in India we assist foreign patients throughout the process, from visa guidance to treatment planning.",
     },
     {
-      question: "Can I do my regular work after IUI treatment?",
+      question: "What is the duration of Fertility treatments in India?",
       answer:
-        "Yes, it is safe to do your regular work and daily activities after IUI treatment. Light activities and normal tasks are typically fine, but it's recommended to avoid exhausting exercise or heavy lifting. At Sudha Fertility Centre, the best IUI hospital, our specialists will guide you on how to care for yourself post-treatment to support your health and maximise the chances of a positive outcome.",
+        "Each fertility treatment takes a different time duration for positive results. IUI takes approximately 4 weeks but IVF takes more time approximately around 6 - 8 weeks for positive results. This timeframe is estimated as the success of each treatment may vary due to different factors like age, and the health condition of the patients. Our dedicated team at Sudha Fertility Centre offers you personalized treatments and comprehensive support ensuring each patient receives the best care and makes your dream of parenthood into reality.  ",
     },
     {
-      question: "Can I go to a job after IUI treatment?",
+      question: "What are the legal requirements for fertility treatments in India? ",
       answer:
-        "Yes, you can go to work after IUI treatment. The procedure is minimally invasive, and most women feel well enough to resume their regular work activities the same day. However, it's best to avoid physically demanding tasks or heavy lifting. At Sudha Fertility Centre, the best IUI centre, we ensure you receive proper guidance on post-treatment care to help you feel comfortable and supported.",
+        "The patients seeking fertility treatments in India should have a medical visa or OCI card (overseas citizen of India). With a non-medical visa, foreign nationals can only go for an OPD consultation.",
     },
     {
-      question: "Is normal delivery possible in IUI treatment?",
+      question: "Can foreigners get travel and accommodation support for fertility treatments in India ",
       answer:
-        "Yes, normal delivery is possible after successful IUI treatment. Sudha Fertility Centre, the best fertility centre in India, offers continuous care throughout the pregnancy journey to ensure a healthy delivery.",
+        "Yes, international patients can receive assistance with travel and accommodation arrangements. Sudha Fertility Centre provides accommodation facilities for foreign patients, but the expenses are to be covered by the patient. Our team also offers guidance on travel options to ensure a smooth and hassle-free treatment journey.",
     },
     {
-      question: "Should I take complete bed rest after IUI treatment",
+      question: "Will my partner need to be present for the entire treatment process? ",
       answer:
-        "No, complete bed rest is not required. You can continue with normal activities but should avoid exhausting tasks or heavy lifting for a few days. At Sudha Fertility Centre, the best fertility centre in India, we provide guidance on how to manage post-IUI care effectively.",
+        "Yes, both partners must be present at Sudha Fertility Centre during the initial stage of the treatment for consultations and diagnosis. After the evaluation, the female partner will need to stay for the entire treatment process. The husband's presence will depend on the specific fertility procedure recommended.",
     },
     {
-      question: "What is the cost of IUI treatment?",
+      question: "Are there any specific fertility treatment packages for international patients? ",
       answer:
-        "IUI treatment costs vary depending on number of cycles required to attain a positive result. As the best IUI centre in India, Sudha Fertility Centre offers affordable and transparent pricing for all fertility treatments.",
+        "Yes, Sudha Fertility Centre offers fertility treatment packages for international patients. However, the package details will be determined after a consultation with our fertility specialist, based on the patient's medical condition and treatment requirements. ",
     },
     {
-      question: "Who should consider IUI treatment?",
+      question: "What documents do foreigners need for fertility treatment in India?",
       answer:
-        "Couples with unexplained infertility, ovulation issues, or minor male fertility issues may consider IUI. At Sudha Fertility Centre, regarded as a leading IVF centre, we provide expert evaluations and help you determine the most suitable approach for your fertility journey.",
+        "Foreign couples seeking fertility treatment in India must provide a medical visa letter from their embassy, an original passport copy, and a marriage certificate. If available, recent fertility reports can also be submitted to assist in treatment planning. At Sudha Fertility Centre, our team will guide you through the necessary documentation and treatment process. ",
     },
     {
-      question: "When should I consider IUI treatment?",
+      question: "Is video consultation available for foreigners getting fertility treatments in India? ",
       answer:
-        "You should consider IUI treatment if you have been trying to conceive for more than a year of regular unprotected sex. IUI is especially beneficial for couples facing mild infertility issues. At Sudha Fertility Centre, our expert IUI doctors provide personalised assessments to help determine the best treatment option for your fertility health.",
+        "Yes, Sudha Fertility Centre offers video consultations with our chief fertility doctor to address fertility-related concerns and explain the treatment process before patients travel to India. This helps international patients understand their options and prepare for their treatment journey in advance.",
     },
     {
-      question: "What is IUI treatment?",
+      question: "Can foreigners get IVF in India? ",
       answer:
-        "IUI (Intrauterine Insemination) is a fertility treatment where sperm is directly injected into the uterus using a catheter to increase the chances of fertilization. This process is beneficial for couples facing minor male infertility issues. At Sudha Fertility Centre, our expert IUI doctors provide personalized care to ensure the best chances of success in your fertility journey.",
+        "Yes, foreign couples can undergo IVF treatment in India. At Sudha Fertility Centre, we provide advanced IVF treatments for international patients, following all legal and medical guidelines. A valid medical visa, required documents, and compliance with Indian regulations are necessary for treatment. Our team assists with the entire process, from consultation to post-treatment care, ensuring a smooth experience.",
     },
-  ];
+  ]
 
   return (
     <>
@@ -250,7 +266,7 @@ function International() {
             playsInline
           >
             <source
-              src="https://ship-crm-img.s3.eu-north-1.amazonaws.com/happy-family-tiny-newborn-infant-male-or-female.mp4"
+              src="https://ship-crm-img.s3.eu-north-1.amazonaws.com/Video_03_01.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -387,7 +403,7 @@ function International() {
               experience.
             </p>
             <p className="text-gray-600 mb-4">
-              The process begins when the patients inquire by filling out a
+              {"1) "}The process begins when the patients inquire by filling out a
               form. The offices of the Fertility Center will reach out to you at
               the earliest with information about:
             </p>
@@ -397,10 +413,7 @@ function International() {
               <li>
                 Available accommodations and dining facilities for inpatients
               </li>
-              <li>
-                Availability and estimate figures of rent for guest houses or
-                rental houses
-              </li>
+              
               <li>
                 Following the receipt and perusal of the details given, the
                 patient is then required to provide confirmation of their travel
@@ -449,7 +462,9 @@ function International() {
           </div>
         </div>
         
-
+        <p className="text-gray-600 mb-4 ms-4 ">
+        {"2) "} Following receipt and perusal of the details given the patient must confirm their travel plans. 
+            </p>
         <ul className="list-disc pl-4 ms-4 pr-4 text-gray-600">
           <li>
             Then, our Overseas Team would send the relevant letter for the
@@ -459,12 +474,16 @@ function International() {
             The patients can apply for their Medical Visa on
             http://boi.gov.in/content/registration-requirements-foreign-national.
           </li>
-          <li>
-            A team representative will receive the patient and attendant upon
+         </ul>
+         <p className="text-gray-600 mb-4 ms-4 mt-2">
+        {"3) "}  A team representative will receive the patient and attendant upon
             arrival. At this time, their passports and Medical VISAs are
             verified to reduce the chances of any hassles upon registration of
             the FRRO.
-          </li>
+            </p>
+
+          <ul className="list-disc pl-4 ms-4 pr-4 text-gray-600 mt-2">
+          
           <li>
             When all the paperwork and registrations are in order, the patient
             may then begin the consultation and treatment process. If the
@@ -741,7 +760,7 @@ function International() {
                         type="submit"
                         className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
                       >
-                        Book A Free Appointment
+                        Enquire Now
                         <svg
                           className="w-5 h-5"
                           viewBox="0 0 24 24"
@@ -762,8 +781,7 @@ function International() {
               </div>
             </div>
 
-      {/* FAQ  */}
-      <div className="container mx-auto relative h-full">
+            <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
           <div className="content mx-auto flex-1 text-center lg:text-left">
             <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl flex justify-center">
@@ -771,7 +789,7 @@ function International() {
             </h1>
           </div>
           <div className="mt-5">
-            {FAQData.map((faq, index) => (
+            {FAQData.slice(0, visibleCount).map((faq, index) => (
               <FAQItem
                 key={index}
                 question={faq.question}
@@ -780,9 +798,44 @@ function International() {
                 toggle={() => toggleFAQ(index)}
               />
             ))}
+            {FAQData.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
+              <div className="text-center mt-4">
+                <button
+                  className="bg-[#173366] text-white py-2 px-4 rounded-lg hover:bg-[#173366] transition-all"
+                  onClick={toggleViewMore} // Updated onClick handler
+                >
+                  {showAll ? "View Less ←" : "View More →"}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
+
+      <section>
+        <div className="container mx-auto">
+          <div className=" mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full">
+            <MarqueeComponent
+              items={Ambattur.gallery}
+              direction="left"
+              speed="fast"
+              className="custom-class"
+            />
+            <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
+              <h2 className="text-2xl font-bold text-center ">
+                Happy Patients, Happy Stories
+              </h2>
+              <Button title="View youtube" icon={<FaYoutube />} />
+            </div>
+            <MarqueeComponent
+              items={Ambattur.gallery}
+              direction="right"
+              speed="fast"
+              className="custom-class"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

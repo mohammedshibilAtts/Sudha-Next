@@ -187,12 +187,9 @@ function AssistedReproductive() {
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white max-w-5xl text-center px-4 font-outfit mt-10">
               <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
-                Your journey is unique, and the joy awaiting you will be worth
-                every moment
+              Endless Hope and Possibilities on Your Path to Parenthood with ART
               </h1>
-              <h3 className="mt-3  font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                Male Infertility Treatments
-              </h3>
+              
               <div className="button mt-7 flex justify-center">
                 <Button text={"Book Your Free Appointment →"} />
               </div>
@@ -203,7 +200,7 @@ function AssistedReproductive() {
 
       <div className="container mx-auto ">
         <h2 className="text-2xl font-semibold flex justify-center text-center mt-5">
-          Male Infertility Treatments
+        Assisted Reproductive Technology (ART) Treatments in Sudha Fertility Centre
         </h2>
         <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row gap-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

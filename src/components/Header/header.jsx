@@ -9,6 +9,9 @@ import Bar from "@/assets/Navbar/bar.svg";
 import DarkLogo from "@/assets/logo-dark.svg";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
+import RequestCallModal from "./modal";
+import whatsapp from "@/assets/floatIcons/whatsapp.svg";
+import phone from "@/assets/floatIcons/phone.svg";
 
 const topNavItems = ["Helpline No: +91 767-007-6006", "Book Appointment"];
 
@@ -36,7 +39,10 @@ const mainNavItems = [
         item: "Assisted Reproduction Treatments",
         link: "/assisted-reproduction-treatments",
       },
-      { item: "Pregnancy & Antenatal Care", link: "/pregnancy-and-antenatal-care" },
+      {
+        item: "Pregnancy & Antenatal Care",
+        link: "/pregnancy-and-antenatal-care",
+      },
       { item: "PCOS & PCOD", link: "/pcos-and-pdoc" },
       { item: "female-infertility", link: "/female-infertility" },
       { item: "Male Infertility", link: "/male-infertility" },
@@ -56,13 +62,14 @@ const mainNavItems = [
           { item: "Erode", link: "/fertility-centre-in-erode" },
           { item: "Karur", link: "/fertility-centre-in-karur" },
           { item: "Krishnagiri", link: "/fertility-centre-in-krishnagiri" },
-          { item: "Madurai", link: "/fertility-centre-in-madurai" },     
+          { item: "Madurai", link: "/fertility-centre-in-madurai" },
           { item: "Salem", link: "/fertility-centre-in-salem" },
           { item: "Thanjavur", link: "/fertility-centre-in-thanjavur" },
           { item: "Theni", link: "/fertility-centre-in-theni" },
           { item: "Tirunelveli", link: "/fertility-centre-in-tirunelveli" },
           { item: "Vellore", link: "/fertility-centre-in-vellore" },
           { item: "Tiruppur", link: "/fertility-centre-in-tiruppur" },
+          { item: "Nagercoil", link: "/fertility-centre-in-nagercoil" },
           {
             item: "Tiruvannamalai",
             link: "/fertility-centre-in-tiruvannamalai",
@@ -89,14 +96,18 @@ const mainNavItems = [
       {
         name: "Andhra Pradesh",
         branches: [
-          { item: "Vijayawada ", link: "/fertility-centre-in-Vijayawada" },
+          { item: "Vijayawada ", link: "/fertility-centre-in-vijayawada" },
         ],
+      },
+      {
+        name: "Puducherry",
+        link: "/fertility-centre-in-puducherry",
+        branches: [],
       },
     ],
   },
-  { item: "Gallery", link: "/gallery" },
-  { item: "International Patients", link: "/international" },
-  { item: "Contact Us", link: "/contact" },
+
+  { item: "Contact Us", link: "/contact-us" },
 ];
 
 function Navbar() {
@@ -107,6 +118,7 @@ function Navbar() {
 
   // State for mobile menu
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleStateClick = (index) => {
     setActiveState(activeState === index ? null : index); // Toggle state visibility
@@ -160,36 +172,45 @@ function Navbar() {
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           {/* Top Navigation Bar */}
           <div className=" py-3">
-            <div className="mx-auto px-7">
+            <div className="mx-auto">
               <div className="flex items-center justify-between">
                 {/* Logo */}
                 <div className="w-40 ">
-                  <Image
-                    src={Logo}
-                    alt="Sudha-Logo"
-                    className="w-full h-auto  top-2"
-                  />
+                  <Link href={"/"}>
+                    {" "}
+                    <Image
+                      src={Logo}
+                      alt="Sudha-Logo"
+                      className="w-full h-auto  top-2"
+                    />
+                  </Link>
                 </div>
-
+                {/* <div className="lg:hidden">
+                  <button onClick={toggleMobileMenu}>
+                    <Image src={Bar} alt="Bar" />
+                  </button>
+                </div> */}
+                {/* /////////////////////////////////////////////////////////////////////////////////////////////////// */}
                 {/* Mobile Hamburger */}
                 <div className="lg:hidden">
                   <button onClick={toggleMobileMenu}>
                     <Image src={Bar} alt="Bar" />
                   </button>
                 </div>
-
                 {/* Top Nav Container */}
                 <div className="flex-1 flex justify-between items-center pl-7 hidden lg:flex">
                   {/* Find Us */}
-                  <div className="flex items-center group cursor-pointer">
-                    <IoLocationSharp
-                      size={25}
-                      className="group-hover:text-[#FFC65C]"
-                    />
-                    <span className="ml-1 group-hover:text-[#FFC65C] text-md">
-                      Find us
-                    </span>
-                  </div>
+                  <Link href={"https://maps.app.goo.gl/hJJAgqV19kYQ1cveA"}>
+                    <div className="flex items-center group cursor-pointer">
+                      <IoLocationSharp
+                        size={25}
+                        className="group-hover:text-[#FFC65C]"
+                      />
+                      <span className="ml-1 group-hover:text-[#FFC65C] text-md">
+                        Find us
+                      </span>
+                    </div>
+                  </Link>
 
                   {/* Right Navigation Items */}
                   <div className="flex items-center">
@@ -202,7 +223,10 @@ function Navbar() {
                           {item}
                         </li>
                       ))}
-                      <li className="flex items-center gap-2 group cursor-pointer">
+                      <li
+                        className="flex items-center gap-2 group cursor-pointer"
+                        onClick={() => setIsModalOpen(true)}
+                      >
                         <BsFillTelephoneInboundFill
                           size={18}
                           className="group-hover:text-[#FFC65C]"
@@ -212,10 +236,14 @@ function Navbar() {
                         </span>
                       </li>
                     </ul>
+                    <RequestCallModal
+                      isOpen={isModalOpen}
+                      onClose={() => setIsModalOpen(false)}
+                    />
                   </div>
                 </div>
               </div>
-                {/* <hr className="h-px mt-2 mx-6 text-white bg-gray-200 border-0 dark:bg-gray-700"/> */}
+              {/* <hr className="h-px mt-2 mx-6 text-white bg-gray-200 border-0 dark:bg-gray-700"/> */}
             </div>
           </div>
         </div>
@@ -236,11 +264,13 @@ function Navbar() {
               <div className="container mx-auto py-6">
                 <div className="flex justify-between px-4">
                   <div className="w-40">
-                    <Image
-                      src={DarkLogo}
-                      alt="Sudha-Logo"
-                      className="w-full h-auto top-2"
-                    />
+                    <Link href={"/"}>
+                      <Image
+                        src={DarkLogo}
+                        alt="Sudha-Logo"
+                        className="w-full h-auto top-2"
+                      />
+                    </Link>
                   </div>
                   {/* Close Button */}
                   <div className="flex">
@@ -306,16 +336,27 @@ function Navbar() {
                                     className="w-full py-4 flex justify-between items-center text-gray-800"
                                     onClick={() => handleStateClick(stateIndex)}
                                   >
-                                    <h4 className="font-semibold text-gray-800">
-                                      {state.name}
-                                    </h4>
-                                    <IoIosArrowDown
-                                      className={`transition-transform duration-200 ${
-                                        activeState === stateIndex
-                                          ? "rotate-180"
-                                          : ""
-                                      }`}
-                                    />
+                                    {state.name == "Puducherry" ? (
+                                      <Link
+                                        className="font-semibold text-gray-800"
+                                        href={"/fertility-centre-in-puducherry"}
+                                      >
+                                        {state.name}
+                                      </Link>
+                                    ) : (
+                                      <h4 className="font-semibold text-gray-800">
+                                        {state.name}
+                                      </h4>
+                                    )}
+                                    {state.branches.length > 0 && (
+                                      <IoIosArrowDown
+                                        className={`transition-transform duration-200 ${
+                                          activeState === stateIndex
+                                            ? "rotate-180"
+                                            : ""
+                                        }`}
+                                      />
+                                    )}
                                   </button>
 
                                   {/* Render branches of the selected state */}
@@ -352,11 +393,18 @@ function Navbar() {
                     <button className="w-full py-3 border-r text-white font-medium">
                       Book Appointment
                     </button>
-                    <button className="w-full py-3 font-medium">
+                    <button
+                      className="w-full py-3 font-medium"
+                      onClick={() => setIsModalOpen(true)}
+                    >
                       Request A Call
                     </button>
                   </div>
                 </div>
+                <RequestCallModal
+                  isOpen={isModalOpen}
+                  onClose={() => setIsModalOpen(false)}
+                />
               </div>
             </motion.div>
           )}
@@ -384,7 +432,6 @@ function Navbar() {
                     ) : (
                       item.title
                     )}
-
 
                     {/* Check for dropdownItems and states being present and correct */}
                     {(typeof item.dropdownItems === "object" &&
@@ -420,6 +467,7 @@ function Navbar() {
                     )}
 
                   {/* Dropdown for States and Branches */}
+
                   {typeof item === "object" &&
                     item.states &&
                     activeDropdown === index && (
@@ -431,26 +479,43 @@ function Navbar() {
                             onMouseEnter={() => handleStateHover(state.name)}
                             onMouseLeave={() => handleStateHover(null)}
                           >
-                            <div className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer flex justify-between items-center">
-                              {state.name}
-                              <IoIosArrowDown className="text-gray-500" />
-                            </div>
-
-                            {/* Secondary dropdown for branches */}
-                            {activeState === state.name && (
-                              <div className="absolute left-full top-0 bg-white text-gray-800 py-2 min-w-[200px] shadow-lg rounded-md -ml-1">
-                                {state.branches.map((branch, branchIndex) => (
-                                  <div
-                                    key={branchIndex}
-                                    className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
-                                  >
-                                    <Link href={branch.link}>
-                                      {branch.item}
-                                    </Link>
-                                  </div>
-                                ))}
+                            {item.name === "Puducherry" ? (
+                              <Link
+                                href={"state.link"}
+                                className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
+                              >
+                                {state.name}
+                              </Link>
+                            ) : (
+                              <div className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer flex justify-between items-center">
+                                <Link
+                                  href={"/fertility-centre-in-puducherry"}
+                                  className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
+                                >
+                                  {state.name}
+                                </Link>
+                                {state.branches.length > 0 && (
+                                  <IoIosArrowDown className="text-gray-500" />
+                                )}
                               </div>
                             )}
+
+                            {/* Secondary dropdown for branches */}
+                            {activeState === state.name &&
+                              state.branches.length > 0 && (
+                                <div className="absolute left-full top-0 bg-white text-gray-800 py-2 min-w-[200px] shadow-lg rounded-md -ml-1">
+                                  {state.branches.map((branch, branchIndex) => (
+                                    <div
+                                      key={branchIndex}
+                                      className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
+                                    >
+                                      <Link href={branch.link}>
+                                        {branch.item}
+                                      </Link>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
                           </div>
                         ))}
                       </div>
@@ -461,6 +526,28 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      {!isMobileMenuOpen && (
+        <div className="fixed top-52 right-5 flex flex-col space-y-3 z-40 ">
+          {/* WhatsApp Button */}
+          <a
+            href="https://wa.me/917107007006"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-20 h-14   rounded-full  hover:scale-105 transition-transform"
+          >
+            <Image src={whatsapp} alt="whatsapp" />
+          </a>
+
+          {/* Phone Call Button */}
+          <a
+            href="tel:+917107007006"
+            className="flex items-center justify-center w-20 h-14   rounded-full  hover:scale-105 transition-transform"
+          >
+            <Image src={phone} alt="Phone" />
+          </a>
+        </div>
+      )}
     </header>
   );
 }

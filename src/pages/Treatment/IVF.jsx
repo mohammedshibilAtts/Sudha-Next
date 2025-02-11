@@ -12,7 +12,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import FAQItem from "@/components/accordion";
 import SubBanner from "@/assets/contact-us/SubBanner.webp";
-import {Ambattur } from "@/middleware/imagesroute";
+import { Ambattur } from "@/middleware/imagesroute";
 import Insta from "@/assets/Home/insta.svg";
 import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
@@ -21,7 +21,8 @@ import fb from "@/assets/Home/fb.svg";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
 import { FaQ } from "react-icons/fa6";
- 
+import ContactForm from "@/components/contact/contactForm";
+
 const IVFData = [
   {
     question: "Initial Consultation",
@@ -49,7 +50,7 @@ const IVFData = [
       "After proper monitoring, the healthy embryos will be placed into the woman’s womb",
   },
 ];
- 
+
 const FAQ = [
   {
     question: "Which hospital provides the best IVF treatment in India? ",
@@ -112,7 +113,7 @@ const FAQ = [
       "IVF is ideal for couples with unexplained infertility, blocked fallopian tubes, male infertility, or other reproductive issues. Sudha Fertility Centre, the best IVF centre in India, offers expert diagnosis to identify the cause of infertility and provide the best treatments.",
   },
 ];
- 
+
 const When_Why_choose = [
   "Elderly women above 40, as they produce less quality eggs or don’t produce eggs.",
   "Individuals who had their ovaries removed.",
@@ -122,7 +123,7 @@ const When_Why_choose = [
   "For couples who have a history of failed fertility treatments.",
   "Couples with genetic disorders, to prevent the transmission of genetic diseases.",
 ];
- 
+
 const prepare_for_IVF = [
   "Focus on a balanced and nutritious diet, moderate exercise, and avoid alcohol and tobacco to support your body for IVF.",
   "Ensure conditions like PCOS, diabetes, or thyroid issues are under control, as these can impact IVF success.",
@@ -170,7 +171,7 @@ const Do = [
   "Prioritise sleep and rest. Aim for at least 7 hours of quality sleep",
   "Engage in gentle activities like walking or stretching.",
 ];
- 
+
 const Dont = [
   "Avoid heavy exercises.",
   "Restrict alcohol and caffeine intake.",
@@ -178,16 +179,13 @@ const Dont = [
   "Never skip the prescribed medications or intake unprescribed ones.",
   "Avoid exposure to toxins.",
 ];
- 
+
 function IVF() {
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(0);
   const [faqIndex, setFaqIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
- 
+  
   const toggleFAQ = (index) => {
     setFaqIndex(faqIndex === index ? null : index);
   };
@@ -200,7 +198,10 @@ function IVF() {
       setShowAll(true); // Properly toggle state
     }
   };
- 
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
       {/* Banner */}
@@ -216,7 +217,7 @@ function IVF() {
         >
           <div className="absolute inset-0 bg-[#173366A1] opacity-45"></div>
         </div>
- 
+
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
@@ -224,7 +225,7 @@ function IVF() {
                 In Vitro Fertilization (IVF)
               </h1>
               <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                “Join the 1,50,00+ Families who have Overcome Infertility”
+                Prepare to welcome your little miracle.
               </h3>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
@@ -233,7 +234,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* About IVF */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
@@ -243,12 +244,12 @@ function IVF() {
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={About} alt="About IVF" />
+                <div className="relative w-full ">
+                  <Image src={About} alt="About IVF " className="rounded-2xl" />
                 </div>
               </div>
             </div>
- 
+
             <div className="flex-1 flex items-center px-4">
               <div>
                 <div className="Title">
@@ -278,7 +279,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* IVF in Sudha Fertility Centre */}
       <div className="container mx-auto relative h-full mt-6 lg:mt-20">
         <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
@@ -306,10 +307,10 @@ function IVF() {
                 </div>
               </div>
             </div>
- 
+
             <div className="flex-1 lg:px-12   flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-52 lg:h-96">
+                <div className="relative w-full ">
                   <Image src={Microscope} alt="IVF in Sudha Fertility Centre" />
                 </div>
               </div>
@@ -317,58 +318,64 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* Why choose us for IVF? */}
-      <div className="container mx-auto mt-6 lg:mt-20 relative h-full bg-[#F0F5FF]">
-        <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
-          <div className="Title lg:hidden text-center">
-            <h2 className="text-2xl font-semibold">Why choose us for IVF?</h2>
-            <h2 className="text-xl mt-2 ">
-              With IVF, Your Little Miracle is Just Around the Corner
-            </h2>
-          </div>
-          <div className="main flex flex-col-reverse md:flex-row">
-            <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
-              <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={WhyChoose} alt="About IVF" />
+      <div className="bg-[#F0F5FF]">
+        <div className="container mx-auto mt-6 lg:mt-20 relative h-full ">
+          <div className="max-w-7xl mx-auto px-4 py-10  2 sm:px-6 lg:px-8 h-full">
+            <div className="Title lg:hidden text-center">
+              <h2 className="text-2xl font-semibold">Why choose us for IVF?</h2>
+              <h2 className="text-xl mt-2 ">
+                With IVF, Your Little Miracle is Just Around the Corner
+              </h2>
+            </div>
+            <div className="main flex flex-col-reverse md:flex-row">
+              <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
+                <div className="w-full h-full flex justify-center items-center">
+                  <div className="relative w-full ">
+                    <Image
+                      src={WhyChoose}
+                      alt="About IVF"
+                      className="rounded-2xl"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
- 
-            <div className="flex-1 flex items-center px-4">
-              <div>
-                <div className="Title hidden lg:block">
-                  <h2 className="text-2xl font-semibold">
-                    Why choose us for IVF?
-                  </h2>
-                  <h2 className="text-xl mt-2 ">
-                    With IVF, Your Little Miracle is Just Around the Corner
-                  </h2>
-                </div>
-                <div className="description mt-4 text-[#838383]">
-                  <p>
-                    As a leading IVF center in India, Sudha Fertility Centre has
-                    a success rate of 85% in IVF treatments. With over 4 decades
-                    of expertise in fertility care, we have delivered thousands
-                    of healthy IVF babies. With the best IVF doctors in India,
-                    we provide you the exceptional IVF treatments in India,
-                    guiding you through every step of your parenthood journey
-                    and helping you achieve your dream. We offer personalised
-                    counselling and compassionate care from consultation to
-                    delivery. The dedication of the IVF doctors in Sudha
-                    Fertility Centre prioritising every step to maximize the
-                    chances of a successful healthy pregnancy and also focusing
-                    on the health of both mother and baby retains us as the best
-                    IVF hospital in India.
-                  </p>
+
+              <div className="flex-1 flex items-center px-4">
+                <div>
+                  <div className="Title hidden lg:block">
+                    <h2 className="text-2xl font-semibold">
+                      Why choose us for IVF?
+                    </h2>
+                    <h2 className="text-xl mt-2 ">
+                      With IVF, Your Little Miracle is Just Around the Corner
+                    </h2>
+                  </div>
+                  <div className="description mt-4 text-[#838383]">
+                    <p>
+                      As a leading IVF center in India, Sudha Fertility Centre
+                      has a success rate of 85% in IVF treatments. With over 4
+                      decades of expertise in fertility care, we have delivered
+                      thousands of healthy IVF babies. With the best IVF doctors
+                      in India, we provide you the exceptional IVF treatments in
+                      India, guiding you through every step of your parenthood
+                      journey and helping you achieve your dream. We offer
+                      personalised counselling and compassionate care from
+                      consultation to delivery. The dedication of the IVF
+                      doctors in Sudha Fertility Centre prioritising every step
+                      to maximize the chances of a successful healthy pregnancy
+                      and also focusing on the health of both mother and baby
+                      retains us as the best IVF hospital in India.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
- 
+
       {/* When and Why Choose IVF? */}
       <div className="container mx-auto relative h-full  mt-6 lg:mt-14 ">
         <div className="max-w-7xl mx-auto px-4 pt-8 sm:px-6  lg:px-8 h-full">
@@ -385,7 +392,7 @@ function IVF() {
                 </div>
                 <div className=" pt-6">
                   <div className="space-y-4">
-                    {When_Why_choose .map((item, index) => (
+                    {When_Why_choose.map((item, index) => (
                       <div key={index} className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-6 h-6">
                           <Image src={Tick} alt="Tick" />
@@ -397,88 +404,135 @@ function IVF() {
                 </div>
               </div>
             </div>
- 
+
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center lg:items-start ">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="relative w-full">
-                  <Image src={ChooseIVF} alt="About IVF" />
+                  <Image
+                    src={ChooseIVF}
+                    alt="About IVF"
+                    className="rounded-2xl"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
- 
+
       {/* Facilities */}
-      <div className="container mx-auto relative  bg-[#F0F5FF] mb-9">
-        <div className="max-w-7xl mx-auto px-4 pt-10 mt-10 sm:px-6 lg:px-8 h-full">
-          <h2 className="text-3xl font-bold text-center mb-12">Facilities</h2>
- 
-          {/* Desktop Layout - Hidden on mobile */}
-          <div className="relative hidden md:flex justify-center items-center">
-            {/* Center Image */}
-            <div className="relative w-96">
-              <Image
-                src={Facilities}
-                alt="Facilities"
-                className="w-full h-auto"
-              />
-            </div>
- 
-            {/* Facility Cards for Desktop */}
-            <div className="absolute inset-0">
-              {facilities.map((facility, index) => (
-                <div
-                  key={index}
-                  className={`absolute ${
-                    facility.position
-                  } transform -translate-y-1/2 z-10
-                  ${
-                    facility.position.includes("left")
-                      ? "mr-4 md:mr-8 pr-4"
-                      : "ml-4 md:ml-8 pl-4"
-                  }
-                  ${index % 2 === 0 ? "mt-8" : "mt-0"}`}
-                >
-                  <div
-                    className={`${facility.rounded} rounded-2xl bg-white shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 `}
-                  >
-                    <p className="text-base font-medium text-gray-800 text-nowrap bg-white">
-                      {facility.title}
-                    </p>
+      <div className="bg-[#F0F5FF]">
+         <div className="container mx-auto relative   mb-9">
+                <div className="max-w-7xl mx-auto px-4 py-10 mt-10 sm:px-6 lg:px-8 h-full">
+                  <h2 className="text-3xl font-bold text-center mb-12">Facilities</h2>
+        
+                  {/* Desktop Layout - For Lg screen only */}
+                  <div className="relative hidden md:flex  2xl:hidden justify-center items-center">
+                    <div className="flex justify-center items-center gap-12 ">
+                      <div className="left space-y-5 flex-1">
+                      {facilities.slice(0,3).map((facility, index) => (
+                      <div key={index} className="flex justify-center">
+                        <div className=" rounded-bl-none w-full rounded-2xl shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 bg-white">
+                          <p className="text-sm font-medium text-gray-800 text-center flex justify-center items-center">
+                            {facility.title}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                      </div>
+                  <div className="Image flex justify-center items-center  mb-8 flex-1">
+                      <div className="relative w-64">
+                        <Image
+                          src={Facilities}
+                          alt="Facilities"
+                          className="w-full h-auto rounded-2xl"
+                        />
+                      </div>
+                    </div>
+        
+                    <div className="right space-y-5 flex-1">
+                      {facilities.slice(3).map((facility, index) => (
+                      <div key={index} className="flex justify-center">
+                        <div className=" rounded-bl-none w-full rounded-2xl shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 bg-white">
+                          <p className="text-sm font-medium text-gray-800 text-center flex justify-center items-center">
+                            {facility.title}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                      </div>
+        
+                 
+                    
+                  </div>
+                  </div>
+        
+        
+                  <div className="relative hidden 2xl:flex justify-center items-center">
+                    {/* Center Image */}
+                    <div className="relative w-96">
+                      <Image
+                        src={Facilities}
+                        alt="Facilities"
+                        className="w-full h-auto rounded-2xl"
+                      />
+                    </div>
+        
+                    {/* Facility Cards for Desktop */}
+                    <div className="absolute inset-0">
+                      {facilities.map((facility, index) => (
+                        <div
+                          key={index}
+                          className={`absolute ${
+                            facility.position
+                          } transform -translate-y-1/2 z-10 
+                          ${
+                            facility.position.includes("left")
+                              ? "mr-4 md:mr-8 pr-4"
+                              : "ml-4 md:ml-8 pl-4"
+                          }
+                          ${index % 2 === 0 ? "mt-8" : "mt-0"}`}
+                        >
+                          <div
+                            className={`${facility.rounded} rounded-2xl bg-white shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 `}
+                          >
+                            <p className="text-base font-medium text-gray-800 text-nowrap bg-white">
+                              {facility.title}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+        
+                  {/* Mobile Layout - Grid with 2 columns */}
+                  <div className="md:hidden grid grid-cols-2 gap-4">
+                    {/* Center Image */}
+                    <div className="col-span-2 flex justify-center mb-8">
+                      <div className="relative w-64">
+                        <Image
+                          src={Facilities}
+                          alt="Facilities"
+                          className="w-full h-auto rounded-2xl"
+                        />
+                      </div>
+                    </div>
+        
+                    {/* Facility Cards for Mobile */}
+                    {facilities.map((facility, index) => (
+                      <div key={index} className="flex justify-center">
+                        <div className=" rounded-bl-none w-full rounded-2xl shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 bg-white">
+                          <p className="text-sm font-medium text-gray-800 text-center flex justify-center items-center">
+                            {facility.title}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
- 
-          {/* Mobile Layout - Grid with 2 columns */}
-          <div className="md:hidden grid grid-cols-2 gap-4">
-            {/* Center Image */}
-            <div className="col-span-2 flex justify-center mb-8">
-              <div className="relative w-64">
-                <Image
-                  src={Facilities}
-                  alt="Facilities"
-                  className="w-full h-auto"
-                />
               </div>
-            </div>
- 
-            {/* Facility Cards for Mobile */}
-            {facilities.map((facility, index) => (
-              <div key={index} className="flex justify-center">
-                <div className=" rounded-bl-none w-full rounded-2xl shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 bg-white">
-                  <p className="text-sm font-medium text-gray-800 text-center flex justify-center items-center">
-                    {facility.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
- 
+
       {/* How to prepare for IVF? */}
       <div className="container mx-auto relative h-full  mt-6 lg:mt-14 ">
         <div className="max-w-7xl mx-auto px-4 pt-8 sm:px-6  lg:px-8 h-full">
@@ -488,12 +542,16 @@ function IVF() {
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="lg:px-12 py-3  flex items-center pb-8 justify-center lg:items-start ">
               <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full">
-                  <Image src={PrepareIVF} alt="About IVF" />
+                <div className="relative w-full ">
+                  <Image
+                    src={PrepareIVF}
+                    alt="About IVF"
+                    className="rounded-2xl object-contain"
+                  />
                 </div>
               </div>
             </div>
- 
+
             <div className=" flex items-center ">
               <div className="p-6">
                 <div className="Title ">
@@ -518,7 +576,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* Do’s & Don’ts During IVF */}
       <div className="container mx-auto relative h-full mt-8 pb-7">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 h-full shadow-2xl">
@@ -574,7 +632,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* Welcome Your Baby into Your Home */}
       <div className="container mx-auto mt-6 mb-9">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -588,7 +646,7 @@ function IVF() {
           >
             {/* Overlay to ensure text readability */}
             <div className="absolute inset-0 bg-black/30"></div>
- 
+
             <div className="relative h-full flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12 mt-9">
               <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start text-center lg:text-left mb-6 lg:mb-0">
                 <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl text-white">
@@ -602,7 +660,7 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* Faq */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
@@ -634,202 +692,10 @@ function IVF() {
           </div>
         </div>
       </div>
- 
+
       {/* contact  */}
-      <div
-        className="py-16 bg-cover bg-center"
-        style={{
-          background:
-            "linear-gradient(170deg, #F0F5FF, #F0F5FF 60%, white 60%, white)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid md:grid-cols-2 lg:gap-16 items-start">
-            {/* Left Column - Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-[32px] font-bold text-black mb-2">
-                  Book your Free Appointment
-                </h2>
-                <p className="text-black text-lg">
-                  Take the first step towards your parenthood journey.
-                </p>
-              </div>
- 
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      CALL
-                    </p>
-                    <p className="text-black">9874651230</p>
-                  </div>
-                </div>
- 
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      EMAIL US
-                    </p>
-                    <p className="text-black">info@gmail.com</p>
-                  </div>
-                </div>
-              </div>
- 
-              <div className="space-y-3">
-                <p className="text-sm text-black">Connect with us:</p>
-                <div className="flex gap-3">
-                  {[
-                    { name: "facebook", icon: fb },
-                    { name: "twitter", icon: x },
-                    { name: "linkedin", icon: Linkedin },
-                    { name: "youtube", icon: youtube },
-                    { name: "instagram", icon: Insta },
-                  ].map((social) => (
-                    <a
-                      key={social.name}
-                      href={`https://${social.name}.com`}
-                      className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label={social.name}
-                    >
-                      <Image
-                        src={social.icon}
-                        alt={social.name}
-                        className="w-full h-full object-contain"
-                      />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
- 
-            {/* Right Column - Form */}
-            <div className="rounded-3xl shadow-xl p-8 bg-white z-30 relative">
-              <h3 className="text-xl font-semibold text-black mb-8">
-                Ready to Start Your Journey to Meet Your Little One?
-              </h3>
- 
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
- 
-                <div>
-                  <label
-                    htmlFor="mobile"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Whatsapp Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="mobile"
-                    placeholder="Enter your Mobile Number"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
- 
-                <div>
-                  <label
-                    htmlFor="branch"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Location
-                  </label>
-                  <div className="relative">
-                    <select
-                      id="branch"
-                      defaultValue=""
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none appearance-none text-black"
-                    >
-                      <option value="" disabled>
-                        Select Location
-                      </option>
-                      <option value="branch1">Location 1</option>
-                      <option value="branch2">Location 2</option>
-                    </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <svg
-                        className="w-5 h-5 text-black"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
- 
-                <button
-                  type="submit"
-                  className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
-                >
-                  Book A Free Appointment
-                  <svg
-                    className="w-5 h-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
- 
+      <ContactForm/>
+
       {/* MarqueeComponent */}
       <section>
         <div className="container mx-auto">
@@ -858,5 +724,5 @@ function IVF() {
     </>
   );
 }
- 
+
 export default IVF;

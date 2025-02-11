@@ -52,50 +52,51 @@ const ManagementCards = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {managementData.map((member) => (
           <div
             key={member.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
+            className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg"
           >
-            <div className="">
-              <div className="group p-4 bg-white rounded-lg transform transition-transform duration-300 hover:scale-105">
-                <div className="relative w-full mb-4">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-auto object-cover rounded-lg"
-                    style={{
-                      background:
-                        "linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent)",
-                    }}
-                  />
-                </div>
-                <h3 className="font-outfit font-semibold text-lg ">
+            <div className="group p-3 sm:p-4">
+              <div className="relative w-full aspect-square mb-3 sm:mb-4">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  className="rounded-lg object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-outfit font-semibold text-base sm:text-lg line-clamp-2">
                   {member.name}
                 </h3>
-                <p className=" text-gray-600 mb-4">{member.role}</p>
-                <p className=" text-gray-600 mb-4">{member.course}</p>
-                {member.website !== "" ? (
+                <p className="text-sm sm:text-base text-gray-600 line-clamp-2">
+                  {member.role}
+                </p>
+                <p className="text-sm sm:text-base text-gray-600 line-clamp-2">
+                  {member.course}
+                </p>
+                {member.website && (
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Link
                       href={member.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline"
+                      className="text-sm sm:text-base text-blue-500 hover:underline"
                     >
                       Visit Website
                     </Link>
                   </div>
-                ) : (
-                  ""
                 )}
               </div>
             </div>
           </div>
         ))}
       </div>
-
+    </div>
     
     </>
   );

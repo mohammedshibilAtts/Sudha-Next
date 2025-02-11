@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "@/assets/Home/Banner.webp";
 import Button from "@/components/button/button";
 import GoogleReview, {
@@ -14,12 +14,7 @@ import Intrauterine from "@/assets/Home/Intrauterine.svg";
 import Intracytoplasmic from "@/assets/Home/Intracytoplasmic.svg";
 import Laser_Assisted from "@/assets/Home/Laser-Assisted.svg";
 import Pregnancy from "@/assets/Home/Pregnancy.svg";
-
-import Insta from "@/assets/Home/insta.svg";
-import Linkedin from "@/assets/Home/linkedin.svg";
-import youtube from "@/assets/Home/youtube.svg";
-import x from "@/assets/Home/x.svg";
-import fb from "@/assets/Home/fb.svg";
+import { motion } from "framer-motion";
 import Pregnancy_Calculator from "@/assets/Home/Pregnancy-Calculator.svg";
 import Ovulation_Calculator from "@/assets/Home/Ovulation-Calculator.svg";
 import Period_Calculator from "@/assets/Home/Period-Calculator.svg";
@@ -40,26 +35,121 @@ import Icon4 from "@/assets/Home/tab4.svg";
 import Icon5 from "@/assets/Home/tab5.svg";
 import { Ambattur } from "@/middleware/imagesroute";
 import VideoCard from "@/components/videoCard/videoCard";
+import Pradeepa from "@/assets/Home/pradeepa.webp";
+import ContactUs from "./contactUs";
+import ContactForm from "@/components/contact/contactForm";
+
+const FAQ = [
+  {
+    question: "Which is the best fertility centre in South India?",
+    answer:
+      "Sudha Fertility Centre is considered the best fertility centre in South India, equipped with world-class facilities, state-of-the-art technologies, the best fertility doctors in India, experienced gynecologists, and 22+ branches across South India and Sri Lanka with a success rate of 80%. ",
+  },
+  {
+    question: "Which is the best fertility centre for IVF treatment?",
+    answer:
+      "With more than 4 decades of experience and expertise in fertility care, Sudha Fertility Centre has delivered more than 1 lakh+ healthy babies, recognizing us as the best IVF centre in India.",
+  },
+  {
+    question: "What is the average cost of fertility treatments?",
+    answer:
+      "The average cost of fertility treatments varies based on the type of procedure the doctor suggests. At Sudha Fertility Centre, the best fertility hospital in India, we offer affordable and personalized fertility solutions to support your journey toward parenthood with the highest level of care.",
+  },
+  {
+    question: "Which IVF Centre has the highest success rate in Tamil Nadu?",
+    answer:
+      "With more than 80% success rate in delivering healthy babies, Sudha Fertility Centre is known as the best IVF centre in India, equipped with the best fertility doctors in India and world-class treatments and facilities. ",
+  },
+  {
+    question: "Which hospital has the best IVF Doctors in Tamil Nadu?",
+    answer:
+      "Sudha Fertility Centre, recognised as the best IVF hospital in India is well-equipped with the best IVF doctors, experienced fertility specialists, and skillful gynecologists. ",
+  },
+  {
+    question:
+      "Which Fertility Centre provides world-class fertility treatments?",
+    answer:
+      "Sudha Fertility Centre is considered the best fertility centre in South India, providing world-class fertility treatments with state-of-the-art technologies, the best fertility doctors in India, experienced gynecologists, and high-tech technologies. ",
+  },
+  {
+    question: "Why choose Sudha Fertility Centre for IVF treatments?",
+    answer:
+      "Sudha Fertility Centre is renowned as one of the best fertility hospitals providing the best IVF treatments with state-of-the-art facilities, experienced specialists, and personalized care. We blend advanced technology with compassionate support to offer you the best chance of achieving your parenthood goals. ",
+  },
+  {
+    question:
+      "What can I expect during my first consultation with a fertility specialist?",
+    answer:
+      "During your first consultation, fertility specialists will review your medical history, discuss any fertility concerns, and recommend necessary tests. As the best fertility hospital in India, we focus on understanding your unique situation and will explain the best treatment options for you. At Sudha Fertility Centre, we are committed to providing compassionate care, expert guidance, and personalized treatment plans to help you achieve your parenthood dreams.",
+  },
+  {
+    question: "Does Sudha Fertility Centre provide free fertility camps?",
+    answer:
+      "Yes, Sudha Fertility Centre conducts free fertility camps every month all over South India, ensuring our world-class fertility treatment is accessible to everyone. You can know the updates about our free medical camps on our social media platforms.",
+  },
+  {
+    question: "How do you start fertility treatment at Sudha Fertility Centre?",
+    answer:
+      "To start fertility treatment at Sudha Fertility Centre, visit your nearest Sudha branch or book an appointment by messaging our WhatsApp or calling our helpline number 7670076006. ",
+  },
+  {
+    question: "Is there any protocol to start a fertility treatment?",
+    answer:
+      "At Sudha Fertility Centre, the process begins with a thorough assessment, including medical history, physical exams, and fertility tests for both partners. Based on the results, your fertility specialist will develop a personalized treatment plan. The protocol may involve lifestyle changes, medications, or assisted reproductive technologies like IVF,  IUI, etc. Throughout the journey, we provide expert guidance, care, and support to ensure the best possible outcome.",
+  },
+  {
+    question: "When is the right time to start fertility treatment?",
+    answer:
+      "It’s advisable to consult the best fertility hospital if you have been trying to conceive for over a year without success or if you have known reproductive health issues. Sudha Fertility Centre, recognized as one of the best fertility centres, offers comprehensive consultations to evaluate your fertility and discuss tailored treatment options. Our expert team provides personalized care to help you navigate your fertility journey and achieve your parenthood goals. ",
+  },
+];
 
 function Home() {
   const [visibleCount, setVisibleCount] = useState(5);
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
+  const [openIndex, setOpenIndex] = useState(0);
+  const [faqIndex, setFaqIndex] = useState(0);
+  const [showAll, setShowAll] = useState(false);
+  const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const toggleFAQ = (index) => {
+    setFaqIndex(faqIndex === index ? null : index);
+  };
+  const toggleViewMore = () => {
+    if (showAll) {
+      setVisibleCount(5); // Reset to initial count when showing less
+      setShowAll(false); // Properly toggle state
+    } else {
+      setVisibleCount(FAQ.length); // Show all FAQs
+      setShowAll(true); // Properly toggle state
+    }
+  };
+
+  const testimonials = [
+    {
+      image: Founder,
+      text: "The journey of Sudha Fertility Centre started with an empathetic mission to help couples achieve their dream of parenthood. The vision of Dr. S. Dhanabagyam, the founder, was shaped by a heart-wrenching and life-changing experience. While performing a postmortem on a woman who had tragically taken her own life due to the immense societal pressure of not having children, Dr. Dhanabagyam was profoundly moved. This sorrowful event sparked her determination to make a difference in the lives of couples facing infertility. It led her to establish the Sudha Fertility Centre.",
+      author: "- Mrs Nagalakshi & Mr Anjineyalu.",
+    },
+    {
+      image: Pradeepa,
+      text: "Dr. S. Pradeepa, Vice President of Sudha Fertility Centre, has been an integral part of the IVF team that achieved the remarkable milestone of delivering 26 IVF babies in a single day. Her dedication and expertise have been instrumental in expanding Sudha Fertility Centre, leading to the establishment of multiple branches across Tamil Nadu. She has actively organized prestigious medical conferences, including CME Coimbatore (2013) and the 3rd International Live 3D Laparoscopic Workshop, Erode (2014). She was also part of the organizing committee for INFERTICON 2016 and served as Organizing Secretary for FETOCARE 2016, focusing on infertility, fetal medicine, and high-risk pregnancy.",
+      author: "- Mrs Priya & Mr Ramesh.",
+    },
+  ];
+
   const tabs = [
     {
-      title: "80% Success Rates",
-      label: "80% Success Rates ",
+      title: "40+ Years Of Excellence",
+      label: "40+ Years Of Excellence",
       content: {
-        heading: "80% Success Rates",
+        heading: "40+ Years Of Excellence",
         description:
-          "As the leading fertility hospital in South India, Sudha Fertility Centre serves as a beacon of hope and brings happiness. With the best fertility doctors and world-class fertility treatments, Sudha Fertility Centre has a record of 80% success rate in helping parents achieve the dream of parenthood. With delivering lakhs of healthy babies, we are identified as a renowned IVF hospital in South India offering personalized solutions and treatments for couples trying for pregnancy. From young couples to older couples, we stand with them in every step of their parenthood journey.",
-        image: Tab1,
+          "Sudha Fertility Centre is known as an icon in fertility care with more than 4 decades of excellence in making lakhs of parents' dreams into reality. With experienced Fertility specialists, we offer you the best treatments personalized according to your needs and medical history. With 20+ branches across Tamil Nadu, we ensure that expert fertility care is accessible to all, giving you the support and guidance you need on your parenthood journey",
+        image: Tab4,
       },
-      icon: Icon1,
+      icon: Icon4,
     },
     {
       title: "Affordable Treatment Cost",
@@ -72,6 +162,7 @@ function Home() {
       },
       icon: Icon2,
     },
+
     {
       title: "People's Most Trusted",
       label: "People's Most Trusted",
@@ -84,15 +175,15 @@ function Home() {
       icon: Icon3,
     },
     {
-      title: "40+ Years Of Excellence",
-      label: "40+ Years Of Excellence",
+      title: "High Success Rate",
+      label: "High Success Rate ",
       content: {
-        heading: "40+ Years Of Excellence",
+        heading: "High Success Rate",
         description:
-          "Sudha Fertility Centre is known as an icon in fertility care with more than 4 decades of excellence in making lakhs of parents' dreams into reality. With experienced Fertility specialists, we offer you the best treatments personalized according to your needs and medical history. With 20+ branches across Tamil Nadu, we ensure that expert fertility care is accessible to all, giving you the support and guidance you need on your parenthood journey",
-        image: Tab4,
+          "As the leading fertility hospital in South India, Sudha Fertility Centre serves as a beacon of hope and brings happiness. With the best fertility doctors and world-class fertility treatments, Sudha Fertility Centre has a record of high success rate in helping parents achieve the dream of parenthood. With delivering lakhs of healthy babies, we are identified as a renowned IVF hospital in South India offering personalized solutions and treatments for couples trying for pregnancy. From young couples to older couples, we stand with them in every step of their parenthood journey.",
+        image: Tab1,
       },
-      icon: Icon4,
+      icon: Icon1,
     },
     {
       title: "150+ Fertility Specialists",
@@ -106,6 +197,16 @@ function Home() {
       icon: Icon5,
     },
   ];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
+    }, 3000); // Change every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval
+  }, []);
   return (
     <>
       {/* Banner */}
@@ -142,7 +243,7 @@ function Home() {
                 into Reality for 40 Years.
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl mt-4">
-                "Join the 1,50,00+ Families who have
+                "Join the 1,50,000+ Families who have
                 <br />
                 Overcome Infertility"
               </p>
@@ -242,42 +343,65 @@ function Home() {
               </div>
             </div>
           </div>
-
           <div className="main flex flex-col lg:flex-row mt-9 mb-9">
             {/* Image */}
             <div className="image w-full lg:w-1/2">
-              <Image src={Founder} alt="Founder" className="rounded-xl" />
+              <motion.div
+                key={index} // Key change triggers animation
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Image
+                  src={testimonials[index].image}
+                  alt="Founder"
+                  className="rounded-xl "
+                />
+              </motion.div>
             </div>
 
             {/* Description */}
-            <div className="description w-full lg:w-1/2 px-3 mt-4 lg:mt-0 xl:mt-5 ">
-              <div className="heading ">
-                <h1 className="ms-5 font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-2xl">
-                  Happy Parenthood Stories.
-                </h1>
+            <div className="description w-full lg:w-1/2 px-3 lg:mt-0 relative">
+              {" "}
+              {/* Add relative positioning here */}
+              <div className="content shadow-xl p-7 rounded-xl font-outfit">
+                <motion.p
+                  key={index} // Key change triggers animation
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-[#838383]"
+                >
+                  {testimonials[index].text}
+                </motion.p>
+
+                <motion.p
+                  key={`author${index}`} // Key change triggers animation
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="xl:mt-6 mt-1"
+                >
+                  {testimonials[index].author}
+                </motion.p>
               </div>
-
-              <div className="content shadow-xl xl:mt-5 p-7 rounded-xl font-outfit">
-                <p className="text-[#838383]">
-                  We have been married for 18 years and had no children. After
-                  consulting many doctors and visiting several hospitals, we
-                  became hopeless. Finally, my uncle referred us to the Sudha
-                  Fertility Centre, mentioning that almost 90% of patients had
-                  successfully conceived there. We decided to visit and met the
-                  fertility specialists, who gave us great hope and assured us
-                  that we would definitely get pregnant.
-                </p>
-
-                <p className="xl:mt-6 mt-1">
-                  - Mrs Nagalakshi & Mr Anjineyalu.
-                </p>
+              {/* Make sure button stays fixed at the bottom */}
+              <div className="absolute -bottom-7 right-4  justify-center mt-4 hidden xl:flex">
+                {" "}
+                {/* Adjust positioning */}
+                <Button title={"Learn More"} link="/about" />
+              </div>
+              <div className="flex justify-center xl:hidden mt-3">
+                <Button title={"Learn More"} link="/about" />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-   
       {/* What Makes Sudha Fertility Centre  the Best Choice */}
       <div className="container mx-auto ">
         <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -322,6 +446,8 @@ function Home() {
                       <p className="text-[#838383] text-center">
                         In Vitro Fertilization
                       </p>
+
+                      <p className="text-[#838383] text-center mt-2">IVF</p>
                     </div>
                   </div>
                 </div>
@@ -342,6 +468,7 @@ function Home() {
                       <p className="text-[#838383] text-center">
                         Intrauterine insemination
                       </p>
+                      <p className="text-[#838383] text-center mt-2">IUI</p>
                     </div>
                   </div>
                 </div>
@@ -362,6 +489,7 @@ function Home() {
                       <p className="text-[#838383] text-center">
                         Intracytoplasmic Sperm Injection
                       </p>
+                      <p className="text-[#838383] text-center mt-2">ICSI</p>
                     </div>
                   </div>
                 </div>
@@ -382,6 +510,7 @@ function Home() {
                       <p className="text-[#838383] text-center">
                         Laser-Assisted Hatching
                       </p>
+                      <p className="text-[#838383] text-center mt-2">LAH</p>
                     </div>
                   </div>
                 </div>
@@ -420,7 +549,7 @@ function Home() {
               </div>
             </div>
             <div className="button hidden lg:flex justify-center mt-8">
-              <Button title={"View All Treatments"} />
+              <Button title={"View All Treatments"} link="/treatment" />
             </div>
           </div>
         </div>
@@ -457,8 +586,7 @@ function Home() {
               <div className="left px-3 flex-1">
                 <div className="content h-auto lg:h-72 flex flex-col justify-center items-center text-center lg:text-left">
                   <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                    Make Pregnancy Planning Simple and Confident with Our
-                    Calculator Tools
+                    Plan your pregnancy with our highly efficient Tools
                   </h1>
                   <p className="text-[#838383] mt-5">
                     Planning your pregnancy should feel empowering, not
@@ -517,21 +645,20 @@ function Home() {
                     </div>
                   </div>
 
-                  
                   <div className="tiles-1 flex flex-col items-center justify-center text-center px-3 hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
-                      <div className="title mb-3">
-                        <Image
-                          src={Pregnancy_Conception}
-                          alt="Pregnancy Conception Calculator"
-                          className="mx-auto"
-                        />
-                      </div>
-                      <div className="des">
-                        <p className="text-[#838383]">
-                          Pregnancy Conception <br /> Calculator
-                        </p>
-                      </div>
+                    <div className="title mb-3">
+                      <Image
+                        src={Pregnancy_Conception}
+                        alt="Pregnancy Conception Calculator"
+                        className="mx-auto"
+                      />
                     </div>
+                    <div className="des">
+                      <p className="text-[#838383]">
+                        Pregnancy Conception <br /> Calculator
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -565,7 +692,6 @@ function Home() {
         </div>
       </div>
 
-
       {/* Turning Dreams into Reality: Witness the Joy of Parenthood  with Sudha Fertility Centre. */}
       <div className="bg-[#DDE9FD] hidden">
         <div className="container mx-auto relative h-full">
@@ -596,228 +722,30 @@ function Home() {
             </h1>
           </div>
           <div className="mt-5">
-            {/* {AmbatturPage.faqs.slice(0, visibleCount).map((faq, index) => (
-            <FAQItem
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-              isOpen={openIndex === index}
-              toggle={() => toggleFAQ(index)}
-            />
-          ))} */}
-          </div>
-        </div>
-      </div>
-
-      {/* contact us  */}
-      <div
-        className="py-16 bg-cover bg-center"
-        style={{
-          background:
-            "linear-gradient(170deg, #F0F5FF, #F0F5FF 60%, white 60%, white)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left Column - Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-[32px] font-bold text-black mb-2">
-                  Book your Free Appointment
-                </h2>
-                <p className="text-black text-lg">
-                  Take the first step towards your parenthood journey.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      CALL
-                    </p>
-                    <p className="text-black">9874651230</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      EMAIL US
-                    </p>
-                    <p className="text-black">info@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-sm text-black">Connect with us:</p>
-                <div className="flex gap-3">
-                  {[
-                    { name: "facebook", icon: fb },
-                    { name: "twitter", icon: x },
-                    { name: "linkedin", icon: Linkedin },
-                    { name: "youtube", icon: youtube },
-                    { name: "instagram", icon: Insta },
-                  ].map((social) => (
-                    <a
-                      key={social.name}
-                      href={`https://${social.name}.com`}
-                      className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label={social.name}
-                    >
-                      <Image
-                        src={social.icon}
-                        alt={social.name}
-                        className="w-full h-full object-contain"
-                      />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Form */}
-            <div className="rounded-3xl shadow-xl p-8 bg-white z-30 relative">
-              <h3 className="text-xl font-semibold text-black mb-8">
-                Ready to Start Your Journey to Meet Your Little One?
-              </h3>
-
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="mobile"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Mobile Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="mobile"
-                    placeholder="Enter your Mobile Number"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="location"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Location
-                  </label>
-                  <input
-                    type="text"
-                    id="location"
-                    placeholder="Enter your Location"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="branch"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Select Branch
-                  </label>
-                  <div className="relative">
-                    <select
-                      id="branch"
-                      defaultValue=""
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none appearance-none text-black"
-                    >
-                      <option value="" disabled>
-                        Select Branch
-                      </option>
-                      <option value="branch1">Branch 1</option>
-                      <option value="branch2">Branch 2</option>
-                    </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <svg
-                        className="w-5 h-5 text-black"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
+            {FAQ.slice(0, visibleCount).map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={faqIndex === index}
+                toggle={() => toggleFAQ(index)}
+              />
+            ))}
+            {FAQ.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
+              <div className="text-center mt-4">
                 <button
-                  type="submit"
-                  className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
+                  className="bg-[#173366] text-white py-2 px-4 rounded-lg hover:bg-[#173366] transition-all"
+                  onClick={toggleViewMore} // Updated onClick handler
                 >
-                  Book A Free Appointment
-                  <svg
-                    className="w-5 h-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  {showAll ? "View Less ←" : "View More →"}
                 </button>
-              </form>
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
+
+      <ContactForm />
 
       {/* MarqueeComponent */}
       <section>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Banner from "@/assets/Treatments/IVF/Banner.webp";
-import About from "@/assets/Treatments/IVF/About.webp";
+import About from "@/assets/Treatments/Pregnancy/About.webp";
 import Microscope from "@/assets/Treatments/IVF/microscope.webp";
 import WhyChoose from "@/assets/Treatments/IVF/WhyChoose.webp";
 import ChooseIVF from "@/assets/Treatments/IVF/ChooseIVF.webp";
@@ -20,24 +20,8 @@ import x from "@/assets/Home/x.svg";
 import fb from "@/assets/Home/fb.svg";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
+import ContactForm from "@/components/contact/contactForm";
 
-const IVFData = [
-  {
-    question: "Ovulation stimulation",
-    answer:
-      "If you’re ovulating regularly, medications are not required to induce ovulation. If you’re not ovulating periodically, IUI specialists in Sudha will prescribe you medications that stimulate egg development. We plan your IVF procedure depending on your hormone and ultrasound test results.",
-  },
-  {
-    question: "Sperm extraction",
-    answer:
-      "Our IUI doctors extract a sperm sample from your partner or donor and “wash it” to remove the non-motile sperms or non-healthy sperms.",
-  },
-  {
-    question: "Insemination Procedure",
-    answer:
-      "In this procedure, the IUI experts used a thin catheter to inject the washed sperm sample into the uterus. By this method, the sperm skips the part of bypassing the vagina and cervix.",
-  },
-];
 
 const FAQ = [
   {
@@ -105,12 +89,8 @@ const FAQ = [
 
 function PregnancyAntenatal() {
   const [visibleCount, setVisibleCount] = useState(5);
-  const [openIndex, setOpenIndex] = useState(0);
   const [faqIndex, setFaqIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   const toggleFAQ = (index) => {
     setFaqIndex(faqIndex === index ? null : index);
@@ -120,8 +100,8 @@ function PregnancyAntenatal() {
       setVisibleCount(5); // Reset to initial count when showing less
       setShowAll(false); // Properly toggle state
     } else {
-      setVisibleCount(Ambattur.faqs.length); // Show all FAQs
-      setShowAll(true);
+      setVisibleCount(FAQ.length); // Show all FAQs
+      setShowAll(true); // Properly toggle state
     }
   };
 
@@ -145,10 +125,10 @@ function PregnancyAntenatal() {
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
               <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
-                In Vitro Fertilization (IVF)
+                Every Pregnancy Is Unique, and So Is Our Care for You
               </h1>
               <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                “Join the 1,50,00+ Families who have Overcome Infertility”
+                Pregnancy and Antenatal Care
               </h3>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
@@ -161,29 +141,14 @@ function PregnancyAntenatal() {
       {/* About pregnancy-and-antenatal-care */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
-          <div className="mt-5 text-center">
-            <div className="Title">
-              <h2 className="text-2xl font-semibold  ">About IUI</h2>
-            </div>
-            <div className="description mt-4 text-[#838383]">
-              <p>
-                Antenatal care is vital for a healthy parenthood journey,
-                especially for couples who have undergone fertility treatments.
-                Being the best maternity hospital in Tamil Nadu, Sudha Fertility
-                Centre understands the joy and anticipation of parenthood. Our
-                expert team is here to guide you in every step of your journey.
-              </p>
-            </div>
-          </div>
-
           <h2 className="text-2xl font-semibold flex justify-center text-center lg:hidden mt-4">
             About IUI
           </h2>
           <div className="main flex flex-col md:flex-row-reverse mt-4">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={About} alt="About IUI" />
+                <div className="relative w-full ">
+                  <Image src={About} alt="About IUI" className="rounded-2xl" />
                 </div>
               </div>
             </div>
@@ -337,6 +302,33 @@ function PregnancyAntenatal() {
         </div>
       </div>
 
+      <div className="container mx-auto mt-16 mb-9">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className="relative min-h-[250px] rounded-lg shadow-2xl overflow-hidden"
+            style={{
+              backgroundImage: `url(${SubBanner.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            {/* Overlay to ensure text readability */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            <div className="relative h-full flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12 mt-9">
+              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start text-center lg:text-left mb-6 lg:mb-0">
+                <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl text-white">
+                  Welcome Your Baby into Your Home
+                </h1>
+              </div>
+              <div className="w-full lg:w-auto flex justify-center lg:justify-end items-center">
+                <Button title="Book Your Free Appointment" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto">
         <section>
           <div className=" max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
@@ -348,7 +340,7 @@ function PregnancyAntenatal() {
                 key={index}
                 question={faq.question}
                 answer={faq.answer}
-                isOpen={openIndex === index}
+                isOpen={faqIndex === index}
                 toggle={() => toggleFAQ(index)}
               />
             ))}
@@ -365,6 +357,32 @@ function PregnancyAntenatal() {
           </div>
         </section>
       </div>
+
+      {/* contact us  */}
+
+      <ContactForm />
+
+      {/* MarqueeComponent */}
+      <section>
+        <MarqueeComponent
+          items={Ambattur.gallery}
+          direction="left"
+          speed="fast"
+          className="custom-class"
+        />
+        <div className="flex md:flex-row  flex-col justify-center gap-4 items-center mt-4 mb-4">
+          <h2 className="text-2xl font-bold text-center ">
+            Happy Patients, Happy Stories
+          </h2>
+          <Button title="View youtube" icon={<FaYoutube />} />
+        </div>
+        <MarqueeComponent
+          items={Ambattur.gallery}
+          direction="right"
+          speed="fast"
+          className="custom-class"
+        />
+      </section>
     </>
   );
 }

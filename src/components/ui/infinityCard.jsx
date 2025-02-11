@@ -49,7 +49,7 @@ export const InfiniteMovingReviews = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "slow") {
-        containerRef.current.style.setProperty("--animation-duration", "200s");
+        containerRef.current.style.setProperty("--animation-duration", "1000s");
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {

@@ -13,23 +13,38 @@ import gallery9 from "../assets/gallery/9.webp";
 import gallery10 from "../assets/gallery/10.webp";
 import gallery11 from "../assets/gallery/11.webp";
 import gallery12 from "../assets/gallery/12.webp";
-import gallery13 from "../assets/gallery/1.webp";
-import gallery14 from "../assets/gallery/2.webp";
-import gallery15 from "../assets/gallery/3.webp";
-import gallery16 from "../assets/gallery/4.webp";
-import gallery17 from "../assets/gallery/5.webp";
-import gallery18 from "../assets/gallery/6.webp";
-import gallery19 from "../assets/gallery/7.webp";
-import gallery20 from "../assets/gallery/8.webp";
-import gallery21 from "../assets/gallery/9.webp";
-import gallery22 from "../assets/gallery/10.webp";
-import gallery23 from "../assets/gallery/11.webp";
-import gallery24 from "../assets/gallery/12.webp";
-import gallery25 from "../assets/gallery/1.webp";
-import gallery26 from "../assets/gallery/2.webp";
-import gallery27 from "../assets/gallery/3.webp";
-import gallery28 from "../assets/gallery/4.webp";
-import Banner from "@/assets/About/Banner.webp"
+import gallery13 from "../assets/gallery/13.webp";
+import gallery14 from "../assets/gallery/14.webp";
+import gallery15 from "../assets/gallery/15.webp";
+import gallery16 from "../assets/gallery/16.webp";
+import gallery17 from "../assets/gallery/17.webp";
+import gallery18 from "../assets/gallery/18.webp";
+import gallery19 from "../assets/gallery/19.webp";
+import gallery20 from "../assets/gallery/20.webp";
+import gallery21 from "../assets/gallery/21.webp";
+import gallery22 from "../assets/gallery/22.webp";
+import gallery23 from "../assets/gallery/23.webp";
+import gallery24 from "../assets/gallery/24.webp";
+import gallery25 from "../assets/gallery/25.webp";
+import gallery26 from "../assets/gallery/26.webp";
+import gallery27 from "../assets/gallery/27.webp";
+import gallery28 from "../assets/gallery/28.webp";
+import gallery29 from "../assets/gallery/29.webp";
+import gallery30 from "../assets/gallery/30.webp";
+import gallery31 from "../assets/gallery/31.webp";
+import gallery32 from "../assets/gallery/32.webp";
+import gallery33 from "../assets/gallery/33.webp";
+import gallery34 from "../assets/gallery/34.webp";
+import gallery35 from "../assets/gallery/35.webp";
+import gallery36 from "../assets/gallery/36.webp";
+import gallery37 from "../assets/gallery/37.webp";
+import gallery38 from "../assets/gallery/38.webp";
+import gallery39 from "../assets/gallery/39.webp";
+import gallery40 from "../assets/gallery/40.webp";
+import gallery41 from "../assets/gallery/41.webp";
+import gallery42 from "../assets/gallery/42.webp";
+import gallery43 from "../assets/gallery/43.webp";
+import Banner from "@/assets/Gallery/Banner.webp";
 
 const images = [
   gallery1,
@@ -60,6 +75,18 @@ const images = [
   gallery26,
   gallery27,
   gallery28,
+  gallery29,
+  gallery31,
+  gallery32,
+  gallery33,
+  gallery34,
+  gallery35,
+  gallery36,
+  gallery37,
+  gallery38,
+  gallery39,
+  gallery39,
+  gallery40,
 ];
 
 export default function Gallery() {
@@ -70,11 +97,9 @@ export default function Gallery() {
   };
 
   return (
-
     <>
-
-          {/* Banner Section */}
-          <div className="relative">
+      {/* Banner Section */}
+      <div className="relative">
         <div
           className="absolute inset-0 bg-cover bg-center -top-28 md:-top-36"
           style={{
@@ -114,50 +139,52 @@ export default function Gallery() {
                 key={index}
                 className="border border-[#E7E7E7] p-4 rounded-lg text-center"
               >
-                <h1 className="text-xl font-bold text-[#173366]">{item.title}</h1>
+                <h1 className="text-xl font-bold text-[#173366]">
+                  {item.title}
+                </h1>
                 <p className="text-[#838383]">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-    
+
       <div className="container mx-auto relative h-full">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
-    <div className="flex flex-col items-center">
-      <h2 className="text-2xl font-semibold my-6">Gallery</h2>
+        <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
+          <div className="flex flex-col items-center">
+            <h2 className="text-2xl font-semibold my-6">Gallery</h2>
 
-      {/* Masonry Layout */}
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
-        {images.slice(0, visibleImages).map((src, index) => (
-          <div key={index} className="mb-4 break-inside-avoid">
-            <Image
-              src={src}
-              alt={`Gallery Image ${index + 1}`}
-              className="w-full h-auto rounded-lg shadow-lg"
-              loading="lazy"
-              width={500}
-              height={300}
-            />
+            {/* Masonry Layout */}
+            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
+              {images.slice(0, visibleImages).map((src, index) => (
+                <div key={index} className="mb-4 break-inside-avoid">
+                  <Image
+                    src={src}
+                    alt={`Gallery Image ${index + 1}`}
+                    className="w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
+                    width={500}
+                    height={300}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Load More Button */}
+            <div className="relative w-full flex justify-center mt-6">
+              <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+              {visibleImages < images.length && (
+                <button
+                  onClick={loadMore}
+                  className="relative z-10 px-6 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700"
+                >
+                  Load More
+                </button>
+              )}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
-
-      {/* Load More Button */}
-      <div className="relative w-full flex justify-center mt-6">
-        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-        {visibleImages < images.length && (
-          <button
-            onClick={loadMore}
-            className="relative z-10 px-6 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700"
-          >
-            Load More
-          </button>
-        )}
-      </div>
-    </div>
-    </div>
-    </div>
     </>
   );
 }

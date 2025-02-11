@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header/header";
 import { Outfit } from "next/font/google";
 import Footer from "@/components/footer/footer";
+import FloatingIcons from "@/components/floatIcon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

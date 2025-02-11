@@ -211,7 +211,7 @@ function FemaleInfertility() {
   ];
 
   return (
-   <>
+    <>
       <div className="relative ">
         <div
           className="absolute inset-0 bg-cover bg-center -top-28  md:-top-36"
@@ -229,11 +229,11 @@ function FemaleInfertility() {
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="max-w-5xl text-white text-center px-4 font-outfit mt-10">
               <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl">
-                Your journey is unique, and the joy awaiting you will be worth
-                every moment
+                Female Infertility Treatments
               </h1>
               <h3 className="mt-3  font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                Female Infertility Treatments
+                Your journey is unique, and the joy awaiting you will be worth
+                every moment
               </h3>
               <div className="button mt-7 flex justify-center">
                 <Button text={"Book Your Free Appointment →"} />
@@ -258,8 +258,8 @@ function FemaleInfertility() {
 
       <div className="container mx-auto">
         <section>
-        <div className=" max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
-        <h2 className="text-2xl font-bold text-center mb-6">
+          <div className=" max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
+            <h2 className="text-2xl font-bold text-center mb-6">
               Frequently Asked Questions
             </h2>
             {faqs.slice(0, visibleCount).map((faq, index) => (
@@ -450,7 +450,7 @@ function FemaleInfertility() {
       </div>
 
       <div className="container mx-auto">
-      <section>
+        <section>
           {/* <div className="container mx-auto">
             <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 h-full"> */}
           <MarqueeComponent

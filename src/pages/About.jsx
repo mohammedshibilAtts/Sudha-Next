@@ -16,13 +16,15 @@ import fb from "@/assets/Home/fb.svg";
 import Vision from "@/assets/About/vision.svg";
 import Value from "@/assets/About/value.svg";
 import Mission from "@/assets/About/mission.svg";
+import Award1 from "@/assets/About/award1.webp";
+import Award2 from "@/assets/About/award2.webp";
 import ManagementCards from "@/components/MangemntCard/ManagementCard";
 import TimelineTabs from "@/components/TimelineTab/TimeLineTab";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
 import { Ambattur } from "@/middleware/imagesroute";
 import Thumbnail from "@/assets/About/dhanabagyam-thumbnail.png";
-
+import ContactForm from "@/components/contact/contactForm";
 
 const cardData = [
   {
@@ -65,7 +67,6 @@ const cardData = [
       content: `
       We are inspired by the mission to help couples bring their parenthood dreams into reality. Our dedication, consistent care, and professionalism helped us remain the best fertility hospital in India. We have delivered 1 lakh+ healthy babies and brought happiness to the lives of thousands of families. Driven by the vision to vanish the stress and tears of couples longing for a baby. 
     `,
-   
     },
   },
 ];
@@ -108,13 +109,25 @@ function About() {
           <div className="flex-1 flex items-center justify-center mb-40 mt-28">
             <div className="text-white text-center px-4 font-outfit">
               <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                About Us
+                Driven By the Happiness Of Thousands of Families.
               </h1>
               <h2 className="font-outfit font-semibold text-xl sm:text-lg md:text-2xl lg:text-xl">
-                — Your Journey Starts Here！
+                Experiencing Parenthood Is No More A Dream!
               </h2>
-              <div className="button mt-8">
+              <div className="button mt-8 flex justify-center items-center">
                 <Button title={"Get Consult Our Specialists"} />
+              </div>
+              <div className="award mt-3 flex justify-center items-center gap-6">
+                <div className="card ">
+                  <div className="image">
+                    <Image src={Award1} alt="Award" />
+                  </div>
+                </div>
+                <div className="card ">
+                  <div className="image">
+                    <Image src={Award2} alt="Award" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -302,42 +315,36 @@ function About() {
                 </motion.div>
 
                 {/* Navigation */}
-               
               </div>
-               
             </div>
           </div>
 
           <div className="navigator flex mt-4 gap-6 justify-center lg:justify-end">
-                  <div
-                    className="left shadow-xl rounded-full p-3 flex justify-center cursor-pointer"
-                    onClick={handlePrev}
-                  >
-                    <button>
-                      <FaAngleLeft
-                        className={`${
-                          currentIndex === 0 ? "text-[#838383]" : ""
-                        }`}
-                        size={20}
-                      />
-                    </button>
-                  </div>
-                  <div
-                    className="next shadow-xl rounded-full p-3 flex justify-center cursor-pointer"
-                    onClick={handleNext}
-                  >
-                    <button>
-                      <FaAngleRight
-                        className={`${
-                          currentIndex === cardData.length - 1
-                            ? "text-[#838383]"
-                            : ""
-                        }`}
-                        size={20}
-                      />
-                    </button>
-                  </div>
-                </div>
+            <div
+              className="left shadow-xl rounded-full p-3 flex justify-center cursor-pointer"
+              onClick={handlePrev}
+            >
+              <button>
+                <FaAngleLeft
+                  className={`${currentIndex === 0 ? "text-[#838383]" : ""}`}
+                  size={20}
+                />
+              </button>
+            </div>
+            <div
+              className="next shadow-xl rounded-full p-3 flex justify-center cursor-pointer"
+              onClick={handleNext}
+            >
+              <button>
+                <FaAngleRight
+                  className={`${
+                    currentIndex === cardData.length - 1 ? "text-[#838383]" : ""
+                  }`}
+                  size={20}
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -358,10 +365,16 @@ function About() {
                     Our Mission
                   </h1>
                   <p className="mt-4 max-w-lg">
-                  Sudha Fertility Centre is a trusted fertility hospital, committed to providing compassionate and advanced care to individuals and couples on their path to parenthood. As a leading IVF centre, we combine innovation and expertise to make the dream of building a family a reality. With a patient-focused approach, we ensure the highest standard of care in a supportive and nurturing environment. 
+                    Sudha Fertility Centre is a trusted fertility hospital,
+                    committed to providing compassionate and advanced care to
+                    individuals and couples on their path to parenthood. As a
+                    leading IVF centre, we combine innovation and expertise to
+                    make the dream of building a family a reality. With a
+                    patient-focused approach, we ensure the highest standard of
+                    care in a supportive and nurturing environment.
                   </p>
                   <div className="button mt-5">
-                    <Button title={"Book Your Free Appointment"} />
+                    <Button title={"Get a Free Consultation"} />
                   </div>
                 </div>
               </div>
@@ -378,12 +391,14 @@ function About() {
                           <div className="content">
                             <div className="title">
                               <h1 className="text-xl font-bold text-[#173366]">
-                                Vision 
+                                Vision
                               </h1>
                             </div>
                             <div className="des mt-2">
                               <p className="text-[#838383]">
-                              To support couples with compassionate care and advanced fertility solutions to achieve their dream of parenthood. 
+                                To support couples with compassionate care and
+                                advanced fertility solutions to achieve their
+                                dream of parenthood.
                               </p>
                             </div>
                           </div>
@@ -401,12 +416,14 @@ function About() {
                             <div className="content">
                               <div className="title">
                                 <h1 className="text-xl font-bold text-[#173366]">
-                                Values 
+                                  Values
                                 </h1>
                               </div>
                               <div className="des mt-2">
                                 <p className="text-[#838383]">
-                                Compassion, integrity, innovation, and unwavering support in every step of the parenthood journey 
+                                  Compassion, integrity, innovation, and
+                                  unwavering support in every step of the
+                                  parenthood journey
                                 </p>
                               </div>
                             </div>
@@ -426,12 +443,14 @@ function About() {
                             <div className="content">
                               <div className="title">
                                 <h1 className="text-xl font-bold text-[#173366]">
-                                Mission 
+                                  Mission
                                 </h1>
                               </div>
                               <div className="des mt-2">
                                 <p className="text-[#838383]">
-                                To provide empathetic, personalized care that supports couples on their journey to parenthood 
+                                  To provide empathetic, personalized care that
+                                  supports couples on their journey to
+                                  parenthood
                                 </p>
                               </div>
                             </div>
@@ -456,55 +475,71 @@ function About() {
             </h1>
 
             <p className="max-w-5xl flex mx-auto mt-3 text-center justify-center">
-            The Visionaries Powering Your Parenthood Dream 
+              The Visionaries Powering Your Parenthood Dream
             </p>
           </div>
           <ManagementCards />
         </div>
       </div>
 
-
       <div className="container mx-auto mt-5 ">
-      <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-  <h2 className="text-center text-2xl font-bold mb-4">Our Journey</h2>
-  <div className="flex flex-col md:flex-row items-center">
-    <div className="relative w-full md:w-1/2 mb-4 md:mb-0">
-      <Image
-        src={Thumbnail}
-        alt="Story Behind Sudha Fertility Centre"
-        className="w-full h-auto rounded-lg"
-      />
+        <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold mb-4">Our Journey</h2>
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="relative w-full md:w-1/2 mb-4 md:mb-0">
+              <Image
+                src={Thumbnail}
+                alt="Story Behind Sudha Fertility Centre"
+                className="w-full h-auto rounded-lg"
+              />
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <button
-          onClick={() => window.open('https://youtu.be/E6aWzjaivps?si=j_XV57-KpA7QVN7L', '_blank')}
-          className="bg-white p-2 rounded-full shadow-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10 text-red-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 10v4a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-          </svg>
-        </button>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://youtu.be/E6aWzjaivps?si=j_XV57-KpA7QVN7L",
+                      "_blank"
+                    )
+                  }
+                  className="bg-white p-2 rounded-full shadow-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10 text-red-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 10v4a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 md:pl-4">
+              <h3 className="text-xl font-semibold mb-2">
+                40 Years of Excellence & Inauguration of New Branches
+              </h3>
+              <p className="text-gray-600">
+                The journey of Sudha Fertility Centre started with an empathetic
+                mission to help couples achieve their dream of parenthood. The
+                vision of Dr. S. Dhanabagyam, the founder, was shaped by a
+                heart-wrenching and life-changing experience. While performing a
+                postmortem on a woman who had tragically taken her own life due
+                to the immense societal pressure of not having children, Dr.
+                Dhanabagyam was profoundly moved. This sorrowful event sparked
+                her determination to make a difference in the lives of couples
+                facing infertility. It led her to establish the Sudha Fertility
+                Centre.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="w-full md:w-1/2 md:pl-4">
-      <h3 className="text-xl font-semibold mb-2">
-      40 Years of Excellence & Inauguration of New Branches 
-      </h3>
-      <p className="text-gray-600">
-      The journey of Sudha Fertility Centre started with an empathetic mission to help couples achieve their dream of parenthood. The vision of Dr. S. Dhanabagyam, the founder, was shaped by a heart-wrenching and life-changing experience. While performing a postmortem on a woman who had tragically taken her own life due to the immense societal pressure of not having children, Dr. Dhanabagyam was profoundly moved. This sorrowful event sparked her determination to make a difference in the lives of couples facing infertility. It led her to establish the Sudha Fertility Centre. 
-      </p>
-    </div>
-  </div>
-</div>
-</div>
-
-
 
       {/* Tab  */}
       <div className="container mx-auto relative h-full">
@@ -521,199 +556,7 @@ function About() {
       </div>
 
       {/* contact us  */}
-      <div
-        className="py-16 bg-cover bg-center"
-        style={{
-          background:
-            "linear-gradient(170deg, #F0F5FF, #F0F5FF 60%, white 60%, white)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid md:grid-cols-2 lg:gap-16 items-start">
-            {/* Left Column - Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-[32px] font-bold text-black mb-2">
-                  Book your Free Appointment
-                </h2>
-                <p className="text-black text-lg">
-                  Take the first step towards your parenthood journey.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      CALL
-                    </p>
-                    <p className="text-black">9874651230</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      EMAIL US
-                    </p>
-                    <p className="text-black">info@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-sm text-black">Connect with us:</p>
-                <div className="flex gap-3">
-                  {[
-                    { name: "facebook", icon: fb },
-                    { name: "twitter", icon: x },
-                    { name: "linkedin", icon: Linkedin },
-                    { name: "youtube", icon: youtube },
-                    { name: "instagram", icon: Insta },
-                  ].map((social) => (
-                    <a
-                      key={social.name}
-                      href={`https://${social.name}.com`}
-                      className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label={social.name}
-                    >
-                      <Image
-                        src={social.icon}
-                        alt={social.name}
-                        className="w-full h-full object-contain"
-                      />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Form */}
-            <div className="rounded-3xl shadow-xl p-8 bg-white z-30 relative">
-              <h3 className="text-xl font-semibold text-black mb-8">
-                Ready to Start Your Journey to Meet Your Little One?
-              </h3>
-
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="mobile"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Whatsapp Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="mobile"
-                    placeholder="Enter your Mobile Number"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="branch"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Location
-                  </label>
-                  <div className="relative">
-                    <select
-                      id="branch"
-                      defaultValue=""
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none appearance-none text-black"
-                    >
-                      <option value="" disabled>
-                        Select Location
-                      </option>
-                      <option value="branch1">Location 1</option>
-                      <option value="branch2">Location 2</option>
-                    </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <svg
-                        className="w-5 h-5 text-black"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
-                >
-                  Book A Free Appointment
-                  <svg
-                    className="w-5 h-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ContactForm/>
 
       {/* MarqueeComponent */}
       <section>

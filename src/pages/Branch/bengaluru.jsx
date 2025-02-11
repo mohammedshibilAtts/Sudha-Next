@@ -223,7 +223,7 @@ function BengaluruPage() {
                       couples to elderly couples who want to start their journey
                       in parenthood.
                     </p>
-                    <p className="text-md text-[#838383] mt-3">
+                    <p className="text-md text-[#838383] mt-3" >
                       Our fertility center in Bangalore has a record of
                       consistently bringing hope and joy with fertility
                       treatments to the family facing complex fertility

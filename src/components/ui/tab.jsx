@@ -18,8 +18,6 @@ const MetricsTabs = ({tabs}) => {
     offset: ["start start", "end end"],
   });
 
-
-  // Observer for tab section visibility
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -40,46 +38,46 @@ const MetricsTabs = ({tabs}) => {
   }, []);
 
   return (
-    <div className="relative xl:bg-[#EBF2FE] rounded-2xl" ref={containerRef} >
+    <div className="relative xl:bg-[#EBF2FE] rounded-2xl" ref={containerRef}>
       <div className="max-w-7xl mx-auto p-2 xl:p-9 font-outfit">
-      <motion.div
-        className="flex overflow-x-auto no-scrollbar p-3 mb-8 xl:flex-wrap xl:justify-center bg-slate-100 xl:bg-white rounded-full"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        style={{
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-        }}
-      >
-        {tabs.map((tab, index) => (
-          <motion.button
-            key={index}
-            onClick={() => setSelectedTab(index)}
-            className={cn(
-              "px-3 py-4 rounded-full font-medium transition-all flex items-center gap-1 group whitespace-nowrap flex-shrink-0",
-              "mr-2 last:mr-0", // Add margin between items except last one
-              index === selectedTab
-                ? "bg-[#173366] text-white"
-                : "text-[#173366] hover:bg-[#173366] hover:text-white"
-            )}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Image
-              src={tab.icon}
-              alt="icon"
-              className="w-5 h-5 group-hover:invert"
-              style={{
-                filter: index === selectedTab ? "invert(1)" : "",
-              }}
-            />
-            {tab.label}
-          </motion.button>
-        ))}
-      </motion.div>
+        <motion.div
+          className="flex flex-col md:flex-col xl:flex-row overflow-x-auto no-scrollbar p-3 mb-8 xl:flex-wrap xl:justify-center bg-slate-100 xl:bg-white rounded-xl xl:rounded-full"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
+          {tabs.map((tab, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setSelectedTab(index)}
+              className={cn(
+                "px-3 py-4 rounded-full font-medium transition-all flex items-center gap-1 group whitespace-nowrap",
+                "w-full lg:w-auto", // Full width until lg breakpoint
+                "mb-2 lg:mb-0 lg:mr-2 last:mb-0 lg:last:mr-0", // Vertical margins until lg breakpoint
+                index === selectedTab
+                  ? "bg-[#173366] text-white"
+                  : "text-[#173366] hover:bg-[#173366] hover:text-white"
+              )}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Image
+                src={tab.icon}
+                alt="icon"
+                className="w-5 h-5 group-hover:invert"
+                style={{
+                  filter: index === selectedTab ? "invert(1)" : "",
+                }}
+              />
+              {tab.label}
+            </motion.button>
+          ))}
+        </motion.div>
 
-        {/* Content Section with AnimatePresence for smooth transitions */}
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab}
@@ -106,7 +104,7 @@ const MetricsTabs = ({tabs}) => {
               </motion.div>
 
               <motion.div
-                className="relative w-full  h-[420px]"
+                className="relative w-full h-[420px]"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.1 }}

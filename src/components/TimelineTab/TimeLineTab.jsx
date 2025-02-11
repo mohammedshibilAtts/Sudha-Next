@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Tab2024 from "../../assets/About/2024.webp";
 import Tab2023 from "../../assets/About/2024.webp";
 import Tab2022 from "../../assets/About/2024.webp";
@@ -16,7 +16,8 @@ const timelineData = [
     title: "",
     description: (
       <>
-        1985 - The journey of Sudha Hospitals began at Erode as a humble 20-bed medical unit for the people.
+        1985 - The journey of Sudha Hospitals began at Erode as a humble 20-bed
+        medical unit for the people.
         <br />
         1995 - The Sudha Women and Child Care Centre was launched in Erode.
       </>
@@ -26,58 +27,66 @@ const timelineData = [
   {
     year: "2011",
     title: "",
-    description: "2011 - Sudha Women Care and Fertility Centre was inaugurated at Coimbatore ",
+    description:
+      "2011 - Sudha Women Care and Fertility Centre was inaugurated at Coimbatore ",
     img: Tab2011,
   },
   {
     year: "2015 ",
     title: "",
-    description: "2015 - Sudha Medical Centre was launched in Colombo, Sri Lanka. ",
+    description:
+      "2015 - Sudha Medical Centre was launched in Colombo, Sri Lanka. ",
     img: Tab2015,
   },
   {
     year: "2018",
     title: "",
-    description: "2018 - Sudha Women Care and Fertility Centre was inaugurated in Salem. ",
+    description:
+      "2018 - Sudha Women Care and Fertility Centre was inaugurated in Salem. ",
     img: Tab2018,
   },
   {
     year: "2019",
     title: "",
-    description: "2019 - Sudha Women Care and Fertility Centre was inaugurated in Chennai. ",
+    description:
+      "2019 - Sudha Women Care and Fertility Centre was inaugurated in Chennai. ",
     img: Tab2019,
   },
   {
     year: "2020",
     title: "",
-    description: "2020 - Sudha Women Care and Fertility Centre was inaugurated in Madurai and Trichy.",
+    description:
+      "2020 - Sudha Women Care and Fertility Centre was inaugurated in Madurai and Trichy.",
     img: Tab2020,
   },
   {
     year: "2021",
     title: "",
-    description: "2021 - Launch of many new fully equipped branches at Bangalore, Hyderabad and Theni.",
+    description:
+      "2021 - Launch of many new fully equipped branches at Bangalore, Hyderabad and Theni.",
     img: Tab2021,
   },
   {
     year: "2022",
     title: "",
-    description: "2022 - Launch of further branches at Vellore, Pondicherry, Thanjavur, Tirupur, Krishnagiri. ",
+    description:
+      "2022 - Launch of further branches at Vellore, Pondicherry, Thanjavur, Tirupur, Krishnagiri. ",
     img: Tab2022,
   },
   {
     year: "2023",
     title: "",
-    description: "2023 - Sudha Women Care and Fertility Centre was inaugurated at Karur, Attapur, Ambattur, Tirunelveli, Dindigul, and Vijayawada.",
+    description:
+      "2023 - Sudha Women Care and Fertility Centre was inaugurated at Karur, Attapur, Ambattur, Tirunelveli, Dindigul, and Vijayawada.",
     img: Tab2023,
   },
   {
     year: "2024",
     title: "",
-    description: "2024 - Sudha Woman Care and Fertility Centre was inaugurated at Thiruvannamalai, Nagercoil and Ramanathapuram. ",
+    description:
+      "2024 - Sudha Woman Care and Fertility Centre was inaugurated at Thiruvannamalai, Nagercoil and Ramanathapuram. ",
     img: Tab2024,
   },
- 
 ];
 
 const TimelineTabs = () => {
@@ -97,7 +106,7 @@ const TimelineTabs = () => {
   const handleScroll = (direction) => {
     const timelineContainer = timelineContainerRef.current;
     const scrollAmount = 200;
-    if (direction === 'left') {
+    if (direction === "left") {
       timelineContainer.scrollLeft -= scrollAmount;
     } else {
       timelineContainer.scrollLeft += scrollAmount;
@@ -120,53 +129,50 @@ const TimelineTabs = () => {
       {/* Image section */}
       <div className="mb-8">
         <Image
-          src={timelineData.find(item => item.year === selectedYear).img}
-          alt={timelineData.find(item => item.year === selectedYear).title}
-          className="w-full  object-cover"
+          src={timelineData.find((item) => item.year === selectedYear).img}
+          alt={timelineData.find((item) => item.year === selectedYear).title}
+          className="w-full  object-cover lg:h-96"
           width={1920}
           height={1080}
         />
       </div>
 
-  {/* Content section */}
-  <div className="mt-8 text-center">
-        {timelineData.find(item => item.year === selectedYear) && (
+      {/* Content section */}
+      <div className="mt-8 text-center">
+        {timelineData.find((item) => item.year === selectedYear) && (
           <div className="space-y-2">
             <h3 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-              {timelineData.find(item => item.year === selectedYear).title}
+              {timelineData.find((item) => item.year === selectedYear).title}
             </h3>
             <p className="text-gray-600">
-              {timelineData.find(item => item.year === selectedYear).description}
+              {
+                timelineData.find((item) => item.year === selectedYear)
+                  .description
+              }
             </p>
           </div>
         )}
       </div>
 
-
-      {/* Timeline container */}
       <div
         ref={timelineContainerRef}
         id="timeline-container"
-        className="overflow-x-auto flex gap-4 px-12 py-4 scroll-smooth no-scrollbar"
+        className="overflow-y-auto grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 max-h-[500px] scroll-smooth no-scrollbar"
       >
         {timelineData.map((item) => (
           <button
             key={item.year}
             onClick={() => setSelectedYear(item.year)}
-            className={`flex-shrink-0 px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`w-full px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               selectedYear === item.year
-                ? 'bg-blue-900 text-white'
-                : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
+                ? "bg-blue-900 text-white"
+                : "border border-gray-300 text-gray-700 hover:bg-gray-50"
             }`}
           >
             {item.year}
           </button>
         ))}
       </div>
-
-    
-
-    
     </div>
   );
 };

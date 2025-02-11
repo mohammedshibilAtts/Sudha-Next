@@ -20,71 +20,7 @@ import x from "@/assets/Home/x.svg";
 import fb from "@/assets/Home/fb.svg";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
-
-
-const FAQ = [
-  {
-    question: "Which hospital provides the best IUI treatment in Bangalore?",
-    answer:
-      "When looking for IUI (Intrauterine Insemination) treatment in Bangalore, Sudha Fertility Centre, the best IUI centre in Bangalore, is one of the top choices, known for its expertise and high success rates in fertility treatments. We offer you the best treatments with the best IUI doctors in India",
-  },
-  {
-    question: "What is the success rate of IUI treatment?",
-    answer:
-      "The success rate of IUI treatment can vary based on factors such as the woman’s age, the cause of infertility, sperm quality, and overall reproductive health. At Sudha Fertility Centre, we offer personalised care to help optimize your chances of success with IUI treatment.",
-  },
-  {
-    question: "Is there any risk associated with IUI treatment? ",
-    answer:
-      "IUI treatment is a safe procedure. There might be some risk factors including a slight chance of infection and the possibility of multiple pregnancies. At Sudha Fertility Centre, we take all precautions to minimize these risks and ensure the safety and well-being of our patients throughout the treatment process.",
-  },
-  {
-    question: "Is IUI treatment painful?",
-    answer:
-      "IUI treatment is generally not painful. Most women experience only mild discomfort or cramping during the procedure, similar to menstrual cramps. At Sudha Fertility Centre, recognised as the best IUI treatment hospital in India, our experienced specialists ensure that the procedure is as comfortable as possible and provide support throughout your treatment.",
-  },
-  {
-    question: "Can I do my regular work after IUI treatment?",
-    answer:
-      "Yes, it is safe to do your regular work and daily activities after IUI treatment. Light activities and normal tasks are typically fine, but it's recommended to avoid exhausting exercise or heavy lifting. At Sudha Fertility Centre, the best IUI hospital, our specialists will guide you on how to care for yourself post-treatment to support your health and maximise the chances of a positive outcome.",
-  },
-  {
-    question: "Can I go to a job after IUI treatment?",
-    answer:
-      "Yes, you can go to work after IUI treatment. The procedure is minimally invasive, and most women feel well enough to resume their regular work activities the same day. However, it's best to avoid physically demanding tasks or heavy lifting. At Sudha Fertility Centre, the best IUI centre, we ensure you receive proper guidance on post-treatment care to help you feel comfortable and supported.",
-  },
-  {
-    question: "Is normal delivery possible in IUI treatment?",
-    answer:
-      "Yes, normal delivery is possible after successful IUI treatment. Sudha Fertility Centre, the best fertility centre in India, offers continuous care throughout the pregnancy journey to ensure a healthy delivery.",
-  },
-  {
-    question: "Should I take complete bed rest after IUI treatment",
-    answer:
-      "No, complete bed rest is not required. You can continue with normal activities but should avoid exhausting tasks or heavy lifting for a few days. At Sudha Fertility Centre, the best fertility centre in India, we provide guidance on how to manage post-IUI care effectively.",
-  },
-  {
-    question: "What is the cost of IUI treatment?",
-    answer:
-      "IUI treatment costs vary depending on number of cycles required to attain a positive result. As the best IUI centre in India, Sudha Fertility Centre offers affordable and transparent pricing for all fertility treatments.",
-  },
-  {
-    question: "Who should consider IUI treatment?",
-    answer:
-      "Couples with unexplained infertility, ovulation issues, or minor male fertility issues may consider IUI. At Sudha Fertility Centre, regarded as a leading IVF centre, we provide expert evaluations and help you determine the most suitable approach for your fertility journey.",
-  },
-  {
-    question: "When should I consider IUI treatment?",
-    answer:
-      "You should consider IUI treatment if you have been trying to conceive for more than a year of regular unprotected sex. IUI is especially beneficial for couples facing mild infertility issues. At Sudha Fertility Centre, our expert IUI doctors provide personalised assessments to help determine the best treatment option for your fertility health.",
-  },
-  {
-    question: "What is IUI treatment?",
-    answer:
-      "IUI (Intrauterine Insemination) is a fertility treatment where sperm is directly injected into the uterus using a catheter to increase the chances of fertilization. This process is beneficial for couples facing minor male infertility issues. At Sudha Fertility Centre, our expert IUI doctors provide personalized care to ensure the best chances of success in your fertility journey.",
-  },
-];
-
+import ContactForm from "@/components/contact/contactForm";
 
 const facilities = [
   {
@@ -94,31 +30,30 @@ const facilities = [
   },
   {
     title: "World-class embryology equipment",
-    position: "left-24 top-44",
+    position: "left-[30px] top-44",
     rounded: "rounded-br-none",
   },
   {
     title: "Sophisticated incubators",
-    position: "left-1 top-2/4",
+    position: "left-[76px] top-2/4",
     rounded: "rounded-br-none",
   },
   {
-    title: "World-class equipments, ",
-    position: "right-32 top-[70px] ",
+    title: "State-of-the-Art Ultrasound Technology",
+    position: "right-[40px] top-[70px] ",
     rounded: "rounded-bl-none",
   },
   {
     title: "Comprehensive diagnostic tools",
-    position: "right-28 top-[140px]  ",
+    position: "right-[85px] top-[140px]  ",
     rounded: "rounded-bl-none",
   },
   {
     title: "Experienced fertility specialists and embryologists in India",
-    position: "-right-6  top-[280px] ",
+    position: "-right-[122px] top-[275px] ",
     rounded: "rounded-bl-none",
   },
 ];
-
 
 function Blastocyst() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -175,7 +110,7 @@ function Blastocyst() {
         </div>
       </div>
 
-      {/* About IUI */}
+      {/* About  Blastocyst */}
       <div className="container mx-auto relative h-full">
         <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-2xl font-semibold flex justify-center text-center lg:hidden">
@@ -184,8 +119,12 @@ function Blastocyst() {
           <div className="main flex flex-col-reverse md:flex-row">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={About} alt="About IUI" />
+                <div className="relative w-full flex justify-center items-center">
+                  <Image
+                    src={About}
+                    alt="About  Blastocyst"
+                    className="rounded-2xl"
+                  />
                 </div>
               </div>
             </div>
@@ -218,164 +157,187 @@ function Blastocyst() {
       </div>
 
       {/* Hysteroscopy in Sudha Fertility Centre */}
-     <div className="container mx-auto relative h-full mt-6 lg:mt-20">
-           <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
-             <h2 className="text-2xl font-semibold flex justify-center text-center mt-14 lg:hidden">
-               Blastocyst Culture And Transfer in Sudha Fertility Centre
-             </h2>
-             <div className="max-w-6xl text-center">
-               <div className="Title">
-                 <h2 className="text-2xl font-semibold hidden lg:block">
-                   Blastocyst Culture And Transfer in Sudha Fertility Centre
-                 </h2>
-               </div>
-               <div className="Accordian mt-4">
-                 <p className="text-[#838383] max-w-5xl mx-auto">
-                   Both IVF and Blastocyst culture treatments may seem similar but
-                   there is a huge difference in the duration that the embryos are
-                   cultured before implantation in the uterus. At Sudha Fertility
-                   Centre, fertility experts follow precise procedures to enhance
-                   the chances of a successful pregnancy.
-                 </p>
-               </div>
-             </div>
-             <div className="main flex flex-col md:flex-row mt-8">
-               <div className="flex-1 px-4">
-                 <div>
-                   <div className="description ">
-                     <div className="mt-6 flex items-center gap-4   rounded-lg  hover:bg-[#F0F5FF] cursor-pointer p-5">
-                       <span className="text-lg font-semibold bg-[#E7E7E7]  w-10 h-10 p-3 flex items-center justify-center rounded-full">
-                         01
-                       </span>
-                       <div>
-                         <h3 className="text-lg font-semibold">
-                           Egg retrieval and Fertilization
-                         </h3>
-                         <p className="text-[#838383]">
-                           After ovarian stimulation mature eggs are retrieved and
-                           fertilized with sperm in the lab, creating embryos the
-                           same as the IVF procedure.
-                         </p>
-                       </div>
-                     </div>
-   
-                     <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
-                       <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 flex p-3 items-center justify-center rounded-full">
-                         02
-                       </span>
-                       <div>
-                         <h3 className="text-lg font-semibold">
-                           Extended Culture
-                         </h3>
-                         <p className="text-[#838383]">
-                           The embryos are carefully cultured for 5-6 days,
-                           allowing them to develop into blastocysts with advanced
-                           cell differentiation, which increases their implantation
-                           potential.
-                         </p>
-                       </div>
-                     </div>
-   
-                     <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
-                       <span className="text-lg font-semibold bg-[#E7E7E7] p-3 w-10 h-10 flex items-center justify-center rounded-full">
-                         03
-                       </span>
-                       <div>
-                         <h3 className="text-lg font-semibold">
-                           Blastocyst Selection
-                         </h3>
-                         <p className="text-[#838383]">
-                           Embryologists in Sudha Fertility Centre, closely monitor
-                           and select the healthiest blastocyst, which exemplifies
-                           strong growth and viability
-                         </p>
-                       </div>
-                     </div>
-                     <div className="description  p-2 mt-3 px-4 sm:px-6 md:px-8">
-                       <p className="text-[#838383]">
-                         The good-quality embryos that are not transferred are
-                         frozen and stored. Those will be used if the first cycle
-                         is not successful
-                       </p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-   
-               <div className="flex-1">
-                 <div className=" lg:px-12 flex items-center justify-center mt-6 md:mt-0">
-                   <div className="w-full h-full flex justify-center items-center">
-                     <div className="relative w-full h-64 md:h-52 lg:h-96">
-                       <Image
-                         src={Microscope}
-                         alt="IVF in Sudha Fertility Centre"
-                         className="w-full h-full object-cover rounded-lg"
-                       />
-                     </div>
-                   </div>
-                 </div>
-                 <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
-                   <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 p-3 flex items-center justify-center rounded-full">
-                     04
-                   </span>
-                   <div>
-                     <h3 className="text-lg font-semibold">Blastocyst Transfer</h3>
-                     <p className="text-[#838383]">
-                       Using a thin catheter, the selected blastocyst is
-                       transferred into the uterus with ultrasound guidance,
-                       ensuring precise placement by the best fertility specialists
-                       in India.
-                     </p>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
+      <div className="container mx-auto relative h-full mt-6 lg:mt-20">
+        <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8 h-full">
+          <h2 className="text-2xl font-semibold flex justify-center text-center mt-14 lg:hidden">
+            Blastocyst Culture And Transfer in Sudha Fertility Centre
+          </h2>
+          <div className="max-w-6xl text-center">
+            <div className="Title">
+              <h2 className="text-2xl font-semibold hidden lg:block">
+                Blastocyst Culture And Transfer in Sudha Fertility Centre
+              </h2>
+            </div>
+            <div className="Accordian mt-4">
+              <p className="text-[#838383] max-w-5xl mx-auto">
+                Both IVF and Blastocyst culture treatments may seem similar but
+                there is a huge difference in the duration that the embryos are
+                cultured before implantation in the uterus. At Sudha Fertility
+                Centre, fertility experts follow precise procedures to enhance
+                the chances of a successful pregnancy.
+              </p>
+            </div>
+          </div>
+          <div className="main flex flex-col md:flex-row mt-8">
+            <div className="flex-1 px-4">
+              <div>
+                <div className="description ">
+                  <div className="mt-6 flex items-center gap-4   rounded-lg  hover:bg-[#F0F5FF] cursor-pointer p-5">
+                    <span className="text-lg font-semibold bg-[#E7E7E7]  w-10 h-10 p-3 flex items-center justify-center rounded-full">
+                      01
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        Egg retrieval and Fertilization
+                      </h3>
+                      <p className="text-[#838383]">
+                        After ovarian stimulation mature eggs are retrieved and
+                        fertilized with sperm in the lab, creating embryos the
+                        same as the IVF procedure.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
+                    <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 flex p-3 items-center justify-center rounded-full">
+                      02
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        Extended Culture
+                      </h3>
+                      <p className="text-[#838383]">
+                        The embryos are carefully cultured for 5-6 days,
+                        allowing them to develop into blastocysts with advanced
+                        cell differentiation, which increases their implantation
+                        potential.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer">
+                    <span className="text-lg font-semibold bg-[#E7E7E7] p-3 w-10 h-10 flex items-center justify-center rounded-full">
+                      03
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        Blastocyst Selection
+                      </h3>
+                      <p className="text-[#838383]">
+                        Embryologists in Sudha Fertility Centre, closely monitor
+                        and select the healthiest blastocyst, which exemplifies
+                        strong growth and viability
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-6  items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer flex md:hidden">
+                <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 p-3 flex items-center justify-center rounded-full">
+                  04
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold">Blastocyst Transfer</h3>
+                  <p className="text-[#838383]">
+                    Using a thin catheter, the selected blastocyst is
+                    transferred into the uterus with ultrasound guidance,
+                    ensuring precise placement by the best fertility specialists
+                    in India.
+                  </p>
+                </div>
+              </div>
+                  <div className="description  p-2 mt-3 px-4 sm:px-6 md:px-8">
+                    <p className="text-[#838383]">
+                      The good-quality embryos that are not transferred are
+                      frozen and stored. Those will be used if the first cycle
+                      is not successful
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-1">
+              <div className=" lg:px-12 flex items-center justify-center mt-6 md:mt-0">
+                <div className="w-full h-full flex justify-center items-center">
+                  <div className="relative w-full ">
+                    <Image
+                      src={Microscope}
+                      alt="IVF in Sudha Fertility Centre"
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6  items-center gap-4 p-4 hover:bg-[#F0F5FF] rounded-lg cursor-pointer hidden md:flex">
+                <span className="text-lg font-semibold bg-[#E7E7E7] w-10 h-10 p-3 flex items-center justify-center rounded-full">
+                  04
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold">Blastocyst Transfer</h3>
+                  <p className="text-[#838383]">
+                    Using a thin catheter, the selected blastocyst is
+                    transferred into the uterus with ultrasound guidance,
+                    ensuring precise placement by the best fertility specialists
+                    in India.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Why choose us for Blastocyst Culture And Transfer */}
       <div className="container mx-auto mt-6 lg:mt-20 relative h-full ">
-        <div className="max-w-7xl mx-auto px-4 py-10 pb-24 lg:pb-32 sm:px-6 lg:px-8 h-full">
+        <div className="max-w-7xl mx-auto px-4 py-10  sm:px-6 lg:px-8 h-full">
           <div className="Title  text-center">
             <h2 className="text-2xl font-semibold">
               Why choose us for Blastocyst Culture And Transfer
             </h2>
-            <h2 className="text-xl mt-2 ">
-              With blastocyst transfer, each moment brings your baby closer.
-            </h2>
+            <p className=" mt-2  text-[#838383] max-w-5xl text-center mx-auto">
+            With blastocyst transfer, each moment brings your baby closer.
+            </p>
           </div>
-          <div className="main flex flex-col-reverse md:flex-row">
+          <div className="main flex flex-col-reverse md:flex-row mt-5">
             <div className="flex-1 lg:px-12 py-3  flex items-center justify-center">
               <div className="w-full h-full flex justify-center items-center">
-                <div className="relative w-full h-64 md:h-80 lg:h-96">
-                  <Image src={WhyChoose} alt="About IUI" />
+                <div className="relative w-full  flex justify-center items-center">
+                  <Image src={WhyChoose} alt="About  Blastocyst" className="rounded-2xl" />
                 </div>
               </div>
             </div>
 
             <div className="flex-1 flex items-center px-4">
               <div>
-               
                 <div className="description mt-4 text-[#838383]">
                   <p>
                     Equipped with the best fertility doctors in India, Sudha
                     Fertility Centre has delivered 1 lakh+ healthy babies. After
                     conducting tests, our fertility specialists suggest you a
                     personalised treatment plan considering your needs and
-                    medical history Blastocyst Culture and Transfer is often
-                    recommended in cases of
+                    medical history.
+                  </p>
+                  <p className="mt-2">
+                    Blastocyst Culture and Transfer is often recommended in
+                    cases of:
                   </p>
 
-                  <ul className="text-[#838383] space-y-2 list-inside list-disc mt-3">
-                    <li>Abnormal bleeding</li>
-                    <li>Too much menstrual bleeding</li>
-                    <li>Post-menopausal bleeding</li>
-                    <li>Recurrent miscarriages</li>
-                    <li>Uterine fibroids and polyps</li>
-                    <li>Causes of infertility</li>
-                    <li>Misplaced IUD</li>
-                    <li>Any uterine abnormalities</li>
-                    <li>Extreme pelvic pain</li>
+                  <ul className="text-[#838383] space-y-2 px-4 list-disc mt-3">
+                    <li>
+                      Parents with genetic disorders to avoid passing it on to
+                      the baby.{" "}
+                    </li>
+                    <li>
+                      Couple with advanced maternal age to maximise the chances
+                      of a successful pregnancy.
+                    </li>
+                    <li>
+                      When multiple embryos are available, this process is used
+                      to select the most viable and healthy blastocyst.
+                    </li>
+                    <li>
+                      Couples who have a history of IVF and other fertility
+                      treatment failures.{" "}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -385,18 +347,60 @@ function Blastocyst() {
       </div>
 
       {/* Facilities */}
-      <div className="container mx-auto relative  bg-[#F0F5FF] mb-9">
-        <div className="max-w-7xl mx-auto px-4 pt-10 mt-10 sm:px-6 lg:px-8 h-full">
+      <div className="bg-[#F0F5FF]">
+      <div className="container mx-auto relative   mb-9">
+        <div className="max-w-7xl mx-auto px-4 py-10 mt-10 sm:px-6 lg:px-8 h-full">
           <h2 className="text-3xl font-bold text-center mb-12">Facilities</h2>
 
-          {/* Desktop Layout - Hidden on mobile */}
-          <div className="relative hidden md:flex justify-center items-center">
+          {/* Desktop Layout - For Lg screen only */}
+          <div className="relative hidden md:flex  2xl:hidden justify-center items-center">
+            <div className="flex justify-center items-center gap-12 ">
+              <div className="left space-y-5 flex-1">
+              {facilities.slice(0,3).map((facility, index) => (
+              <div key={index} className="flex justify-center">
+                <div className=" rounded-bl-none w-full rounded-2xl shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 bg-white">
+                  <p className="text-sm font-medium text-gray-800 text-center flex justify-center items-center">
+                    {facility.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+              </div>
+          <div className="Image flex justify-center items-center  mb-8 flex-1">
+              <div className="relative w-64">
+                <Image
+                  src={Facilities}
+                  alt="Facilities"
+                  className="w-full h-auto rounded-2xl"
+                />
+              </div>
+            </div>
+
+            <div className="right space-y-5 flex-1">
+              {facilities.slice(3).map((facility, index) => (
+              <div key={index} className="flex justify-center">
+                <div className=" rounded-bl-none w-full rounded-2xl shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 bg-white">
+                  <p className="text-sm font-medium text-gray-800 text-center flex justify-center items-center">
+                    {facility.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+              </div>
+
+         
+            
+          </div>
+          </div>
+
+
+          <div className="relative hidden 2xl:flex justify-center items-center">
             {/* Center Image */}
             <div className="relative w-96">
               <Image
                 src={Facilities}
                 alt="Facilities"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-2xl"
               />
             </div>
 
@@ -435,7 +439,7 @@ function Blastocyst() {
                 <Image
                   src={Facilities}
                   alt="Facilities"
-                  className="w-full h-auto"
+                  className="w-full h-auto rounded-2xl"
                 />
               </div>
             </div>
@@ -452,6 +456,7 @@ function Blastocyst() {
             ))}
           </div>
         </div>
+      </div>
       </div>
 
       {/* Welcome Your Baby into Your Home */}
@@ -482,218 +487,8 @@ function Blastocyst() {
         </div>
       </div>
 
-      {/* Faq */}
-      <div className="container mx-auto relative h-full">
-        <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
-          <div className="content mx-auto flex-1 text-center lg:text-left">
-            <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl flex justify-center">
-              FAQ
-            </h1>
-          </div>
-          <div className="mt-5">
-            {FAQ.slice(0, visibleCount).map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={faqIndex === index}
-                toggle={() => toggleFAQ(index)}
-              />
-            ))}
-            {Ambattur.faqs.length > 5 && ( // Ensure button is shown if there are more than 5 FAQs
-              <div className="text-center mt-4">
-                <button
-                  className="bg-[#173366] text-white py-2 px-4 rounded-lg hover:bg-[#173366] transition-all"
-                  onClick={toggleViewMore} // Updated onClick handler
-                >
-                  {showAll ? "View Less ←" : "View More →"}
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
       {/* contact  */}
-      <div
-        className="py-16 bg-cover bg-center"
-        style={{
-          background:
-            "linear-gradient(170deg, #F0F5FF, #F0F5FF 60%, white 60%, white)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid md:grid-cols-2 lg:gap-16 items-start">
-            {/* Left Column - Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-[32px] font-bold text-black mb-2">
-                  Book your Free Appointment
-                </h2>
-                <p className="text-black text-lg">
-                  Take the first step towards your parenthood journey.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      CALL
-                    </p>
-                    <p className="text-black">9874651230</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-black uppercase tracking-wider">
-                      EMAIL US
-                    </p>
-                    <p className="text-black">info@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-sm text-black">Connect with us:</p>
-                <div className="flex gap-3">
-                  {[
-                    { name: "facebook", icon: fb },
-                    { name: "twitter", icon: x },
-                    { name: "linkedin", icon: Linkedin },
-                    { name: "youtube", icon: youtube },
-                    { name: "instagram", icon: Insta },
-                  ].map((social) => (
-                    <a
-                      key={social.name}
-                      href={`https://${social.name}.com`}
-                      className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label={social.name}
-                    >
-                      <Image
-                        src={social.icon}
-                        alt={social.name}
-                        className="w-full h-full object-contain"
-                      />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Form */}
-            <div className="rounded-3xl shadow-xl p-8 bg-white z-30 relative">
-              <h3 className="text-xl font-semibold text-black mb-8">
-                Ready to Start Your Journey to Meet Your Little One?
-              </h3>
-
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="mobile"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Whatsapp Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="mobile"
-                    placeholder="Enter your Mobile Number"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="branch"
-                    className="block text-sm text-black mb-1"
-                  >
-                    Location
-                  </label>
-                  <div className="relative">
-                    <select
-                      id="branch"
-                      defaultValue=""
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none appearance-none text-black"
-                    >
-                      <option value="" disabled>
-                        Select Location
-                      </option>
-                      <option value="branch1">Location 1</option>
-                      <option value="branch2">Location 2</option>
-                    </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></div>
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
-                >
-                  Book A Free Appointment
-                  <svg
-                    className="w-5 h-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ContactForm />
 
       {/* MarqueeComponent */}
       <section>

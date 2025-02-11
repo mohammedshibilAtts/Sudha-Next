@@ -14,8 +14,9 @@ import phone from "@/assets/footer/phone.svg";
 import fb from "@/assets/footer/fb.svg";
 import insta from "@/assets/footer/insta.svg";
 import yt from "@/assets/footer/yt.svg";
+import { MdEmail } from "react-icons/md";
 
-const branches = [
+export const branches = [
   { title: "Ambattur  ", link: "" },
   { title: "Attapur", link: "" },
   { title: "Bengaluru", link: "" },
@@ -44,7 +45,7 @@ const branches = [
 export default function Footer() {
   return (
     <footer className="container mx-auto relative h-full">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 h-full">
+      <div className="max-w-7xl mx-auto px-6  sm:px-8 lg:px-10 h-full">
         {/* Branches Section */}
         <div>
           <h3 className="font-semibold text-blue-900 text-lg md:text-xl">
@@ -74,12 +75,14 @@ export default function Footer() {
               environment. Let's make your dream come true and welcome your
               little one.
             </p>
+            <Link href={"https://maps.app.goo.gl/hJJAgqV19kYQ1cveA"}>
             <button className="mt-4 px-6 py-3 bg-[#173366] rounded-full text-white text-sm  flex items-center justify-center gap-2 transition">
               Get Directions{" "}
               <span>
                 <MdLocationOn size={22} />
               </span>
             </button>
+            </Link>
             <div className="flex gap-4 mt-4 text-gray-700 ">
             <Image src={yt} alt="whatsapp" />
             <Image src={insta} alt="whatsapp" />
@@ -93,16 +96,17 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="text-gray-600 text-sm md:text-base mt-2 space-y-2">
-              <li>
-               <Link href={'/about'}> About Us</Link>
-                </li>
+             
               <li>
                 <Link href={"/treatments"}/>
                 Treatments
                 </li>
+                <Link href={"/international"}>
               <li
-              >News & Events
+              >  
+              International Patients
               </li>
+              </Link>
               {/* <li>Blog</li> */}
               <li>
                 Gallery
@@ -137,6 +141,10 @@ export default function Footer() {
             <div className="flex items-center gap-2 mt-2 text-gray-700">
               <Image src={phone} alt="phone" />
               <span className="text-sm md:text-base">+91 767-007-6006</span>
+            </div>
+            <div className="flex items-center gap-2 mt-2 text-gray-700 ">
+              <MdEmail size={28}/>
+              <span className="text-sm md:text-base">care@sudhahospitals.com</span>
             </div>
           </div>
         </div>
