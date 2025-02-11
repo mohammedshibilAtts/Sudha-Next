@@ -44,8 +44,8 @@ export const branches = [
 
 export default function Footer() {
   return (
-    <footer className="container mx-auto relative h-full">
-      <div className="max-w-7xl mx-auto px-6  sm:px-8 lg:px-10 h-full">
+    <footer className="container mx-auto relative h-full py-7">
+      <div className="max-w-7xl mx-auto px-6   sm:px-8 lg:px-10 h-full">
         {/* Branches Section */}
         <div>
           <h3 className="font-semibold text-blue-900 text-lg md:text-xl">
@@ -95,11 +95,12 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-800 text-lg md:text-xl">
               Quick Links
             </h3>
-            <ul className="text-gray-600 text-sm md:text-base mt-2 space-y-2">
+            <ul className="text-gray-600 text-sm md:text-base mt-2 ">
              
               <li>
-                <Link href={"/treatments"}/>
+                <Link href={"/treatments"}>
                 Treatments
+                </Link>
                 </li>
                 <Link href={"/international"}>
               <li
@@ -108,9 +109,11 @@ export default function Footer() {
               </li>
               </Link>
               {/* <li>Blog</li> */}
+              <Link href={'/gallery'}>
               <li>
                 Gallery
                 </li>
+                </Link>
               <li>Interviews</li>
             </ul>
           </div>
@@ -121,8 +124,12 @@ export default function Footer() {
               Legal
             </h3>
             <ul className="text-gray-600 text-sm md:text-base mt-2 space-y-2">
-              <li>Privacy Policy</li>
+             <Link href={'/privacy-policy'}>
+             <li>Privacy Policy</li>
+             </Link>
+              <Link href={'/terms-condition'}>
               <li>Terms & Conditions</li>
+              </Link>
             </ul>
           </div>
 

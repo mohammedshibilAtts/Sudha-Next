@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Banner from "@/assets/Treatments/IVF/Banner.webp";
+import Banner from "@/assets/Treatments/Female/Banner.webp";
 import Button from "@/components/button";
 import { motion } from "framer-motion";
 import Card from "@/components/card";

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Banner from "@/assets/Treatments/IVF/Banner.webp";
+import Banner from "@/assets/Treatments/Pregnancy/Banner.webp";
 import About from "@/assets/Treatments/Pregnancy/About.webp";
 import Microscope from "@/assets/Treatments/IVF/microscope.webp";
 import WhyChoose from "@/assets/Treatments/IVF/WhyChoose.webp";
