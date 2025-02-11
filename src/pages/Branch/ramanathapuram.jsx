@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Ramanathapuram } from "@/middleware/imagesroute";
+import { Ambattur, Ramanathapuram } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function RamanathapuramPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -250,7 +251,7 @@ function RamanathapuramPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Ramanathapuram.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -313,13 +314,15 @@ function RamanathapuramPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Ramanathapuram
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr .R.kalaivani
                       </h2>
-                      <h2 className="text-md font-bold mt-2">MBBS,MS(OG) </h2>
+                      <h2 className="text-md text-[#000000] ">
+                        MBBS,MS(OG){" "}
+                      </h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr. R. Kalaivani, MBBS, MS(OG), is a highly experienced
                         Consultant OB/GYN and Infertility Specialist at Sudha
@@ -380,8 +383,22 @@ function RamanathapuramPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            No:6/1155-2, D'block,Madurai-Rameswaram Rd, opp. to RTO office,Kadampa Nagar, Ramanathapuram, Tamil Nadu 623503
                             </p>
                           </div>
                         </div>
@@ -394,7 +411,7 @@ function RamanathapuramPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

@@ -44,7 +44,7 @@ import gallery40 from "../assets/gallery/40.webp";
 import gallery41 from "../assets/gallery/41.webp";
 import gallery42 from "../assets/gallery/42.webp";
 import gallery43 from "../assets/gallery/43.webp";
-import Banner from "@/assets/Gallery/Banner.webp";
+import Banner from "@/assets/gallery/Banner.webp";
 
 const images = [
   gallery1,

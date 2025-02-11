@@ -28,10 +28,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Chennai } from "@/middleware/imagesroute";
+import { Ambattur, Chennai } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 function ChennaiPage() {
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(null);
@@ -99,7 +100,7 @@ function ChennaiPage() {
             </div>
           </div>
         </div>
-             <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
+        <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
           <InfiniteMovingCardsDemo />
         </div>
         <div
@@ -135,24 +136,27 @@ function ChennaiPage() {
                         Best Fertility Centre in Chennai
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                       
-                        Since 2019 <span className="text-[#173366] font-bold">Sudha Fertility Centre in Chennai</span> has been
+                        Since 2019 Sudha Fertility Centre in Chennai has been
                         empathising with the emotional challenges of childless
                         couples and helped thousands of couples achieve their
-                        dream of parenthood. As a leading <span className="text-[#173366] font-bold">fertility hospital in
-                        Chennai</span>, we are well-equipped with experienced <span className="text-[#173366] font-bold">fertility
-                        doctors in Chennai</span> and the best IVF doctors in India. We
+                        dream of parenthood. As a leading fertility hospital in
+                        Chennai, we are well-equipped with experienced fertility
+                        doctors in Chennai and the best IVF doctors in India. We
                         are committed to our mission and ensure you enjoy your
                         parenthood with positivity and health. With more than
                         85% of success rate, Sudha Fertility Centre in Chennai
-                        is renowned as the best <span className="text-[#173366] font-bold">fertility centre in Chennai.</span>
+                        is renowned as the best fertility centre in Chennai.
                       </p>
-                     
+
                       <h5 className="mt-2 font-bold">
-                      Best Fertility Treatments in Chennai: 
+                        Best Fertility Treatments in Chennai:
                       </h5>
                       <p className="mt-2 text-md text-[#838383]">
-                      Equipped with the best <span className="text-[#173366] font-bold">IVF doctors</span> and <span className="text-[#173366] font-bold">fertility doctors in Chennai</span>, we provide you the exceptional fertility treatments in Chennai. We make sure you receive personalised care and support throughout your parenthood journey.  
+                        Equipped with the best IVF doctors and fertility doctors
+                        in Chennai, we provide you the exceptional fertility
+                        treatments in Chennai. We make sure you receive
+                        personalised care and support throughout your parenthood
+                        journey.
                       </p>
                     </div>
                     <div className="w-full lg:w-1/2">
@@ -169,34 +173,53 @@ function ChennaiPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
-                    Being the best IVF centre in Chennai, Sudha Fertility Centre serves as an expert in the following treatments.  
-                    </h4>
+                    <p className="text-md text-[#838383]">
+                      Being the best IVF centre in Chennai, Sudha Fertility
+                      Centre serves as an expert in the following treatments.
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers</li>
                       <li>IVF - In vitro fertilization </li>
                       <li>IUI - Intrauterine insemination </li>
                       <li>ICSI - Intracytoplasmic Sperm Injection</li>
-                      <li>IMSI - Intracytoplasmic morphologically selected sperm injection</li>
+                      <li>
+                        IMSI - Intracytoplasmic morphologically selected sperm
+                        injection
+                      </li>
                       <li>TESE - Testicular sperm extraction</li>
                       <li>PESA - Percutaneous Epididymal Sperm Aspiration</li>
                       <li>LAH - Laparoscopic-assisted hepatectomy</li>
-                      <li>Ovarian ABCD - Ovarian Rejuvenation (Autologous Blood Cell Derivative)
+                      <li>
+                        Ovarian ABCD - Ovarian Rejuvenation (Autologous Blood
+                        Cell Derivative)
                       </li>
                       <li>FET - Frozen Embryo Transfer</li>
                       <li>ENDOMETRIUM PRP - Platelet-Rich Plasma</li>
                     </ul>
                     <p className="text-md text-[#838383]">
-                    and other gynaec-related surgeries like C-section, Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst and fluid aspiration, Myomectomy, ERA, OBS as well as other fertility preservation processes are performed by the best <span className="text-[#173366] font-bold">fertility doctors in Chennai.</span>
+                      and other gynaec-related surgeries like C-section,
+                      Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst
+                      and fluid aspiration, Myomectomy, ERA, OBS as well as
+                      other fertility preservation processes are performed by
+                      the best fertility doctors in Chennai.
                     </p>
                     <h2 className=" text-md font-bold mt-3">
-                    Why is Sudha Fertility Centre the Best Fertility Centre in Chennai? 
+                      Why is Sudha Fertility Centre the Best Fertility Centre in
+                      Chennai?
                     </h2>
                     <p className="text-md text-[#838383] mt-3">
-                    Our fertility hospital in Chennai is driven by the mission of helping every couple enjoy the joy of parenthood. Guided by the best <span className="text-[#173366] font-bold">IVF doctors in Chennai</span>, we have helped countless couples in overcoming complicated fertility challenges, and welcome healthy babies.  
+                      Our fertility hospital in Chennai is driven by the mission
+                      of helping every couple enjoy the joy of parenthood.
+                      Guided by the best IVF doctors in Chennai, we have helped
+                      countless couples in overcoming complicated fertility
+                      challenges, and welcome healthy babies.
                     </p>
                     <p className="text-md text-[#838383] mt-3">
-                    As the best <span className="text-[#173366] font-bold">IVF hospital in Chennai</span>, Sudha is serving as a hope for thousands of childless families and helping them welcome their babies to their homes. We ensure that from young couples to older couples who visit our doors are treated with care and blessed with parenthood.  
+                      As the best IVF hospital in Chennai, Sudha is serving as a
+                      hope for thousands of childless families and helping them
+                      welcome their babies to their homes. We ensure that from
+                      young couples to older couples who visit our doors are
+                      treated with care and blessed with parenthood.
                     </p>
                   </motion.div>
 
@@ -217,26 +240,26 @@ function ChennaiPage() {
                         Facilities
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                      Sudha Fertility Centre in Chennai is well-equipped with world-class facilities and highly skilled fertility experts and technicians. We ensure you experience the healthcare excellence at the best fertility centre in Chennai, as you embark on your parenthood journey.  
+                        Sudha Fertility Centre in Chennai is well-equipped with
+                        world-class facilities and highly skilled fertility
+                        experts and technicians. We ensure you experience the
+                        healthcare excellence at the best fertility centre in
+                        Chennai, as you embark on your parenthood journey.
                       </p>
                       <ul className="text-md text-[#838383] mt-2 list-disc pl-4 line-height-10">
-                        <li>
-                        State-of-the-art Laboratories for IVF Treatment 
-                        </li>
-                        <li>24/7 Access to Pharmacy   </li>
+                        <li>State-of-the-art Laboratories for IVF Treatment</li>
+                        <li>24/7 Access to Pharmacy </li>
                         <li>Dedicated Labour Room for Normal Delivery </li>
                         <li>Round-the-Clock Care </li>
                         <li>Experienced Multidisciplinary Team </li>
-                        <li>Comprehensive Diagnostic Services  </li>
+                        <li>Comprehensive Diagnostic Services </li>
                         <li>Operation Theatres</li>
                         <li>Personalised Treatment Plans </li>
-                        <li>
-                        Cost-efficient Procedures and Treatments.
-                        </li>
+                        <li>Cost-efficient Procedures and Treatments.</li>
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Chennai.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
 
                       {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
                     </div>
@@ -259,7 +282,7 @@ function ChennaiPage() {
                         in Chennai
                       </h2>
                       <h3 className="text-[20px] font-bold mt-2">
-                      Chief Experts of Sudha Fertility Centre in Chennai
+                        Chief Experts of Sudha Fertility Centre in Chennai
                       </h3>
                       <h4 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr. S. Pradeepa
@@ -268,7 +291,13 @@ function ChennaiPage() {
                         DGO, DNB(OG), MNAMS , ART
                       </h4>
                       <p className="text-md text-[#838383] mt-2 line-height-10">
-                      Dr. Pradeepa’s unwavering commitment to excellence has garnered global acclaim from a diverse clientele. Following her appointment as Vice President at Sudha Fertility Centre, a strategic and meticulously planned expansion initiative led to the establishment of 19 branches within an impressive span of just 5 years, all of which are now thriving successfully. 
+                        Dr. Pradeepa’s unwavering commitment to excellence has
+                        garnered global acclaim from a diverse clientele.
+                        Following her appointment as Vice President at Sudha
+                        Fertility Centre, a strategic and meticulously planned
+                        expansion initiative led to the establishment of 19
+                        branches within an impressive span of just 5 years, all
+                        of which are now thriving successfully.
                       </p>
                     </div>
                     <div className="w-full lg:w-1/2">
@@ -294,17 +323,26 @@ function ChennaiPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
-                      Our Fertility Specialist in Chennai 
+                      <h2 className="text-[20px] font-bold ">
+                        Our Fertility Specialist in Chennai
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
-                      Dr. U. Shyla 
+                      <h2 className="text-[18px] text-[#173366] font-bold ">
+                        Dr. U. Shyla
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
-                      MBBS.,DGO.,DNB(OG).,DRM.,MNAMS 
+                      <h2 className="text-md text-[#000000] mt-2">
+                        MBBS.,DGO.,DNB(OG).,DRM.,MNAMS
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                      Dr. U. Shyla, consultant OBG and infertility at Sudha Fertility Centre in Chennai brings expertise in reproductive medicine with over 750 ICSI and 1000 IUI procedures performed. With a background in MBBS, DGO, DNB(OG), and ICOG fellowship in ART, she has successfully consulted over 3000 patients, earning their satisfaction through personalised care. Over her four years at Sudha Fertility Centre, Dr. Shyla has demonstrated proficiency in performing more than 550 hysteroscopy, laparoscopy, and other related procedures.  
+                        Dr. U. Shyla, consultant OBG and infertility at Sudha
+                        Fertility Centre in Chennai brings expertise in
+                        reproductive medicine with over 750 ICSI and 1000 IUI
+                        procedures performed. With a background in MBBS, DGO,
+                        DNB(OG), and ICOG fellowship in ART, she has
+                        successfully consulted over 3000 patients, earning their
+                        satisfaction through personalised care. Over her four
+                        years at Sudha Fertility Centre, Dr. Shyla has
+                        demonstrated proficiency in performing more than 550
+                        hysteroscopy, laparoscopy, and other related procedures.
                       </p>
                     </div>
                   </motion.div>
@@ -323,15 +361,19 @@ function ChennaiPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                     
-                      <h2 className="text-[20px] font-bold mt-4">
-                      Dr.V. Indhumathy 
+                      <h2 className="text-[18px] text-[#173366] font-bold ">
+                        Dr.V. Indhumathy
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
-                      MBBS DGO FRM 
+                      <h2 className="text-md text-[#000000] mt-2">
+                        MBBS DGO FRM
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                      Dr. Indhumathy, MBBS DGO FRM, is a highly skilled consultant specialising in obstetrics, gynecology, and reproductive medicine. With her advanced training and expertise, Dr. Indhumathy offers a personalised care and professional approach for patients seeking fertility treatments, prenatal care, and gynecological services.  
+                        Dr. Indhumathy, MBBS DGO FRM, is a highly skilled
+                        consultant specialising in obstetrics, gynecology, and
+                        reproductive medicine. With her advanced training and
+                        expertise, Dr. Indhumathy offers a personalised care and
+                        professional approach for patients seeking fertility
+                        treatments, prenatal care, and gynecological services.
                       </p>
                     </div>
                   </motion.div>
@@ -386,8 +428,22 @@ function ChennaiPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            No.940, EVR Periyar Road, Poonamalli High Road (Opp) Old Dasprakash Hotel Purasaiwalkkam, Chennai – 600084
                             </p>
                           </div>
                         </div>
@@ -400,7 +456,7 @@ function ChennaiPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>
@@ -426,14 +482,14 @@ function ChennaiPage() {
                       <div className="bg-blue-50 p-4 rounded-lg shadow-md max-w-sm mx-auto">
                         <div className="relative">
                           <Image
-                                                     src={Hospital}
-                                                     alt="Building"
-                                                     className="rounded-lg w-full"
-                                                     layout="responsive" // Ensures the image is responsive
-                                                     width={700} // Set a default width
-                                                     height={500} // Set a default height
-                                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px" // Define sizes for different breakpoints
-                                                   />
+                            src={Hospital}
+                            alt="Building"
+                            className="rounded-lg w-full"
+                            layout="responsive" // Ensures the image is responsive
+                            width={700} // Set a default width
+                            height={500} // Set a default height
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px" // Define sizes for different breakpoints
+                          />
                           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs flex justify-around items-center p-2 rounded-b-lg">
                             <div className="flex items-center space-x-1">
                               <FaWalking />

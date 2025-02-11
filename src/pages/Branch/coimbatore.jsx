@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Coimbatore } from "@/middleware/imagesroute";
+import { Ambattur, Coimbatore } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function CoimbatorePage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -98,7 +99,7 @@ function CoimbatorePage() {
             </div>
           </div>
         </div>
-             <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
+        <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
           <InfiniteMovingCardsDemo />
         </div>
         <div
@@ -134,41 +135,28 @@ function CoimbatorePage() {
                         Best Fertility Centre in Coimbatore
                       </p>
                       <p className=" mt-3 text-md text-[#838383]">
-                      <span className="text-[#173366] font-bold">
-                        Sudha Fertility Centre
-                      </span> &nbsp;
-                      launched its branch in Coimbatore in 2011. With expertise
-                      of service in fertility care, Sudha is known as the best &nbsp;
-                      <span className="text-[#173366] font-bold">
-                        fertility hospital in Coimbatore.
-                      </span>&nbsp;
-                      Equipped with state-of-the-art technologies and
-                      world-class technologies, Sudha is known as the best
-                      <span className="text-[#173366] font-bold">
-                        fertility centre in Coimbatore.
-                      </span>&nbsp;
-                      Our experienced team is committed to assuring that you
-                      enjoy every step of your parenthood journey with
-                      personalised care. We’re driven by the mission to turn
-                      your dreams of parenthood into reality.
+                        Sudha Fertility Centre launched its branch in Coimbatore
+                        in 2011. With expertise of service in fertility care,
+                        Sudha is known as the best fertility hospital in
+                        Coimbatore. Equipped with state-of-the-art technologies
+                        and world-class technologies, Sudha is known as the best
+                        fertility centre in Coimbatore. Our experienced team is
+                        committed to assuring that you enjoy every step of your
+                        parenthood journey with personalised care. We’re driven
+                        by the mission to turn your dreams of parenthood into
+                        reality.
                       </p>
-                      
 
                       <h5 className="mt-2 font-bold">
                         World-class Fertility Treatments in Coimbatore:
                       </h5>
                       <p className="mt-2 text-md text-[#838383]">
-                        With advanced technologies and the best &nbsp;
-                        <span className="text-[#173366] font-bold">
-                          fertility specialists in Coimbatore
-                        </span>&nbsp;
-                        , we provide you the exceptional &nbsp;
-                        <span className="text-[#173366] font-bold">
-                          fertility treatments in Coimbatore.
-                        </span>&nbsp;
-                        Our days are incomplete without watching the happiness
-                        of couples, we are committed to supporting you
-                        throughout your parenthood journey.
+                        With advanced technologies and the best fertility
+                        specialists in Coimbatore , we provide you the
+                        exceptional fertility treatments in Coimbatore. Our days
+                        are incomplete without watching the happiness of
+                        couples, we are committed to supporting you throughout
+                        your parenthood journey.
                       </p>
                     </div>
                     <div className="w-full lg:w-1/2">
@@ -185,10 +173,10 @@ function CoimbatorePage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="mt-2 text-md text-[#838383]">
                       As the best IVF centre in Coimbatore, Sudha Fertility
                       Centre specialises in the following treatments
-                    </h4>
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
                       <li>IVF - In vitro fertilization </li>
@@ -255,14 +243,11 @@ function CoimbatorePage() {
                         Facilities
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                        As the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility hospital in Coimbatore
-                        </span>
-                        , Sudha Fertility Centre provides the best fertility
-                        treatments with utmost care and attention. With
-                        world-class facilities, we ensure your parenthood
-                        journey is comfortable and joyful at every stage.
+                        As the best fertility hospital in Coimbatore , Sudha
+                        Fertility Centre provides the best fertility treatments
+                        with utmost care and attention. With world-class
+                        facilities, we ensure your parenthood journey is
+                        comfortable and joyful at every stage.
                       </p>
                       <ul className="text-md text-[#838383] mt-2 list-disc pl-4 line-height-10">
                         <li>State-of-the-art Laboratories for IVF Treatment</li>
@@ -278,9 +263,7 @@ function CoimbatorePage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Coimbatore.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -380,8 +363,22 @@ function CoimbatorePage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            410, Bharathiyar Rd, Siddhapudur, New Siddhapudur, Tamil Nadu 641044
                             </p>
                           </div>
                         </div>
@@ -394,7 +391,7 @@ function CoimbatorePage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

@@ -1,9 +1,12 @@
 // Ambattur
 import Imageone from "../assets/branch/ambatur/gallery/1.webp";
-import Imagetwo from "../assets/branch/ambatur/gallery/3.webp";
+import Imagetwo from "../assets/branch/ambatur/gallery/2.webp";
 import Imagethree from "../assets/branch/ambatur/gallery/3.webp";
 import Imagefour from "../assets/branch/ambatur/gallery/4.webp";
 import Imagefive from "../assets/branch/ambatur/gallery/5.webp";
+import Facilitiesimg from "../assets/branch/ambatur/img.webp";
+
+
 
 // Attapur
 import AttapurImageone from "../assets/branch/attapur/gallery/1.webp";
@@ -166,6 +169,7 @@ import VijayawadaImagefive from "../assets/branch/vijayawada/gallery/5.webp";
 
 export const Ambattur = {
   gallery: [Imageone, Imagetwo, Imagethree, Imagefour, Imagefive],
+  Facilities:{Facilitiesimg},
 
   marquee: [Imageone, Imagetwo, Imagethree, Imagefour, Imagefive],
   faqs: [

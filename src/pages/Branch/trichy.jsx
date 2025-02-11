@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Trichy } from "@/middleware/imagesroute";
+import { Ambattur, Trichy } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function TrichyPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -131,18 +132,15 @@ function TrichyPage() {
                         About
                       </h2>
                       <p className="text-md font-bold">
-                        Best Fertility Centre in Trichy{" "}
+                        Best Fertility Centre in Trichy
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>{" "}
-                        launched its branch in Trichy in 2020. As the best
-                        fertility centre in Trichy, we offer specialised,
-                        compassionate care at every stage of your parenthood
-                        journey. Our experienced team is passionate about
-                        supporting you through every step, ensuring that your
-                        dream of having a baby becomes a reality.
+                        Sudha Fertility Centre launched its branch in Trichy in
+                        2020. As the best fertility centre in Trichy, we offer
+                        specialised, compassionate care at every stage of your
+                        parenthood journey. Our experienced team is passionate
+                        about supporting you through every step, ensuring that
+                        your dream of having a baby becomes a reality.
                       </p>
                       <h5 className="mt-2 font-bold">
                         Best Fertility Treatments in Trichy:
@@ -170,10 +168,10 @@ function TrichyPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="text-md text-md text-[#838383]">
                       As the best fertility hospital in Trichy, Sudha Fertility
                       Centre specialises in the following treatments,
-                    </h4>
+                    </p>
 
                     <ul className="text-md text-[#838383] list-disc mt-3 pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
@@ -199,10 +197,7 @@ function TrichyPage() {
                       Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst
                       and fluid aspiration, Myomectomy, ERA, OBS as well as
                       other fertility preservation processes are performed by
-                      the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility doctors in Trichy.{" "}
-                      </span>
+                      the best fertility doctors in Trichy.
                     </p>
                     <h2 className=" text-md font-bold mt-3">
                       Why Sudha Fertility Centre is the Best Fertility Centre in
@@ -213,29 +208,20 @@ function TrichyPage() {
                       the lives of numerous families who have longed for a
                       child. From young couples just starting their journey
                       together to older couples who have waited years for this
-                      moment, we’ve been part of their story. As the foremost{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility hospital in Trichy,
-                      </span>{" "}
-                      we ensure that every patient receives world-class care and
-                      enjoys every step of their path to parenthood.
+                      moment, we’ve been part of their story. As the foremost
+                      fertility hospital in Trichy, we ensure that every patient
+                      receives world-class care and enjoys every step of their
+                      path to parenthood.
                     </p>
                     <p className="text-md text-[#838383]">
-                      Our{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility centre in Trichy
-                      </span>{" "}
-                      has earned a trusted reputation for consistently
-                      delivering hope and happiness to families facing complex
-                      fertility challenges, turning their dreams into reality.
-                      With the expertise of the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        {" "}
-                        fertility specialists in Trichy,
-                      </span>{" "}
-                      many couples who have been yearning for a child for years
-                      have been blessed with babies, making their dream of
-                      parenthood come true at Sudha Fertility Centre.
+                      Our fertility centre in Trichy has earned a trusted
+                      reputation for consistently delivering hope and happiness
+                      to families facing complex fertility challenges, turning
+                      their dreams into reality. With the expertise of the best
+                      fertility specialists in Trichy, many couples who have
+                      been yearning for a child for years have been blessed with
+                      babies, making their dream of parenthood come true at
+                      Sudha Fertility Centre.
                     </p>
                   </motion.div>
 
@@ -276,7 +262,7 @@ function TrichyPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Trichy.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -334,13 +320,13 @@ function TrichyPage() {
                       <Image src={uma} alt="uma" className="w-full h-auto" />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold ">
                         Our Fertility Specialist in Trichy
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         DR.S.UMA SHANKARI
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md mt-2">
                         MBBS, DGO - Fertility Consultant / Gynaecologist{" "}
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -407,8 +393,22 @@ function TrichyPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Rangga Hotel, C/O, Williams Rd, opposite to Femina Hotel, Cantonment, Tiruchirappalli, Tamil Nadu 620001
                             </p>
                           </div>
                         </div>
@@ -421,7 +421,7 @@ function TrichyPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

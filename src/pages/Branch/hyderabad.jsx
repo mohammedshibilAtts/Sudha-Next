@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Hyderabad } from "@/middleware/imagesroute";
+import { Ambattur, Hyderabad } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function HyderabadPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -134,42 +135,34 @@ function HyderabadPage() {
                         Best Fertility Centre in Hyderabad
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>{" "}
-                        has stepped into Hyderabad in 2021. With the busy people
-                        working around the city, Sudha has been seen as a hope
-                        for the couple, who have been longing for a baby for
-                        years. With a well-experienced and intellectually
-                        equipped team, Sudha Fertility Centre is identified as
-                        the best fertility hospital in Hyderabad. Sudha was and
-                        is being trusted by thousands of families. Our
-                        <span className="text-[#173366] font-bold">
-                          fertility specialists
-                        </span>{" "}
-                        and support staff are committed to providing the utmost
-                        care and personalised support to every couple who
-                        reaches our doors.
+                        Sudha Fertility Centre has stepped into Hyderabad in
+                        2021. With the busy people working around the city,
+                        Sudha has been seen as a hope for the couple, who have
+                        been longing for a baby for years. With a
+                        well-experienced and intellectually equipped team, Sudha
+                        Fertility Centre is identified as the best fertility
+                        hospital in Hyderabad. Sudha was and is being trusted by
+                        thousands of families. Our fertility specialists and
+                        support staff are committed to providing the utmost care
+                        and personalised support to every couple who reaches our
+                        doors.
                       </p>
 
                       <p className="text-md mt-3 text-md text-[#838383]">
                         We are dedicated to ensuring you enjoy every step of
                         your journey towards parenthood and that your dream of
-                        having a healthy baby in your arms comes true.{" "}
+                        having a healthy baby in your arms comes true.
                       </p>
 
                       <h5 className="mt-2 font-bold">
                         Personalised Fertility Treatments in Hyderabad:
                       </h5>
                       <p className="mt-2 text-md text-md text-[#838383]">
-                        With the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility doctors in Hyderabad, Sudha Fertility Centre
-                        </span>{" "}
-                        provides a wide range of fertility treatments tailored
-                        to your needs with world-class medical excellence and
-                        empathetic care to be a support for every couple in
-                        their journey.
+                        With the best fertility doctors in Hyderabad, Sudha
+                        Fertility Centre provides a wide range of fertility
+                        treatments tailored to your needs with world-class
+                        medical excellence and empathetic care to be a support
+                        for every couple in their journey.
                       </p>
                     </div>
                     <div className="w-full lg:w-1/2">
@@ -186,10 +179,10 @@ function HyderabadPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="mt-2 text-md text-md text-[#838383]">
                       As the best IVF hospital in Hyderabad, Sudha specialises
                       in offering the best fertility treatments such as,
-                    </h4>
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
                       <li>IVF - In vitro fertilization</li>
@@ -214,10 +207,7 @@ function HyderabadPage() {
                       Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst
                       and fluid aspiration, Myomectomy, ERA, OBS as well as
                       other fertility preservation processes are performed by
-                      the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility experts in Hyderabad.
-                      </span>
+                      the best fertility experts in Hyderabad.
                     </p>
                     <h2 className=" text-md font-bold mt-3">
                       Why Sudha Fertility Centre is the Best Fertility Centre in
@@ -230,29 +220,19 @@ function HyderabadPage() {
                       young couples to older couples, all embarking on their
                       unique journey towards parenthood.
                     </p>
-                    <p>
+                    <p className="text-md text-[#838383] mt-3">
                       Our fertility hospital in Hyderabad consistently brings
                       hope and joy and is driven by the mission of turning
                       parenthood dreams into reality. Under the expertise
-                      guidance and empathic support of the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF doctors in Hyderabad
-                      </span>
-                      , many couples who have been longing for a baby for years
-                      delivered healthy babies.
+                      guidance and empathic support of the best IVF doctors in
+                      Hyderabad , many couples who have been longing for a baby
+                      for years delivered healthy babies.
                     </p>
                     <p className="text-md text-[#838383] mt-3">
-                      Recognised as the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF hospital in Hyderabad
-                      </span>{" "}
-                      with the{" "}
-                      <span className="text-[#173366] font-bold">
-                        best IVF doctors
-                      </span>
-                      , we ensure that every couple receives personalised
-                      attention. Our goal is to bring joy and fulfilment to
-                      families through our dedicated services.
+                      Recognised as the best IVF hospital in Hyderabad with the
+                      best IVF doctors , we ensure that every couple receives
+                      personalised attention. Our goal is to bring joy and
+                      fulfilment to families through our dedicated services.
                     </p>
                   </motion.div>
 
@@ -296,9 +276,7 @@ function HyderabadPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Hyderabad.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -360,13 +338,13 @@ function HyderabadPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold">
                         Our Fertility Specialist in Hyderabad
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr. Akhila Ayyagari
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md text-[#000000] mt-3">
                         MBBS.,,DNB(OBG).ICOG - Fertility Specialist / OB-GYN
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -430,8 +408,22 @@ function HyderabadPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            D.No. 8-2-335/2 A/T, Green Valley Rd, Banjara Hills, Hyderabad, Telangana 500034
                             </p>
                           </div>
                         </div>
@@ -444,7 +436,7 @@ function HyderabadPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

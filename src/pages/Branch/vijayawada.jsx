@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Vijayawada } from "@/middleware/imagesroute";
+import { Ambattur, Vijayawada } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function VijayawadaPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -131,7 +132,7 @@ function VijayawadaPage() {
                         About
                       </h2>
                       <p className="text-md font-bold">
-                        Best Fertility Centre in Vijayawada{" "}
+                        Best Fertility Centre in Vijayawada
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
                         Sudha Fertility Centre expanded to Vijayawada in 2023,
@@ -170,10 +171,10 @@ function VijayawadaPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="text-md mt-3 text-md text-[#838383]">
                       As the best IVF centre in Vijayawada, Sudha Fertility
                       Centre specialises in the following treatments,
-                    </h4>
+                    </p>
 
                     <ul className="text-md text-[#838383] list-disc mt-3 pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
@@ -259,7 +260,7 @@ function VijayawadaPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Vijayawada.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -321,13 +322,13 @@ function VijayawadaPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Vijayawada
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr. Praneetha Garlapati
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md text-[#000000] mt-2">
                         M.B.B.S., M.S(OG)., FRM., OB/Gyn & IVF Consultant{" "}
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -390,8 +391,22 @@ function VijayawadaPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Dr.No: 40-16/1-37, 1st Floor, Georgepet, Near D-Address Mall, Labbipet, Vijayawada, Andhra Pradesh - 520010
                             </p>
                           </div>
                         </div>
@@ -404,7 +419,7 @@ function VijayawadaPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

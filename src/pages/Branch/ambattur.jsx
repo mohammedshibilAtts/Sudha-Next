@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import Pradeepa from "@/assets/branch/ambatur/pradeepa.png";
 import BathulaPadmavathiDevi from "@/assets/branch/ambatur/bathula_padmavathi_devi.png";
 import Hospital from "@/assets/branch/ambatur/hospital_img.png";
-
+import { CiLocationOn } from "react-icons/ci";
 import ImageGrid from "@/components/imagegrid";
 
 import {
@@ -42,6 +42,8 @@ function AmbatturPage() {
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(null);
   const [showAll, setShowAll] = useState(false); // State to track if all FAQs are shown
+
+  console.log("Ambattur", Ambattur);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -139,34 +141,26 @@ function AmbatturPage() {
                       <h2 className="text-[#173366] text-2xl font-bold">
                         About
                       </h2>
-                      <p className="text-md">
+                      <p className="text-md text-[#838383]">
                         Best Fertility Centre in Ambattur
                       </p>
-                      <p className="text-md mt-3">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>
-                        launched its branch in Ambattur in 2023. With expertise
-                        in fertility care, Sudha is known as the best fertility
-                        hospital in Ambattur. Our experienced team is committed
-                        to providing personalized care and compassionate support
-                        in every step of your parenthood journey. We're driven
-                        by the mission to turn your dreams of parenthood into
-                        reality.
+                      <p className="text-md mt-3 text-[#838383]">
+                        Sudha Fertility Centre launched its branch in Ambattur
+                        in 2023. With expertise in fertility care, Sudha is
+                        known as the best fertility hospital in Ambattur. Our
+                        experienced team is committed to providing personalized
+                        care and compassionate support in every step of your
+                        parenthood journey. We're driven by the mission to turn
+                        your dreams of parenthood into reality.
                       </p>
                       <h5 className="mt-2 font-bold">
                         World-class Fertility Treatments in Ambattur:
                       </h5>
-                      <p className="mt-2 text-md">
-                        With advanced technologies and the
-                        <span className="text-[#173366] font-bold">
-                          best fertility specialists in Ambattur
-                        </span>
-                        , we provide you the exceptional
-                        <span className="text-[#173366] font-bold">
-                          fertility treatments in Ambattur
-                        </span>
-                        to support you throughout your parenthood journey.
+                      <p className="mt-2 text-md text-[#838383]">
+                        With advanced technologies and the best fertility
+                        specialists in Ambattur , we provide you the exceptional
+                        fertility treatments in Ambattur to support you
+                        throughout your parenthood journey.
                       </p>
                     </div>
                     <div className="w-full lg:w-1/2">
@@ -183,21 +177,21 @@ function AmbatturPage() {
                     animate="animate"
                     variants={fadeInUp}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="mt-2 text-md text-[#838383]">
                       As the best IVF centre in Ambattur, Sudha Fertility Centre
                       specialises in the following treatments,
-                    </h4>
+                    </p>
                     <h2 className=" text-md font-bold">
                       Fertility Treatments:
                     </h2>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers</li>
-                      <li>IVF - In vitro fertilization</li>
-                      <li>IUI - Intrauterine inseminatio</li>
+                      <li>IVF - In vitro fertilization </li>
+                      <li>IUI - Intrauterine insemination </li>
                       <li>ICSI - Intracytoplasmic Sperm Injection</li>
                       <li>
-                        IMSI - Intracytoplasmic morphologically selected
-                        sperminjection
+                        IMSI - Intracytoplasmic morphologically selected sperm
+                        injection
                       </li>
                       <li>TESE - Testicular sperm extraction</li>
                       <li>PESA - Percutaneous Epididymal Sperm Aspiration</li>
@@ -221,16 +215,13 @@ function AmbatturPage() {
                       Ambattur?
                     </h2>
                     <p className="text-md text-[#838383] mt-3">
-                      Sudha Fertility Centre in Ambattur has lighten up the
-                      lives of thousands of families longing for a baby for
-                      years. Not only young couples who start their marriage
-                      life but also elderly couples longing for a child for
-                      years have been blessed with babies. As the best
-                      <span className="text-[#173366] font-bold">
-                        IVF hospital in Ambattur
-                      </span>
-                      , we make sure every individual who visits our doors
-                      receives the best care and enjoys every journey of
+                      Sudha Fertility Centre in Ambattur has lit up the lives of
+                      thousands of families longing for a baby for years. Not
+                      only young couples who have started their marriage life
+                      but also elderly couples longing for a child for years
+                      have been blessed with babies. As the best IVF hospital in
+                      Ambattur, we make sure every individual who visits our
+                      doors receives the best care and enjoys every journey of
                       parenthood.
                     </p>
                     <p className="text-md text-[#838383] mt-3">
@@ -246,6 +237,7 @@ function AmbatturPage() {
                   <hr className="mt-4" />
                 </section>
               </ScrollMotion>
+
               <ScrollMotion>
                 <section id="facilities">
                   <motion.div
@@ -258,18 +250,14 @@ function AmbatturPage() {
                       <h2 className="text-[#173366] text-2xl font-bold">
                         Facilities
                       </h2>
-                      <h2 className="text-md font-bold">Our Best Facilities</h2>
                       <p className="text-md text-[#838383] mt-2">
-                        As the best
-                        <span className="text-[#173366] font-bold ml-1">
-                          fertility hospital in Ambattur
-                        </span>
-                        , Sudha Fertility Centre provides quick and practical
-                        solutions to patients with evidence-based results. We
-                        help you transform your dream of parenthood into reality
-                        with our best fertility treatments and world-class
-                        facilities, delivering excellence at every stage of your
-                        parenthood journey.
+                        As the best fertility hospital in Ambattur , Sudha
+                        Fertility Centre provides quick and practical solutions
+                        to patients with evidence-based results. We help you
+                        transform your dream of parenthood into reality with our
+                        best fertility treatments and world-class facilities,
+                        delivering excellence at every stage of your parenthood
+                        journey.
                       </p>
                       <ul className="text-md text-[#838383] mt-2 list-disc pl-4 line-height-10">
                         <li>Operation Theatre</li>
@@ -281,7 +269,7 @@ function AmbatturPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Ambattur.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -291,7 +279,7 @@ function AmbatturPage() {
               <ScrollMotion>
                 <section id="specialists">
                   <motion.div
-                    className="flex flex-col-reverse lg:flex-row gap-8 mt-5"
+                    className="flex flex-wrap lg:flex-nowrap gap-8 mt-5"
                     initial="initial"
                     animate="animate"
                     variants={fadeInUp}
@@ -330,7 +318,7 @@ function AmbatturPage() {
                   </motion.div>
 
                   <motion.div
-                    className="flex flex-col lg:flex-row gap-8 mt-5"
+                    className="flex flex-col-reverse lg:flex-row gap-8 mt-5"
                     initial="initial"
                     animate="animate"
                     variants={fadeInUp}
@@ -343,13 +331,13 @@ function AmbatturPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Consultant
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr. Bathula Padmavathi Devi
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md text-[#000000]">
                         MBBS., MD(OG)., FRM
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -387,7 +375,7 @@ function AmbatturPage() {
               <ScrollMotion>
                 <section id="location">
                   <motion.div
-                    className="flex flex-col lg:flex-row gap-8 mt-5 bg-[#F0F5FF] p-5 rounded-lg"
+                    className="flex flex-col lg:flex-row gap-8 mt-5 bg-[#F0F5FF] p-4 rounded-lg"
                     initial="initial"
                     animate="animate"
                     variants={fadeInUp}
@@ -407,27 +395,41 @@ function AmbatturPage() {
                         {/* Phone Section */}
                         <div className="flex items-center space-x-4">
                           <div className="bg-white p-2 rounded-full">
-                            <IoCallOutline className="text-xl text-black size-4" />
+                            <IoCallOutline className="text-xl text-black" />
                           </div>
                           <div>
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                              No: 119, Seven star complex, Second Floor, MD H
+                              Road, Ambattur, Chennai - 600 053.
                             </p>
                           </div>
                         </div>
 
                         <div className="flex items-center space-x-4">
                           <div className="bg-white p-2 rounded-full">
-                            <AiTwotoneMail className="text-xl text-black size-4" />
+                            <AiTwotoneMail className="text-xl text-black" />
                           </div>
                           <div>
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>
@@ -442,7 +444,7 @@ function AmbatturPage() {
                             </p>
                           </div>
                           <div className="flex space-x-4">
-                            <FaFacebook className="text-4xl  text-gray-600 bg-white p-2 rounded-full" />
+                            <FaFacebook className="text-4xl text-gray-600 bg-white p-2 rounded-full" />
                             <FaYoutube className="text-4xl text-gray-600 bg-white p-2 rounded-full" />
                             <FaInstagram className="text-4xl text-gray-600 bg-white p-2 rounded-full" />
                           </div>

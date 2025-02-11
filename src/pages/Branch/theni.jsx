@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Theni } from "@/middleware/imagesroute";
+import { Ambattur, Theni } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function TheniPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -167,10 +168,10 @@ function TheniPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="mt-2 text-md text-md text-[#838383]">
                       As the best fertility centre in Theni, Sudha Fertility
                       Centre specialises in the following treatments,
-                    </h4>
+                    </p>
 
                     <ul className="text-md text-[#838383] list-disc mt-3 pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
@@ -196,10 +197,7 @@ function TheniPage() {
                       Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst
                       and fluid aspiration, Myomectomy, ERA, OBS as well as
                       other fertility preservation processes are performed by
-                      the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF doctors in Theni.
-                      </span>
+                      the best IVF doctors in Theni.
                     </p>
                     <h2 className=" text-md font-bold mt-3">
                       Why Sudha Fertility Centre is the Best Fertility Centre in
@@ -243,16 +241,13 @@ function TheniPage() {
                         Facilities
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                        As the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          IVF hospital in Theni,
-                        </span>{" "}
-                        Sudha Fertility Centre provides quick and practical
-                        solutions to patients with evidence-based results. We
-                        help you transform your dream of parenthood into reality
-                        with our best fertility treatments and world-class
-                        facilities, delivering excellence at every stage of your
-                        parenthood journey.
+                        As the best IVF hospital in Theni, Sudha Fertility
+                        Centre provides quick and practical solutions to
+                        patients with evidence-based results. We help you
+                        transform your dream of parenthood into reality with our
+                        best fertility treatments and world-class facilities,
+                        delivering excellence at every stage of your parenthood
+                        journey.
                       </p>
                       <ul className="text-md text-[#838383] mt-2 list-disc pl-4 line-height-10">
                         <li>Comprehensive diagnostic services </li>
@@ -264,7 +259,7 @@ function TheniPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Theni.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -326,14 +321,14 @@ function TheniPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Theni
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr. U. Soundharya Nivasini
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
-                        MBBS, DNB, OG - Fertility Consultant / OB-GYN{" "}
+                      <h2 className="text-md text-[#000000] mt-2">
+                        MBBS, DNB, OG - Fertility Consultant / OB-GYN
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr. U Soundharya Nivasini, a fertility consultant at
@@ -398,8 +393,22 @@ function TheniPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Krishnammal Memorial Hospital, 293, Periyakulam - Cumbum Rd, Theni, Tamil Nadu 625531
                             </p>
                           </div>
                         </div>
@@ -412,7 +421,7 @@ function TheniPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

@@ -27,10 +27,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Madurai } from "@/middleware/imagesroute";
+import { Ambattur, Madurai } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function MaduraiPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -132,19 +133,13 @@ function MaduraiPage() {
                         About
                       </h2>
                       <p className="text-md font-bold">
-                        Best Fertility Centre in Madurai{" "}
+                        Best Fertility Centre in Madurai
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>{" "}
-                        launched its branch in Madurai in 2020. Known for
-                        excellence in fertility care, we are recognised as the
-                        top{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility hospital in Madurai
-                        </span>
-                        , committed to guiding couples with personalised and
+                        Sudha Fertility Centre launched its branch in Madurai in
+                        2020. Known for excellence in fertility care, we are
+                        recognised as the top fertility hospital in Madurai ,
+                        committed to guiding couples with personalised and
                         compassionate care. With a keen eye on your needs, our
                         fertility experts provide full support in your
                         parenthood journey, turning your dreams into a joyful
@@ -176,14 +171,10 @@ function MaduraiPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
-                      As the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF centre in Madurai
-                      </span>
-                      , Sudha Fertility Centre specialises in the following
-                      treatments,
-                    </h4>
+                    <p className="mt-2 text-md text-md text-[#838383]">
+                      As the best IVF centre in Madurai , Sudha Fertility Centre
+                      specialises in the following treatments,
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers</li>
                       <li>IVF - In vitro fertilization </li>
@@ -208,10 +199,7 @@ function MaduraiPage() {
                       Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst
                       and fluid aspiration, Myomectomy, ERA, OBS as well as
                       other fertility preservation processes are performed by
-                      the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility doctors in Madurai.
-                      </span>
+                      the best fertility doctors in Madurai.
                     </p>
                     <h2 className=" text-md font-bold mt-3">
                       Why Sudha Fertility Centre is the Best Fertility Centre in
@@ -228,18 +216,14 @@ function MaduraiPage() {
                       journey into parenthood.
                     </p>
                     <p className="text-md text-[#838383]">
-                      Our
-                      <span className="text-[#173366] font-bold">
-                        {" "}
-                        fertility centre in Madurai
-                      </span>{" "}
-                      has built a solid reputation for consistently bringing
-                      hope and joy to families facing complex fertility issues,
-                      providing solutions that transform dreams into reality.
-                      With the guidance of the best fertility specialists in
-                      Madurai, couples who have longed for a child for years
-                      have finally been blessed with babies, fulfilling their
-                      parenthood dreams at Sudha Fertility Centre.
+                      Our fertility centre in Madurai has built a solid
+                      reputation for consistently bringing hope and joy to
+                      families facing complex fertility issues, providing
+                      solutions that transform dreams into reality. With the
+                      guidance of the best fertility specialists in Madurai,
+                      couples who have longed for a child for years have finally
+                      been blessed with babies, fulfilling their parenthood
+                      dreams at Sudha Fertility Centre.
                     </p>
                   </motion.div>
 
@@ -270,27 +254,25 @@ function MaduraiPage() {
                       </p>
                       <ul className="text-md text-[#838383] mt-2 list-disc pl-4 line-height-10">
                         <li>
-                          29-bed facility with 4 Neonatal Intensive Care Units{" "}
+                          29-bed facility with 4 Neonatal Intensive Care Units
                         </li>
                         <li>Hi-Tech laboratory working around the clock </li>
                         <li>A 24×7 pharmacy </li>
                         <li>
                           Labour room for pregnant women to ensure safe
-                          childbirth{" "}
+                          childbirth
                         </li>
                         <li>A modular and well-equipped IVF laboratory </li>
                         <li>
                           Cutting-edge diagnostic facilities for precise
-                          healthcare{" "}
+                          healthcare
                         </li>
                         <li>A modular and well-equipped IVF laboratory </li>
                         <li>Advanced patient-centric infrastructure </li>
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Madurai.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -353,13 +335,15 @@ function MaduraiPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Madurai
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-3">
                         DR.JEEVITHA.K.J
                       </h2>
-                      <h2 className="text-md font-bold mt-2">MBBS, DNB(OG) </h2>
+                      <h2 className="text-md text-[#000000] mt-3">
+                        MBBS, DNB(OG){" "}
+                      </h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr. Jeevitha K.J, MBBS, DNB (OG), is an accomplished
                         obstetrician and gynaecologist at Sudha Fertility
@@ -389,10 +373,12 @@ function MaduraiPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-3">
                         Dr. M.KARTHIYAYINI
                       </h2>
-                      <h2 className="text-md font-bold mt-2">MBBS, DGO </h2>
+                      <h2 className="text-md text-[#000000] mt-3">
+                        MBBS, DGO{" "}
+                      </h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr. M. Karthiyayini, MBBS, DGO, is a compassionate and
                         highly experienced obstetrician and gynaecologist at
@@ -457,8 +443,21 @@ function MaduraiPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Srinivasa Multispeciality Hospital, C/O, Kalpalam Rd, near Meenakshi College Road, Sellur, Goripalayam, Madurai, Tamil Nadu 625002
                             </p>
                           </div>
                         </div>
@@ -471,11 +470,12 @@ function MaduraiPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>
                         </div>
+                      
 
                         {/* Social Media Section */}
                         <div>

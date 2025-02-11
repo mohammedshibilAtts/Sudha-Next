@@ -27,9 +27,10 @@ import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
 import ScrollMotion from "@/components/animation/scrollMotion";
-import { Puducherry } from "@/middleware/imagesroute";
+import { Ambattur, Puducherry } from "@/middleware/imagesroute";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function PuducherryPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -130,8 +131,8 @@ function PuducherryPage() {
                       <h2 className="text-[#173366] text-2xl font-bold">
                         About
                       </h2>
-                      <p className="text-md">
-                        Best Fertility Centre in Puducherry{" "}
+                      <p className="text-md font-bold">
+                        Best Fertility Centre in Puducherry
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
                         Since launching in 2022, Sudha Fertility Centre in
@@ -169,14 +170,11 @@ function PuducherryPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
-                      As the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF center in Pondicherry
-                      </span>
-                      , Sudha Fertility Centre is committed to solving all your
-                      infertility issues with the following treatments.
-                    </h4>
+                    <p className=" text-md text-md text-[#838383]">
+                      As the best IVF center in Pondicherry , Sudha Fertility
+                      Centre is committed to solving all your infertility issues
+                      with the following treatments.
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
                       <li>IVF - In vitro fertilization </li>
@@ -212,12 +210,9 @@ function PuducherryPage() {
                       happiness to thousands of families longing for a child.
                       From newlywed couples to older couples longing for a baby
                       for years, we have made those dreams come true. As the
-                      most trusted{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF hospital in Pondicherry
-                      </span>
-                      , we ensure that each couple receives the best care and
-                      enjoys every step of their parenthood journey.
+                      most trusted IVF hospital in Pondicherry , we ensure that
+                      each couple receives the best care and enjoys every step
+                      of their parenthood journey.
                     </p>
                     <p className="text-md text-[#838383]">
                       Our mission is to support couples to overcome their
@@ -269,9 +264,7 @@ function PuducherryPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Puducherry.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -334,14 +327,14 @@ function PuducherryPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Pondicherry
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         DR.AISHWARYA JAGAN
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
-                        MBBS, MD(OG), FMAS, DMAS, Dip.ART{" "}
+                      <h2 className="text-md text-[#000000] mt-3">
+                        MBBS, MD(OG), FMAS, DMAS, Dip.ART
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr. Aishwarya Jagan is a highly skilled fertility expert
@@ -404,8 +397,22 @@ function PuducherryPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            No.265, Bussy street, Lal bahadur sasthri street, near kamban kalaiarangam, Puducherry-605001
                             </p>
                           </div>
                         </div>
@@ -418,7 +425,7 @@ function PuducherryPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Karur } from "@/middleware/imagesroute";
+import { Ambattur, Karur } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function KarurPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -171,10 +172,10 @@ function KarurPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="mt-2 text-md text-md text-[#838383]">
                       As the best IVF centre in Karur, Sudha Fertility Centre
                       specialises in the following treatments,
-                    </h4>
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers</li>
                       <li>IVF - In vitro fertilization </li>
@@ -206,20 +207,14 @@ function KarurPage() {
                       Karur?
                     </h2>
                     <p className="text-md text-[#838383] mt-3">
-                      Being the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF hospital in Karur
-                      </span>
-                      , we have brought happiness to thousands of families with
-                      our expertise in fertility care. From young couples
-                      starting their marriage life to elderly couples longing
-                      for a baby for years trust us as the beacon of hope. With
-                      a remarkable record of delivering lakhs of healthy babies
-                      across all branches, we are proud to be recognized as the
-                      best{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility centre in Karur.
-                      </span>
+                      Being the best IVF hospital in Karur , we have brought
+                      happiness to thousands of families with our expertise in
+                      fertility care. From young couples starting their marriage
+                      life to elderly couples longing for a baby for years trust
+                      us as the beacon of hope. With a remarkable record of
+                      delivering lakhs of healthy babies across all branches, we
+                      are proud to be recognized as the best fertility centre in
+                      Karur.
                     </p>
                     <p className="text-md text-[#838383]">
                       We pride ourselves as a place where families find hope,
@@ -248,15 +243,10 @@ function KarurPage() {
                         Facilities
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                        Sudha Fertility Centre in Karur provides the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility treatments in Karur
-                        </span>{" "}
-                        with world-class facilities, efficient{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility specialists in Karur
-                        </span>
-                        , experienced lab technicians, state-of-the-art
+                        Sudha Fertility Centre in Karur provides the best
+                        fertility treatments in Karur with world-class
+                        facilities, efficient fertility specialists in Karur ,
+                        experienced lab technicians, state-of-the-art
                         technology, exceptional infrastructure, and persoanlised
                         care. Your parenthood journey is in the safe hands,
                         begin your first step with hope with Sudha Fertility
@@ -273,9 +263,7 @@ function KarurPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Karur.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -337,13 +325,13 @@ function KarurPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Karur
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr. S.Dhivya
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md text-[#000000] mt-3">
                         MBBS, MS, DNB(OG) - Fertility Consultant /OB-GYN{" "}
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -409,8 +397,22 @@ function KarurPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Sri Rathna Hospital, C/O, North West pradhakshanam Road, near Thinnappa Theatre, Madavilagam, Karur, Tamil Nadu 639002
                             </p>
                           </div>
                         </div>
@@ -423,7 +425,7 @@ function KarurPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

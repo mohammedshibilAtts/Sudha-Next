@@ -27,10 +27,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Bengaluru } from "@/middleware/imagesroute";
+import { Ambattur, Bengaluru } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 function BengaluruPage() {
   const [visibleCount, setVisibleCount] = useState(5);
   const [openIndex, setOpenIndex] = useState(null);
@@ -98,7 +99,7 @@ function BengaluruPage() {
             </div>
           </div>
         </div>
-             <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
+        <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
           <InfiniteMovingCardsDemo />
         </div>
         <div
@@ -134,17 +135,14 @@ function BengaluruPage() {
                         Best Fertility Centre in Bangalore
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>{" "}
-                        has launched its branch in Bangalore in 2021. With more
-                        than four decades of expertise in fertility care, Sudha
-                        Fertility Centre has become a beacon of hope for
-                        thousands of families to begin their parenthood journey.
-                        As a leading fertility hospital in Bangalore, we pride
-                        ourselves on delivering personalised care through
-                        advanced medical technology making us a trusted name
-                        across the region.
+                        Sudha Fertility Centre has launched its branch in
+                        Bangalore in 2021. With more than four decades of
+                        expertise in fertility care, Sudha Fertility Centre has
+                        become a beacon of hope for thousands of families to
+                        begin their parenthood journey. As a leading fertility
+                        hospital in Bangalore, we pride ourselves on delivering
+                        personalised care through advanced medical technology
+                        making us a trusted name across the region.
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
                         Our experienced team is committed to providing
@@ -179,10 +177,10 @@ function BengaluruPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="text-md mt-3 text-md text-[#838383]">
                       As a leading IVF center in Bangalore, we specialise in
                       offering various treatments such as
-                    </h4>
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
                       <li>IVF - In vitro fertilization </li>
@@ -223,7 +221,7 @@ function BengaluruPage() {
                       couples to elderly couples who want to start their journey
                       in parenthood.
                     </p>
-                    <p className="text-md text-[#838383] mt-3" >
+                    <p className="text-md text-[#838383] mt-3">
                       Our fertility center in Bangalore has a record of
                       consistently bringing hope and joy with fertility
                       treatments to the family facing complex fertility
@@ -278,7 +276,7 @@ function BengaluruPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Bengaluru.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
 
                       {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
                     </div>
@@ -342,13 +340,13 @@ function BengaluruPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold ">
                         Our Fertility Specialist in Bangalore
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold">
                         Dr. Naga Tejaswi T
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md text-[#000000] mt-2">
                         MBBS.,MS(OBG), FRM - IVF CONSULTANT
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -416,8 +414,22 @@ function BengaluruPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Door no - 1534, 21st Main, 7th Cross Rd, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102
                             </p>
                           </div>
                         </div>
@@ -430,7 +442,7 @@ function BengaluruPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

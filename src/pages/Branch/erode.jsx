@@ -27,10 +27,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Coimbatore, Erode } from "@/middleware/imagesroute";
+import { Ambattur, Coimbatore, Erode } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function ErodePage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -99,7 +100,7 @@ function ErodePage() {
             </div>
           </div>
         </div>
-             <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
+        <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
           <InfiniteMovingCardsDemo />
         </div>
         <div
@@ -133,41 +134,28 @@ function ErodePage() {
                       </h2>
                       <p className="text-md">Best Fertility Centre in Erode</p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>{" "}
-                        launched its branch in Erode in 1995. With more than
-                        four decades of service in fertility care, Sudha is
-                        known as the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility hospital in Erode.
-                        </span>{" "}
-                        We are driven by the mission to provide personalised
-                        care and compassionate support in every step of your
-                        parenthood journey. With the best
-                        <span className="text-[#173366] font-bold">
-                          fertility doctors in Erode
-                        </span>
-                        , we provide the best fertility treatments that have
-                        established us as the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility centre in Erode.{" "}
-                        </span>
+                        Sudha Fertility Centre launched its branch in Erode in
+                        1995. With more than four decades of service in
+                        fertility care, Sudha is known as the best fertility
+                        hospital in Erode. We are driven by the mission to
+                        provide personalised care and compassionate support in
+                        every step of your parenthood journey. With the best
+                        fertility doctors in Erode , we provide the best
+                        fertility treatments that have established us as the
+                        best fertility centre in Erode.
                       </p>
 
                       <h5 className="mt-2 font-bold">
                         Best Fertility Treatments in Erode:
                       </h5>
                       <p className="mt-2 text-md text-md text-[#838383]">
-                        With a success rate of 85%, we provide you with the best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility specialists in Erode
-                        </span>{" "}
-                        with advanced technologies. From young couples to older
-                        couples, we offer complete and comprehensive treatment
-                        for all infertility issues and help them in their
-                        parenthood journey. As the best IVF centre in Erode,
-                        Sudha Fertility Centre specialises in the following
+                        With a success rate of 85%, we provide you with the best
+                        fertility specialists in Erode with advanced
+                        technologies. From young couples to older couples, we
+                        offer complete and comprehensive treatment for all
+                        infertility issues and help them in their parenthood
+                        journey. As the best IVF centre in Erode, Sudha
+                        Fertility Centre specialises in the following
                         treatments,
                       </p>
                     </div>
@@ -225,17 +213,10 @@ function ErodePage() {
                       a dream.
                     </p>
                     <p className="text-md text-[#838383] mt-3">
-                      Recognised as the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        IVF hospital in Erode
-                      </span>{" "}
-                      with the{" "}
-                      <span className="text-[#173366] font-bold">
-                        best IVF doctors
-                      </span>
-                      , we ensure that every couple receives personalised
-                      attention. Our goal is to bring joy and fulfilment to
-                      families through our dedicated services.
+                      Recognised as the best IVF hospital in Erode with the best
+                      IVF doctors , we ensure that every couple receives
+                      personalised attention. Our goal is to bring joy and
+                      fulfilment to families through our dedicated services.
                     </p>
                   </motion.div>
 
@@ -256,16 +237,12 @@ function ErodePage() {
                         Facilities
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
-                        Known as the best
-                        <span className="text-[#173366] font-bold">
-                          {" "}
-                          fertility hospital in Erode
-                        </span>
-                        , Sudha Fertility Centre integrates state-of-the-art
-                        technology with compassionate care and provides
-                        treatments to make your parenthood dream into reality.
-                        Our commitment is to guide you through every moment of
-                        your parenthood journey with personalised attention.
+                        Known as the best fertility hospital in Erode , Sudha
+                        Fertility Centre integrates state-of-the-art technology
+                        with compassionate care and provides treatments to make
+                        your parenthood dream into reality. Our commitment is to
+                        guide you through every moment of your parenthood
+                        journey with personalised attention.
                       </p>
                       <ul className="text-md text-[#838383] mt-2 list-disc pl-4 line-height-10">
                         <li>30 NICU and Paediatric beds </li>
@@ -284,9 +261,7 @@ function ErodePage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Erode.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -348,13 +323,13 @@ function ErodePage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold ">
                         Our Fertility Specialist in Erode
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr.P.Vanitha
                       </h2>
-                      <h2 className="text-md font-bold mt-2">MBBS DGO</h2>
+                      <h2 className="text-md text-[#000000] mt-2">MBBS DGO</h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr. P. Vanitha, MBBS, DGO, is a highly skilled and
                         compassionate obstetrician and gynecologist at Sudha
@@ -381,15 +356,19 @@ function ErodePage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
-                        Our Fertility Specialist in Erode
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
+                        Dr.G.Deepeka
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
-                      Dr.G.Deepeka  
-                      </h2>
-                      <h2 className="text-md font-bold mt-2">MBBS DGO</h2>
+                      <h2 className="text-md text-[#000000] mt-2">MBBS DGO</h2>
                       <p className="text-md text-[#838383] mt-2">
-                      Dr. G. Deepeka, MBBS, DGO, is a dedicated and experienced obstetrician and gynaecologist at Sudha Fertility Centre. With a focus on women’s health, Dr. Deepeka specialises in prenatal care, gynaecological treatments, and reproductive health. Her compassionate approach ensures that each patient receives the highest standard of personalised care, making her a trusted and valued member of the Sudha Fertility Centre team. 
+                        Dr. G. Deepeka, MBBS, DGO, is a dedicated and
+                        experienced obstetrician and gynaecologist at Sudha
+                        Fertility Centre. With a focus on women’s health, Dr.
+                        Deepeka specialises in prenatal care, gynaecological
+                        treatments, and reproductive health. Her compassionate
+                        approach ensures that each patient receives the highest
+                        standard of personalised care, making her a trusted and
+                        valued member of the Sudha Fertility Centre team.
                       </p>
                     </div>
                   </motion.div>
@@ -444,8 +423,23 @@ function ErodePage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                              64/77, Municipal colony, Nehruji Nagar, Dindigul,
+                              Tamil Nadu 624001
                             </p>
                           </div>
                         </div>
@@ -458,7 +452,7 @@ function ErodePage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

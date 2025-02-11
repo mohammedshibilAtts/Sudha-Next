@@ -26,10 +26,11 @@ import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
 import { MarqueeComponent } from "@/components/marqueeSlider";
-import { Nagercoil } from "@/middleware/imagesroute";
+import { Ambattur, Nagercoil } from "@/middleware/imagesroute";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function NagercoilPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -134,9 +135,7 @@ function NagercoilPage() {
                         Best Fertility Centre in Nagercoil{" "}
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
                           Sudha Fertility Centre
-                        </span>{" "}
                         became a welcoming place of hope for families in
                         Nagercoil, renowned for delivering exceptional fertility
                         treatments. As the best fertility hospital in the area,
@@ -171,10 +170,10 @@ function NagercoilPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="mt-2 text-md text-md text-[#838383]">
                       As the best IVF centre in Nagercoil, Sudha Fertility
                       Centre specialises in the following treatments,
-                    </h4>
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers </li>
                       <li>IVF - In vitro fertilization </li>
@@ -263,9 +262,7 @@ function NagercoilPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Nagercoil.gallery} />
-
-                      {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
                     </div>
                   </motion.div>
                   <hr className="mt-4 border-gray-300" />
@@ -327,14 +324,14 @@ function NagercoilPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Nagercoil
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold mt-2">
                         Dr.R.Keerthana
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
-                        MBBS.,MS(OG).,DNB (OG).,PDF ( Endogyn){" "}
+                      <h2 className="text-md text-[#000000] mt-2">
+                        MBBS.,MS(OG).,DNB (OG).,PDF ( Endogyn)
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
                         Dr.R.Keerthana, MBBS, MS, DNB(OG), PDF ( Endogyn), is a
@@ -398,8 +395,22 @@ function NagercoilPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            530, MS Rd, Vetturnimadam, Nagercoil, Tamil Nadu 629003
                             </p>
                           </div>
                         </div>
@@ -412,7 +423,7 @@ function NagercoilPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>

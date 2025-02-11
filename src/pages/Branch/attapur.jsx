@@ -23,7 +23,7 @@ import {
 import { IoCallOutline } from "react-icons/io5";
 import { AiTwotoneMail } from "react-icons/ai";
 import FAQItem from "@/components/accordion";
-import { Attapur } from "@/middleware/imagesroute";
+import { Ambattur, Attapur } from "@/middleware/imagesroute";
 import AppointmentForm from "@/components/appointmentForm";
 import Navbar from "@/components/branchNav";
 import ImageSlider from "@/components/imageSlider";
@@ -31,6 +31,7 @@ import { MarqueeComponent } from "@/components/marqueeSlider";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import BranchForm from "@/components/branchForm";
 import { InfiniteMovingCardsDemo } from "@/components/review_Card/reviewCard";
+import { CiLocationOn } from "react-icons/ci";
 
 function AttapurPage() {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -81,7 +82,7 @@ function AttapurPage() {
                   transition={{ duration: 0.5 }}
                 >
                   <h2 className="text-[#FFC65C] text-base sm:text-xl md:text-4xl uppercase">
-                    VANAKKAM ATTAPUR
+                    ATTAPUR
                   </h2>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4">
                     Best Fertility Centre In <br className="hidden sm:block" />
@@ -94,12 +95,12 @@ function AttapurPage() {
                 </motion.div>
 
                 {/* Right Content - Form */}
-              <BranchForm />
+                <BranchForm />
               </div>
             </div>
           </div>
         </div>
-             <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
+        <div className="absolute -bottom-64 lg:-bottom-44 w-full ">
           <InfiniteMovingCardsDemo />
         </div>
         <div
@@ -135,15 +136,12 @@ function AttapurPage() {
                         Best Fertility Centre in Attapur{" "}
                       </p>
                       <p className="text-md mt-3 text-md text-[#838383]">
-                        <span className="text-[#173366] font-bold">
-                          Sudha Fertility Centre
-                        </span>
-                        &nbsp;is recognised as the best fertility hospital in
-                        Attapur as we provide all infertility treatment under
-                        one roof. Our fertility experts provide exceptional
-                        fertility treatments with no compromise in care and
-                        quality. We assist couples facing fertility challenges
-                        achieve their parenting dreams.
+                        Sudha Fertility Centre is recognised as the best
+                        fertility hospital in Attapur as we provide all
+                        infertility treatment under one roof. Our fertility
+                        experts provide exceptional fertility treatments with no
+                        compromise in care and quality. We assist couples facing
+                        fertility challenges achieve their parenting dreams.
                       </p>
                       <h5 className="mt-2 font-bold">
                         Best Fertility Treatments in Attapur:
@@ -151,13 +149,10 @@ function AttapurPage() {
                       <p className="mt-2 text-md text-md text-[#838383]">
                         Equipped with the finest fertility doctors in India,
                         Sudha Fertility Centre is proud to be recognized as the
-                        best{" "}
-                        <span className="text-[#173366] font-bold">
-                          fertility hospital in India.
-                        </span>{" "}
-                        With the help of modern technologies and the best
-                        fertility treatments, we aid couples who visit us with
-                        hope and help them achieve their dream of parenthood.
+                        best fertility hospital in India. With the help of
+                        modern technologies and the best fertility treatments,
+                        we aid couples who visit us with hope and help them
+                        achieve their dream of parenthood.
                       </p>
                     </div>
                     <div className="w-full lg:w-1/2">
@@ -174,10 +169,10 @@ function AttapurPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h4 className="text-[#173366] text-lg font-bold">
+                    <p className="text-md text-[#838383] mt-3">
                       As the best IVF centre in Attapur, Sudha Fertility Centre
                       specialises in the following treatments,
-                    </h4>
+                    </p>
                     <ul className="text-md text-[#838383] list-disc pl-4 line-height-10">
                       <li>Normal Delivery - Natural Labour For Mothers</li>
                       <li>IVF - In vitro fertilization</li>
@@ -202,11 +197,7 @@ function AttapurPage() {
                       Laparoscopy, Hysteroscopy, SSG, Cervical cerclage, Cyst
                       and fluid aspiration, Myomectomy, ERA, OBS as well as
                       other fertility preservation processes are performed by
-                      the best{" "}
-                      <span className="text-[#173366] font-bold">
-                        fertility doctors in Attapur
-                      </span>
-                      .
+                      the best fertility doctors in Attapur.
                     </p>
                     <h2 className=" text-md font-bold mt-3">
                       Why Sudha Fertility Centre is the Best Fertility Centre in
@@ -218,15 +209,15 @@ function AttapurPage() {
                       practical fertility solutions and expert care turn dreams
                       into cherished realities for countless couples. Being
                       well-equipped with highly skilled fertility doctors, we
-                      ensure that we provide the best treatments. As the best
-                      <span className="text-[#173366] font-bold">
-                        IVF hospital in Ambattur
-                      </span>
-                      , we understand the emotion of longing and waiting. We are
-                      dedicated to offering high-quality fertility treatments
-                      with highly skilled IVF doctors and fertility specialists.
-                      We ensure you get the best experience in every step of
-                      your parenthood journey.
+                      ensure that we provide the best treatments.
+                    </p>
+                    <p className="text-md text-[#838383] mt-3">
+                      As the best IVF centre in Attapur, we understand the
+                      emotion of longing and waiting. We are dedicated to
+                      offering high-quality fertility treatments with highly
+                      skilled IVF doctors and fertility specialists. We ensure
+                      you get the best experience in every step of your
+                      parenthood journey.
                     </p>
                   </motion.div>
 
@@ -246,7 +237,6 @@ function AttapurPage() {
                       <h2 className="text-[#173366] text-2xl font-bold">
                         Facilities
                       </h2>
-                      <h2 className="text-md font-bold">Our Best Facilities</h2>
                       <p className="text-md text-[#838383] mt-2">
                         As the leading fertility hospital in India, Sudha
                         Fertility Centre in Attapur is equipped with a team of
@@ -269,7 +259,7 @@ function AttapurPage() {
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <ImageSlider images={Attapur.gallery} />
+                      <ImageSlider images={Ambattur.Facilities.Facilitiesimg} />
 
                       {/* <Image src={Facilities} alt="Facilities" className="w-full h-full object-cover" /> */}
                     </div>
@@ -286,9 +276,6 @@ function AttapurPage() {
                     transition={{ duration: 0.5 }}
                   >
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
-                        Consultant
-                      </h2>
                       <h2 className="text-[#173366] text-[20px] font-bold mt-4">
                         Fertility Specialists <br />
                         in Attapur
@@ -335,13 +322,13 @@ function AttapurPage() {
                       />
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <h2 className="text-[#173366] text-2xl font-bold">
+                      <h2 className="text-[20px] font-bold mt-2">
                         Our Fertility Specialist in Attapur
                       </h2>
-                      <h2 className="text-[20px] font-bold mt-4">
+                      <h2 className="text-[18px] text-[#173366] font-bold ">
                         Dr. Geetanjali Bai
                       </h2>
-                      <h2 className="text-md font-bold mt-2">
+                      <h2 className="text-md text-[#000000] mt-2">
                         MBBS MS (OBG) - Fertility Consultant & OB /GYN
                       </h2>
                       <p className="text-md text-[#838383] mt-2">
@@ -408,8 +395,22 @@ function AttapurPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               CALL
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               +91 767-007-6006
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                          <div className="bg-white p-3 rounded-full flex items-start justify-start shadow-md">
+                            <CiLocationOn className="text-xl text-black size-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
+                              Address
+                            </p>
+                            <p className="text-lg sm:text-xl md:text-sm  font-bold">
+                            Pillar Number 147, Zoi Hospitals campus, Rambagh Colony, Attapur, Hyderabad, Telangana 500048
                             </p>
                           </div>
                         </div>
@@ -422,7 +423,7 @@ function AttapurPage() {
                             <p className="text-xs sm:text-sm md:text-base font-bold text-gray-500">
                               EMAIL US
                             </p>
-                            <p className="text-lg sm:text-xl md:text-xl font-bold">
+                            <p className="text-lg sm:text-xl md:text-sm font-bold">
                               care@sudhahospitals.com
                             </p>
                           </div>
