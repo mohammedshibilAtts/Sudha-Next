@@ -49,7 +49,7 @@ const facilities = [
     rounded: "rounded-bl-none",
   },
   {
-    title: "Experienced gynecologists and fertility specialists in India.",
+    title: "Experienced gynaecologists and fertility specialists in India.",
     position: "-right-28  top-[275px] ",
     rounded: "rounded-bl-none",
   },
@@ -96,11 +96,11 @@ function Hysteroscopy() {
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
+              <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl mt-3">
+                Hysteroscopy
               <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
                 Find hope and healing through precision.
               </h3>
-              <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl mt-3">
-                Hysteroscopy
               </h1>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />

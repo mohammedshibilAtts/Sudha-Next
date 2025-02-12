@@ -283,7 +283,7 @@ function International() {
                 Your health is everything to us
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl mt-4">
-                “Join the 1,50,00+ Families who have
+                “Join the 1,50,000+ Families who have
                 <br />
                 Overcome Infertility”
               </p>

@@ -7,8 +7,8 @@ import Button from "@/components/button";
 import SudhaAbout from "@/assets/branch/ambatur/doc.png";
 import { motion } from "framer-motion";
 import Pradeepa from "@/assets/branch/ambatur/pradeepa.png";
-import Hospital from "@/assets/branch/nagercoil/nagercoil.webp";
-import nagercoil from "@/assets/branch/nagercoil/keerthana.webp";
+import Hospital from "@/assets/branch/Ramanathapuram/hospital.webp";
+import keerthana from "@/assets/branch/Ramanathapuram/dr.webp";
 import ImageGrid from "@/components/imagegrid";
 
 import {
@@ -308,8 +308,8 @@ function RamanathapuramPage() {
                   >
                     <div className="w-full lg:w-1/2">
                       <Image
-                        src={nagercoil}
-                        alt="nagercoil"
+                        src={keerthana}
+                        alt="keerthana"
                         className="w-full h-auto"
                       />
                     </div>

@@ -19,46 +19,88 @@ const getYoutubeThumbnail = (videoUrl) => {
 const videos = [
     {
       id: 1,
-      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/Ma6II9Cw4MY?si=I9HBz2tQ05JJKwrH"),
-      videoUrl: "https://www.youtube.com/embed/Ma6II9Cw4MY?si=I9HBz2tQ05JJKwrH",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/Ma6II9Cw4MY?si=XkcBXcm7N4MWJgi8"),
+      videoUrl: "https://www.youtube.com/embed/Ma6II9Cw4MY?si=XkcBXcm7N4MWJgi8",
       title: "Video 1",
       description: "This is the first video description."
     },
     {
       id: 2,
-      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/oMipXnLGmj4?si=sxMnz3fQjz30hWM_"),
-      videoUrl: "https://www.youtube.com/embed/oMipXnLGmj4?si=sxMnz3fQjz30hWM_",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/oMipXnLGmj4?si=Fwrp8kK31DmJ3ytB"),
+      videoUrl: "https://www.youtube.com/embed/oMipXnLGmj4?si=Fwrp8kK31DmJ3ytB",
       title: "Video 2",
       description: "This is the second video description."
     },
     {
       id: 3,
-      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/h71m87dx-3E?si=9VD1XpmSMfqahpDb"),
-      videoUrl: "https://www.youtube.com/embed/h71m87dx-3E?si=9VD1XpmSMfqahpDb",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/h71m87dx-3E?si=0hChZTJ2zEZ6KK31"),
+      videoUrl: "https://www.youtube.com/embed/h71m87dx-3E?si=0hChZTJ2zEZ6KK31",
       title: "Video 3",
       description: "This is the third video description."
     },
     {
       id: 4,
-      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/6jcLO3srNto?si=3X1IYpX_3dL9b2SN"),
-      videoUrl: "https://www.youtube.com/embed/6jcLO3srNto?si=3X1IYpX_3dL9b2SN",
+      thumbnail: getYoutubeThumbnail("https://www.youtube.com/embed/1IBiq-xw5Q8?si=LxpDRJ7BAt-WELtC"),
+      videoUrl: "https://www.youtube.com/embed/1IBiq-xw5Q8?si=LxpDRJ7BAt-WELtC",
       title: "Video 4",
       description: "This is the fourth video description."
     },
     {
       id: 5,
-      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/fAoaLHKsQKk?si=hosbH1NDWMbPEWBn"),
-      videoUrl: "https://www.youtube.com/embed/fAoaLHKsQKk?si=hosbH1NDWMbPEWBn",
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/llt2lwBjACc?si=lew9IAGGNrZGx3Y7"),
+      videoUrl: "https://www.youtube.com/embed/llt2lwBjACc?si=lew9IAGGNrZGx3Y7",
       title: "Video 5",
       description: "This is the fifth video description."
     },
     {
       id: 6,
-      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/1XyLY1tiz48?si=il-KUAqpgYVCtFYI"),
-      videoUrl: "https://www.youtube.com/embed/1XyLY1tiz48?si=il-KUAqpgYVCtFYI",
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/fAoaLHKsQKk?si=oYJ3U2fE1zbu7QfL"),
+      videoUrl: "https://www.youtube.com/embed/fAoaLHKsQKk?si=oYJ3U2fE1zbu7QfL",
       title: "Video 5",
       description: "This is the fifth video description."
-    }
+    },
+    {
+      id: 7,
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/cntFBWcv62A?si=3-7YuPLz0-Gh1cXT"),
+      videoUrl: "https://www.youtube.com/embed/cntFBWcv62A?si=3-7YuPLz0-Gh1cXT",
+      title: "Video 5",
+      description: "This is the fifth video description."
+    },
+    {
+      id: 8,
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/Cp5yj5Fq7sM?si=SVl8ulTYlCO7dKx9"),
+      videoUrl: "https://www.youtube.com/embed/Cp5yj5Fq7sM?si=SVl8ulTYlCO7dKx9",
+      title: "Video 5",
+      description: "This is the fifth video description."
+    },
+    {
+      id: 9,
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/6jcLO3srNto?si=U1MoNxYOYxnExBOZ"),
+      videoUrl: "https://www.youtube.com/embed/6jcLO3srNto?si=U1MoNxYOYxnExBOZ",
+      title: "Video 5",
+      description: "This is the fifth video description."
+    },
+    {
+      id: 10,
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/3vMPqaEFzfw?si=EHeX9I3vR9yCwMx2"),
+      videoUrl: "https://www.youtube.com/embed/3vMPqaEFzfw?si=EHeX9I3vR9yCwMx2",
+      title: "Video 5",
+      description: "This is the fifth video description."
+    },
+    {
+      id: 11,
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/IBdO2ZKyFH8?si=Rh6C6E15lD4rJtK-"),
+      videoUrl: "https://www.youtube.com/embed/IBdO2ZKyFH8?si=Rh6C6E15lD4rJtK-",
+      title: "Video 5",
+      description: "This is the fifth video description."
+    },
+    {
+      id: 12,
+      thumbnail:getYoutubeThumbnail("https://www.youtube.com/embed/zM5GIh-qUGQ?si=vdbb6_sGaHw3uMHI"),
+      videoUrl: "https://www.youtube.com/embed/zM5GIh-qUGQ?si=vdbb6_sGaHw3uMHI",
+      title: "Video 5",
+      description: "This is the fifth video description."
+    },
   ];
 
   export default function VideoCarousel() {

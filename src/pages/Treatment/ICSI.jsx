@@ -127,7 +127,7 @@ const facilities = [
     rounded: "rounded-br-none",
   },
   {
-    title: "Round-the-clock care and support,",
+    title: "Round-the-clock care and support",
     position: "left-1 top-2/4",
     rounded: "rounded-br-none",
   },
@@ -203,12 +203,12 @@ function ICSI() {
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
-              <h3 className="mt-3 max-w-3xl font-outfit  text-xl sm:text-2xl md:text-3xl lg:text-2xl">
-                Bringing your dream of a family closer to reality.
-              </h3>
               <h1 className="font-outfit max-w-3xl font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl mt-1">
                 Intracytoplasmic Sperm Injection (ICSI)
               </h1>
+              <h3 className="mt-3 max-w-3xl font-outfit  text-xl sm:text-2xl md:text-3xl lg:text-2xl">
+                Bringing your dream of a family closer to reality.
+              </h3>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
               </div>

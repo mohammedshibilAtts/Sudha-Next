@@ -70,6 +70,7 @@ const mainNavItems = [
           { item: "Vellore", link: "/fertility-centre-in-vellore" },
           { item: "Tiruppur", link: "/fertility-centre-in-tiruppur" },
           { item: "Nagercoil", link: "/fertility-centre-in-nagercoil" },
+          { item: "Trichy ", link: "/fertility-centre-in-trichy " },
           {
             item: "Tiruvannamalai",
             link: "/fertility-centre-in-tiruvannamalai",
@@ -162,6 +163,24 @@ function Navbar() {
   const handleDropdownClick = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
+
+  const handleClick = (e, id) => {
+    e.preventDefault();
+  
+    // Determine the header offset based on screen width
+    const isMobile = window.innerWidth < 768; // Example breakpoint for mobile
+    const headerOffset = isMobile ? 400 : 200; // Adjust these values as needed
+  
+    const element = document.getElementById(id);
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerOffset;
+  
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={`w-full  text-white font-outfit z-30 sticky top-0 ${
@@ -216,11 +235,16 @@ function Navbar() {
                   <div className="flex items-center">
                     <ul className="flex gap-9">
                       {topNavItems.map((item, index) => (
+                        
                         <li
                           key={index}
                           className="hover:text-[#FFC65C] transition-colors duration-300 text-md cursor-pointer"
                         >
-                          {item}
+                         {item==="Book Appointment"&&
+                           <Link href={"#contact-now"}  onClick={(e) => handleClick(e, "contact-now")}>
+                           {item}
+                           </Link>
+                         }
                         </li>
                       ))}
                       <li
@@ -413,8 +437,8 @@ function Navbar() {
 
       {/* Main Navigation Bar for Larger Screens */}
       <div className="container mx-auto">
-        <div className="pb-4 hidden lg:block">
-          <div className="ms-9 2xl:mt-5">
+        <div className="pb-4 hidden lg:block">  
+          <div className="ms-9 "> {/* 2xl:mt-5 */}
             <ul className="container flex gap-8 2xl:gap-12 justify-center">
               {mainNavItems.map((item, index) => (
                 <li
@@ -479,21 +503,24 @@ function Navbar() {
                             onMouseEnter={() => handleStateHover(state.name)}
                             onMouseLeave={() => handleStateHover(null)}
                           >
-                            {item.name === "Puducherry" ? (
+                            {state.name ==="Puducherry" ? (
+                              <div className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer flex justify-between items-center">
+
                               <Link
-                                href={"state.link"}
+                              href={"/fertility-centre-in-puducherry"}
                                 className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
                               >
-                                {state.name}
+                                {state.name} 
                               </Link>
+                              </div>
                             ) : (
                               <div className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer flex justify-between items-center">
-                                <Link
-                                  href={"/fertility-centre-in-puducherry"}
+                                <p
+                                  
                                   className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
                                 >
-                                  {state.name}
-                                </Link>
+                                  {state.name} 
+                                </p>
                                 {state.branches.length > 0 && (
                                   <IoIosArrowDown className="text-gray-500" />
                                 )}
@@ -503,16 +530,16 @@ function Navbar() {
                             {/* Secondary dropdown for branches */}
                             {activeState === state.name &&
                               state.branches.length > 0 && (
-                                <div className="absolute left-full top-0 bg-white text-gray-800 py-2 min-w-[200px] shadow-lg rounded-md -ml-1">
+                                <div className="absolute left-full top-0 bg-white text-gray-800 py-2 min-w-[200px] shadow-lg rounded-md -ml-1 max-h-96 overflow-x-hidden ">
                                   {state.branches.map((branch, branchIndex) => (
+                                    <Link href={branch.link}  key={branchIndex}>
                                     <div
                                       key={branchIndex}
                                       className="px-4 py-2 hover:bg-blue-50 hover:text-[#1a237e] cursor-pointer"
                                     >
-                                      <Link href={branch.link}>
                                         {branch.item}
-                                      </Link>
                                     </div>
+                                      </Link>
                                   ))}
                                 </div>
                               )}
@@ -529,7 +556,7 @@ function Navbar() {
 
       {!isMobileMenuOpen && (
         <div className="fixed top-52 right-5 flex flex-col space-y-3 z-40 ">
-          {/* WhatsApp Button */}
+          
           <a
             href="https://wa.me/917107007006"
             target="_blank"

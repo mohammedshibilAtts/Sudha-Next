@@ -1,11 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import Logo from "@/assets/logo-dark.svg";
 import whatsapp from "@/assets/footer/whatsapp.svg";
 import Link from "next/link";
@@ -15,31 +11,32 @@ import fb from "@/assets/footer/fb.svg";
 import insta from "@/assets/footer/insta.svg";
 import yt from "@/assets/footer/yt.svg";
 import { MdEmail } from "react-icons/md";
+import Button from "../button/button";
 
 export const branches = [
-  { title: "Ambattur  ", link: "" },
-  { title: "Attapur", link: "" },
-  { title: "Bengaluru", link: "" },
-  { title: "Chennai", link: "" },
-  { title: "Coimbatore", link: "" },
-  { title: "Erode", link: "" },
-  { title: "Dindigul", link: "" },
-  { title: "Hyderabad", link: "" },
-  { title: "Karur", link: "" },
-  { title: "Krishnagiri", link: "" },
-  { title: "Madurai", link: "" },
-  { title: "Nagercoil", link: "" },
-  { title: "Puducherry", link: "" },
-  { title: "Ramanathapuram", link: "" },
-  { title: "Salem", link: "" },
-  { title: "Tiruvannamalai", link: "" },
-  { title: "Trichy", link: "" },
-  { title: "Thanjavur", link: "" },
-  { title: "Tiruppur", link: "" },
-  { title: "Theni", link: "" },
-  { title: "Tirunelveli", link: "" },
-  { title: "Vellore", link: "" },
-  { title: "Vijayawada", link: "" },
+  { title: "Ambattur  ", link: "fertility-centre-in-ambattur" },
+  { title: "Attapur", link: "fertility-centre-in-attapur" },
+  { title: "Bengaluru", link: "fertility-centre-in-bengaluru" },
+  { title: "Chennai", link: "fertility-centre-in-chennai" },
+  { title: "Coimbatore", link: "fertility-centre-in-coimbatore" },
+  { title: "Erode", link: "fertility-centre-in-erode" },
+  { title: "Dindigul", link: "fertility-centre-in-dindigul" },
+  { title: "Hyderabad", link: "fertility-centre-in-hyderabad" },
+  { title: "Karur", link: "fertility-centre-in-karur" },
+  { title: "Krishnagiri", link: "fertility-centre-in-krishnagiri" },
+  { title: "Madurai", link: "fertility-centre-in-madurai" },
+  { title: "Nagercoil", link: "fertility-centre-in-nagercoil" },
+  { title: "Puducherry", link: "fertility-centre-in-puducherry" },
+  { title: "Ramanathapuram", link: "fertility-centre-in-ramanathapuram" },
+  { title: "Salem", link: "fertility-centre-in-salem" },
+  { title: "Tiruvannamalai", link: "fertility-centre-in-tiruvannamalai" },
+  { title: "Trichy", link: "fertility-centre-in-trichy" },
+  { title: "Thanjavur", link: "fertility-centre-in-thanjavur" },
+  { title: "Tiruppur", link: "fertility-centre-in-tiruppur" },
+  { title: "Theni", link: "fertility-centre-in-theni" },
+  { title: "Tirunelveli", link: "fertility-centre-in-tirunelveli" },
+  { title: "Vellore", link: "fertility-centre-in-vellore" },
+  { title: "Vijayawada", link: "fertility-centre-in-vijayawada" },
 ];
 
 export default function Footer() {
@@ -76,17 +73,17 @@ export default function Footer() {
               little one.
             </p>
             <Link href={"https://maps.app.goo.gl/hJJAgqV19kYQ1cveA"}>
-            <button className="mt-4 px-6 py-3 bg-[#173366] rounded-full text-white text-sm  flex items-center justify-center gap-2 transition">
-              Get Directions{" "}
-              <span>
-                <MdLocationOn size={22} />
-              </span>
-            </button>
+              <button className="mt-4 px-6 py-3 bg-[#173366] rounded-full text-white text-sm  flex items-center justify-center gap-2 transition">
+                Get Directions{" "}
+                <span>
+                  <MdLocationOn size={22} />
+                </span>
+              </button>
             </Link>
             <div className="flex gap-4 mt-4 text-gray-700 ">
-            <Image src={yt} alt="whatsapp" />
-            <Image src={insta} alt="whatsapp" />
-            <Image src={fb} alt="whatsapp" />
+              <Image src={yt} alt="whatsapp" />
+              <Image src={insta} alt="whatsapp" />
+              <Image src={fb} alt="whatsapp" />
             </div>
           </div>
 
@@ -96,25 +93,17 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="text-gray-600 text-sm md:text-base mt-2 ">
-             
-              <li>
-                <Link href={"/treatments"}>
-                Treatments
-                </Link>
-                </li>
-                <Link href={"/international"}>
-              <li
-              >  
-              International Patients
+              <li className="mt-3">
+                <Link href={"/treatments"}>Treatments</Link>
               </li>
+              <Link href={"/international"}>
+                <li className="mt-3">International Patients</li>
               </Link>
               {/* <li>Blog</li> */}
-              <Link href={'/gallery'}>
-              <li>
-                Gallery
-                </li>
-                </Link>
-              <li>Interviews</li>
+              <Link href={"/gallery"}>
+                <li className="mt-3">Gallery</li>
+              </Link>
+              <li className="mt-3">Interviews</li>
             </ul>
           </div>
 
@@ -124,43 +113,79 @@ export default function Footer() {
               Legal
             </h3>
             <ul className="text-gray-600 text-sm md:text-base mt-2 space-y-2">
-             <Link href={'/privacy-policy'}>
-             <li>Privacy Policy</li>
-             </Link>
-              <Link href={'/terms-condition'}>
-              <li>Terms & Conditions</li>
+              <Link href={"/privacy-policy"}>
+                <li className="mt-3">Privacy Policy</li>
+              </Link>
+              <Link href={"/terms-condition"}>
+                <li className="mt-3">Terms & Conditions</li>
               </Link>
             </ul>
           </div>
 
           {/* Contact Us Section */}
+
           <div>
-            <h3 className="font-semibold text-gray-800 text-lg md:text-xl">
+            <h3 className="font-semibold text-gray-800 text-lg md:text-xl ">
               Contact Us
             </h3>
-            <button className="mt-2 px-6 py-3 text-gray-800 text-sm rounded-full border border-[#000000] transition">
-              Contact Us →
-            </button>
+
+            {/* Contact Us Button with Link */}
+         
+            <div className="mt-4">
+            <Button title={" Contact Us"} link="/contact-us"/>
+            </div>
+            
+
+            {/* WhatsApp Link */}
             <div className="flex items-center gap-2 mt-4 text-gray-700">
-              <Image src={whatsapp} alt="whatsapp" />
-              <span className="text-sm md:text-base">Chat on Whatsapp</span>
+              <a
+                href="https://wa.me/917670076006"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Image src={whatsapp} alt="whatsapp" width={20} height={20} />
+                <span className="text-sm md:text-base">Chat on Whatsapp</span>
+              </a>
             </div>
+
+            {/* Phone Link */}
             <div className="flex items-center gap-2 mt-2 text-gray-700">
-              <Image src={phone} alt="phone" />
-              <span className="text-sm md:text-base">+91 767-007-6006</span>
+              <a href="tel:+917670076006" className="flex items-center gap-2">
+                <Image src={phone} alt="phone" width={20} height={20} />
+                <span className="text-sm md:text-base">+91 767-007-6006</span>
+              </a>
             </div>
-            <div className="flex items-center gap-2 mt-2 text-gray-700 ">
-              <MdEmail size={28}/>
-              <span className="text-sm md:text-base">care@sudhahospitals.com</span>
+
+            {/* Email Link */}
+            <div className="flex items-center gap-2 mt-2 text-gray-700">
+              <a
+                href="mailto:care@sudhahospitals.com"
+                className="flex items-center gap-2"
+              >
+                <MdEmail size={20} />
+                <span className="text-sm md:text-base">
+                  care@sudhahospitals.com
+                </span>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Footer Bottom Section */}
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm md:text-base">
-          <p>Copyright © 2025 Sudhafertilitycentre.com. All Rights Reserved.</p>
+          <p>Copyright © 2025 sudhafertilitycentre.com. All Rights Reserved.</p>
           <p>
-            Powered By <span className="text-blue-600">Arion Media Corp</span>
+            Powered By{" "}
+            <span className="text-blue-600">
+              <Link
+                href={"https://arionmediacorp.com/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Arion Media Corp
+              </Link>
+            </span>
           </p>
         </div>
       </div>

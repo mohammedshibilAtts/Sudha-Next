@@ -205,12 +205,12 @@ function IUI() {
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center mb-28 ">
             <div className="text-white text-center px-4 font-outfit mt-10">
-              <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                Little you is on the way, hold on to hope
-              </h3>
               <h1 className="font-outfit font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-4xl mt-3">
                 Intrauterine insemination (IUI)
               </h1>
+              <h3 className="mt-3 max-w-3xl font-outfit  text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
+                Little you is on the way, hold on to hope
+              </h3>
               <div className="button mt-7 flex justify-center">
                 <Button title={"Book Your Free Appointment"} />
               </div>
@@ -362,18 +362,18 @@ function IUI() {
         </div>
       </div>
 
-      {/* When and Why Choose IVF? */}
+      {/* When and Why Choose IUI? */}
       <div className="container mx-auto relative h-full  mt-6 lg:mt-14 ">
         <div className="max-w-7xl mx-auto px-4 pt-8 sm:px-6  lg:px-8 h-full">
           <h2 className="text-2xl font-semibold text-center lg:hidden">
-            When and Why Choose IVF?
+            When and Why Choose IUI?
           </h2>
           <div className="main flex flex-col md:flex-row">
             <div className="flex-1 flex items-center ">
               <div className="p-6">
                 <div className="Title ">
                   <h2 className="text-2xl font-semibold lg:block hidden">
-                    When and Why Choose IVF?
+                    When and Why Choose IUI?
                   </h2>
                 </div>
                 <div className=" pt-6">

@@ -1,11 +1,10 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { MdArrowOutward } from 'react-icons/md';
-import { Toaster, toast } from 'react-hot-toast'; // Importing from react-hot-toast
+import { Toaster, toast } from 'react-hot-toast';
+import Link from 'next/link';
 import Insta from "@/assets/Home/insta.svg";
-import Linkedin from "@/assets/Home/linkedin.svg";
 import youtube from "@/assets/Home/youtube.svg";
-import x from "@/assets/Home/x.svg";
 import fb from "@/assets/Home/fb.svg";
 import Image from 'next/image';
 
@@ -17,14 +16,14 @@ function ContactForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    toast.success('Form submitted successfully!'); // Display a success toast
+    toast.success('Form submitted successfully!');
     console.log(data);
   };
 
   return (
     <>
-      <Toaster position="top-right" reverseOrder={false} /> {/* Use Toaster from react-hot-toast */}
-      <div
+      <Toaster position="top-right" reverseOrder={false} />
+      <div id='contact-now'
         className="py-16 bg-cover bg-center"
         style={{
           background: "linear-gradient(170deg, #F0F5FF, #F0F5FF 60%, white 60%, white)",
@@ -57,7 +56,7 @@ function ContactForm() {
                   </div>
                   <div>
                     <p className="text-xs text-black uppercase tracking-wider">CALL</p>
-                    <p className="text-black">9874651230</p>
+                    <p className="text-black">7670076006</p>
                   </div>
                 </div>
 
@@ -74,7 +73,7 @@ function ContactForm() {
                   </div>
                   <div>
                     <p className="text-xs text-black uppercase tracking-wider">EMAIL US</p>
-                    <p className="text-black">info@gmail.com</p>
+                    <p className="text-black">care@sudhahospitals.com</p>
                   </div>
                 </div>
               </div>
@@ -82,16 +81,33 @@ function ContactForm() {
               <div className="space-y-3">
                 <p className="text-sm text-black">Connect with us:</p>
                 <div className="flex gap-3">
-                  {[{ name: "facebook", icon: fb }, { name: "youtube", icon: youtube }, { name: "instagram", icon: Insta }].map((social) => (
-                    <a
-                      key={social.name}
-                      href={`https://${social.name}.com`}
-                      className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label={social.name}
-                    >
-                      <Image src={social.icon} alt={social.name} className="w-full h-full object-contain" />
-                    </a>
-                  ))}
+                  <Link
+                    href="https://www.facebook.com/sudhafertilitycentre"
+                    className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={fb} alt="Facebook" className="w-full h-full object-contain" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/@sudhafertilitycentre"
+                    className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={youtube} alt="YouTube" className="w-full h-full object-contain" />
+                  </Link>
+                  <Link
+                    href="https://instagram.com/sudhafertilitycentre/"
+                    className="w-12 h-12 rounded-full flex cursor-pointer items-center justify-center hover:bg-gray-100 transition-colors"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={Insta} alt="Instagram" className="w-full h-full object-contain" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -102,9 +118,12 @@ function ContactForm() {
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
+                  <div className='flex justify-between'>
                   <label htmlFor="name" className="block text-sm text-black mb-1">
-                    Name
+                    Name (Required)
                   </label>
+                   <p>{errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}</p>
+                  </div>
                   <input
                     type="text"
                     id="name"
@@ -112,42 +131,65 @@ function ContactForm() {
                     {...register('name', { required: 'Name is required' })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
                   />
-                  {errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}
+                  
                 </div>
 
                 <div>
+                  <div className='flex justify-between'>
                   <label htmlFor="email" className="block text-sm text-black mb-1">
-                    Email
+                    Email (Optional)
                   </label>
+                  <p>{errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}</p>
+                  </div>
                   <input
                     type="email"
                     id="email"
                     placeholder="Enter your Email"
-                    {...register('email', { required: 'Email is required', pattern: { value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/, message: 'Invalid email address' } })}
+                    {...register('email', { 
+                      pattern: { 
+                        value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/, 
+                        message: 'Invalid email address' 
+                      } 
+                    })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
                   />
-                  {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
+                  
                 </div>
 
                 <div>
-                  <label htmlFor="mobile" className="block text-sm text-black mb-1">
-                    Mobile
+                 <div className='flex justify-between'>
+                 <label htmlFor="mobile" className="block text-sm text-black mb-1">
+                    Mobile (Required)
                   </label>
+                  <p> {errors.mobile && <span className="text-red-500 text-xs">{errors.mobile.message}</span>}
+                  </p>
+                 </div>
                   <input
                     type="tel"
                     id="mobile"
                     placeholder="Enter your Mobile"
-                    {...register('mobile', { required: 'Mobile number is required', pattern: { value: /^[0-9]{5,15}$/, message: 'Invalid mobile number' } })}
+                    maxLength={10}
+                    onKeyPress={(e) => {
+                      if (!/[0-9]/.test(e.key)) {
+                        e.preventDefault();
+                      }
+                    }}
+                    {...register('mobile', { 
+                      required: 'Mobile number is required',
+                      pattern: { 
+                        value: /^[0-9]{10}$/, 
+                        message: 'Please enter a valid 10-digit mobile number' 
+                      } 
+                    })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-gray-300 focus:border-gray-300 outline-none"
                   />
-                  {errors.mobile && <span className="text-red-500 text-xs">{errors.mobile.message}</span>}
                 </div>
 
                 <button
                   type="submit"
                   className="w-full bg-[#1e3a8a] text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors flex items-center justify-center gap-2 mt-4"
                 >
-                  Enquiry Now
+                  Enquire Now
                   <MdArrowOutward className="rotate-45" />
                 </button>
               </form>

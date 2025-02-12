@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utility";
-import Button from "../button/button";
 import Image from "next/image";
 import {
   motion,
@@ -9,6 +8,7 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
+import BookingButton from "../button/bookingButton";
 
 const MetricsTabs = ({tabs}) => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -100,7 +100,7 @@ const MetricsTabs = ({tabs}) => {
                 <p className="text-gray-600 leading-relaxed">
                   {tabs[selectedTab].content.description}
                 </p>
-                <Button title={"Get A Free Consultation"} />
+                <BookingButton title={"Get A Free Consultation"} />
               </motion.div>
 
               <motion.div

@@ -38,12 +38,14 @@ import VideoCard from "@/components/videoCard/videoCard";
 import Pradeepa from "@/assets/Home/pradeepa.webp";
 import ContactUs from "./contactUs";
 import ContactForm from "@/components/contact/contactForm";
+import Link from "next/link";
+import BookingButton from "@/components/button/bookingButton";
 
 const FAQ = [
   {
     question: "Which is the best fertility centre in South India?",
     answer:
-      "Sudha Fertility Centre is considered the best fertility centre in South India, equipped with world-class facilities, state-of-the-art technologies, the best fertility doctors in India, experienced gynecologists, and 22+ branches across South India and Sri Lanka with a success rate of 80%. ",
+      "Sudha Fertility Centre is considered the best fertility centre in South India, equipped with world-class facilities, state-of-the-art technologies, the best fertility doctors in India, experienced gynecologists, and 22+ branches across South India and Sri Lanka with a high success rate. ",
   },
   {
     question: "Which is the best fertility centre for IVF treatment?",
@@ -164,10 +166,10 @@ function Home() {
     },
 
     {
-      title: "People's Most Trusted",
-      label: "People's Most Trusted",
+      title: "Trusted by 1 Lakh+",
+      label: "Trusted by 1 Lakh+",
       content: {
-        heading: "People's Most Trusted",
+        heading: "Trusted by 1 Lakh+",
         description:
           "Sudha Fertility Centre has earned the trust of lakhs of families as South India's best fertility centre. We are happy and blessed to witness the parenthood stories of lakhs of parents. Each review and video we receive always remember our motto of helping couples in their parenthood journey. We are driven by the mission to help couples experience the happiness of parenthood, and dedicated to making it happen. We ensure every couple who visits us receives the best care and starts their journey of parenthood.",
         image: Tab3,
@@ -203,7 +205,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
-    }, 3000); // Change every 5 seconds
+    }, 6000); // Change every 5 seconds
 
     return () => clearInterval(interval); // Cleanup interval
   }, []);
@@ -248,7 +250,7 @@ function Home() {
                 Overcome Infertility"
               </p>
               <div className="mt-6 flex justify-center">
-                <Button title="Book Your Free Appointment" />
+                <BookingButton title="Book Your Free Appointment" />
               </div>
             </div>
           </div>
@@ -437,7 +439,8 @@ function Home() {
           <div>
             <div className="tiles grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5   gap-6  mt-9">
               <div className="tiles-1 border border-[#E7E7E7] p-4 rounded-2xl font-outfit hover:bg-[#EBF2FE] cursor-pointer">
-                <div className="main-tail flex items-center justify-center">
+               <Link href={"/in-vitro-fertilization"}>
+               <div className="main-tail flex items-center justify-center">
                   <div className="content">
                     <div className="image flex justify-center">
                       <Image src={Vitro} alt="In Vitro Fertilization" />
@@ -451,9 +454,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
+               </Link>
               </div>
 
               <div className="tiles-1 border border-[#E7E7E7] p-4 rounded-2xl hover:bg-[#EBF2FE] cursor-pointer">
+              <Link href={"/intrauterine-insemination"}>
                 <div className="main-tail flex items-center justify-center">
                   <div className="content">
                     <div className="title">
@@ -472,9 +477,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
+                </Link>
               </div>
 
               <div className="tiles-1  border border-[#E7E7E7] p-4 rounded-2xl hover:bg-[#EBF2FE] cursor-pointer">
+                <Link href={'/intracytoplasmic-sperm-injection'} >
                 <div className="main-tail flex items-center justify-center ">
                   <div className="content">
                     <div className="title">
@@ -493,30 +500,34 @@ function Home() {
                     </div>
                   </div>
                 </div>
+                </Link>
               </div>
 
               <div className="tiles-1  border border-[#E7E7E7] p-4 rounded-2xl hover:bg-[#EBF2FE] cursor-pointer">
+                <Link href={'/pcos-and-pdoc'}>
                 <div className="main-tail flex items-center justify-center">
                   <div className="content text-cente">
                     <div className="title">
                       <div className="image flex justify-center">
                         <Image
                           src={Laser_Assisted}
-                          alt="Laser-Assisted Hatching"
+                          alt="pcos-and-pdoc"
                         />
                       </div>
                     </div>
                     <div className="des mt-4">
                       <p className="text-[#838383] text-center">
-                        Laser-Assisted Hatching
+                      PCOS/PCOD
                       </p>
                       <p className="text-[#838383] text-center mt-2">LAH</p>
                     </div>
                   </div>
                 </div>
+                </Link>
               </div>
 
               <div className="tiles-1  border border-[#E7E7E7] p-4 rounded-2xl hover:bg-[#EBF2FE] cursor-pointer">
+                <Link href={'/pregnancy-and-antenatal-care'}>
                 <div className="main-tail flex items-center justify-center">
                   <div className="content text-center">
                     <div className="title">
@@ -534,6 +545,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
+                </Link> 
               </div>
 
               <div className="tiles-1 flex items-center justify-center">
@@ -541,7 +553,7 @@ function Home() {
                   <div className="content  flex justify-center items-center ">
                     <div className="title">
                       <div className="button flex items-center justify-center lg:hidden">
-                        <Button title={"View More"} />
+                        <Button title={"View More"}  link="/treatment" />
                       </div>
                     </div>
                   </div>
@@ -571,7 +583,7 @@ function Home() {
               </div>
             </div>
             <div className="button">
-              <Button title={"Book Your Free Appointment"} />
+            <BookingButton title={"Book Your Free Appointment"} />
             </div>
           </div>
         </div>
@@ -605,7 +617,7 @@ function Home() {
 
               <div className="right flex-1 flex justify-center items-center px-3">
                 <div className="tiles grid  grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:gap-8 xl mt-9">
-                  {/* First row: 3 tiles */}
+                  <Link href={'/free-online-pregnancy-calculator'}>
                   <div className="tiles-1 flex flex-col items-center justify-center text-center hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                     <div className="title mb-3">
                       <Image
@@ -618,7 +630,9 @@ function Home() {
                       <p className="text-[#838383]">Pregnancy Calculator</p>
                     </div>
                   </div>
+                  </Link>
 
+                  <Link href={'/free-ovulation-calculator'}>   
                   <div className="tiles-1 flex flex-col items-center justify-center text-center hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                     <div className="title mb-3">
                       <Image
@@ -631,7 +645,9 @@ function Home() {
                       <p className="text-[#838383]">Ovulation Calculator</p>
                     </div>
                   </div>
+                  </Link>
 
+                    <Link href={'/free-menstrual-cycle-calculator'}>
                   <div className="tiles-1 flex flex-col items-center justify-center text-center hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                     <div className="title mb-3">
                       <Image
@@ -644,7 +660,9 @@ function Home() {
                       <p className="text-[#838383]">Period Calculator</p>
                     </div>
                   </div>
+                    </Link>
 
+                  <Link href={'/free-conception-calculator'}>
                   <div className="tiles-1 flex flex-col items-center justify-center text-center px-3 hover:bg-[#EBF2FE] rounded-2xl p-5 cursor-pointer">
                     <div className="title mb-3">
                       <Image
@@ -659,6 +677,7 @@ function Home() {
                       </p>
                     </div>
                   </div>
+                    </Link>
                 </div>
               </div>
             </div>
@@ -667,7 +686,6 @@ function Home() {
       </div>
 
       {/* VIdeo section  */}
-
       <div className="bg-[#EBF2FE]">
         <div className="container mx-auto ">
           <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -761,7 +779,7 @@ function Home() {
               <h2 className="text-2xl font-bold text-center ">
                 Happy Patients, Happy Stories
               </h2>
-              <Button title="View youtube" icon={<FaYoutube />} />
+              <Button title="View YouTube" link="https://www.youtube.com/@sudhafertilitycentre" icon={<FaYoutube />} />
             </div>
             <MarqueeComponent
               items={Ambattur.gallery}

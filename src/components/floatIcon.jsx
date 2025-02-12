@@ -7,7 +7,7 @@ const FloatingIcons = () => {
     <div className="fixed top-52 right-5 flex flex-col space-y-3 z-40 ">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/917107007006"
+        href="https://wa.me/917670076006"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-20 h-14   rounded-full  hover:scale-105 transition-transform"
@@ -17,7 +17,7 @@ const FloatingIcons = () => {
 
       {/* Phone Call Button */}
       <a
-        href="tel:+917107007006"
+        href="tel:+917670076006"
         className="flex items-center justify-center w-20 h-14   rounded-full  hover:scale-105 transition-transform"
       >
         <Image src={phone} alt="Phone" />
