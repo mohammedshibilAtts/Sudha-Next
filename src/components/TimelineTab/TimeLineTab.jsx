@@ -157,7 +157,7 @@ const TimelineTabs = () => {
       <div
         ref={timelineContainerRef}
         id="timeline-container"
-        className="overflow-y-auto grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 max-h-[500px] scroll-smooth no-scrollbar"
+        className="overflow-y-auto grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:flex gap-4 py-4 px-4 max-h-[500px] scroll-smooth no-scrollbar"
       >
         {timelineData.map((item) => (
           <button

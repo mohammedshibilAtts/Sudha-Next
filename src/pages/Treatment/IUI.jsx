@@ -688,7 +688,7 @@ function IUI() {
               <h2 className="text-2xl font-bold text-center ">
                 Happy Patients, Happy Stories
               </h2>
-              <Button title="View youtube" icon={<FaYoutube />} />
+              <Button title="View on YouTube" icon={<FaYoutube />} />
             </div>
             <MarqueeComponent
               items={Ambattur.gallery}

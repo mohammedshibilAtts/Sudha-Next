@@ -25,6 +25,7 @@ import { FaYoutube } from "react-icons/fa";
 import { Ambattur } from "@/middleware/imagesroute";
 import Thumbnail from "@/assets/About/dhanabagyam-thumbnail.png";
 import ContactForm from "@/components/contact/contactForm";
+import BookingButton from "@/components/button/bookingButton";
 
 const cardData = [
   {
@@ -109,13 +110,13 @@ function About() {
           <div className="flex-1 flex items-center justify-center mb-40 mt-28">
             <div className="text-white text-center px-4 font-outfit">
               <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
-                Driven By the Happiness Of Thousands of Families.
+                Driven By the Happiness Of Lakhs of Families.
               </h1>
               <h2 className="font-outfit font-semibold text-xl sm:text-lg md:text-2xl lg:text-xl">
                 Experiencing Parenthood Is No More A Dream!
               </h2>
               <div className="button mt-8 flex justify-center items-center">
-                <Button title={"Get Consult Our Specialists"} />
+                <Button title={"Get Free Consultation "} link="/#contact-now"/>
               </div>
               <div className="award mt-3 flex justify-center items-center gap-6">
                 <div className="card ">
@@ -374,7 +375,7 @@ function About() {
                     care in a supportive and nurturing environment.
                   </p>
                   <div className="button mt-5">
-                    <Button title={"Get a Free Consultation"} />
+                    <Button title={"Get  Free Consultation"} link="/#contact-now" />
                   </div>
                 </div>
               </div>
@@ -555,8 +556,7 @@ function About() {
         </div>
       </div>
 
-      {/* contact us  */}
-      <ContactForm/>
+      
 
       {/* MarqueeComponent */}
       <section>
@@ -572,7 +572,7 @@ function About() {
               <h2 className="text-2xl font-bold text-center ">
                 Happy Patients, Happy Stories
               </h2>
-              <Button title="View youtube" icon={<FaYoutube />} />
+              <Button title="View on YouTube" icon={<FaYoutube />} />
             </div>
             <MarqueeComponent
               items={Ambattur.gallery}

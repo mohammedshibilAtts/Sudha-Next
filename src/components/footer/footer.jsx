@@ -81,9 +81,24 @@ export default function Footer() {
               </button>
             </Link>
             <div className="flex gap-4 mt-4 text-gray-700 ">
-              <Image src={yt} alt="whatsapp" />
-              <Image src={insta} alt="whatsapp" />
-              <Image src={fb} alt="whatsapp" />
+              <Link
+                href="https://www.youtube.com/@sudhafertilitycentre"
+                target="_blank"
+              >
+                <Image src={yt} alt="YouTube" />
+              </Link>
+              <Link
+                href="https://instagram.com/sudhafertilitycentre/"
+                target="_blank"
+              >
+                <Image src={insta} alt="Instagram" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/sudhafertilitycentre"
+                target="_blank"
+              >
+                <Image src={fb} alt="Facebook" />
+              </Link>
             </div>
           </div>
 
@@ -103,7 +118,9 @@ export default function Footer() {
               <Link href={"/gallery"}>
                 <li className="mt-3">Gallery</li>
               </Link>
-              <li className="mt-3">Interviews</li>
+              <Link href={"/interviews"}>
+                <li className="mt-3">Interviews</li>
+              </Link>
             </ul>
           </div>
 
@@ -130,11 +147,10 @@ export default function Footer() {
             </h3>
 
             {/* Contact Us Button with Link */}
-         
+
             <div className="mt-4">
-            <Button title={" Contact Us"} link="/contact-us"/>
+              <Button title={" Contact Us"} link="/contact-us" />
             </div>
-            
 
             {/* WhatsApp Link */}
             <div className="flex items-center gap-2 mt-4 text-gray-700">

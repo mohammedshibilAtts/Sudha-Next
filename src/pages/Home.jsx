@@ -131,7 +131,7 @@ function Home() {
   const testimonials = [
     {
       image: Founder,
-      text: "The journey of Sudha Fertility Centre started with an empathetic mission to help couples achieve their dream of parenthood. The vision of Dr. S. Dhanabagyam, the founder, was shaped by a heart-wrenching and life-changing experience. While performing a postmortem on a woman who had tragically taken her own life due to the immense societal pressure of not having children, Dr. Dhanabagyam was profoundly moved. This sorrowful event sparked her determination to make a difference in the lives of couples facing infertility. It led her to establish the Sudha Fertility Centre.",
+      text: "The journey of Sudha Fertility Centre started with an empathetic mission to help couples achieve their dream of parenthood. The vision of Dr. S. Dhanabagyam, the founder, was shaped by a heart-wrenching and life-changing experience. While performing a postmortem on a woman who had tragically taken her own life due to the immense societal pressure of not having children, Dr. Dhanabagyam was profoundly moved. This sorrowful event sparked her determination to make a difference in the lives of couples facing infertility. It led her to establish the Sudha Fertility Centre.Dr. S. Pradeepa, Vice President of Sudha Fertility Centre, has been an integral part of the IVF team that achieved the remarkable milestone of delivering 26 IVF babies in a single day. Her dedication and expertise have been instrumental in expanding Sudha Fertility Centre, leading to the establishment of multiple branches across Tamil Nadu. She has actively organized prestigious medical conferences, including CME Coimbatore (2013) and the 3rd International Live 3D Laparoscopic Workshop, Erode (2014). She was also part of the organizing committee for INFERTICON 2016 and served as Organizing Secretary for FETOCARE 2016, focusing on infertility, fetal medicine, and high-risk pregnancy.",
       author: "- Mrs Nagalakshi & Mr Anjineyalu.",
     },
     {
@@ -369,35 +369,27 @@ function Home() {
               {/* Add relative positioning here */}
               <div className="content shadow-xl p-7 rounded-xl font-outfit">
                 <motion.p
-                  key={index} // Key change triggers animation
+                  
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8 }}
                   className="text-[#838383]"
                 >
-                  {testimonials[index].text}
+                  Sudha Fertility Centre began with a compassionate mission to help couples achieve parenthood. Dr. S. Dhanabagyam was deeply moved by a tragic experience—performing a postmortem on a woman who took her own life due to infertility stigma. This inspired her to establish the Sudha Fertility Centre. Our Vice President Dr. S. Pradeepa has been a strong pillar of support, and together, their efforts have led to the expansion of multiple branches across South India, Bangladesh and Sri Lanka. Sudha has also achieved the remarkable milestone of delivering 26 IVF babies in a single day.
+ 
                 </motion.p>
 
-                <motion.p
-                  key={`author${index}`} // Key change triggers animation
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="xl:mt-6 mt-1"
-                >
-                  {testimonials[index].author}
-                </motion.p>
+              
               </div>
               {/* Make sure button stays fixed at the bottom */}
-              <div className="absolute -bottom-7 right-4  justify-center mt-4 hidden xl:flex">
+              <div className="absolute bottom-8 right-4  justify-center mt-4 hidden xl:flex">
                 {" "}
                 {/* Adjust positioning */}
-                <Button title={"Learn More"} link="/about" />
+                <Button title={"Learn More"} link="/about-us" />
               </div>
               <div className="flex justify-center xl:hidden mt-3">
-                <Button title={"Learn More"} link="/about" />
+                <Button title={"Learn More"} link="/about-us" />
               </div>
             </div>
           </div>
@@ -450,7 +442,7 @@ function Home() {
                         In Vitro Fertilization
                       </p>
 
-                      <p className="text-[#838383] text-center mt-2">IVF</p>
+                      <p className="text-[#838383] text-center mt-2 font-bold">( IVF )</p>
                     </div>
                   </div>
                 </div>
@@ -473,7 +465,7 @@ function Home() {
                       <p className="text-[#838383] text-center">
                         Intrauterine insemination
                       </p>
-                      <p className="text-[#838383] text-center mt-2">IUI</p>
+                      <p className="text-[#838383] text-center mt-2 font-bold">( IUI )</p>
                     </div>
                   </div>
                 </div>
@@ -496,7 +488,7 @@ function Home() {
                       <p className="text-[#838383] text-center">
                         Intracytoplasmic Sperm Injection
                       </p>
-                      <p className="text-[#838383] text-center mt-2">ICSI</p>
+                      <p className="text-[#838383] text-center mt-2 font-bold">( ICSI )</p>
                     </div>
                   </div>
                 </div>
@@ -519,7 +511,6 @@ function Home() {
                       <p className="text-[#838383] text-center">
                       PCOS/PCOD
                       </p>
-                      <p className="text-[#838383] text-center mt-2">LAH</p>
                     </div>
                   </div>
                 </div>
@@ -692,7 +683,7 @@ function Home() {
             <div className="title text-center">
               <h1 className="font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl ">
                 Turning Dreams into Reality: Witness the Joy of Parenthood with
-                Sudha Fertility Centre.
+                Sudha Fertility Centre, {" "}
                 <span className="lg:bock">the Best Choice</span>
               </h1>
 
@@ -779,7 +770,7 @@ function Home() {
               <h2 className="text-2xl font-bold text-center ">
                 Happy Patients, Happy Stories
               </h2>
-              <Button title="View YouTube" link="https://www.youtube.com/@sudhafertilitycentre" icon={<FaYoutube />} />
+              <Button title="View on YouTube" link="https://www.youtube.com/@sudhafertilitycentre" icon={<FaYoutube />} />
             </div>
             <MarqueeComponent
               items={Ambattur.gallery}

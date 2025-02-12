@@ -1,4 +1,5 @@
 import React from 'react';
+import { branches } from './footer/footer';
 
 function AppointmentForm({ onSubmit }) {
   return (
@@ -28,8 +29,12 @@ function AppointmentForm({ onSubmit }) {
           <select
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           >
-            <option>Select Location</option>
-            {/* Add more options as needed */}
+            <option value="">Select Location</option>
+            {branches.map((branch, index) => (
+              <option key={index} value={branch.link}>
+                {branch.title}
+              </option>
+            ))}
           </select>
         </div>
         <button

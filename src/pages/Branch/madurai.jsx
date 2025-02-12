@@ -290,7 +290,7 @@ function MaduraiPage() {
                     <div className="w-full lg:w-1/2">
                       <h2 className="text-[#173366] text-2xl font-bold">
                         Fertility Specialists <br />
-                        in Krishnagiri
+                        in Madurai
                       </h2>
                       <h3 className="text-[20px] font-bold mt-2">
                         Chief Experts of Sudha Fertility Centre in Madurai
@@ -576,7 +576,7 @@ function MaduraiPage() {
             <h2 className="text-2xl font-bold text-center ">
               Happy Patients, Happy Stories
             </h2>
-            <Button text="View youtube " icon={<FaYoutube />} />
+            <Button text="View on YouTube " icon={<FaYoutube />} />
           </div>
           <MarqueeComponent
             items={Madurai.gallery}

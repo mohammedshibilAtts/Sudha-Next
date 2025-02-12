@@ -18,6 +18,7 @@ import { MarqueeComponent } from "@/components/marqueeSlider";
 import { FaYoutube } from "react-icons/fa";
 import Button from "@/components/button/button";
 import {Ambattur } from "@/middleware/imagesroute";
+import BookingButton from "@/components/button/bookingButton";
 
 function ContactUs() {
   return (
@@ -138,7 +139,7 @@ function ContactUs() {
       {/* Contact  */}
 
       <div
-        className="py-16 bg-cover bg-center"
+        className="py-16 bg-cover bg-center" id="contact-now"
         style={{
           background:
             "linear-gradient(170deg, #F0F5FF, #F0F5FF 60%, white 60%, white)",
@@ -445,7 +446,7 @@ function ContactUs() {
                 </h1>
               </div>
               <div className="w-full lg:w-auto flex justify-center lg:justify-end items-center">
-                <Button title="Book Your Free Appointment" />
+                <BookingButton title="Book Your Free Appointment" />
               </div>
             </div>
           </div>
@@ -466,7 +467,7 @@ function ContactUs() {
               <h2 className="text-2xl font-bold text-center ">
                 Happy Patients, Happy Stories
               </h2>
-              <Button title="View youtube" icon={<FaYoutube />} />
+              <Button title="View on YouTube" icon={<FaYoutube />} />
             </div>
             <MarqueeComponent
               items={Ambattur.gallery}

@@ -17,12 +17,12 @@ const topNavItems = ["Helpline No: +91 767-007-6006", "Book Appointment"];
 
 const mainNavItems = [
   { item: "Home", link: "/" },
-  { item: "About Us", link: "/about" },
+  { item: "About Us", link: "/about-us" },
   {
     title: "Treatments",
     link: "treatment",
     dropdownItems: [
-      { item: "In Vitro Fertilization", link: "/in-vitro-fertilization" },
+      { item: <p>In Vitro Fertilization <span className="font-semibold">( IVF )</span> </p>, link: "/in-vitro-fertilization" },
       { item: "Intrauterine Insemination", link: "/intrauterine-insemination" },
       {
         item: "Intracytoplasmic Sperm Injection",

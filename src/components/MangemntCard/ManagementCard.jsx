@@ -40,7 +40,7 @@ const managementData = [
     id: 4,
     name: "Dr. S. Pradeepa",
     role: "Vice President, Sudha Hospitals Pvt ltd ",
-    course: "MD., DNB (Cardiology) ",
+    course: "DGO, DNB(OG), MNAMS, ART ",
     description:"",
     image: Pradeepa,
     website: "https://drpradeepa.com/",
@@ -64,9 +64,8 @@ const ManagementCards = () => {
                 <Image
                   src={member.image}
                   alt={member.name}
-                  className="rounded-lg object-cover"
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="rounded-lg object-cover w-full"
+                  
                 />
               </div>
               <div className="space-y-2">
@@ -80,12 +79,12 @@ const ManagementCards = () => {
                   {member.course}
                 </p>
                 {member.website && (
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="  transition-opacity duration-300">
                     <Link
                       href={member.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm sm:text-base text-blue-500 hover:underline"
+                      className="text-sm sm:text-base text-blue-900 hover:underline"
                     >
                       Visit Website
                     </Link>

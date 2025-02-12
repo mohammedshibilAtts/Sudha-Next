@@ -526,7 +526,7 @@ function TrichyPage() {
             <h2 className="text-2xl font-bold text-center ">
               Happy Patients, Happy Stories
             </h2>
-            <Button text="View youtube " icon={<FaYoutube />} />
+            <Button text="View on YouTube " icon={<FaYoutube />} />
           </div>
           <MarqueeComponent
             items={Trichy.gallery}
