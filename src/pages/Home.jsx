@@ -40,6 +40,7 @@ import ContactUs from "./contactUs";
 import ContactForm from "@/components/contact/contactForm";
 import Link from "next/link";
 import BookingButton from "@/components/button/bookingButton";
+import ProfileButton from "@/components/button/profileButton";
 
 const FAQ = [
   {
@@ -234,7 +235,7 @@ function Home() {
         {/* Content */}
         <div className="relative h-full flex flex-col">
           {/* Main Content */}
-          <div className="flex-1 flex items-center justify-center mb-40 mt-16">
+          <div className="flex-1 flex  justify-center mb-40 mt-16">
             <div className="text-white text-center px-4 font-outfit">
               <h2 className="text-[#FFC65C] font-outfit font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-3xl">
                 "Cherish the Boon of Motherhood"
@@ -244,7 +245,7 @@ function Home() {
                 <br />
                 into Reality for 40 Years.
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl mt-4">
+              <p className=" mt-4">
                 "Join the 1,50,000+ Families who have
                 <br />
                 Overcome Infertility"
@@ -265,6 +266,9 @@ function Home() {
               "linear-gradient(to top, rgba(255, 255, 255, 1), transparent)",
           }}
         ></div>
+        <div className=" absolute bottom-32 md:bottom-40 md:right-5 right-2 flex flex-col space-y-3 z-32 ">
+          <ProfileButton/>
+          </div>
       </div>
 
       {/* Driven By the Happiness Of Lakhs of Families */}

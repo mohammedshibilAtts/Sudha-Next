@@ -1,10 +1,11 @@
 import whatsapp from "@/assets/floatIcons/whatsapp.svg"
 import phone from "@/assets/floatIcons/phone.svg"
 import Image from "next/image";
+import ProfileButton from "./button/profileButton";
 
 const FloatingIcons = () => {
   return (
-    <div className="fixed top-52 right-5 flex flex-col space-y-3 z-40 ">
+    <div className="fixed top- right-5 flex flex-col space-y-3 z-40 ">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/917670076006"
@@ -22,6 +23,7 @@ const FloatingIcons = () => {
       >
         <Image src={phone} alt="Phone" />
       </a>
+        <ProfileButton />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 import RequestCallModal from "./modal";
 import whatsapp from "@/assets/floatIcons/whatsapp.svg";
 import phone from "@/assets/floatIcons/phone.svg";
+import ProfileButton from "../button/profileButton";
 
 const topNavItems = ["Helpline No: +91 767-007-6006", "Book Appointment"];
 
@@ -555,7 +556,8 @@ function Navbar() {
       </div>
 
       {!isMobileMenuOpen && (
-        <div className="fixed top-52 right-5 flex flex-col space-y-3 z-40 ">
+        <>
+                <div className="fixed top-52 md:right-5 -right-2 flex flex-col space-y-3 z-40 ">
           
           <a
             href="https://wa.me/917107007006"
@@ -574,6 +576,9 @@ function Navbar() {
             <Image src={phone} alt="Phone" />
           </a>
         </div>
+          
+          </>
+
       )}
     </header>
   );
